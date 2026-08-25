@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alibaba.com — Đưa Thương Hiệu Việt Ra Thế Giới</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#F7F4EC;
+    --navy-900:#F1EDE1;
+    --navy-800:#FFFFFF;
+    --navy-700:#FFFFFF;
+    --gold:#B08A38;
+    --gold-soft:#C9A24B;
+    --gold-deep:#8A6B26;
+    --ivory:#14243D;
+    --ivory-dim:rgba(20,36,61,.74);
+    --ivory-faint:rgba(20,36,61,.5);
+    --line:rgba(176,138,56,.3);
+    --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+    --sans:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--sans);
+    background:var(--navy-950);
+    color:var(--ivory);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold);color:#fff}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+  a{color:inherit;text-decoration:none}
+
+  /* ============ NAV ============ */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:18px 0;
+    transition:all .4s var(--ease);
+    background:linear-gradient(to bottom,rgba(247,244,236,.92),transparent);
+  }
+  header.nav.scrolled{
+    background:rgba(247,244,236,.96);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    padding:12px 0;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.5px}
+  .brand .dot{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;
+    background:radial-gradient(circle at 30% 30%,var(--gold-soft),var(--gold-deep));
+    color:#fff;font-family:var(--sans);font-weight:800;font-size:15px}
+  .nav-links{display:flex;gap:28px;font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--ivory-dim)}
+  .nav-links a{transition:color .3s}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-cta{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);
+    border:1px solid var(--gold);padding:9px 20px;border-radius:99px;transition:all .3s}
+  .nav-cta:hover{background:var(--gold);color:var(--navy-950)}
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+    background:
+      radial-gradient(1000px 500px at 85% -10%,rgba(201,162,75,.22),transparent 60%),
+      radial-gradient(800px 600px at -10% 110%,rgba(64,120,200,.1),transparent 60%),
+      linear-gradient(165deg,#FBF9F2 0%,#F6F2E7 55%,#EFE9DB 100%);
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(1px 1px at 20% 30%,rgba(20,36,61,.4) 0,transparent 100%) , radial-gradient(1px 1px at 70% 20%,rgba(20,36,61,.32) 0,transparent 100%), radial-gradient(1px 1px at 40% 70%,rgba(20,36,61,.3) 0,transparent 100%), radial-gradient(1px 1px at 85% 60%,rgba(20,36,61,.38) 0,transparent 100%), radial-gradient(1px 1px at 55% 45%,rgba(20,36,61,.26) 0,transparent 100%), radial-gradient(1px 1px at 10% 80%,rgba(20,36,61,.34) 0,transparent 100%);
+    background-size:300px 300px,250px 250px,220px 220px,280px 280px,240px 240px,260px 260px;
+    opacity:.4;
+  }
+  .hero-grid{position:absolute;inset:0;opacity:.5;
+    background-image:linear-gradient(rgba(20,36,61,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(20,36,61,.05) 1px,transparent 1px);
+    background-size:72px 72px;mask-image:radial-gradient(700px 500px at 50% 45%,#000 30%,transparent 75%);
+    -webkit-mask-image:radial-gradient(700px 500px at 50% 45%,#000 30%,transparent 75%);
+  }
+  .hero .wrap{position:relative;z-index:2;text-align:center;padding-top:140px;padding-bottom:80px}
+  .kicker{
+    display:inline-flex;align-items:center;gap:14px;
+    font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);
+    border:1px solid var(--line);padding:10px 22px;border-radius:99px;
+    background:rgba(201,162,75,.06);margin-bottom:34px;
+  }
+  .kicker::before,.kicker::after{content:"";width:26px;height:1px;background:var(--gold)}
+  .hero h1{
+    font-family:var(--serif);font-weight:700;
+    font-size:clamp(56px,9vw,122px);line-height:1.05;letter-spacing:-.5px;
+  }
+  .hero h1 em{font-style:italic;color:transparent;
+    background:linear-gradient(100deg,var(--gold) 0%,var(--gold-deep) 45%,var(--gold-soft) 70%,var(--gold-deep) 100%);
+    -webkit-background-clip:text;background-clip:text;}
+  .hero .sub{
+    max-width:720px;margin:30px auto 0;font-size:clamp(15px,1.7vw,18.5px);
+    color:var(--ivory-dim);font-weight:300;letter-spacing:.2px;
+  }
+  .hero .sub b{color:var(--gold);font-weight:600}
+  .hero-btns{display:flex;gap:16px;justify-content:center;margin-top:44px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:15px 36px;border-radius:99px;font-size:13px;
+    letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:all .35s var(--ease);
+  }
+  .btn-gold{background:linear-gradient(120deg,var(--gold-soft),var(--gold) 55%,var(--gold-deep));color:#14243D;box-shadow:0 10px 34px rgba(176,138,56,.35)}
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 18px 44px rgba(201,162,75,.5)}
+  .btn-ghost{border:1px solid var(--ivory-faint);color:var(--ivory)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .hero-stats{
+    display:flex;justify-content:center;gap:0;margin-top:64px;flex-wrap:wrap;
+    border-top:1px solid var(--line);
+  }
+  .hs{flex:1;min-width:150px;max-width:240px;padding:26px 12px;text-align:center;border-left:1px solid var(--line)}
+  .hs:last-child{border-right:1px solid var(--line)}
+  .hs .num{font-family:var(--serif);font-weight:700;font-size:clamp(30px,3.6vw,44px);color:var(--gold)}
+  .hs .lbl{font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--ivory-faint);margin-top:6px}
+  .slogan{
+    position:relative;z-index:2;text-align:center;padding:24px 0;font-family:var(--serif);
+    font-style:italic;font-size:clamp(19px,2.4vw,26px);color:var(--ivory-dim);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .slogan b{color:var(--gold);font-weight:600}
+
+  /* ============ SECTION BASE ============ */
+  section{position:relative;padding:110px 0}
+  .sec-head{max-width:760px;margin-bottom:64px}
+  .sec-num{
+    font-family:var(--serif);font-style:italic;font-size:21px;color:var(--gold);
+    letter-spacing:2.5px;display:flex;align-items:center;gap:16px;margin-bottom:18px;
+  }
+  .sec-num::after{content:"";width:70px;height:1px;background:var(--gold);opacity:.6}
+  .sec-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(42px,5.8vw,70px);line-height:1.12;letter-spacing:-.3px}
+  .sec-head h2 em{font-style:italic;color:var(--gold)}
+  .sec-head p{margin-top:18px;color:var(--ivory-dim);font-weight:300;font-size:16.5px}
+  .sec-center{margin-left:auto;margin-right:auto;text-align:center}
+  .sec-center .sec-num{justify-content:center}
+  .sec-center .sec-num::before{content:"";width:70px;height:1px;background:var(--gold);opacity:.6}
+  .sec-center .sec-num::after{content:none}
+  .divider-gold{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);border:0;opacity:.35}
+
+  .bg-alt{background:linear-gradient(180deg,#FBF9F2,#F3EEE2 30%,#FBF9F2)}
+
+  /* ============ CARDS ============ */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .card{
+    position:relative;background:#FFFFFF;
+    border:1px solid rgba(20,36,61,.09);border-radius:18px;padding:36px 30px;
+    transition:all .45s var(--ease);overflow:hidden;
+    box-shadow:0 8px 30px rgba(20,36,61,.05);
+  }
+  .card::before{content:"";position:absolute;inset:0;border-radius:18px;padding:1px;
+    background:linear-gradient(140deg,rgba(201,162,75,.55),transparent 40%,transparent 70%,rgba(201,162,75,.25));
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .45s}
+  .card:hover{transform:translateY(-7px);box-shadow:0 20px 46px rgba(20,36,61,.1)}
+  .card:hover::before{opacity:1}
+  .card .ico{
+    width:52px;height:52px;border-radius:14px;display:grid;place-items:center;margin-bottom:22px;
+    background:rgba(201,162,75,.12);border:1px solid var(--line);
+  }
+  .card .ico svg{width:26px;height:26px;stroke:var(--gold-soft);fill:none;stroke-width:1.6}
+  .card h3{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:12px;color:var(--ivory)}
+  .card p{font-size:14.5px;color:var(--ivory-dim);font-weight:300}
+  .big-stat{
+    font-family:var(--serif);font-weight:700;font-size:clamp(34px,4vw,48px);
+    color:var(--gold);line-height:1;
+  }
+  .big-stat small{font-size:.45em;color:var(--ivory-faint);font-family:var(--sans);letter-spacing:1px}
+
+  /* ============ TREND BAR (01) ============ */
+  .trend-row{display:flex;align-items:center;gap:20px;margin-bottom:18px}
+  .trend-row .flag{width:150px;font-weight:600;font-size:14.5px;color:var(--ivory);text-align:right}
+  .trend-row .bar{flex:1;height:34px;border-radius:8px;background:rgba(20,36,61,.07);position:relative;overflow:hidden}
+  .trend-row .fill{position:absolute;inset:0;border-radius:8px;transform-origin:left;
+    background:linear-gradient(90deg,rgba(201,162,75,.25),var(--gold));
+    box-shadow:0 0 22px rgba(201,162,75,.35)}
+  .trend-row .pct{width:110px;font-family:var(--serif);font-weight:700;font-size:26px;color:var(--gold)}
+
+  /* ============ MARKET CHIPS (02) ============ */
+  .market-chip{
+    display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);
+    border-radius:99px;padding:12px 22px;margin:6px;font-size:14px;color:var(--ivory-dim);
+    background:rgba(201,162,75,.05);transition:all .3s;
+  }
+  .market-chip:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+  .market-chip b{color:var(--gold);font-weight:700}
+
+  /* ============ NUMBERS GRID (03) ============ */
+  .num-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .num-cell{
+    text-align:center;padding:46px 20px;border-radius:18px;position:relative;
+    background:#FFFFFF;
+    border:1px solid rgba(20,36,61,.09);transition:all .4s var(--ease);
+    box-shadow:0 8px 30px rgba(20,36,61,.05);
+  }
+  .num-cell:hover{border-color:var(--gold);transform:translateY(-5px)}
+  .num-cell .n{font-family:var(--serif);font-weight:800;font-size:clamp(38px,4.6vw,58px);color:var(--gold);line-height:1}
+  .num-cell .n sup{font-size:.45em;color:var(--ivory-faint);font-weight:400}
+  .num-cell .t{margin-top:14px;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ivory-faint)}
+
+  /* ============ FEATURE SPLIT (04) ============ */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .split .lead{font-family:var(--serif);font-size:clamp(28px,3.2vw,38px);line-height:1.35;font-weight:600}
+  .split .lead em{color:var(--gold);font-style:italic}
+  .checklist{margin-top:26px;display:grid;gap:14px}
+  .checklist li{list-style:none;display:flex;gap:14px;font-size:15px;color:var(--ivory-dim);font-weight:300}
+  .checklist .ck{flex:0 0 24px;height:24px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;margin-top:2px}
+  .checklist .ck svg{width:12px;height:12px;stroke:var(--gold);fill:none;stroke-width:2.4}
+
+  /* ============ TIERS (05) ============ */
+  .tier{display:flex;align-items:stretch;gap:0;margin-top:46px;flex-wrap:wrap}
+  .tier .t{
+    flex:1;min-width:170px;padding:34px 22px;text-align:center;position:relative;
+    background:#FFFFFF;
+    border:1px solid rgba(20,36,61,.09);
+  }
+  .tier .t:first-child{border-radius:18px 0 0 18px}
+  .tier .t:last-child{border-radius:0 18px 18px 0}
+  .tier .t::after{content:"";position:absolute;top:22px;bottom:22px;right:-1px;width:1px;background:var(--line)}
+  .tier .t:last-child::after{display:none}
+  .tier .lv{font-size:11px;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
+  .tier .t h4{font-family:var(--serif);font-size:23px;margin:12px 0 14px;color:var(--ivory)}
+  .tier .t p{font-size:12.5px;color:var(--ivory-dim);font-weight:300;line-height:1.55}
+  .tier .gold .lv{color:var(--gold)}
+  .tier .gold h4{color:var(--gold)}
+  .tier .gold{border-color:var(--gold);background:linear-gradient(180deg,rgba(201,162,75,.16),#fff)}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+
+  /* ============ TIMELINE (09) ============ */
+  .tl{position:relative;max-width:900px;margin:0 auto;padding-left:40px}
+  .tl::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:1px;
+    background:linear-gradient(180deg,var(--gold),rgba(201,162,75,.1))}
+  .tl-item{position:relative;padding:0 0 46px 34px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-item::before{content:"";position:absolute;left:-40px;top:6px;width:23px;height:23px;border-radius:50%;
+    background:#fff;border:1px solid var(--gold);box-shadow:0 0 0 5px rgba(201,162,75,.16)}
+  .tl-item .phase{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
+  .tl-item h4{font-family:var(--serif);font-size:27px;margin:8px 0 10px;color:var(--ivory)}
+  .tl-item p{font-size:14.5px;color:var(--ivory-dim);font-weight:300;max-width:640px}
+
+  /* ============ QUOTES (08) ============ */
+  .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:14px}
+  .quote{
+    background:#FFFFFF;
+    border:1px solid rgba(20,36,61,.09);border-radius:18px;padding:34px 28px;
+    display:flex;flex-direction:column;transition:all .4s var(--ease);
+    box-shadow:0 8px 30px rgba(20,36,61,.05);
+  }
+  .quote:hover{transform:translateY(-6px);border-color:var(--gold)}
+  .quote .qmark{font-family:var(--serif);font-size:56px;line-height:.6;color:var(--gold);opacity:.75;margin-bottom:20px}
+  .quote .txt{font-size:14px;color:var(--ivory-dim);font-weight:300;flex:1;font-style:italic}
+  .quote .who{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+  .quote .who b{display:block;font-size:18px;color:var(--gold);font-family:var(--serif)}
+  .quote .who span{font-size:12px;color:var(--ivory-faint);letter-spacing:1px;text-transform:uppercase}
+  .quote .metric{margin-top:12px;font-size:13px;color:var(--ivory)}
+
+  /* ============ CTA FOOTER ============ */
+  .cta{
+    text-align:center;padding:130px 0 100px;position:relative;overflow:hidden;
+    background:
+      radial-gradient(900px 420px at 50% 115%,rgba(201,162,75,.2),transparent 65%),
+      linear-gradient(180deg,#FBF9F2,#F0EBDE);
+  }
+  .cta h2{font-family:var(--serif);font-weight:700;font-size:clamp(44px,6vw,76px);line-height:1.1}
+  .cta h2 em{font-style:italic;color:var(--gold)}
+  .cta p{max-width:640px;margin:24px auto 0;color:var(--ivory-dim);font-weight:300;font-size:16.5px}
+  .contact-card{
+    max-width:560px;margin:52px auto 0;border:1px solid var(--line);border-radius:22px;
+    background:#FFFFFF;
+    padding:42px 44px;text-align:left;position:relative;
+    box-shadow:0 20px 50px rgba(20,36,61,.08);
+  }
+  .contact-card::before{content:"";position:absolute;inset:-1px;border-radius:22px;padding:1px;
+    background:linear-gradient(140deg,rgba(201,162,75,.6),transparent 45%,rgba(201,162,75,.25));
+    -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude}
+  .contact-card .name{font-family:var(--serif);font-size:31px;color:var(--gold);font-weight:600}
+  .contact-card .role{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--ivory-faint);margin-top:6px}
+  .contact-card .line{display:flex;align-items:center;gap:14px;margin-top:18px;font-size:15px;color:var(--ivory-dim)}
+  .contact-card .line svg{flex:0 0 20px;width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.7}
+  .foot-note{
+    margin-top:70px;font-size:11px;color:var(--ivory-faint);letter-spacing:1px;line-height:2;
+    border-top:1px solid rgba(20,36,61,.08);padding-top:26px;text-align:center;
+  }
+
+  /* ============ REVEAL ============ */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+  /* ============ RESPONSIVE ============ */
+  @media(max-width:920px){
+    .grid-3,.grid-2,.num-grid,.quotes,.two-col,.split{grid-template-columns:1fr}
+    .nav-links{display:none}
+    .hero .wrap{padding-top:110px}
+    section{padding:80px 0}
+    .hs{min-width:130px;max-width:none;border-left:0;border-top:1px solid var(--line)}
+    .hs:last-child{border-right:0}
+    .hero-stats{flex-direction:column;width:100%}
+    .tier .t{min-width:100%;border-radius:0!important}
+    .tier .t::after{display:none}
+    .trend-row{flex-wrap:wrap;gap:10px}
+    .trend-row .flag{width:100%;text-align:left}
+    .trend-row .pct{width:auto}
+    .contact-card{padding:32px 26px}
+  }
+  @media print{
+    header.nav,.hero-btns{display:none}
+    body{background:#fff;color:#111}
+    section{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <div class="brand"><span class="dot">A</span>Alibaba.com <span style="color:var(--gold);font-style:italic;font-weight:500;font-size:15px">Vietnam</span></div>
+    <nav class="nav-links">
+      <a href="#xu-huong">Xu hướng</a>
+      <a href="#vietnam">Việt Nam</a>
+      <a href="#nen-tang">Nền tảng</a>
+      <a href="#niem-tin">Niềm tin</a>
+      <a href="#he-sinh-thai">Hệ sinh thái</a>
+      <a href="#pavilion">Pavilion</a>
+      <a href="#thanh-cong">Thành công</a>
+    </nav>
+    <a class="nav-cta" href="#lien-he">Liên hệ</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="hero-grid"></div>
+  <div class="wrap">
+    <div class="kicker reveal">Alibaba.com · Vietnam Sales Kit 2026</div>
+    <h1 class="reveal d1">Đưa Thương Hiệu Việt<br><em>Ra Thế Giới</em></h1>
+    <p class="sub reveal d2">Alibaba.com — nền tảng thương mại điện tử B2B hàng đầu toàn cầu, nơi hơn <b>50 triệu nhà mua hàng quốc tế</b> tìm kiếm, tin tưởng và giao thương với các nhà cung cấp từ hơn <b>200 quốc gia và vùng lãnh thổ</b>. Cánh cửa đưa thương hiệu của bạn bước ra thị trường thế giới.</p>
+    <div class="hero-btns reveal d3">
+      <a class="btn btn-gold" href="#lien-he">Khám phá cơ hội</a>
+      <a class="btn btn-ghost" href="#vietnam">Góc nhìn Việt Nam</a>
+    </div>
+    <div class="hero-stats reveal d4">
+      <div class="hs"><div class="num">200<sup>+</sup></div><div class="lbl">Quốc gia &amp; vùng lãnh thổ</div></div>
+      <div class="hs"><div class="num">50<sup>M+</sup></div><div class="lbl">Nhà mua B2B hoạt động</div></div>
+      <div class="hs"><div class="num">200<sup>M+</sup></div><div class="lbl">Sản phẩm niêm yết</div></div>
+      <div class="hs"><div class="num">16</div><div class="lbl">Ngôn ngữ hỗ trợ</div></div>
+    </div>
+  </div>
+</div>
+<div class="slogan">“ Make it easy to do business everywhere — <b>Kinh doanh thuận lợi mọi lúc, mọi nơi</b> ”</div>
+
+<!-- ============ 01 XU HƯỚNG ============ -->
+<section id="xu-huong" style="padding-top:110px">
+  <div class="wrap">
+    <div class="sec-head sec-center reveal">
+      <div class="sec-num">01 — Thương mại không biên giới</div>
+      <h2>B2B toàn cầu đã <em>số hóa</em> —<br>và đây chính là thời điểm vàng</h2>
+      <p>Làn sóng chuyển dịch của thương mại toàn cầu đang mở ra những cơ hội chưa từng có. Doanh nghiệp nào nắm bắt sớm công nghệ số sẽ dẫn đầu cuộc chơi xuất khẩu.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg></div>
+        <div class="big-stat">83<small>%</small></div>
+        <h3 style="margin-top:14px">Nhà mua B2B ưa chuộng đặt hàng &amp; thanh toán qua TMĐT</h3>
+        <p style="margin-top:10px">Hành vi mua hàng B2B đã thay đổi hoàn toàn — từ gặp mặt, đàm phán truyền thống sang giao dịch trực tuyến nhanh chóng, minh bạch.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zm14 10v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div class="big-stat">74<small>%</small></div>
+        <h3 style="margin-top:14px">Nhà mua thuộc thế hệ Millennials tìm nhà cung cấp mới</h3>
+        <p style="margin-top:10px">Họ kỳ vọng trải nghiệm mua sắm B2B giống như tiêu dùng cá nhân — trực tuyến, tiện lợi và giàu thông tin.</p>
+      </div>
+      <div class="card reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 14l4-4 3 3 5-6"/></svg></div>
+        <h3 style="margin-top:6px">Nguồn cung dịch chuyển toàn cầu</h3>
+        <p style="margin-top:10px">Bất ổn thương mại khiến người mua đa dạng hóa nguồn cung: ưu tiên hiệu quả chi phí, nguồn cung gần, chính sách thương mại thân thiện — cơ hội lớn cho các thị trường mới như Việt Nam.</p>
+      </div>
+    </div>
+    <div style="margin-top:56px" class="reveal">
+      <p style="text-align:center;color:var(--ivory-dim);font-size:13px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:26px">Tăng trưởng người mua hoạt động tích cực theo quốc gia cung ứng (12 tháng liên tiếp, đến 05/2025)</p>
+      <div class="trend-row"><div class="flag">Thổ Nhĩ Kỳ</div><div class="bar"><div class="fill" data-w="100%"></div></div><div class="pct">+1091%</div></div>
+      <div class="trend-row"><div class="flag">Ấn Độ</div><div class="bar"><div class="fill" data-w="47%"></div></div><div class="pct">+513%</div></div>
+      <div class="trend-row"><div class="flag">Đài Loan</div><div class="bar"><div class="fill" data-w="18%"></div></div><div class="pct">+191%</div></div>
+      <div class="trend-row"><div class="flag">Pakistan</div><div class="bar"><div class="fill" data-w="15%"></div></div><div class="pct">+162%</div></div>
+      <div class="trend-row"><div class="flag">Việt Nam</div><div class="bar"><div class="fill" data-w="10%"></div></div><div class="pct">+89%</div></div>
+    </div>
+  </div>
+</section>
+<hr class="divider-gold">
+
+<!-- ============ 02 VIỆT NAM ============ -->
+<section id="vietnam" class="bg-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-num">02 — Điểm sáng Việt Nam</div>
+      <h2>Việt Nam vươn mình trong <em>làn sóng xuất khẩu mới</em></h2>
+      <p>Với thế mạnh chi phí, nguồn nhân lực tay nghề và mạng lưới FTA rộng mở, Việt Nam đang trở thành điểm đến nguồn cung được thế giới tin chọn.</p>
+    </div>
+    <div class="split">
+      <div class="reveal">
+        <div class="big-stat">475.06<small> tỷ USD — Xuất khẩu 2025 (+17% YoY)</small></div>
+        <ul class="checklist" style="margin-top:30px">
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Xuất siêu <b style="color:var(--gold);margin:0 4px">~20 tỷ USD</b> — thặng dư thương mại bền vững</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Tổng kim ngạch xuất nhập khẩu <b style="color:var(--gold);margin:0 4px">930.07 tỷ USD (+18.2%)</b></li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Xuất khẩu tăng trưởng <b style="color:var(--gold);margin:0 4px">17% năm 2025</b>, liên tục tăng qua các năm</li>
+        </ul>
+        <div style="margin-top:40px">
+          <p style="font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--ivory-faint);margin-bottom:16px">Thị trường xuất khẩu chủ lực 2025</p>
+          <div>
+            <span class="market-chip">Mỹ <b>~32.2%</b></span>
+            <span class="market-chip">EU + UK <b>~14.2%</b></span>
+            <span class="market-chip">ASEAN <b>8–9%</b></span>
+            <span class="market-chip">Hàn Quốc &amp; Nhật Bản <b>5–7%</b></span>
+          </div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <div class="card" style="padding:40px 36px">
+          <h3 style="font-size:28px">Người mua thế giới đang tìm kiếm “Made in Vietnam”</h3>
+          <p style="margin-top:14px">Các quốc gia có nhu cầu tìm kiếm sản phẩm Việt Nam <b style="color:var(--gold)">tăng mạnh</b> trong 300 ngày gần đây (T4/2025 – T2/2026):</p>
+          <div style="margin-top:20px;display:flex;flex-wrap:wrap">
+            <span class="market-chip">Mỹ</span><span class="market-chip">Anh</span><span class="market-chip">Ấn Độ</span><span class="market-chip">Pháp</span><span class="market-chip">Canada</span><span class="market-chip">Nhật Bản</span>
+          </div>
+          <p style="margin-top:20px;font-size:14px;color:var(--ivory-faint)">Nhóm EU duy trì lượng tìm kiếm cao ổn định qua từng quý kể từ Q1/2025. Đây là tín hiệu rõ ràng: cầu quốc tế cho hàng Việt đang mở rộng.</p>
+        </div>
+        <div style="margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+          <div class="card" style="padding:26px 24px">
+            <h3 style="font-size:19px">Lợi thế chi phí &amp; FTA</h3>
+            <p style="margin-top:8px">Thuế quan thấp từ các hiệp định thương mại tự do, giá nhân công cạnh tranh.</p>
+          </div>
+          <div class="card" style="padding:26px 24px">
+            <h3 style="font-size:19px">Chính sách mở &amp; nhân lực</h3>
+            <p style="margin-top:8px">Nhân công tay nghề, môi trường thương mại thân thiện, chính phủ đồng hành.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider-gold">
+
+<!-- ============ 03 NỀN TẢNG ============ -->
+<section id="nen-tang">
+  <div class="wrap">
+    <div class="sec-head sec-center reveal">
+      <div class="sec-num">03 — Nền tảng hàng đầu</div>
+      <h2>Alibaba.com — <em>19 năm</em> dẫn đầu<br>thương mại quốc tế</h2>
+      <p>Ra đời năm 1999, Alibaba.com cung cấp giải pháp số toàn diện cho hàng trăm nghìn doanh nghiệp SMEs toàn cầu, giúp họ tận dụng nhu cầu tìm kiếm nguồn hàng trực tuyến ngày càng lớn.</p>
+    </div>
+    <div class="num-grid">
+      <div class="num-cell reveal"><div class="n">200<sup>+</sup></div><div class="t">Quốc gia &amp; vùng lãnh thổ</div></div>
+      <div class="num-cell reveal d1"><div class="n">50<sup>M+</sup></div><div class="t">Nhà mua B2B hoạt động tích cực</div></div>
+      <div class="num-cell reveal d2"><div class="n">200<sup>M+</sup></div><div class="t">Sản phẩm</div></div>
+      <div class="num-cell reveal"><div class="n">40<sup>+</sup></div><div class="t">Danh mục ngành</div></div>
+      <div class="num-cell reveal d1"><div class="n">7.600<sup>+</sup></div><div class="t">Danh mục sản phẩm</div></div>
+      <div class="num-cell reveal d2"><div class="n">16</div><div class="t">Ngôn ngữ hỗ trợ</div></div>
+    </div>
+    <div class="two-col" style="margin-top:34px">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>#1 trong danh mục Mua sắm trên App Store Hoa Kỳ</h3>
+        <p style="margin-top:10px">Tháng 4/2025, Alibaba.com vươn lên vị trí dẫn đầu danh mục mua sắm tại App Store Mỹ và hơn 10 thị trường khác — minh chứng cho sức hút toàn cầu của nền tảng.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Lượt tìm kiếm theo xuất xứ tăng +23%</h3>
+        <p style="margin-top:10px">Tháng 4/2025, các lượt tìm kiếm liên quan xuất xứ sản phẩm trên Alibaba.com tăng 23% — phản ánh xu hướng đa dạng hóa nguồn cung của người mua toàn cầu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider-gold">
+
+<!-- ============ 04 NIỀM TIN ============ -->
+<section id="niem-tin" class="bg-alt">
+  <div class="wrap">
+    <div class="sec-head sec-center reveal">
+      <div class="sec-num">04 — Niềm tin &amp; công cụ</div>
+      <h2>Xây dựng niềm tin, <em>tối ưu vận hành</em><br>cho mọi giao dịch</h2>
+      <p>Từ bảo vệ thanh toán đến trợ lý thông minh, Alibaba.com trang bị cho doanh nghiệp Việt bộ công cụ hoàn chỉnh để bán hàng B2B chuyên nghiệp và an tâm.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg></div>
+        <h3>Trade Assurance</h3>
+        <p>Chuẩn mực bảo vệ toàn diện từ thanh toán đến giao hàng: tiền được giữ an toàn trong tài khoản ký quỹ, cam kết giao đúng hạn, trọng tài trực tuyến khi phát sinh tranh chấp.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3>Verified Supplier</h3>
+        <p>Xác minh doanh nghiệp trực tiếp bởi các công ty kiểm tra độc lập hàng đầu (SGS/TUV) — kèm video xác minh, tham quan nhà máy trực tuyến và dấu nhận diện Verified Supplier.</p>
+      </div>
+      <div class="card reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3>Smart Assistant &amp; Data Insights</h3>
+        <p>Trợ lý AI tối ưu vận hành, đăng bài và theo dõi đơn hàng; công cụ phân tích thị trường, người mua, sản phẩm và từ khóa giúp ra quyết định dựa trên dữ liệu thực.</p>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="card reveal">
+        <h3 style="font-size:21px">Thành phần Trade Assurance</h3>
+        <ul class="checklist" style="margin-top:18px">
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Thanh toán an toàn &amp; dễ dàng qua tài khoản ký quỹ</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Cam kết giao hàng đúng hạn, vận chuyển đúng thời gian</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Trọng tài trực tuyến, hòa giải giữa người mua &amp; nhà cung cấp</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Dịch vụ trực tuyến 7×24, phản hồi trong 20 giây</li>
+        </ul>
+      </div>
+      <div class="card reveal d1">
+        <h3 style="font-size:21px">Công cụ phân tích dữ liệu</h3>
+        <ul class="checklist" style="margin-top:18px">
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Phân tích thị trường: ngành hàng, xu hướng từng quốc gia, tỷ lệ chuyển đổi</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Phân tích người mua: chân dung, hành trình, nguồn khách</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Phân tích sản phẩm &amp; từ khóa: sản phẩm xu hướng, độ biến động, cạnh tranh</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Gold Supplier / Verified Supplier: tăng xếp hạng sao, tiếp cận người mua VIP</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider-gold">
+
+<!-- ============ 05 HỆ SINH THÁI ============ -->
+<section id="he-sinh-thai">
+  <div class="wrap">
+    <div class="sec-head sec-center reveal">
+      <div class="sec-num">05 — Hệ sinh thái người mua</div>
+      <h2>Tiếp cận <em>50 triệu nhà mua</em> B2B<br>toàn cầu ở mọi phân khúc</h2>
+      <p>Từ nhà phân phối, nhà bán buôn, siêu thị, chuỗi bán lẻ đến nhà nhập khẩu và công ty thương mại — hệ sinh thái người mua phân cấp của Alibaba.com giúp doanh nghiệp tiếp cận đúng khách hàng, đúng giá trị.</p>
+    </div>
+    <div class="tier reveal">
+      <div class="t"><div class="lv">L0</div><h4>Registered Buyer</h4><p>Người mua đã đăng ký trên nền tảng, tổng giá trị đơn hàng đạt từ 50 USD/năm</p></div>
+      <div class="t"><div class="lv">L1</div><h4>Potential Buyer</h4><p>Điền thông tin công ty, đạt 100.000 USD giá trị đơn hàng/năm</p></div>
+      <div class="t"><div class="lv">L2</div><h4>Small Business Buyer</h4><p>Đạt 1.000.000 USD giá trị đơn hàng/năm trên Alibaba.com</p></div>
+      <div class="t gold"><div class="lv">L3</div><h4>Enterprise Buyer</h4><p>Qua chứng nhận doanh nghiệp, doanh thu hằng năm trên 1 triệu USD, đạt 1 triệu USD giao dịch/năm</p></div>
+      <div class="t"><div class="lv">L4</div><h4>Enterprise Pro Buyer</h4><p>Qua chứng nhận sản phẩm tương ứng, doanh thu hằng năm trên 10 triệu USD</p></div>
+    </div>
+    <div class="grid-2" style="margin-top:30px">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+        <h3>Tìm kiếm khách hàng Bị động</h3>
+        <p style="margin-top:10px">Khách hàng chủ động tìm đến gian hàng chuyên nghiệp của bạn qua tìm kiếm sản phẩm và các bài đăng sản phẩm — xây dựng hiện diện để được tìm thấy.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>Tìm kiếm khách hàng Chủ động</h3>
+        <p style="margin-top:10px">Báo giá trực tiếp cho những đơn đặt hàng sẵn mà khách để lại trên sàn (RFQ) — chủ động chốt cơ hội kinh doanh mỗi ngày.</p>
+      </div>
+    </div>
+    <div class="card reveal" style="margin-top:26px;padding:34px 36px">
+      <h3 style="font-size:26px">Lợi thế của gian hàng đạt 3 sao trở lên</h3>
+      <div class="grid-2" style="margin-top:18px;gap:20px">
+        <p style="font-size:14.5px;color:var(--ivory-dim)"><b style="color:var(--gold)">Ưu tiên tiếp cận khách hàng L3</b> — phân khúc giao dịch trên 100.000 USD, những khách hàng giá trị cao nhất.</p>
+        <p style="font-size:14.5px;color:var(--ivory-dim)"><b style="color:var(--gold)">Thư báo giá tiếp cận khách hàng Gold</b> — mở rộng cơ hội chốt đơn với tập khách hàng VIP.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider-gold">
+
+<!-- ============ 06 PAVILION ============ -->
+<section id="pavilion" class="bg-alt">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-num">06 — Gian hàng Quốc gia Việt Nam</div>
+      <h2>Vietnam Pavilion — bảo trợ bởi <em>Bộ Công Thương</em></h2>
+      <p>Chương trình Gian hàng Quốc gia Việt Nam trên sàn TMĐT quốc tế duy nhất nhận sự bảo trợ của Chính phủ — Cục Xúc tiến Thương mại, Bộ Công Thương, đồng hành cùng Vietrade từ năm 2023.</p>
+    </div>
+    <div class="split">
+      <div class="reveal">
+        <div class="card" style="padding:40px 38px">
+          <h3 style="font-size:27px">Sứ mệnh: Đưa sản phẩm Việt vươn xa thế giới</h3>
+          <ul class="checklist" style="margin-top:22px">
+            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Quảng bá thương hiệu Việt qua sản phẩm của <b style="color:var(--gold)">Top Doanh Nghiệp Tiêu Biểu</b></li>
+            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Thúc đẩy xuất khẩu và gia tăng năng lực cạnh tranh toàn cầu</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Nâng cao năng lực chuyển đổi số qua TMĐT tại doanh nghiệp</li>
+            <li><span class="ck"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>Kết nối và xúc tiến thương mại Việt Nam – Thế giới</li>
+          </ul>
+          <p style="margin-top:22px;font-size:13.5px;color:var(--ivory-faint)">Không gian hàng hóa Made-in-Vietnam tập hợp doanh nghiệp, thương hiệu uy tín và sản phẩm chất lượng, đại diện cho hình ảnh – thương hiệu Việt Nam trước khách hàng quốc tế.</p>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <div class="num-cell" style="margin-bottom:20px">
+          <div class="n" style="font-size:clamp(30px,3.4vw,42px)">200</div>
+          <div class="t">Doanh nghiệp Tiêu biểu mỗi giai đoạn 2 năm<br><span style="text-transform:none;letter-spacing:0;font-size:12px;color:var(--ivory-faint)">chọn theo Bộ Tiêu chí của Cục XTTM &amp; Alibaba.com</span></div>
+        </div>
+        <div class="card" style="padding:28px 28px">
+          <p style="font-size:14px;color:var(--ivory-dim)"><b style="color:var(--gold)">Lộ trình:</b> Khởi động 11/2023 → Top 100 (2024–2025) → Top 200 (2025–2026) → Top 200 (2026–2027), công bố 6/2026.</p>
+          <p style="margin-top:14px;font-size:14px;color:var(--ivory-dim)"><b style="color:var(--gold)">Vinh danh:</b> VN KEL Award 2024 · APAC-SOUTH KEL Award 2024 · New Power Award 2025 · Ngày MSME của Liên Hợp Quốc.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-3" style="margin-top:34px">
+      <div class="card reveal">
+        <h3 style="font-size:21px">Không gian hiển thị riêng</h3>
+        <p style="margin-top:10px">Giới thiệu thương hiệu với người mua quốc tế tìm kiếm nhà cung cấp theo quốc gia; banner ưu tiên tại trang Worldwide – Lá cờ Việt Nam.</p>
+      </div>
+      <div class="card reveal d1">
+        <h3 style="font-size:21px">Chứng nhận chính thức</h3>
+        <p style="margin-top:10px">Văn bản chứng nhận Top Featured Businesses do Cục Xúc tiến Thương mại cấp — gia tăng uy tín thương hiệu quốc tế.</p>
+      </div>
+      <div class="card reveal d2">
+        <h3 style="font-size:21px">Đào tạo &amp; tư vấn</h3>
+        <p style="margin-top:10px">Chương trình đào tạo nâng cao năng lực TMĐT, tư vấn 1-1, kiểm tra sức khỏe gian hàng và báo cáo ngành hàng.</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:44px" class="reveal">
+      <a href="https://sale.alibaba.com/p/vietnampavilion-vnfeaturedbusiness/index.html" target="_blank" rel="noopener" class="btn btn-gold">Khám phá Vietnam Pavilion</a>
+    </p>
+  </div>
+</section>
+<hr class="divider-gold">
+
+<!-- ============ 07 HẬU CẦN ============ -->
+<section id="hau-can">
+  <div class="wrap">
+    <div class="sec-head sec-center reveal">
+      <div class="sec-num">07 — Hậu cần &amp; thanh toán</div>
+      <h2>Giao hàng <em>3–7 ngày</em> đến hơn 200 khu vực<br>với thanh toán thuận tiện bằng VND</h2>
+      <p>Alibaba.com Logistics đồng hành doanh nghiệp Việt từ kho hàng tại TP. Hồ Chí Minh và Hà Nội, hoàn thiện đơn hàng trực tuyến và giao đến khách hàng toàn cầu.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Chuyển phát nhanh quốc tế</h3>
+        <p style="margin-top:10px">Thời gian vận chuyển chỉ <b style="color:var(--gold)">3–7 ngày</b> đến hơn 200 khu vực trên thế giới, với mạng lưới hậu cần toàn diện.</p>
+      </div>
+      <div class="card reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div>
+        <h3>Thanh toán nhanh bằng VND</h3>
+        <p style="margin-top:10px">Hợp tác các kênh thanh toán Việt Nam qua Alipay — đặt hàng đơn giản, minh bạch giá, theo dõi tình trạng trong một chạm.</p>
+      </div>
+      <div class="card reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Bảo hiểm &amp; chăm sóc khách hàng</h3>
+        <p style="margin-top:10px">Bảo hiểm vận chuyển cho hàng hóa mất mát, hư hại; dịch vụ trực tuyến 7×24, nhận hàng trong 2 ngày làm việc, phản hồi trong 20 giây.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider-gold">
+
+<!-- ============ 08 THÀNH CÔNG ============ -->
+<section id="thanh-cong" class="bg-alt">
+  <div class="wrap">
+    <div class="sec-head sec-center reveal">
+      <div class="sec-num">08 — Câu chuyện truyền cảm hứng</div>
+      <h2>Những thương hiệu Việt <em>vươn ra thế giới</em><br>từ Alibaba.com</h2>
+      <p>Hàng nghìn doanh nghiệp SMEs Việt Nam đã và đang xây dựng thương hiệu xuất khẩu bền vững trên nền tảng. Đây là những minh chứng sống động.</p>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal">
+        <div class="qmark">“</div>
+        <div class="txt">Xây dựng niềm tin là quan trọng nhất trong B2B. Trở thành Verified Supplier trên Alibaba.com đã nâng cao uy tín của chúng tôi, giúp tăng trung bình 30% lượng đơn hàng mỗi năm.</div>
+        <div class="metric"><b style="color:var(--gold)">15 triệu USD</b> doanh thu trên Alibaba.com năm 2023</div>
+        <div class="who"><b>Mr. Đái Thắng</b><span>Đồ Gỗ Nghĩa Sơn · Nội thất gỗ · 19 năm</span></div>
+      </div>
+      <div class="quote reveal d1">
+        <div class="qmark">“</div>
+        <div class="txt">Nhờ AI Smart Assistant và Trade Assurance, đội ngũ chỉ 4 nhân viên xử lý hơn 100 tin hỏi hàng mỗi ngày và xuất khẩu thành công 500 đơn hàng lớn mỗi năm.</div>
+        <div class="metric"><b style="color:var(--gold)">500 đơn hàng lớn</b> xuất khẩu hằng năm</div>
+        <div class="who"><b>Kim Chi</b><span>Thanh Hiền Cường · Thời trang &amp; Phụ kiện</span></div>
+      </div>
+      <div class="quote reveal d2">
+        <div class="qmark">“</div>
+        <div class="txt">Nhờ đào tạo, báo cáo và tư vấn từ Alibaba.com, chúng tôi vượt qua rào cản văn hóa để kết nối khách hàng chất lượng toàn cầu.</div>
+        <div class="metric"><b style="color:var(--gold)">+90% doanh số</b> trong 1 năm · 5 container/tháng · 3 triệu USD năm đầu</div>
+        <div class="who"><b>Hoàng Vân</b><span>VKAUS · Trái cây sấy, gia vị</span></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:26px">
+      <div class="card reveal">
+        <h3 style="font-size:26px">Indochina — Hành trình 11 năm tăng trưởng</h3>
+        <p style="margin-top:12px">Decor từ dừa, tre và nội thất thủ công. Tăng trưởng doanh thu ổn định <b style="color:var(--gold)">30–40%/năm</b>, khoảng 50% đến từ Alibaba.com. Mở rộng lên 3 nhà máy ngay trong giai đoạn dịch bệnh, tạo việc làm ổn định cho hơn 5.000 hộ gia đình nông thôn, hiện diện vững chắc tại châu Âu, Mỹ, Úc, Nhật Bản.</p>
+      </div>
+      <div class="card reveal d1">
+        <h3 style="font-size:26px">Babeeni — 19 năm đồng hành</h3>
+        <p style="margin-top:12px">May mặc trẻ em thêu tay bán sỉ. Duy trì <b style="color:var(--gold)">nhà cung cấp 5 sao</b>, xuất khẩu thành công sang hơn 30 quốc gia (US, UK, EU, MENA), là doanh nghiệp tiên phong TMĐT của Việt Nam và là Top 200 Doanh Nghiệp Tiêu Biểu giai đoạn 2025–2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="divider-gold">
+
+<!-- ============ 09 LỘ TRÌNH ============ -->
+<section id="lo-trinh">
+  <div class="wrap">
+    <div class="sec-head sec-center reveal">
+      <div class="sec-num">09 — Lộ trình tăng trưởng</div>
+      <h2>Đồng hành 12 tháng, <em>đi từng bước</em><br>từ gia nhập đến dẫn đầu ngành</h2>
+      <p>Alibaba.com Việt Nam hỗ trợ xuyên suốt: đào tạo trực tuyến &amp; trực tiếp, báo cáo ngành hàng, tư vấn 1-1, chiến dịch trực tuyến, Elite Camp và Câu lạc bộ Verified Supplier.</p>
+    </div>
+    <div class="tl">
+      <div class="tl-item reveal">
+        <div class="phase">0 – 3 tháng · Bắt đầu</div>
+        <h4>Kích hoạt tài khoản &amp; làm chủ nền tảng</h4>
+        <p>Tham gia khóa đào tạo, đăng 150 sản phẩm tiềm năng, đạt ít nhất 1 sao, phản hồi trong 4 giờ và duy trì tỷ lệ phản hồi nhanh từ 90% để nhận tăng lưu lượng truy cập.</p>
+      </div>
+      <div class="tl-item reveal d1">
+        <div class="phase">4 – 6 tháng · Tăng tốc</div>
+        <h4>Đạt 2 sao &amp; tối ưu vận hành</h4>
+        <p>Đăng tối thiểu 50 sản phẩm/tháng, học và áp dụng kỹ năng KWA, tận dụng tối đa RFQ và đăng sản phẩm nổi bật mỗi tháng.</p>
+      </div>
+      <div class="tl-item reveal d2">
+        <div class="phase">7 – 9 tháng · Trưởng thành</div>
+        <h4>Xây dựng đội ngũ &amp; thương hiệu</h4>
+        <p>Sử dụng KWA, tham gia đào tạo ASTE Star, duy trì điểm SR 4–5, hoàn thiện hồ sơ công ty, mini-site và danh sách từ khóa.</p>
+      </div>
+      <div class="tl-item reveal d3">
+        <div class="phase">10 – 12 tháng · Mở rộng</div>
+        <h4>Đạt 3 sao trở lên &amp; tiếp cận khách VIP</h4>
+        <p>Duy trì 3 sao+, đăng 50–100 sản phẩm/tháng, sử dụng KWA hoặc quảng cáo Premium Sponsor, tham gia đào tạo Trade Assurance và sự kiện offline nâng cấp Verified Supplier.</p>
+      </div>
+      <div class="tl-item reveal d4">
+        <div class="phase">13+ tháng · Dẫn đầu</div>
+        <h4>Trở thành KOL ngành hàng</h4>
+        <p>Đánh giá và lập kế hoạch kinh doanh, thống nhất mục tiêu tăng trưởng, bước sang năm thứ hai với vị thế KOL ngành hàng trên Alibaba.com.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<div class="cta" id="lien-he">
+  <div class="wrap">
+    <h2 class="reveal">Nắm thời cơ.<br><em>Bứt tốc xuất khẩu</em> cùng Alibaba.com</h2>
+    <p class="reveal d1">Đội ngũ chuyên gia Alibaba.com Việt Nam sẵn sàng đồng hành — tư vấn chiến lược, đánh giá sức khỏe gian hàng và xây dựng lộ trình đưa thương hiệu của bạn ra thế giới.</p>
+    <div class="contact-card reveal d2">
+      <div class="name">Nguyễn Hoài Nam</div>
+      <div class="role">Business Development Supervisor · Alibaba.com Việt Nam</div>
+      <div class="line">
+        <svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8 10a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg>
+        <span>(84) 339 6868 45 · 833 329 769</span>
+      </div>
+      <div class="line">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+        <span>nam.nguyen@alibaba-inc.com</span>
+      </div>
+    </div>
+    <p class="foot-note reveal d3">Alibaba.com · Vietnam Sales Kit 2026 — Nội dung và dữ liệu được phê duyệt bởi Alibaba.com Data Disclosure Platform (02/2026).<br>“Make it easy to do business everywhere — Kinh doanh thuận lợi mọi lúc, mọi nơi.”</p>
+  </div>
+</div>
+
+<script>
+  // Nav scroll state
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Animate trend bars when visible
+  const barIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const fill = e.target;
+        const w = fill.dataset.w || '50%';
+        fill.style.transition = 'transform 1.4s cubic-bezier(.22,.61,.36,1)';
+        fill.style.transform = 'scaleX(1)';
+        fill.style.transformOrigin = 'left';
+        // ensure initial state
+        requestAnimationFrame(() => {
+          fill.style.transform = 'scaleX(1)';
+        });
+        barIO.unobserve(fill);
+      }
+    });
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.fill').forEach(f => {
+    f.style.transform = 'scaleX(0)';
+    barIO.observe(f);
+  });
+</script>
+</body>
+</html>
