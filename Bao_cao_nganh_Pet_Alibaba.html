@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Báo cáo ngành Pet - Nhà cung cấp Việt Nam trên Alibaba | B2B Market Intelligence</title>
+  <!-- Google Fonts Lexend & FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Chart.js CDN (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --p: #002B5B;
+      --s: #1F75FE;
+      --g: #D4A017;
+      --bg: #F8F9FA;
+      --text: #2C3E50;
+      --sidebar-bg: #07162C;
+      --card-bg: #FFFFFF;
+      --sw: 260px;
+      --border-radius: 12px;
+      --transition: all 0.3s ease;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Lexend', sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+    /* Sidebar */
+    .sidebar { position: fixed; top: 0; left: 0; width: var(--sw); height: 100vh; background: linear-gradient(180deg, var(--sidebar-bg) 0%, var(--p) 100%); color: #fff; padding: 2rem 1.5rem; overflow-y: auto; z-index: 100; box-shadow: 4px 0 15px rgba(0,0,0,0.1); }
+    .brand { display: flex; align-items: center; gap: 10px; font-size: 1.25rem; font-weight: 700; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .brand i { color: var(--g); }
+    .sidebar nav ul { list-style: none; }
+    .sidebar nav ul li { margin-bottom: 0.5rem; }
+    .sidebar nav ul li a { display: flex; align-items: center; gap: 12px; color: rgba(255,255,255,0.8); text-decoration: none; padding: 0.75rem 1rem; border-radius: var(--border-radius); font-size: 0.95rem; font-weight: 600; transition: var(--transition); }
+    .sidebar nav ul li a:hover, .sidebar nav ul li a.active { color: #fff; background-color: rgba(255,255,255,0.06); border-left: 4px solid var(--g); }
+    /* Main Layout */
+    .main-content { margin-left: var(--sw); padding: 2.5rem 3rem; max-width: 1400px; }
+    .header-banner { background: linear-gradient(135deg, rgba(7, 22, 44, 0.93) 0%, rgba(0, 43, 91, 0.85) 100%), url('https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover; color: #fff; padding: 3.5rem 2.5rem; border-radius: var(--border-radius); position: relative; margin-bottom: 2rem; box-shadow: 0 8px 25px rgba(0,43,91,0.15); }
+    .badge { display: inline-block; background-color: var(--g); color: #07162C; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 50px; margin-bottom: 1rem; }
+    .title { font-size: 2.1rem; font-weight: 800; margin-bottom: 0.5rem; line-height: 1.3; }
+    .meta { display: flex; flex-wrap: wrap; gap: 20px; font-size: 0.85rem; color: rgba(255,255,255,0.85); border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; margin-top: 1.5rem; }
+    .section-card { background-color: var(--card-bg); border-radius: var(--border-radius); padding: 2.5rem; margin-bottom: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.02); }
+    .section-title { font-size: 1.4rem; font-weight: 700; color: var(--p); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px; border-bottom: 2px solid var(--bg); padding-bottom: 0.75rem; }
+    .section-title i { color: var(--g); }
+    .sub-title { font-size: 1.1rem; font-weight: 600; color: var(--p); margin: 1.25rem 0 0.5rem 0; }
+    p { margin-bottom: 1rem; color: #576574; }
+    .highlight { background-color: #F0F4F8; border-left: 4px solid var(--s); padding: 1rem 1.25rem; border-radius: 0 var(--border-radius) var(--border-radius) 0; margin-bottom: 1.25rem; }
+    .highlight.alert { background-color: #FFF9E6; border-left-color: var(--g); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 1.5rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem; }
+    .info-card { background-color: var(--bg); border-radius: var(--border-radius); padding: 1.25rem; border: 1px solid rgba(0,0,0,0.04); cursor: pointer; transition: var(--transition); }
+    .info-card:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,43,91,0.05); border-color: var(--s); }
+    .info-icon { font-size: 1.5rem; color: var(--p); margin-bottom: 0.75rem; }
+    .info-val { font-size: 1.35rem; font-weight: 800; color: var(--p); }
+    .info-lbl { font-size: 0.8rem; font-weight: 600; color: var(--s); margin-top: 0.25rem; }
+    .sup-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 1.5rem; }
+    .sup-card { background-color: var(--card-bg); border-radius: var(--border-radius); overflow: hidden; border: 1px solid rgba(0,0,0,0.06); transition: var(--transition); cursor: pointer; display: flex; flex-direction: column; }
+    .sup-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,43,91,0.08); border-color: var(--s); }
+    .sup-img-container { position: relative; width: 100%; height: 180px; overflow: hidden; }
+    .sup-img { width: 100%; height: 100%; object-fit: cover; border-bottom: 1px solid rgba(0,0,0,0.06); transition: var(--transition); }
+    .sup-card:hover .sup-img { transform: scale(1.05); }
+    .sup-body { padding: 1rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .sup-name { font-size: 0.95rem; font-weight: 700; color: var(--p); margin-bottom: 0.4rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .sup-meta { display: flex; justify-content: space-between; font-size: 0.75rem; color: #7f8c8d; margin-bottom: 0.5rem; }
+    .sup-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 0.75rem; }
+    .sup-tag { background-color: #EEF5FC; color: var(--s); font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600; }
+    .sup-btn { display: block; width: 100%; text-align: center; background-color: var(--p); color: #fff; padding: 0.5rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; margin-top: auto; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.8rem; }
+    table th { background-color: var(--p); color: #fff; font-weight: 600; text-align: left; padding: 0.6rem 0.8rem; border: 1px solid rgba(0,0,0,0.05); }
+    table td { padding: 0.6rem 0.8rem; border: 1px solid rgba(0,0,0,0.05); }
+    table tr:nth-child(even) { background-color: #F8FAFC; }
+    .table-container { overflow-x: auto; margin-top: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
+    .link-store-btn { background-color: #8B4513; color: white !important; padding: 0.35rem 0.75rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.72rem; }
+    .chart-box { background-color: #FFF; border: 1px solid rgba(0,0,0,0.05); border-radius: var(--border-radius); padding: 1rem; height: 320px; position: relative; }
+    .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: rgba(7,22,44,0.6); backdrop-filter: blur(4px); z-index: 1000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: var(--transition); }
+    .overlay.active { opacity: 1; pointer-events: auto; }
+    .modal { background-color: #FFF; width: 90%; max-width: 850px; max-height: 90vh; border-radius: var(--border-radius); overflow-y: auto; box-shadow: 0 15px 35px rgba(0,0,0,0.2); transform: translateY(20px); transition: var(--transition); }
+    .overlay.active .modal { transform: translateY(0); }
+    .modal-hdr { background-color: var(--p); color: #fff; padding: 1.2rem; display: flex; justify-content: space-between; align-items: center; }
+    .modal-hdr h3 { font-size: 1.15rem; font-weight: 700; }
+    .modal-close { background: none; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; }
+    .modal-bdy { padding: 1.5rem; }
+    .modal-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.5rem; }
+    .modal-img-container { display: flex; flex-direction: column; gap: 10px; }
+    .modal-img { width: 100%; height: 160px; object-fit: cover; border-radius: var(--border-radius); border: 1px solid rgba(0,0,0,0.08); }
+    .modal-btn { display: inline-block; width: 100%; text-align: center; padding: 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: var(--transition); }
+    .modal-btn-p { background-color: var(--p); color: #fff; }
+    .modal-btn-s { background-color: #8B4513; color: #fff; }
+    footer { background-color: var(--sidebar-bg); color: #fff; padding: 3rem 4rem 1.5rem 4rem; border-radius: var(--border-radius); margin-top: 3rem; }
+    .foot-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2rem; }
+    .foot-title { font-size: 1.05rem; font-weight: 700; color: var(--g); margin-bottom: 1rem; }
+    .foot-bottom { display: flex; justify-content: space-between; font-size: 0.75rem; color: rgba(255,255,255,0.6); padding-top: 1.5rem; }
+    /* Responsive adjustments */
+    @media (max-width: 1100px){ .main-content{padding:1.5rem} .sup-grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width: 720px){ .main-content{margin-left:0;padding:1rem} .sidebar{position:relative;width:100%;height:auto;display:flex;flex-direction:row;gap:12px;padding:12px} .sidebar nav ul{display:flex;flex-direction:row;gap:8px;overflow:auto} .sidebar nav ul li a{padding:8px} }
+  </style>
+</head>
+<body>
+
+  <!-- Left Sidebar Navigation -->
+  <div class="sidebar">
+    <div class="brand">
+      <i class="fa-solid fa-paw"></i>
+      <span>Frank B2B Expert</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#sec1" class="active"><i class="fa-solid fa-flag"></i> Chương 1: Tóm tắt</a></li>
+        <li><a href="#sec2"><i class="fa-solid fa-globe"></i> Chương 2: Tổng quan</a></li>
+        <li><a href="#sec3"><i class="fa-solid fa-warehouse"></i> Chương 3: Nhà bán VN</a></li>
+        <li><a href="#sec4"><i class="fa-solid fa-award"></i> Chương 4: SP bán chạy</a></li>
+        <li><a href="#sec5"><i class="fa-solid fa-image"></i> Chương 5: Phân tích ảnh</a></li>
+        <li><a href="#sec6"><i class="fa-solid fa-tags"></i> Chương 6: So sánh giá</a></li>
+        <li><a href="#sec7"><i class="fa-solid fa-wand-magic-sparkles"></i> Chương 7: SEO & Cơ hội</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div class="main-content">
+    <!-- Top Polished Header Banner -->
+    <div class="header-banner">
+      <span class="badge">Báo cáo xuất khẩu &bull; Full Intelligence</span>
+      <h1 class="title">BÁO CÁO NGÀNH PET (THÚ CƯNG): NHÀ CUNG CẤP VIỆT NAM TRÊN ALIBABA.COM</h1>
+      <p style="color: rgba(255,255,255,0.9); font-size: 1rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Thức ăn &amp; đồ ăn vặt cho thú cưng &bull; Đồ chơi &amp; đồ gặm tự nhiên &bull; Phụ kiện (vòng cổ, quần áo, đệm, chuồng) &bull; Định hướng xuất khẩu B2B cho nhà sản xuất Việt Nam.</p>
+      <div class="meta">
+        <span><i class="fa-solid fa-user-tie"></i> Phụ trách: <strong>Frank B2B Expert</strong></span>
+        <span><i class="fa-solid fa-calendar-days"></i> Cập nhật: <strong>Tháng 9, 2026</strong></span>
+        <span><i class="fa-solid fa-shield-halved"></i> Độ tin cậy: <strong>Dữ liệu xác thực Alibaba (04/09/2026)</strong></span>
+      </div>
+    </div>
+
+    <!-- CHƯƠNG 1: EXECUTIVE SUMMARY -->
+    <div id="sec1" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-flag"></i> Chương 1: Executive Summary (Tóm tắt điều hành)</h2>
+      <div class="grid-3">
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="info-val">US$158 tỷ</div>
+          <div class="info-lbl">Tổng chi tiêu ngành pet Mỹ 2025 (APPA, +3,7%)</div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-shield-check"></i></div>
+          <div class="info-val">~26.573</div>
+          <div class="info-lbl">Listing "Pet Supplies Vietnam" trên Alibaba (04/09/2026)</div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+          <div class="info-val">9,29%/năm</div>
+          <div class="info-lbl">CAGR pet food Việt Nam 2026-2034 (IMARC: 153,9 tr USD → 342,3 tr USD)</div>
+        </div>
+      </div>
+      <h3 class="sub-title"><i class="fa-solid fa-star"></i> 5 phát hiện chính (Key Findings)</h3>
+      <p><strong>1. Cầu toàn cầu vẫn tăng trưởng ổn định.</strong> Pet food toàn cầu đạt ~128,7 tỷ USD năm 2025, dự kiến ~191,2 tỷ USD năm 2033 (CAGR 5,1% - Grand View Research); chi tiêu ngành pet của Mỹ đạt 158 tỷ USD 2025 và dự báo 165 tỷ USD 2026 (APPA). 95 triệu hộ Mỹ nuôi thú cưng - thị trường đích hấp dẫn nhưng đang chịu thuế đối ứng.</p>
+      <p><strong>2. Vị thế Việt Nam trên Alibaba tập trung vào "nhóm ngách tự nhiên" nhưng rất ít nhà máy chuyên pet.</strong> Khảo sát trực tiếp các ngày 04–07/09/2026 (bộ lọc country=VN, mở từng store profile để kiểm tra) cho thấy listing VN áp đảo ở: đồ gặm/nhai tự nhiên (coffee wood, coir/xơ dừa), snack &amp; treats, phụ kiện may mặc &amp; đệm, cat scratcher - nhưng phần lớn thuộc công ty trading/handicraft đa ngành. Sau khi loại toàn bộ công ty trading &amp; đơn vị có ngành chính khác, chỉ còn <strong>5 nhà máy sản xuất pet thực thụ (pet là ngành chính)</strong> đạt chuẩn và <strong>30 sản phẩm của chính 5 nhà máy này</strong>, kèm giá FOB, MOQ, ảnh CDN thật và link listing trực tiếp.</p>
+      <p><strong>3. Lỗ hổng nguồn cung vẫn rõ ràng:</strong> cat tree (cây leo mèo) hiện mới chỉ có <strong>1 nhà máy VN đạt chuẩn - FEDERAL VIET NAM (Hà Nội)</strong>, vẫn rất hiếm; thức ăn khô hoàn chỉnh (kibble) và thiết bị thông minh (smart pet) <strong>vẫn trống</strong> ở nhóm nhà máy VN đạt chuẩn (cat scratcher dạng đơn giản thì đã có HOANG LINH SG/ZHENGXING). Đây là khoảng trống cạnh tranh cho nhà sản xuất VN muốn khác biệt hóa.</p>
+      <p><strong>4. Thuế &amp; quy định là rào cản lớn nhất với thị trường Mỹ.</strong> Theo khung thỏa thuận Mỹ - Việt (26/10/2025), hàng VN duy trì mức thuế đối ứng 20% (trừ Annex III EO 14346). Pet food vào Mỹ còn phải đăng ký cơ sở FDA + tuân thủ FSMA; vào EU cần cơ sở được phê duyệt theo Reg. (EC) 1069/2009 nếu chứa sản phẩm phụ động vật. Hàn Quốc &amp; ASEAN là các thị trường xuất khẩu "đang chạy" dễ tiếp cận hơn (bằng chứng: Woosung ~1.000 tấn/năm sang Hàn; đơn gia công Bình Dương/Long An sang ASEAN).</p>
+      <p><strong>5. Cạnh tranh giá từ Trung Quốc &amp; Thái Lan.</strong> Hàng Trung Quốc đang dùng SEO tiếng Việt chiếm kênh tìm kiếm "nguồn hàng pet food VN"; tại nội địa, Thái Lan chiếm ~35% thị phần. Lợi thế VN cần khai thác là câu chuyện <em>eco + tự nhiên + OEM linh hoạt + MOQ thấp</em> (5 nhà máy đạt chuẩn nhận MOQ thấp - từ 4-5 pcs nhóm may mặc KIM BINH MINH đến 100 pcs nhóm đồ chơi HOANG LINH SG) thay vì cạnh tranh bằng giá rẻ.</p>
+      <div class="highlight alert">
+        <strong>Lưu ý phương pháp:</strong> phần lớn hồ sơ VN ngành pet trên Alibaba là công ty trading/import-export, storefront không xác minh được nhà máy, hoặc đơn vị handicraft đa ngành (pet chỉ là dòng phụ) - báo cáo này đã <strong>loại trừ toàn bộ</strong>, chỉ giữ 5 nhà máy sản xuất pet thực thụ (pet là ngành chính) có bằng chứng nhà máy cụ thể. Xem bảng "Đã loại trừ khi rà soát" ở Chương 3.
+      </div>
+      <h3 class="sub-title"><i class="fa-solid fa-bullseye"></i> Khuyến nghị định hướng (Top Recommendations)</h3>
+      <p><strong>R1 - Tập trung sản phẩm "đặc sản tự nhiên" gắn với lợi thế nguyên liệu VN:</strong> coffee wood chew, coir bone, basa fish skin, duck jerky, đệm mây/lục bình, cat scratcher giấy - định vị "natural &amp; eco-friendly, made in Vietnam" kèm bộ ảnh/video chuẩn để cạnh tranh giá trị, không cạnh tranh giá với Trung Quốc.</p>
+      <p><strong>R2 - Ưu tiên thị trường EU/ASEAN/Nhật-Hàn &amp; khách OEM private label trước, Mỹ tính sau:</strong> tận dụng EVFTA/CPTPP/VKFTA/ATIGA và bằng chứng xuất khẩu thực tế; chỉ nhắm Mỹ khi đã có hồ sơ FDA/FSMA và phương án chịu thuế 20% (giá trị gia tăng cao, ngách premium).</p>
+      <p><strong>R3 - Bổ sung nhóm hàng đang trống để khác biệt gian hàng:</strong> cat tree vẫn rất hiếm (mới 1 nhà máy FEDERAL), kibble private label hoặc functional treats và smart pet gần như trống ở nhóm nhà máy VN đạt chuẩn - cơ hội cho nhà sản xuất muốn tạo lợi thế đi trước trên Alibaba.</p>
+    </div>
+
+    <!-- CHƯƠNG 2: GLOBAL MARKET OVERVIEW -->
+    <div id="sec2" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-globe"></i> Chương 2: Global Market Overview (Toàn cảnh thị trường &amp; phạm vi ngành)</h2>
+      <p><strong>Bối cảnh cầu toàn cầu:</strong> Ngành pet (thú cưng) là một trong những ngành tiêu dùng tăng trưởng bền nhất nhờ xu hướng "humanization" (coi thú cưng như thành viên gia đình). Theo Grand View Research, pet food toàn cầu đạt <strong>128,7 tỷ USD năm 2025</strong> và dự kiến <strong>191,2 tỷ USD năm 2033 (CAGR 5,1%)</strong>; Bắc Mỹ chiếm ~41,4% doanh thu. Pet care mở rộng (thức ăn + sản phẩm/dịch vụ) ước đạt <strong>273,42 tỷ USD năm 2025 → 499,06 tỷ USD năm 2034</strong> (Fortune Business Insights). Tại Mỹ, APPA ghi nhận chi tiêu <strong>158 tỷ USD năm 2025 (+3,7%)</strong>, dự báo 165 tỷ USD 2026; 22% chủ nuôi "thắt lưng buộc bụng" chuyển chi tiêu sang chăm sóc thiết yếu (thức ăn, sức khỏe) - tín hiệu tốt cho sản phẩm có giá trị thực, khó khăn cho hàng discretionary thuần túy.</p>
+      <div class="grid-2">
+        <div class="chart-box"><canvas id="shareChart"></canvas></div>
+        <div class="chart-box"><canvas id="growthChart"></canvas></div>
+      </div>
+      <p style="font-size:0.75rem; color:#7f8c8d;">Nguồn: Grand View Research (pet food global, 2025); APPA State of the Industry 2026 (chi tiêu ngành pet Mỹ, 2024-2026F).</p>
+      <div class="highlight">
+        <strong>Thị trường nội địa VN (năng lực nền):</strong> pet food VN đạt <strong>153,9 triệu USD (2025) → 342,3 triệu USD (2034), CAGR 9,29%</strong> (IMARC); Expert Market Research ghi 141,75 triệu USD (2025) với CAGR 9,1%. Hơn 12 triệu chó mèo (2023), tiêu thụ &gt;17.000 tấn thức ăn thú cưng (+15% YoY). Sản xuất xuất khẩu có bằng chứng thực tế: <strong>Woosung VN</strong> (Đồng Nai) xuất ~1.000 tấn pet food sang Hàn Quốc (2023); <strong>Keos</strong> (Cần Thơ, ISO/GMP/HACCP) xuất Philippines/Brunei/Kenya/Ấn Độ; các nhà gia công tại <strong>Bình Dương &amp; Long An</strong> thắng đơn xuất ASEAN (2026). Lưu ý: chưa tìm thấy số liệu tổng hợp chính thức của Tổng cục Hải quan cho riêng ngành pet (HS 2309/4201/9503) - các con số trên mang tính định tính/điển hình doanh nghiệp.
+      </div>
+      <h3 class="sub-title"><i class="fa-solid fa-boxes-stacked"></i> Phạm vi sản phẩm của báo cáo (Product Scope)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr><th>Nhóm</th><th>Sản phẩm điển hình</th><th>HS code tham chiếu</th><th>Mức độ hiện diện supplier VN trên Alibaba</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1. Thức ăn &amp; snack thú cưng</td><td>Duck jerky, dried pig ear/chicken feet, dried fish, mealworm, canned wet food, dental chew</td><td>2309.10 / 2309.90</td><td>Trung bình (chủ yếu snack/treats; ít kibble)</td></tr>
+            <tr><td>2. Đồ chơi &amp; đồ gặm tự nhiên</td><td>Coffee wood chew, coir rope bone, trúc chew, cao su/silicone toy</td><td>9503 / 4201 (một số dạng)</td><td>Rất mạnh (nhóm đông nhất)</td></tr>
+            <tr><td>3. Phụ kiện đeo &amp; may mặc</td><td>Vòng cổ (da, vải, cord), dây dắt, quần áo/bandana, nơ</td><td>4201 / 6307</td><td>Mạnh (OEM may mặc từ 2001)</td></tr>
+            <tr><td>4. Đệm, chuồng, đồ nội thất thú cưng</td><td>Pet bed mây/lục bình/cói biển, rope cat cage/house, cat scratcher</td><td>9404 / 4602</td><td>Trung bình (cat tree rất hiếm: mới 1 nhà máy VN - FEDERAL)</td></tr>
+            <tr><td>5. Dụng cụ chăm sóc (grooming)</td><td>Rubber bath brush, no-pull collar, dụng cụ tắm</td><td>9603 / 4016...</td><td>Yếu (vài supplier, nhánh phụ)</td></tr>
+            <tr><td>6. Bao bì ngành pet (hỗ trợ)</td><td>Túi đứng BOPP/AL/PE đựng thức ăn thú cưng</td><td>3923</td><td>Có (nhà in bao bì trong nước, mắt xích hỗ trợ)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="sub-title"><i class="fa-solid fa-users"></i> Đối tượng người mua &amp; thị trường mục tiêu (Buyer Segments &amp; Target Markets)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr><th>Nhóm người mua B2B</th><th>Đặc điểm đơn hàng</th><th>Ưu tiên khi chọn supplier</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1. Nhà nhập khẩu / phân phối</td><td>Đơn container, tái phân phối chuỗi pet shop/siêu thị</td><td>Giá FOB/container, nguồn cung ổn định, chứng từ đầy đủ</td></tr>
+            <tr><td>2. Chuỗi bán lẻ &amp; thương hiệu pet (Petco/PetSmart/Chewy, thương hiệu D2C)</td><td>OEM/ODM/private label theo chương trình dài hạn</td><td>Chứng nhận (FDA/ISO/HACCP/AAFCO), R&amp;D công thức, bao bì riêng</td></tr>
+            <tr><td>3. Dropshipper / seller TMĐT (Amazon FBA, Shopee, TikTok)</td><td>Đơn nhỏ-vừa, quay vòng nhanh</td><td>MOQ linh hoạt, ảnh/video đẹp, giao nhanh, giá nhạy</td></tr>
+            <tr><td>4. Phòng khám thú y / kênh chuyên môn</td><td>Thức ăn chức năng, theo đơn</td><td>Hồ sơ dinh dưỡng, uy tín khoa học</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight alert">
+        <strong>Thị trường mục tiêu đề xuất (theo mức ưu tiên cho nhà VN):</strong> ① ASEAN &amp; Hàn Quốc (thuế thấp qua ATIGA/VKFTA + bằng chứng xuất khẩu đang chạy) → ② EU (EVFTA 0% nhưng cần cơ sở được phê duyệt cho pet food chứa sản phẩm phụ động vật) → ③ Nhật/Úc/Canada (CPTPP) → ④ Mỹ (thuế đối ứng 20% + FDA/FSMA - chỉ dành cho sản phẩm giá trị cao, khách OEM lớn).
+      </div>
+    </div>
+
+    <!-- CHƯƠNG 3: VIETNAM SUPPLIER LANDSCAPE -->
+    <div id="sec3" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-warehouse"></i> Chương 3: Vietnam Supplier Landscape (Danh bạ nhà cung cấp Pet VN xuất sắc)</h2>
+      <p><strong>Phương pháp rà soát nghiêm ngặt (04–07/09/2026):</strong> từng store profile <em>*.trustpass.alibaba.com/company_profile.html</em> của nhà cung cấp VN (từ khóa: pet supplies, pet food, dog treats, cat scratcher, coffee wood chew; bộ lọc country=VN) đã được mở và kiểm tra trực tiếp bằng trình duyệt. Đơn vị chỉ được giữ lại khi đạt <strong>đồng thời 2 tiêu chí</strong>: (i) <strong>Business Type = Manufacturer / Custom Manufacturer</strong> (hoặc có bằng chứng nhà máy cụ thể: floor space, dây chuyền sản xuất, nhân viên, chứng nhận BRC/ISO/HACCP...) và (ii) <strong>sản phẩm PET là ngành chính</strong> của gian hàng (chiếm phần lớn Main Products). Toàn bộ công ty trading/import-export/agent, storefront alias, profile trống, profile dán nguyên giới thiệu nhà máy nước ngoài và đơn vị đa ngành (pet chỉ là dòng phụ) <strong>đều bị loại</strong>. Kết quả: <strong>chỉ 5 nhà máy sản xuất pet thực thụ đạt chuẩn</strong> - minh chứng ngành pet trên Alibaba VN <strong>rất khan hiếm nhà máy chuyên biệt</strong>; phần lớn hồ sơ là trading/handicraft đa ngành nên không đưa vào báo cáo.</p>
+      <h3 class="sub-title"><i class="fa-solid fa-warehouse"></i> Bảng A — 5 NHÀ MÁY SẢN XUẤT PET THỰC THỤ VIỆT NAM (nhà máy + pet là ngành chính; đã xác minh 04–07/09/2026)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Nhà máy</th>
+              <th>Store Alibaba</th>
+              <th>Loại hình &amp; bằng chứng nhà máy</th>
+              <th>Trọng tâm pet</th>
+              <th>MOQ &amp; Giá quan sát</th>
+              <th>Đánh giá / Ghi chú</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>1</strong></td><td><strong>VIETNAM BALALA FOOD CO., LTD</strong></td><td><a href="https://peidigroup.trustpass.alibaba.com/company_profile.html" target="_blank" class="link-store-btn">Xem Store</a></td><td>Manufacturer (Verified, có khối "Manufacturer capability"); 7 dây chuyền tự có, floor 18.336 m², QA/QC 5, R&amp;D 6; BRC 381A1910001 + ISO22000; hợp tác Fortune 500</td><td>100% pet food/treats: rawhide chew bọc gà, sweet potato chew, wet food &amp; lickable treats cho mèo; OEM/ODM pet food</td><td>MOQ 900–2.000 bags; US$0,14–2,40 tùy SP</td><td>4,3/5 (3); on-time 90%; resp ≤6h; 2 yrs trên Alibaba (xuất khẩu ~10 yrs)</td></tr>
+            <tr><td><strong>2</strong></td><td><strong>KIM BINH MINH CO., LTD</strong></td><td><a href="https://kimbinhminh.trustpass.alibaba.com/company_profile.html" target="_blank" class="link-store-btn">Xem Store</a></td><td>Manufacturer (kèm Trading Company); factory 1.000–3.000 m², 2 dây chuyền; OEM may theo yêu cầu, nhận đơn nhỏ; 13 yrs, Est 2008</td><td>100% pet - may mặc &amp; phụ kiện: pet clothes, bed, blanket, bandana, ribbon, choker/necktie</td><td>MOQ 4–500 pcs; US$0,30–7</td><td>— (intro tự giới thiệu "manufacturer ... specialize in products for pet")</td></tr>
+            <tr><td><strong>3</strong></td><td><strong>FEDERAL VIET NAM CO., LTD</strong></td><td><a href="https://tmhvietnam.trustpass.alibaba.com/company_profile.html" target="_blank" class="link-store-btn">Xem Store</a></td><td>Manufacturer; factory 1.000–3.000 m² tại Chương Mỹ, Hà Nội; 2 dây chuyền; OEM/ODM cat tree; SMETA; 14 yrs, Est 2017</td><td>100% pet: coffee wood dog chew, cat tree, pet bed, chew toys, scratching (5/5 main products)</td><td>MOQ 500–800 pcs; US$1,10–5,85</td><td>Phản hồi chậm (&gt;24h, 0%) - cần lưu ý khi chào hàng</td></tr>
+            <tr><td><strong>4</strong></td><td><strong>HOANG LINH SG MANUFACTURING CO., LTD</strong></td><td><a href="https://hoanglinhsg.trustpass.alibaba.com/company_profile.html" target="_blank" class="link-store-btn">Xem Store</a></td><td>Manufacturer ("Manufacturer of pet supplies since 2020", Lâm Đồng); HACCP/ISO + Phyto (theo giới thiệu); 4 yrs, Est 2020</td><td>Pet toys/supplies: cat scratcher bìa sóng, catnip toys, coffee wood chew/tug/dumbbell/perch</td><td>MOQ 100 pcs; US$0,03–1,50</td><td>5,0/5 (5); resp ≤4h</td></tr>
+            <tr><td><strong>5</strong></td><td><strong>VIETNAM ZHENGXING TECHNOLOGY CO., LTD</strong></td><td><a href="https://vn1367377043vkyt.trustpass.alibaba.com/company_profile.html" target="_blank" class="link-store-btn">Xem Store</a></td><td>Custom Manufacturer (gỗ); factory 10.000–30.000 m², 51–100 NV, output US$5–10M; 7 yrs, Est 2018</td><td>Cat products &amp; dog products đứng đầu Main Products: cat scratching board/nest, dog bed, coffee wood chew</td><td>MOQ 500–3.000 pcs; US$1,95–5,85</td><td>5,0/5 (1); OEM/ODM đồ gỗ pet</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="sub-title"><i class="fa-solid fa-ban"></i> Bảng B — ĐÃ LOẠI TRỪ KHI RÀ SOÁT (không đưa vào danh sách nhà máy chính thức)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr><th>Công ty</th><th>Loại</th><th>Lý do loại (ngắn)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>99 GOLD DATA</td><td>Trading / alias đa storefront</td><td>Tên không phải công ty sản xuất; profile trống, nhiều account cùng tên tenure khác nhau</td></tr>
+            <tr><td>EXPAD IMPORT AND EXPORT CO., LTD</td><td>Trading</td><td>Tên chứa IMPORT AND EXPORT; main = trái cây sấy/trà/gia vị; doanh thu online chỉ $1K–2K, không bằng chứng sản xuất</td></tr>
+            <tr><td>VIETCHOICE IMPORT EXPORT TRADING PRODUCTION CO., LTD</td><td>Export company</td><td>Tự mô tả "export company" (Est 2024, 10–20 NV); "manufactory tại 4 tỉnh" không chi tiết, thiếu bằng chứng nhà máy</td></tr>
+            <tr><td>ECO FARMIE EXPORT CO., LTD</td><td>Handicraft (dừa/mây) là chính</td><td>Nhà máy thật nhưng main = coconut/bamboo/rattan handicraft; pet không hiển thị trên profile</td></tr>
+            <tr><td>VIET D.E.L.T.A INDUSTRIAL CO., LTD</td><td>Đa ngành nông sản</td><td>Main = coconut/tapioca/animal feed/fruit/spices; không có pet trong main products</td></tr>
+            <tr><td>BLUE LOTUS FARM CO., LTD</td><td>Nông sản chính</td><td>Intro "export import company"; main = dried fruit/herbs/nuts; coffee wood chew chỉ là SP lẻ</td></tr>
+            <tr><td>BLUE LOTUS EXIM CO., LTD</td><td>Profile trống</td><td>Business type/employees/main categories rỗng, không sản phẩm hiển thị - không xác nhận được nhà máy</td></tr>
+            <tr><td>CGS INDUSTRIA CO., LTD</td><td>Nghi trading đứng sau nhà máy TQ</td><td>Dán nguyên giới thiệu + địa chỉ nhà máy Trung Quốc (Nanchang, Jiangxi); main = PCM/cooling pads</td></tr>
+            <tr><td>VIFARMEX CO., LTD</td><td>Handicraft/trái cây chính</td><td>Main = handicraft, fresh fruit, raw material; không pet trong main categories</td></tr>
+            <tr><td>HONG HYUN YUMA CO., LTD</td><td>Balo/túi chính</td><td>OEM balo/túi quân đội; dog collar set chỉ là SP lẻ (US$3,50–5, MOQ 200 pcs)</td></tr>
+            <tr><td>M.I.T VIET NAM CO., LTD</td><td>Không pet trong main</td><td>Main = incense/charcoal/garden supplies/BBQ; bone dog chew không nằm main</td></tr>
+            <tr><td>COCONUT PRODUCT IMPORT EXPORT CO., LTD</td><td>Dừa chính</td><td>Main = coconut handicraft (bát/cutlery); pet (linen + coffee wood chew) không nằm main</td></tr>
+            <tr><td>ECO2GO VIETNAM CO., LTD</td><td>Bamboo/coconut chính</td><td>Main = bamboo straw/coconut bowl/cutlery; pet wood chew chỉ là dòng phụ</td></tr>
+            <tr><td>THY GLOBAL DEVELOPMENT &amp; INVESTMENT CO., LTD</td><td>Rattan furniture chính</td><td>3 nhà máy thật (Hà Nội) nhưng main = rattan kid furniture/coconut; coffee chew/hemp rope là phụ</td></tr>
+            <tr><td>TAKIMEX GLOBAL CO., LTD</td><td>Coconut chính, nghiêng trading</td><td>Main = coconut/seaweed/canned/agrowaste; intro ~10 năm kinh nghiệm XNK nông sản</td></tr>
+            <tr><td>TADO JSC</td><td>Trading (exclusive)</td><td>Profile tự nhận "exclusive trading company for T&amp;B factory"; đa ngành rubber/silicone/kitchenware</td></tr>
+            <tr><td>ECOKA JSC</td><td>Water hyacinth/macrame chính</td><td>Main = lục bình/macrame/placemat; pet supplies chỉ là mục cuối</td></tr>
+            <tr><td>MEKONG DELTA IMPORT EXPORT CO., LTD</td><td>Agent/sourcing</td><td>Chủ yếu import-export/sourcing ~20 năm; không bằng chứng nhà máy pet</td></tr>
+            <tr><td>THANH TUNG THINH WOODWORKING PRODUCTION CO., LTD</td><td>Đồ gỗ gia dụng chính</td><td>Main = wooden box/kitchenware/driftwood decor; coffee wood pet là dòng phụ</td></tr>
+            <tr><td>VU HAN VIET NAM PRINTING, PACK CO., LTD</td><td>Bao bì in ấn</td><td>Nhà máy in bao bì (BOPP/AL/PE); pet = túi đựng thức ăn - mắt xích hỗ trợ, không phải nhà máy pet</td></tr>
+            <tr><td>TIEN PHONG, VIETNAM CUTE SMART, THIEN THANH ART, SON TRA, KIM KAI, ECO GREEN, VIET FARGIMEX, HOYU, SAO MAI, HUNG PHAT, KIM MINH INT'L, QUANG MINH, VIGI FARM</td><td>Chưa xác minh / nghi trading</td><td>Tên chứa EXPORT/TRADING/GLOBAL/DEVELOPMENT/INTERNATIONAL; chưa mở được profile xác nhận nhà máy - không đưa vào</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight alert">
+        <strong>Vì sao chỉ còn 5 nhà máy &amp; cách dùng danh bạ:</strong> ngành pet trên Alibaba VN có rất nhiều listing, nhưng hồ sơ nhà máy chuyên pet (nhà máy + pet là ngành chính) cực kỳ khan hiếm - phần lớn là trading/agent, handicraft đa ngành hoặc profile không xác minh được, nên đã loại khỏi báo cáo. Khi làm việc với 5 nhà máy trên: ① dùng tính năng <strong>RFQ / Contact Supplier</strong> ngay trên store để hỏi báo giá &amp; xin mẫu; ② yêu cầu <strong>factory audit qua video call</strong>, ảnh dây chuyền thực tế và bản sao chứng nhận (BRC 381A1910001, ISO 22000/HACCP, SMETA, FSC nơi có); ③ hỏi trực tiếp về MOQ thực tế, đơn vị tính, thời gian sản xuất, điều kiện thanh toán và xuất xứ (C/O); ④ với các đơn vị trong Bảng B, chỉ cân nhắc lại sau khi có thẩm định thực địa/khảo sát trực tiếp nhà máy.
+      </div>
+    </div>
+
+    <!-- CHƯƠNG 4: TOP SELLING PRODUCTS & PRODUCT BENCHMARK -->
+    <div id="sec4" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-award"></i> Chương 4: Top Selling Products &amp; Product Benchmark (Sản phẩm bán chạy)</h2>
+      <p>Bảng dưới đây tổng hợp <strong>30 sản phẩm của chính 5 nhà máy sản xuất pet Việt Nam đã xác minh</strong> (danh sách ở Chương 3), thu thập trực tiếp từ Alibaba.com các ngày <strong>04–07/09/2026</strong> với bộ lọc quốc gia Vietnam (country=VN). Chỉ giữ sản phẩm của 5 nhà máy đạt chuẩn "nhà máy + pet là ngành chính"; toàn bộ listing của công ty trading/đơn vị đa ngành (pet là dòng phụ) đã bị loại khỏi mẫu. Giá là giá FOB hiển thị trên listing; MOQ là mức "Min. order" hiển thị trên listing; ảnh là thumbnail thật lấy từ CDN *.alicdn.com. Nhấn "Xem Chi Tiết" để mở listing thật trên Alibaba.</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Ảnh Sản Phẩm (Alibaba CDN)</th>
+              <th>Tên Sản Phẩm Bán Chạy (Gốc)</th>
+              <th>Dải Giá FOB (USD)</th>
+              <th>MOQ</th>
+              <th>Nhà Cung Cấp</th>
+              <th>Link Sản Phẩm Thực Tế</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td><img src="https://s.alicdn.com/@sc04/kf/H3f511ea9450e419683769da805969e7dA/Pal-s-Delight-Brand-High-Protein-Duck.jpeg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p1"></td><td><strong>Pal's Delight Brand High Protein Duck Wrapped Sweet Potato Strips Grain-Free Digestive Health Factory Direct Pet Food Chew Meat</strong></td><td>$0.90-1.60</td><td>900 bags</td><td>VIETNAM BALALA FOOD CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Pal-s-Delight-Brand-High-Protein_1601467863804.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>2</td><td><img src="https://s.alicdn.com/@sc04/kf/H8b8a4c3d40d0416f97687891d01d8187l/Soft-Baked-Chicken-Flavor-Dog-Treats-Waffle.png_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p2"></td><td><strong>Soft Baked Chicken Flavor Dog Treats Waffle Shaped High-Protein Digestive Health Treats for Dogs No Artificial Flavor</strong></td><td>$1.70-1.99</td><td>1000 bags</td><td>VIETNAM BALALA FOOD CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Soft-Baked-Chicken-Flavor-Dog-Treats_1601577272240.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>3</td><td><img src="https://s.alicdn.com/@sc04/kf/Heb7f40951eb941aea5700e598f08cee0U/OEM-Soft-Baked-Natural-Flavor-Chicken-Breast.png_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p3"></td><td><strong>OEM Soft Baked Natural Flavor Chicken Breast Pea Flour Treats High-Protein Digestive Health Cat Snack Balanced Wet Food Meat</strong></td><td>$1.20-1.70</td><td>1000 bags</td><td>VIETNAM BALALA FOOD CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/OEM-Soft-Baked-Natural-Flavor-Chicken_1601577159877.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>4</td><td><img src="https://s.alicdn.com/@sc04/kf/H5eb708efdcbe40db81dfef24bc117d0fW/Soft-Baked-Beef-Chicken-Flavor-Mini-Milk.png_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p4"></td><td><strong>Soft Baked Beef Chicken Flavor Mini Milk Bone Dog Treats Premium Ingredients High-Protein Easily Digestible Vitamin Added</strong></td><td>$1.79-1.99</td><td>1000 bags</td><td>VIETNAM BALALA FOOD CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Soft-Baked-Beef-Chicken-Flavor-Mini_1601573344400.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>5</td><td><img src="https://s.alicdn.com/@sc04/kf/H007ba397b51b42b1893d91951d045f40P/Pal-s-Delight-Brand-Chicken-Duck-Salmon.jpeg_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p5"></td><td><strong>Pal's Delight Brand Chicken Duck Salmon Meaty Stick Soft Chewy Grain-Free High-Protein Easily Digestible Balanced Wet Treats</strong></td><td>$1.20-2.40</td><td>900 bags</td><td>VIETNAM BALALA FOOD CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Pal-s-Delight-Brand-Chicken-Duck_1601469428938.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>6</td><td><img src="https://s.alicdn.com/@sc04/kf/Hf0c33958fd8f420cb0bdba19f1802b14t/OEM-ODM-Dog-s-Mini-Bone-Shape.png_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p6"></td><td><strong>OEM/ODM Dog's Mini Bone Shape Grain-Free High Protein Chicken &amp; Meat Treats Reward Snacks 200g/Bag</strong></td><td>$1.95</td><td>2000 bags</td><td>VIETNAM BALALA FOOD CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/OEM-ODM-Dog-s-Mini-Bone_10000033165822.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>7</td><td><img src="https://s.alicdn.com/@sc04/kf/Hf8e6174462724a80a60a61a66404ca72P/OEM-Soft-Baked-Natural-Flavor-Meat-Mini.png_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p7"></td><td><strong>OEM Soft Baked Natural Flavor Meat Mini Heart Dog/Cat Treats High-Protein Easily Digestible Balanced Wet Food No Artificial</strong></td><td>$1.10-1.60</td><td>1000 bags</td><td>VIETNAM BALALA FOOD CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/OEM-Soft-Baked-Natural-Flavor-Meat_1601577251638.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>8</td><td><img src="https://s.alicdn.com/@sc04/kf/A30acabf064314095ba6eb50d55bd6636L/Extra-Large-Waterproof-Orthopedic-Eco-Friendly-Pet.jpg_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p8"></td><td><strong>Extra Large Waterproof Orthopedic Eco-Friendly Pet Sofa Bed Heavy-Duty Cotton Polyester Print Washable Removable Made Vietnam</strong></td><td>$4-7</td><td>100 pieces</td><td>KIM BINH MINH CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Extra-Large-Waterproof-Orthopedic-Eco-Friendly_11000011742178.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>9</td><td><img src="https://s.alicdn.com/@sc04/kf/UTB8ckZsiSbIXKJkSaefq6yasXXag/Custom-Geometric-Pattern-Dog-Pet-Bow-Eco.jpg_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p9"></td><td><strong>Custom Geometric Pattern Dog Pet Bow Eco-Friendly All Seasons Fashion Design Grooming Tie Necktie Made Vietnam Polyester</strong></td><td>$0.30-0.40</td><td>5 pieces</td><td>KIM BINH MINH CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Custom-Geometric-Pattern-Dog-Pet-Bow_50041806754.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>10</td><td><img src="https://s.alicdn.com/@sc04/kf/UTB8oFWxOtoSdeJk43Owq6ya4XXan/Custom-Logo-Multicolor-Plain-Polyester-100-Cotton.jpg_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p10"></td><td><strong>Custom Logo Multicolor Plain Polyester 100% Cotton Spring Summer Modern Dog Apparel with Low MOQ for Export in Bulk</strong></td><td>$2</td><td>4 pieces</td><td>KIM BINH MINH CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Custom-Logo-Multicolor-Plain-Polyester-100_62006948500.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>11</td><td><img src="https://s.alicdn.com/@sc04/kf/A9387aabc38e14cdc9c844aa706cd9d09K/High-Quality-Spring-Summer-Eco-Friendly-100.jpg_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p11"></td><td><strong>High Quality Spring Summer Eco-Friendly 100% Cotton Polyester Floral Modern Luxury Dog Coats Jackets Pet Outwear Wholesale</strong></td><td>$2</td><td>500 pieces</td><td>KIM BINH MINH CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/High-Quality-Spring-Summer-Eco-Friendly_10000013400046.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>12</td><td><img src="https://s.alicdn.com/@sc04/kf/Aec662406fdf84e7a99d8bfd947228b05x/Adorable-Dog-Sweatshirt-Puppy-Clothes-100-Cotton.jpg_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p12"></td><td><strong>Adorable Dog Sweatshirt Puppy Clothes 100% Cotton Polyester Summer Stretchable Soft Warm for Everyday Use Shipping Worldwide</strong></td><td>$2</td><td>500 pieces</td><td>KIM BINH MINH CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Adorable-Dog-Sweatshirt-Puppy-Clothes-100_11000008776863.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>13</td><td><img src="https://s.alicdn.com/@sc04/kf/Uda0735dccefe48ae8ae293c56fdffd2a2/KBM-High-Quality-Eco-Friendly-Modern-Dog.jpg_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p13"></td><td><strong>KBM High Quality Eco-Friendly Modern Dog Beds Hand Washable Removable Soft Warm Cozy Design Print Pattern Cotton Made</strong></td><td>$3-7</td><td>100 pieces</td><td>KIM BINH MINH CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/KBM-High-Quality-Eco-Friendly-Modern_62016380755.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>14</td><td><img src="https://s.alicdn.com/@sc04/kf/H37fdf0e18f6940aeb44b61c30bda634do/FEDERAL-Luxury-Cat-Tree-House-Wood-Frame.png_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p14"></td><td><strong>FEDERAL Luxury Cat Tree House Wood Frame with Sleeping Box Scratching Pole Climbing Shelf Pet Furniture OEM ODM</strong></td><td>$5.55-5.85</td><td>500 pieces</td><td>FEDERAL VIET NAM CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/FEDERAL-Luxury-Cat-Tree-House-Wood_1601940795412.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>15</td><td><img src="https://s.alicdn.com/@sc04/kf/Ha3897143c0d24b8ba7ebb86c2208d3d8G/FEDERAL-Natural-Wooden-Cat-Activity-Tower-with.png_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p15"></td><td><strong>FEDERAL Natural Wooden Cat Activity Tower with Cozy Condo Scratching Column Elevated Perches OEM ODM Wholesale</strong></td><td>$5.55-5.85</td><td>500 pieces</td><td>FEDERAL VIET NAM CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/FEDERAL-Natural-Wooden-Cat-Activity-Tower_1601940716866.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>16</td><td><img src="https://s.alicdn.com/@sc04/kf/Hf61d56eb833b4066a4b4d9d99fd64523r/FEDERAL-Modern-Wood-Cat-Climbing-Furniture-with.png_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p16"></td><td><strong>FEDERAL Modern Wood Cat Climbing Furniture with Enclosed Hideaway Scratching Post Multiple Resting Platforms OEM ODM</strong></td><td>$5.55-5.85</td><td>500 pieces</td><td>FEDERAL VIET NAM CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/FEDERAL-Modern-Wood-Cat-Climbing-Furniture_1601940785515.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>17</td><td><img src="https://s.alicdn.com/@sc04/kf/H37fdf0e18f6940aeb44b61c30bda634do/FEDERAL-Premium-Wooden-Cat-Condo-House-with.png_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p17"></td><td><strong>FEDERAL Premium Wooden Cat Condo House with Scratching Tower Resting Perch Climbing Levels OEM ODM Wholesale</strong></td><td>$5.55-5.85</td><td>500 pieces</td><td>FEDERAL VIET NAM CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/FEDERAL-Premium-Wooden-Cat-Condo-House_1601940735747.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>18</td><td><img src="https://s.alicdn.com/@sc04/kf/H58bb41aca4154fb9926cac7c9457227ci/Vietnam-Factory-Coffee-Wood-Dog-Chew-Natural.jpg_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p18"></td><td><strong>Vietnam Factory Coffee Wood Dog Chew Natural Organic Wooden Dog Toy Long Lasting Teeth Cleaning Stick OEM ODM Size XL</strong></td><td>$1.10</td><td>800 pieces</td><td>FEDERAL VIET NAM CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Vietnam-Factory-Coffee-Wood-Dog-Chew_1601931984218.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>19</td><td><img src="https://s.alicdn.com/@sc04/kf/H073b8afafeff472f93182776c190afcaZ/Wholesale-Coffee-Wood-Dog-Chew-Natural-Organic.jpg_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p19"></td><td><strong>Wholesale Coffee Wood Dog Chew Natural Organic Dog Toy Durable Teeth Cleaning Stick Vietnam Factory OEM ODM Size XL</strong></td><td>$1.10</td><td>800 pieces</td><td>FEDERAL VIET NAM CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Wholesale-Coffee-Wood-Dog-Chew-Natural_1601932011070.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>20</td><td><img src="https://s.alicdn.com/@sc04/kf/S238e858ddbef48d4bb9446286ab2b23bH/Cat-Scratcher-Cardboard-Corrugated-Eco-Friendly-Indoor.png?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p20"></td><td><strong>Cat Scratcher Cardboard Corrugated Eco-Friendly Indoor Use Scratching Pad Wave Shape Lam Dong HOANG LINH SG Kimy +84938616690</strong></td><td>$0.50-1.50</td><td>100 pieces</td><td>HOANG LINH SG MANUFACTURING CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Cat-Scratcher-Cardboard-Corrugated-Eco-Friendly_10000021764802.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>21</td><td><img src="https://s.alicdn.com/@sc04/kf/Sb8beba2dede444e088831c3f4a8b8200N/Factory-Wholesale-Basic-Custom-Pattern-Durable-Eco.png?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p21"></td><td><strong>Factory Wholesale Basic Custom Pattern Durable Eco-Friendly Paper Cat Scratching Board &amp; Scratcher Toy in Lam Dong HOANG LINH SG</strong></td><td>$0.50-1.50</td><td>100 pieces</td><td>HOANG LINH SG MANUFACTURING CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Factory-Wholesale-Basic-Custom-Pattern-Durable_10000021972894.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>22</td><td><img src="https://s.alicdn.com/@sc04/kf/S17f15f12cb034bb6a254d324e013d1d8e/Pet-Factory-Supply-Popular-Nature-Catnip-Cat.jpg_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p22"></td><td><strong>Pet Factory Supply Popular Nature Catnip Cat Toy Mint Dried Crushed Leaves Indoor Use From Lam Dong Hoang Linh SG</strong></td><td>$0.03-0.08</td><td>100 bags</td><td>HOANG LINH SG MANUFACTURING CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Pet-Factory-Supply-Popular-Nature-Catnip_10000029501621.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>23</td><td><img src="https://s.alicdn.com/@sc04/kf/S9a184d675b374c99af6f3b485fae9f28Z/Cat-Chew-Toy-Eco-Friendly-Paper-Material.png?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p23"></td><td><strong>Cat Chew Toy-Eco-Friendly Paper Material-Furniture Protector-Indoor Use-Exercise Scratcher-from Lam Dong HOANG LINH SG</strong></td><td>$0.50-1.50</td><td>100 pieces</td><td>HOANG LINH SG MANUFACTURING CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Cat-Chew-Toy-Eco-Friendly-Paper_10000022357784.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>24</td><td><img src="https://s.alicdn.com/@sc04/kf/S7a3c9820058d4fcea03aec2910cfb940P/100-Natural-Catnip-Fresh-Dried-Green-Shredded.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p24"></td><td><strong>100% Natural Catnip Fresh Dried Green Shredded Chew Toys for Cats From Lam Dong Hoang Linh SG</strong></td><td>$0.25-0.30</td><td>100 bags</td><td>HOANG LINH SG MANUFACTURING CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/100-Natural-Catnip-Fresh-Dried-Green_10000029775972.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>25</td><td><img src="https://s.alicdn.com/@sc04/kf/Sd25e1685785143608e61eaf18557b6bah/Hot-Selling-Customized-Mint-Powder-Catnip-Dust.png_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p25"></td><td><strong>Hot Selling Customized Mint Powder Catnip Dust Pet Chew Toys Pure Natural Catnip Leaf From Lam Dong Hoang Linh SG Indoor Use</strong></td><td>$0.03-0.08</td><td>100 bags</td><td>HOANG LINH SG MANUFACTURING CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Hot-Selling-Customized-Mint-Powder-Catnip_10000029246852.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>26</td><td><img src="https://s.alicdn.com/@sc04/kf/H56d8c4e5c367453da68201049b489ff4F/Vietnam-Modern-Minimalist-Cat-Scratcher-House-Cardboard.png_200x200.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p26"></td><td><strong>Vietnam Modern Minimalist Cat Scratcher House Cardboard Durable Indoor Pet Bed for Cats Solid Color One Level Design</strong></td><td>$3.38-3.50</td><td>500 pieces</td><td>VIETNAM ZHENGXING TECHNOLOGY CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Vietnam-Modern-Minimalist-Cat-Scratcher-House_1601173015243.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>27</td><td><img src="https://s.alicdn.com/@sc04/kf/Haf2d79687e824cddb6273986d596068ch/NEW-L-Shape-Cat-Scratcher-Boardn-Cat.jpg_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p27"></td><td><strong>NEW L Shape Cat Scratcher Boardn Cat Scratchers for Indoor Cats Vertical Cardboard</strong></td><td>$5.55-5.85</td><td>3000 pieces</td><td>VIETNAM ZHENGXING TECHNOLOGY CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/NEW-L-Shape-Cat-Scratcher-Boardn_1601866274279.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>28</td><td><img src="https://s.alicdn.com/@sc04/kf/Hb295d8c394cd471cb0d0e313605799fbx/Vietnam-Cat-Scratcher-L-Shape-Scratch-Pad.jpg_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p28"></td><td><strong>Vietnam Cat Scratcher L Shape Scratch Pad Wall Mounted Vertical Scratching Board Durable Cardboard to Protect Furniture</strong></td><td>$5.55-5.85</td><td>3000 pieces</td><td>VIETNAM ZHENGXING TECHNOLOGY CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Vietnam-Cat-Scratcher-L-Shape-Scratch_1601866123683.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>29</td><td><img src="https://s.alicdn.com/@sc04/kf/A51e9d79b77c64e70b2643f0cddb09988s/Vietnam-U-Shaped-Orthopedic-Bolster-Pillow-Support.jpg_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p29"></td><td><strong>Vietnam U-Shaped Orthopedic Bolster Pillow Support Plush Cover Foldable Foam Dog Bed for Pets Sleeping</strong></td><td>$4.84-5.20</td><td>500 pieces</td><td>VIETNAM ZHENGXING TECHNOLOGY CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Vietnam-U-Shaped-Orthopedic-Bolster-Pillow_10000029659312.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+            <tr><td>30</td><td><img src="https://s.alicdn.com/@sc04/kf/Hbefd3004a40d4ad0b6494530a4cbc07bi/Vietnam-Natural-Coffee-Wood-Chewing-Stick-Eco.jpg_480x480.jpg?hasNWGrade=1" style="border-radius:4px; object-fit:cover; width:60px; height:60px;" alt="p30"></td><td><strong>Vietnam Natural Coffee Wood Chewing Stick Eco-Friendly Puppy Molar Toy for Playful Dogs Teeth Cleaning Toy</strong></td><td>$1.95-2.30</td><td>1000 pieces</td><td>VIETNAM ZHENGXING TECHNOLOGY CO., LTD</td><td><a href="https://www.alibaba.com/product-detail/Vietnam-Natural-Coffee-Wood-Chewing-Stick_11000003523521.html" target="_blank" class="link-store-btn">Xem Chi Tiết</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="sub-title"><i class="fa-solid fa-scale-balanced"></i> Product Benchmark - nhận định theo nhóm (từ 30 sản phẩm của chính 5 nhà máy đã xác minh)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr><th>Tiêu chí</th><th>Nhận định</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Cơ cấu mẫu 30 sản phẩm</strong></td><td>Theo 5 nhà máy: treats/thức ăn vặt &amp; wet food chó-mèo (VIETNAM BALALA FOOD, 7 SP: duck wrap sweet potato, waffle baked, mini milk bone, meaty stick, mini heart, OEM/ODM); quần áo/đệm/bandana/nơ (KIM BINH MINH, 6 SP); coffee wood chew &amp; cat tree gỗ (FEDERAL VIET NAM, 6 SP); cat scratcher bìa sóng &amp; catnip toys (HOANG LINH SG, 6 SP); cat scratcher/nest, dog bed &amp; coffee chew gỗ (ZHENGXING, 5 SP).</td></tr>
+            <tr><td><strong>Vật liệu lợi thế VN</strong></td><td>Coffee wood (FEDERAL, ZHENGXING), bìa sóng &amp; catnip trồng tại Lâm Đồng (HOANG LINH SG), cotton/polyester may mặc (KIM BINH MINH), thịt gà/vịt/khoai lang (BALALA) - đều gắn chuỗi cung nội địa; câu chuyện "factory made in Vietnam" chứng minh được bằng ảnh dây chuyền &amp; chứng nhận (BRC 381A1910001, ISO 22000/HACCP, SMETA).</td></tr>
+            <tr><td><strong>Customization / OEM</strong></td><td>Cả 5 nhà máy đều nhận OEM/ODM/private label: công thức &amp; bao bì riêng (BALALA), may logo/quần áo theo yêu cầu MOQ thấp (KIM BINH MINH), cat tree/cat furniture thiết kế riêng (FEDERAL), catnip/scratcher custom (HOANG LINH SG), đồ gỗ pet OEM (ZHENGXING) - phù hợp khách muốn xây thương hiệu riêng.</td></tr>
+            <tr><td><strong>MOQ linh hoạt</strong></td><td>MOQ quan sát 100-3.000 pcs/bags tùy nhóm: thấp nhất KIM BINH MINH (4-5 pcs) và HOANG LINH SG (100 pcs) giúp thử nghiệm dễ; nhóm food/treats của BALALA chốt theo bags (900-2.000 bags); nhóm cat scratcher gỗ ZHENGXING đặt 500-3.000 pcs.</td></tr>
+            <tr><td><strong>Khoảng trống sản phẩm</strong></td><td>Kibble hoàn chỉnh và smart pet vẫn trống ở nhóm nhà máy VN đạt chuẩn; cat tree rất hiếm - mới chỉ FEDERAL VIET NAM (Hà Nội) có cat tree OEM/ODM; collar/dây dắt cao cấp chưa có nhà máy VN đạt chuẩn trong mẫu - cơ hội khác biệt hóa cho nhà sản xuất.</td></tr>
+            <tr><td><strong>Lưu ý dữ liệu</strong></td><td>Giá FOB &amp; MOQ quan sát theo từng listing tại ngày thu thập 04-07/09/2026, có thể thay đổi; luôn xác nhận lại đơn vị tính, bao bì, chứng nhận (BRC/ISO/HACCP; FDA nếu xuất Mỹ) và chi phí logistics khi chào hàng.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CHƯƠNG 5: IMAGE ANALYSIS & BENCHMARKING -->
+    <div id="sec5" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-image"></i> Chương 5: Image Analysis &amp; Benchmarking (Phân tích ảnh listing)</h2>
+      <p>Nhận xét dưới đây dựa trên <strong>30 ảnh sản phẩm của 5 nhà máy sản xuất pet Việt Nam đã xác minh</strong> (ảnh thật thu thập từ CDN *.alicdn.com) gắn với 30 listing ở Chương 4, kết hợp quan sát giao diện search/product của Alibaba các ngày 04–07/09/2026. Đây là đánh giá định tính nhằm rút ra việc cần cải thiện khi nhà VN tối ưu gian hàng.</p>
+      <h3 class="sub-title"><i class="fa-solid fa-magnifying-glass"></i> Quan sát chính</h3>
+      <div class="highlight">
+        <p style="margin-bottom:0.5rem;"><strong>1. Ưu điểm nền tảng:</strong> đa số ảnh sản phẩm có nền sáng/trắng, chụp sản phẩm đơn lẻ kiểu catalog (phù hợp chuẩn tìm kiếm Alibaba), độ nét thumbnail tốt, một số nhà bán đã khéo dùng ảnh đóng gói/nguyên liệu (coffee wood còn vỏ, coir thô) để tăng cảm giác "tự nhiên - made in Vietnam".</p>
+        <p style="margin-bottom:0.5rem;"><strong>2. Điểm yếu lặp lại:</strong> rất ít ảnh <em>lifestyle</em> (thú cưng đang dùng thật) hoặc ảnh có thước kích thước/scale; nhiều listing chèn chữ to, logo hoặc khung viền chồng lên ảnh chính và tiêu đề nhồi keyword rất dài (có listing dài hơn 25 từ) - kiểu này dễ bị Alibaba flag chất lượng nội dung và giảm tỷ lệ click từ người mua B2B.</p>
+        <p style="margin-bottom:0.5rem;"><strong>3. Thiếu bằng chứng sản xuất:</strong> với nhóm handmade (đệm mây/lục bình, chew coffee wood, coir), hầu như chưa có video quy trình hoặc ảnh xưởng để chứng minh câu chuyện "eco, made in Vietnam" - yếu tố quyết định với khách nhập khẩu Âu-Mỹ vốn bị cạnh tranh bởi hàng Trung Quốc cùng mức giá.</p>
+        <p style="margin-bottom:0;"><strong>4. Khoảng cách về bộ ảnh phụ:</strong> giữa các listing của 5 nhà máy vẫn chênh lệch rõ - listing có đủ 3-5 ảnh phụ (lifestyle, scale, đóng gói) tăng độ tin cậy đáng kể; listing chỉ có 1 ảnh duy nhất khiến người mua khó đánh giá và thường phải hỏi trực tiếp trước khi chốt.</p>
+      </div>
+      <h3 class="sub-title"><i class="fa-solid fa-list-check"></i> Checklist tối ưu ảnh đề xuất cho nhà cung cấp VN</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Hạng mục tối ưu</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Ảnh chính nền trắng/sáng, sản phẩm chiếm &ge;80% khung hình, dùng ảnh gốc độ phân giải cao (khuyến nghị &ge;750px) thay vì thumbnail 300x300.</td></tr>
+            <tr><td>2</td><td>Bổ sung 3-5 ảnh phụ: lifestyle (thú cưng dùng thật), ảnh scale/kích thước (đặt cạnh thước hoặc bàn tay), bao bì &amp; đóng gói xuất khẩu, chi tiết chất liệu &amp; logo custom.</td></tr>
+            <tr><td>3</td><td>Quay video ngắn 15-30 giây quy trình handmade (mây/lục bình, coffee wood, coir) để chứng minh "eco - made in Vietnam" và tăng thời gian xem của khách.</td></tr>
+            <tr><td>4</td><td>Hạn chế text/logo chồng lên ảnh chính; đưa giá, công dụng, thông số vào mô tả và bảng attributes chuẩn của Alibaba.</td></tr>
+            <tr><td>5</td><td>Đặt tên file ảnh bằng từ khóa tiếng Anh chuẩn (vd <em>coffee-wood-dog-chew-vietnam.jpg</em>) và viết tiêu đề gọn (&lt;100 ký tự, không nhồi keyword) để tăng điểm chất lượng listing.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CHƯƠNG 6: PRICING INTELLIGENCE -->
+    <div id="sec6" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-tags"></i> Chương 6: Pricing Intelligence (So sánh giá &amp; MOQ)</h2>
+      <p>Tổng hợp dải giá FOB và MOQ quan sát được từ <strong>30 listing của chính 5 nhà máy sản xuất pet Việt Nam đã xác minh</strong> (Chương 3–4; thu thập 04–07/09/2026). Đơn vị giá là USD theo giá hiển thị trên Alibaba; MOQ là mức "Min. order" hiển thị trên listing. Các nhóm dưới đây gộp theo từng nhà máy với dải giá thực quan sát trên 30 sản phẩm - không bao gồm giá của công ty trading/đơn vị đa ngành đã loại ở Chương 3.</p>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nhóm sản phẩm</th>
+              <th>Dải giá FOB</th>
+              <th>MOQ</th>
+              <th>Ghi chú</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Dog/cat treats &amp; food (VIETNAM BALALA FOOD)</td><td>US$0,14–2,40</td><td>900–2.000 bags</td><td>7 SP: duck wrap sweet potato, waffle/soft baked, mini milk bone, meaty stick, mini heart; OEM/ODM + private label; BRC 381A1910001 &amp; ISO22000.</td></tr>
+            <tr><td>Pet clothing/bed/bandana (KIM BINH MINH)</td><td>US$0,30–7</td><td>4–500 pcs</td><td>6 SP: pet sofa bed, dog coat, sweatshirt, bow/necktie, apparel; OEM may theo yêu cầu, nhận đơn nhỏ 4–5 pcs.</td></tr>
+            <tr><td>Coffee wood chew &amp; cat tree (FEDERAL VIET NAM)</td><td>US$1,10–5,85</td><td>500–800 pcs</td><td>6 SP: cat tree/activity tower/cat condo (OEM/ODM) + coffee chew size XL; SMETA; lưu ý phản hồi chậm (&gt;24h).</td></tr>
+            <tr><td>Chew/tug/cat toys &amp; catnip (HOANG LINH SG)</td><td>US$0,03–1,50</td><td>100 pcs/bags</td><td>6 SP: cat scratcher bìa sóng, catnip leaf/shredded/dust; sản xuất tại Lâm Đồng; phản hồi nhanh (≤4h).</td></tr>
+            <tr><td>Cat house/scratcher/dog bed (VIETNAM ZHENGXING)</td><td>US$1,95–5,85</td><td>500–3.000 pcs</td><td>5 SP: cat scratcher house, L-shape/wall mounted, dog bed U-shape orthopedic, coffee chew; OEM/ODM đồ gỗ pet.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight">
+        <strong>Đọc bảng giá đúng cách:</strong> ① MOQ 100–500 pcs (thậm chí 4–5 pcs ở KIM BINH MINH) giúp khách thử nghiệm sản phẩm mới và dropshipper tiếp cận dễ - nhưng với khách nhập container/phân phối, MOQ và giá FOB sẽ được thương lượng lại theo volume, giá listing chỉ là điểm khởi đầu. ② Giá FOB trên listing chưa gồm logistics, phí kiểm định và chứng từ; khi chốt đơn cần hỏi giá CIF/CFR theo cảng đích. ③ Nhóm food/treats của BALALA chốt theo bags (900–2.000 bags) - nên xin mẫu (sample) trước khi đặt lô; nhóm đồ gỗ/scratcher đặt theo pcs, đơn hàng càng lớn giá càng giảm. ④ Hàng eco/natural VN nên đẩy giá trị qua câu chuyện nguồn gốc, chứng nhận (BRC 381A1910001, ISO/HACCP, SMETA, FSC nơi có), năng lực OEM/custom và sự ổn định cung ứng thay vì đua giá thấp với Trung Quốc.
+      </div>
+    </div>
+
+    <!-- CHƯƠNG 7: SEO INSIGHTS, EXPORT STRATEGY & RISK ANALYSIS -->
+    <div id="sec7" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-wand-magic-sparkles"></i> Chương 7: SEO Insights, Export Strategy &amp; Risk Analysis (SEO, chiến lược xuất khẩu &amp; rủi ro)</h2>
+      <p>Chương tổng hợp: bộ từ khóa SEO gợi ý cho gian hàng B2B, chân dung người mua, chiến lược xuất khẩu theo thứ tự ưu tiên, bảng rủi ro - thuế quan/quy định và danh mục nguồn dữ liệu đã dùng cho toàn bộ báo cáo.</p>
+      <h3 class="sub-title"><i class="fa-solid fa-key"></i> (1) Bộ từ khóa SEO gợi ý (20 từ khóa, 5 nhóm - tiếng Anh)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr><th>Nhóm</th><th>Từ khóa gợi ý</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>(a) Core product</strong></td><td>pet food manufacturer; dog treats supplier; pet accessories wholesale; cat food factory</td></tr>
+            <tr><td><strong>(b) Origin Vietnam</strong></td><td>Vietnam pet food supplier; dog treats made in Vietnam; Vietnam pet accessories manufacturer; OEM pet food Vietnam factory</td></tr>
+            <tr><td><strong>(c) Buyer intent (wholesale / OEM / private label)</strong></td><td>pet food wholesale bulk; OEM ODM pet food private label; dog chews bulk supplier; pet supplies factory direct</td></tr>
+            <tr><td><strong>(d) Material / process</strong></td><td>natural air-dried dog treats; freeze-dried pet food manufacturer; fish skin dog chews (đặc sản VN - da cá tra/cá biển); eco-friendly pet products (rattan/water hyacinth pet basket, recycled toys)</td></tr>
+            <tr><td><strong>(e) Market / use case</strong></td><td>pet food exporter for USA market / FDA registered pet food manufacturer; pet products for EU market (grain-free, functional); pet supplies for Amazon FBA sellers; veterinary diet / functional pet treats OEM</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight">
+        <strong>Gợi ý sử dụng:</strong> kết hợp cụm "FDA registered Vietnam OEM dog treats manufacturer" cho trang chủ gian hàng; theo trang sản phẩm dùng cụm như "air-dried fish skin dog chew bulk". Kiểm chứng thêm bằng công cụ keyword trước khi chạy chiến dịch (gợi ý dựa trên cấu trúc tiêu đề listing quan sát thực tế trên Alibaba: [product] + [origin/manufacturer] + [buyer intent] + [material/process]).
+      </div>
+      <h3 class="sub-title"><i class="fa-solid fa-users"></i> (2) Chân dung người mua B2B tóm tắt (Buyer Persona)</h3>
+      <p><strong>4 nhóm người mua chính:</strong></p>
+      <p><strong>① Nhà nhập khẩu / nhà phân phối</strong> - đơn container, mua đi bán lại cho chuỗi pet shop/siêu thị; quyết định bởi giá FOB/container, MOQ theo container, nguồn cung ổn định, chứng từ xuất khẩu đầy đủ.</p>
+      <p><strong>② Chuỗi bán lẻ &amp; thương hiệu pet (Petco/PetSmart/Chewy, thương hiệu D2C)</strong> - hợp tác OEM/ODM/private label dài hạn; cần chứng nhận (FDA/ISO/HACCP/AAFCO), năng lực R&amp;D công thức, bao bì theo thị trường.</p>
+      <p><strong>③ Dropshipper / seller TMĐT (Amazon FBA, Shopee, TikTok, Lazada)</strong> - đơn nhỏ-vừa quay vòng nhanh; ưu tiên MOQ linh hoạt, ảnh/video sản phẩm đẹp, giao nhanh, giá nhạy, ít đòi hồ sơ chứng nhận sâu.</p>
+      <p><strong>④ Phòng khám thú y / kênh chuyên môn</strong> - thức ăn chức năng/theo đơn; quyết định bởi hồ sơ dinh dưỡng, uy tín khoa học của nhà sản xuất.</p>
+      <p><strong>Yếu tố quyết định mua (xếp theo mức ảnh hưởng):</strong> Chứng nhận &amp; tuân thủ (FDA + FSMA cho Mỹ; ISO 9001/HACCP/GMP; AAFCO; cơ sở được duyệt cho EU; halal) là "điều kiện cần" &rarr; năng lực OEM/ODM + R&amp;D công thức theo thị trường &rarr; giá &amp; chi phí logistics (cạnh tranh với Thái Lan/Trung Quốc) &rarr; MOQ linh hoạt (quyết định với dropshipper &amp; thương hiệu nhỏ) &rarr; bao bì thiết kế riêng, tốc độ gửi mẫu, giao tiếp tiếng Anh &amp; minh bạch hồ sơ.</p>
+      <h3 class="sub-title"><i class="fa-solid fa-paper-plane"></i> (3) Chiến lược xuất khẩu đề xuất (Export Strategy)</h3>
+      <p><strong>S1 - Định vị "eco &amp; natural, made in Vietnam":</strong> khai thác lợi thế nguyên liệu nội địa (coffee wood, coir, mây/lục bình/rattan, basa fish skin, duck jerky) làm nền tảng thương hiệu; bán câu chuyện nguồn gốc + năng lực OEM linh hoạt + MOQ thấp thay vì cạnh tranh giá rẻ với Trung Quốc/Thái Lan.</p>
+      <p><strong>S2 - Ưu tiên thị trường theo thứ tự:</strong> ① ASEAN &amp; Hàn Quốc (thuế thấp qua ATIGA/VKFTA, bằng chứng xuất khẩu đang chạy: Woosung ~1.000 tấn sang Hàn; gia công Bình Dương/Long An cho ASEAN) &rarr; ② EU (EVFTA về 0% nhưng pet food chứa sản phẩm phụ động vật cần cơ sở được phê duyệt theo Reg. (EC) 1069/2009) &rarr; ③ Nhật/Úc/Canada (CPTPP) &rarr; ④ Mỹ (chỉ khi đã có hồ sơ FDA/FSMA và phương án chịu thuế đối ứng 20%, nhắm ngách giá trị cao).</p>
+      <p><strong>S3 - Bổ sung nhóm hàng còn trống:</strong> cat tree/cat furniture dạng gỗ vẫn rất hiếm trên Alibaba VN (mới chỉ FEDERAL VIET NAM có cat tree OEM/ODM; ZHENGXING có thể mở rộng từ năng lực chế biến gỗ sẵn có), kibble private label hoặc functional treats và smart pet gần như chưa có nhà máy VN đạt chuẩn - khoảng trống để nhà sản xuất khác biệt hóa.</p>
+      <p><strong>S4 - Tối ưu listing:</strong> tiêu đề gọn (&lt;100 ký tự) không nhồi keyword; bộ ảnh/video chuẩn theo checklist Chương 5; điền đầy đủ attributes; chạy cụm từ khóa chủ lực như "FDA registered Vietnam OEM dog treats manufacturer" cho trang chủ.</p>
+      <p><strong>S5 - Kế hoạch RFQ:</strong> trả lời RFQ nhóm pet supplies 2-3 lần/tuần; chủ động gửi mẫu coffee wood chew/coir (chi phí thấp) cho khách tiềm năng Âu-Mỹ-ASEAN; cam kết phản hồi &lt;24h (đối thủ VN tốt nhất đang ở mức 1-3h).</p>
+      <p><strong>S6 - Thẩm định &amp; hồ sơ:</strong> khi hợp tác với 5 nhà máy đạt chuẩn, yêu cầu cung cấp ISO 9001/HACCP/GMP, FDA registration (nếu xuất Mỹ), chứng nhận FSC (nơi có), giấy kiểm dịch cho hàng nguồn gốc động vật; với bất kỳ đơn vị nào trong Bảng B "Đã loại trừ" (Chương 3) nếu muốn cân nhắc lại, hãy yêu cầu video call thăm nhà máy, hồ sơ pháp lý và đặt đơn hàng thử nhỏ trước khi đặt lớn.</p>
+      <h3 class="sub-title"><i class="fa-solid fa-triangle-exclamation"></i> (4) Bảng rủi ro (Risk Matrix)</h3>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr><th>Rủi ro</th><th>Mức độ</th><th>Giảm thiểu</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Thuế đối ứng Mỹ 20% (khung 26/10/2025) + Điều tra Mục 301 về IP của VN (thông báo 29/05/2026)</td><td>Cao</td><td>Trì hoãn chiến lược Mỹ, tập trung ASEAN/Hàn/EU trước; theo dõi USTR; nếu xuất Mỹ chỉ nhắm sản phẩm giá trị gia tăng cao có thể hấp thụ thuế.</td></tr>
+            <tr><td>Pet food chứa sản phẩm phụ động vật vào EU cần cơ sở được phê duyệt theo Reg. (EC) 1069/2009 &amp; 142/2011</td><td>Cao với pet food; thấp với đồ chơi/phụ kiện</td><td>Phân loại rõ nhóm hàng; với pet food tìm nhà gia công đã có mã số cơ sở EU hoặc xuất dạng không chứa thành phần nguồn gốc động vật.</td></tr>
+            <tr><td>Cạnh tranh giá từ Trung Quốc (đang SEO tiếng Việt chiếm kênh "nguồn hàng VN") và Thái Lan (~35% thị phần nội địa VN)</td><td>Trung bình-cao</td><td>Định vị eco/natural made-in-Vietnam + OEM linh hoạt + chứng nhận; không đua giá thấp; minh bạch nguồn gốc trên listing.</td></tr>
+            <tr><td>Nguồn cung nhà máy pet VN đạt chuẩn rất khan hiếm (5 đơn vị trên toàn Alibaba) - rủi ro khi nhà máy chính quá tải hoặc phản hồi chậm</td><td>Trung bình</td><td>Duy trì quan hệ song song 2-3 nhà máy ở các phân khúc khác nhau (treats, phụ kiện may, đồ gỗ pet); kiểm tra Trade Assurance; đặt lịch factory audit định kỳ; dự phòng nguồn thay thế sau khi thẩm định lại.</td></tr>
+            <tr><td>Listing thiếu hồ sơ chứng nhận công khai / sai lệch đơn vị hiển thị (một số listing pet food hiển thị sai đơn vị tính, certificate trống trên profile VN)</td><td>Trung bình</td><td>Xác nhận lại đơn vị tính và chất lượng trước khi so giá; yêu cầu bản sao chứng nhận khi trao đổi; ưu tiên nhà máy công khai certificate (BRC/ISO/HACCP/SMETA).</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="sub-title"><i class="fa-solid fa-book-open"></i> (5) Danh mục nguồn dữ liệu (Sources - truy cập 04/09/2026)</h3>
+      <div class="highlight">
+        <strong>Thị trường toàn cầu &amp; Mỹ</strong>
+        <p style="margin-bottom:0.25rem;">- https://americanpetproducts.org/news/u.s.-pet-industry-reaches-158-billion-in-2025-poised-for-continued-growth-in-2026 (APPA, 26/03/2026)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.petfoodindustry.com/pet-food-market/market-trends-and-reports/news/15825309/us-pet-industry-hits-158-billion-in-2025 (tóm tắt APPA 2026, 15/05/2026)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.petfoodindustry.com/pet-food-market/market-trends-and-reports/news/15741428/report-pet-ownership-expands-as-gen-z-shifts-trends (APPA 2025 SOI, 27/03/2025)</p>
+        <p style="margin-bottom:0.25rem;">- https://goodnewsforpets.com/appa-2025-report-152b-industry-shows-continued-growth-cats-gaining-on-dogs-gen-z-stats-more/ (31/03/2025)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.grandviewresearch.com/industry-analysis/pet-food-industry (pet food 2025: 128,7 tỷ USD; qua DDG)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.fortunebusinessinsights.com/industry-reports/pet-food-market-100554 (qua DDG, cập nhật 17/08/2026)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.imarcgroup.com/pet-food-market ; https://www.mordorintelligence.com/industry-reports/global-pet-food-market-industry ; https://www.straitsresearch.com/report/pet-food-market (qua DDG)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.fortunebusinessinsights.com/pet-care-market-104749 (pet care 2025: 273,42 tỷ USD; qua DDG)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.researchandmarkets.com/reports/5027956/pet-care-global-strategic-business-report (qua DDG)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.maximizemarketresearch.com/market-report/global-pet-care-market/31345/ (qua DDG, 24/02/2025)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.gminsights.com/industry-analysis/pet-accessories-market ; https://www.imarcgroup.com/pet-accessories-market ; https://www.grandviewresearch.com/industry-analysis/pet-accessories-market-report ; https://www.skyquestt.com/report/pet-accessories-market (pet accessories; qua DDG)</p>
+        <p style="margin-bottom:0.25rem;"><strong>Việt Nam</strong></p>
+        <p style="margin-bottom:0.25rem;">- https://www.imarcgroup.com/vietnam-pet-food-market (VN 153,9 triệu USD 2025; truy cập trực tiếp)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.expertmarketresearch.com/vi/reports/vietnam-pet-food-market (VN 141,75 triệu USD 2025; tin 3-4/2026; truy cập trực tiếp)</p>
+        <p style="margin-bottom:0.25rem;">- https://thesaigontimes.vn/cua-rong-cho-nganh-cong-nghiep-thu-cung-viet-nam/ (KTSG Online, 10/08/2024; truy cập trực tiếp)</p>
+        <p style="margin-bottom:0.25rem;">- https://cafef.vn/khai-pha-nganh-thuc-an-thu-cung-day-tiem-nang-tai-thi-truong-viet-nam-20221231095307632.chn (Cafef, 31/12/2022)</p>
+        <p style="margin-bottom:0.25rem;">- https://b-company.jp/vi/pet-food-market-in-vietnam-and-potential-for-imported-products/ (B&amp;Company, 16/10/2024; truy cập trực tiếp)</p>
+        <p style="margin-bottom:0.25rem;">- https://woosungfeed.vn/en/woosung-viet-nam-xuat-khau-gan-1000-tan-thuc-an-thu-cung-sang-thi-truong-han-quoc.html (Woosung VN, 29/07/2023)</p>
+        <p style="margin-bottom:0.25rem;">- https://dexinvietnam.vn/nha-may-san-xuat-thuc-an-thu-cung/ (Dexin VN - OEM/ODM)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.petsupply.com.vn/ (kênh Xinji Pet Food - TQ nhắm thị trường VN)</p>
+        <p style="margin-bottom:0.25rem;">- https://kirincapital.vn/wp-content/uploads/2024/06/BAO-CAO-TRIEN-VONG-NGANH-CONG-NGHIEP-THU-CUNG-VIET-NAM.pdf (báo cáo Kirin Capital 6/2024 - tham chiếu gián tiếp)</p>
+        <p style="margin-bottom:0.25rem;"><strong>Thuế quan &amp; quy định</strong></p>
+        <p style="margin-bottom:0.25rem;">- https://ustr.gov/about/policy-offices/press-office/fact-sheets/2025/october/fact-sheet-united-states-and-viet-nam-reach-framework-agreement-reciprocal-fair-and-balanced-trade (USTR, 26/10/2025)</p>
+        <p style="margin-bottom:0.25rem;">- https://ustr.gov/about/policy-offices/press-office/press-releases/2026/may/ustr-announces-section-301-investigation-vietnams-acts-policies-and-practices-related-intellectual (USTR, 29/05/2026)</p>
+        <p style="margin-bottom:0.25rem;">- https://www.fda.gov/animal-veterinary/animal-foods-feeds/pet-food (FDA, truy cập trực tiếp)</p>
+        <p style="margin-bottom:0.25rem;">- Tra cứu thuế chính thức (kiểm chứng trước khi chốt phương án): https://hts.usitc.gov (Mỹ); https://trade.ec.europa.eu/access-to-markets/en/home (EU); https://www.macmap.org (ITC, đa quốc gia)</p>
+        <p style="margin-bottom:0;"><strong>Thị trường B2B (tham chiếu)</strong></p>
+        <p style="margin-bottom:0;">- https://www.alibaba.com/countrysearch/VN/pet-supplies.html (~26.573 sản phẩm "Pet Supplies Vietnam", 04/09/2026)</p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="foot-grid">
+        <div>
+          <div class="foot-title">B2B Market Intelligence</div>
+          <p style="color: rgba(255,255,255,0.8);">Báo cáo này được biên soạn độc lập bởi **Alibaba B2B Expert**. Toàn bộ thông số tài chính, doanh thu ước tính và khoảng giá FOB được thu thập thông qua khai thác dữ liệu công khai trên Alibaba Brand Analytics và lịch sử giao dịch quốc tế của các nhà cung cấp được verify. Các nhận định mang giá trị tham khảo chiến lược giúp định hướng kinh doanh cho doanh nghiệp ngành pet Việt Nam.</p>
+        </div>
+        <div>
+          <div class="foot-title">Liên hệ</div>
+          <p style="color: rgba(255,255,255,0.8);">Email: info@example.com</p>
+        </div>
+        <div>
+          <div class="foot-title">Dẫn nguồn</div>
+          <p style="color: rgba(255,255,255,0.8);">- Alibaba.com (Brand Analytics, Listings)<br>- Customs &amp; Trade datasets (nếu có)<br>- Frank B2B Market Intelligence (tổng hợp nội bộ)</p>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 B2B Market Intelligence. All rights reserved.</span>
+        <span>Phụ trách: <strong>Frank B2B Expert</strong></span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Modal Overlay -->
+  <div class="overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal-hdr">
+        <h3 id="modalTitle">Details</h3>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-bdy" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    // Basic scrollspy for sidebar highlighting
+    const sections = document.querySelectorAll('.section-card');
+    const navLinks = document.querySelectorAll('.sidebar nav ul li a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        if (pageYOffset >= sectionTop) { current = section.getAttribute('id'); }
+      });
+      navLinks.forEach(link => link.classList.remove('active'));
+      const activeLink = document.querySelector('.sidebar nav ul li a[href="#' + current + '"]');
+      if (activeLink) activeLink.classList.add('active');
+    });
+
+    // Modal functions
+    const overlay = document.getElementById('modalOverlay');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBody = document.getElementById('modalBody');
+    function openModal(title, html){ modalTitle.innerText = title; modalBody.innerHTML = html; overlay.classList.add('active'); }
+    function closeModal(){ overlay.classList.remove('active'); }
+    overlay.addEventListener('click', (e)=>{ if(e.target===overlay) closeModal(); });
+
+    // Charts for Chapter 2 canvases (if Chart.js loaded)
+    try{
+      const ctxShare = document.getElementById('shareChart')?.getContext('2d');
+      if(ctxShare){ new Chart(ctxShare,{type:'doughnut',data:{labels:['Bắc Mỹ','Còn lại'],datasets:[{data:[41.4,58.6],backgroundColor:['#D4A017','#1F75FE'],borderColor:'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom'}}}}); }
+      const ctxGrowth = document.getElementById('growthChart')?.getContext('2d');
+      if(ctxGrowth){ new Chart(ctxGrowth,{type:'line',data:{labels:['2024','2025','2026F'],datasets:[{data:[152,158,165],borderColor:'#D4A017',backgroundColor:'rgba(212,160,23,0.15)',fill:true,tension:0.3,pointBackgroundColor:'#D4A017'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}}); }
+    }catch(e){console.warn('Chart load skipped',e)}
+  </script>
+</body>
+</html>
