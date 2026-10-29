@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="vi" class="lang-vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đề xuất hợp tác KIGIMEX × Alibaba.com — Gạo &amp; Cá cơm — 10/2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{
+  --primary:#1B365D; --secondary:#E8740C; --accent:#2E8B57;
+  --bg-light:#F8F9FA; --text-dark:#1A1A2E; --text-muted:#5A6072;
+  --border:#E2E8F0; --gradient-header:linear-gradient(135deg,#1B365D 0%,#2D5AA0 100%);
+  --client:#0B5C8A;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#fff;color:var(--text-dark);font-size:14.5px;line-height:1.7;}
+html.lang-vi body{font-family:'Be Vietnam Pro',sans-serif;}
+html.lang-en body{font-family:'Inter',sans-serif;}
+html.lang-cn body{font-family:'Noto Sans SC',sans-serif;}
+
+/* language */
+html.lang-vi .cn,html.lang-vi .en,html.lang-vi .blk-cn,html.lang-vi .blk-en{display:none !important;}
+html.lang-cn .vi,html.lang-cn .en,html.lang-cn .blk-vi,html.lang-cn .blk-en{display:none !important;}
+html.lang-en .vi,html.lang-en .cn,html.lang-en .blk-vi,html.lang-en .blk-cn{display:none !important;}
+html.lang-vi .vi{display:inline !important;}
+html.lang-cn .cn{display:inline !important;}
+html.lang-en .en{display:inline !important;}
+html.lang-vi .blk-vi{display:block !important;}
+html.lang-cn .blk-cn{display:block !important;}
+html.lang-en .blk-en{display:block !important;}
+
+.lang-switcher{position:fixed;top:14px;right:14px;z-index:200;display:flex;gap:4px;
+  background:rgba(27,54,93,.92);padding:4px;border-radius:24px;box-shadow:0 4px 14px rgba(0,0,0,.18);}
+.lang-switcher button{border:0;background:transparent;color:#cdd8ea;font-size:11.5px;font-weight:600;
+  letter-spacing:.4px;padding:5px 12px;border-radius:20px;cursor:pointer;font-family:inherit;}
+.lang-switcher button.active{background:#fff;color:var(--primary);}
+
+/* header */
+.site-header{background:var(--gradient-header);color:#fff;}
+.classification{display:flex;align-items:center;gap:10px;padding:9px 40px;
+  background:rgba(0,0,0,.22);font-size:11px;letter-spacing:.8px;text-transform:uppercase;flex-wrap:wrap;}
+.badge-conf{background:#C62828;color:#fff;padding:2px 9px;border-radius:3px;font-weight:700;font-size:10px;letter-spacing:1px;}
+.classification .sep{opacity:.35;}
+.header-main{display:grid;grid-template-columns:1.45fr 1fr;gap:32px;padding:30px 40px 26px;align-items:start;}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:20px;flex-wrap:wrap;}
+.brand img{height:30px;display:block;}
+.brand .ggs{font-size:11.5px;font-weight:500;color:#b9cbe8;letter-spacing:1.2px;border-left:1px solid rgba(255,255,255,.3);padding-left:14px;}
+.brand .x{font-size:16px;color:#FFB268;font-weight:700;}
+.doc-kicker{font-size:11.5px;letter-spacing:2.4px;text-transform:uppercase;color:#9DB7DE;margin-bottom:8px;font-weight:600;}
+.doc-title{font-size:29px;line-height:1.25;font-weight:800;letter-spacing:-.4px;margin-bottom:6px;}
+.doc-title .accent{color:#FFB268;}
+.doc-industry{font-size:17px;font-weight:600;color:#dbe6f7;margin-bottom:12px;}
+.doc-sub{font-size:13px;color:#a9bfdd;max-width:590px;}
+.meta-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.meta-table td{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.14);vertical-align:top;}
+.meta-table td:first-child{color:#9DB7DE;width:46%;font-size:11px;letter-spacing:.6px;text-transform:uppercase;}
+.meta-table td:last-child{color:#fff;font-weight:600;text-align:right;}
+.status-pill{display:inline-block;background:#2E8B57;padding:2px 10px;border-radius:3px;font-size:10.5px;letter-spacing:1px;}
+.header-tags{display:flex;flex-wrap:wrap;gap:8px;padding:0 40px 20px;}
+.htag{font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;background:rgba(255,255,255,.13);color:#e6eefb;border:1px solid rgba(255,255,255,.2);}
+.htag.hot{background:#FFB268;border-color:#FFB268;color:#5a2b00;}
+.htag.up{background:#2E8B57;border-color:#2E8B57;color:#fff;}
+.htag.red{background:#C62828;border-color:#C62828;color:#fff;}
+
+/* toc */
+.toc{position:sticky;top:0;z-index:150;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);padding:8px 188px 8px 34px;display:flex;flex-wrap:wrap;gap:5px;}
+.toc a{flex:0 0 auto;font-size:11.5px;font-weight:600;color:var(--text-muted);text-decoration:none;
+  padding:5px 11px;border-radius:18px;border:1px solid transparent;white-space:nowrap;transition:.15s;}
+.toc a:hover{background:var(--primary);color:#fff;}
+.toc a .num{color:var(--secondary);margin-right:5px;}
+.toc a:hover .num{color:#FFB268;}
+
+/* layout */
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px 70px;}
+section{padding:50px 0 8px;border-bottom:1px solid var(--border);}
+section:last-of-type{border-bottom:0;}
+.sec-head{display:flex;align-items:flex-start;gap:16px;margin-bottom:8px;}
+.sec-num{font-size:13px;font-weight:800;color:#fff;background:var(--primary);min-width:38px;height:38px;
+  border-radius:9px;display:flex;align-items:center;justify-content:center;letter-spacing:.5px;flex:0 0 auto;}
+.sec-title{font-size:21px;font-weight:800;color:var(--primary);letter-spacing:-.2px;line-height:1.3;}
+.sec-sub{font-size:13px;color:var(--text-muted);margin-top:2px;}
+h3{font-size:15.5px;font-weight:700;color:var(--primary);margin:24px 0 10px;}
+h4{font-size:13.5px;font-weight:700;color:var(--text-dark);margin:18px 0 8px;}
+p{margin-bottom:12px;}
+.small{font-size:12.5px;color:var(--text-muted);}
+.src{font-size:11.5px;color:var(--text-muted);font-style:italic;margin-top:6px;}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:20px 0 8px;}
+.stat{background:var(--bg-light);border:1px solid var(--border);border-left:4px solid var(--secondary);
+  border-radius:10px;padding:16px 18px;}
+.stat .val{font-size:23px;font-weight:800;color:var(--primary);line-height:1.2;letter-spacing:-.5px;}
+.stat .lbl{font-size:12px;color:var(--text-muted);margin-top:4px;font-weight:500;}
+.stat .chg{font-size:11.5px;font-weight:700;margin-top:6px;color:var(--accent);}
+.stat .chg.down{color:#C62828;}
+.stat .chg.neutral{color:var(--text-muted);}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;margin:14px 0 6px;border:1px solid var(--border);border-radius:10px;}
+table.data{width:100%;border-collapse:collapse;font-size:12.5px;min-width:660px;}
+table.data thead th{background:var(--primary);color:#fff;text-align:left;padding:11px 12px;
+  font-size:11.5px;font-weight:600;letter-spacing:.3px;vertical-align:middle;}
+table.data tbody td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+table.data tbody tr:nth-child(even){background:#FAFBFC;}
+table.data tbody tr:hover{background:#F1F6FD;}
+table.data tbody tr:last-child td{border-bottom:0;}
+table.data td.num,table.data th.num{text-align:right;white-space:nowrap;}
+table.data a{color:#2D5AA0;text-decoration:none;font-weight:600;word-break:break-all;}
+table.data a:hover{text-decoration:underline;}
+.grp-row td{background:#EEF3FA !important;font-weight:700;color:var(--primary);font-size:11.5px;
+  letter-spacing:1px;text-transform:uppercase;}
+
+/* tags */
+.tag{display:inline-block;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:3px;letter-spacing:.3px;}
+.tag-vn{background:#FDE7E7;color:#B71C1C;}
+.tag-cn{background:#FFF4E0;color:#A45B00;}
+.tag-ot{background:#E7EFFB;color:#1B4FAA;}
+.tag-up{background:#E3F5EA;color:#1B6E43;}
+.tag-dn{background:#FDE7E7;color:#B71C1C;}
+.tag-hot{background:#FFF0D6;color:#8A4B00;}
+.tag-cl{background:#E0F0F7;color:#0B5C8A;}
+
+/* boxes */
+.insight{background:linear-gradient(90deg,#FFF8F1 0%,#FFFDFB 100%);border-left:4px solid var(--secondary);
+  border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0;font-size:13px;}
+.insight .ttl{font-weight:700;color:#8A4B00;margin-bottom:6px;font-size:12.5px;letter-spacing:.3px;text-transform:uppercase;}
+.highlight{background:#FFFBE6;border:1px solid #F0D77B;border-radius:9px;padding:14px 18px;margin:16px 0;font-size:13px;}
+.note{background:var(--bg-light);border:1px dashed var(--border);border-radius:9px;padding:12px 16px;
+  font-size:11.5px;color:var(--text-muted);margin:10px 0 4px;}
+.cl-box{background:linear-gradient(135deg,#F0F7FB 0%,#FBFDFE 100%);border:1px solid #BFDCEB;
+  border-left:4px solid var(--client);border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0;font-size:13px;}
+.cl-box .ttl{font-weight:700;color:var(--client);margin-bottom:6px;font-size:12.5px;letter-spacing:.3px;text-transform:uppercase;}
+
+/* charts */
+.chart-box{border:1px solid var(--border);border-radius:10px;box-shadow:0 2px 10px rgba(27,54,93,.05);
+  padding:20px 22px 14px;margin:18px 0;background:#fff;}
+.chart-box h4{margin:0 0 2px;font-size:13.5px;}
+.chart-box .cap{font-size:11.5px;color:var(--text-muted);margin-bottom:10px;}
+.canvas-wrap{position:relative;height:300px;}
+.canvas-wrap.sm{height:250px;}
+.chart-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.chart-grid .chart-box{margin:0;}
+
+/* personas */
+.personas{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:14px;margin:16px 0;}
+.persona{border:1px solid var(--border);border-radius:10px;padding:16px 18px;background:#fff;border-top:3px solid var(--secondary);}
+.persona.anch{border-top-color:var(--client);}
+.persona .top{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.avatar{width:42px;height:42px;border-radius:50%;background:var(--gradient-header);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:19px;flex:0 0 auto;}
+.persona .nm{font-weight:700;font-size:13.5px;color:var(--primary);}
+.persona .rg{font-size:11.5px;color:var(--text-muted);}
+.persona dl{display:grid;grid-template-columns:84px 1fr;gap:4px 10px;font-size:12px;}
+.persona dt{color:var(--text-muted);font-weight:500;}
+.persona dd{color:var(--text-dark);}
+.kw{display:inline-block;background:#EEF3FA;color:#2D5AA0;font-size:10.5px;padding:1px 7px;
+  border-radius:3px;margin:2px 3px 0 0;font-family:ui-monospace,monospace;}
+
+/* phases */
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0;}
+.phase{border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+.phase .ph{background:var(--primary);color:#fff;padding:9px 16px;font-size:12px;font-weight:700;letter-spacing:1px;}
+.phase:nth-child(2) .ph{background:#2D5AA0;}
+.phase:nth-child(3) .ph{background:#3A76C4;}
+.phase:nth-child(4) .ph{background:var(--accent);}
+.phase .body{padding:13px 16px;font-size:12.3px;}
+.phase .body ul{list-style:none;}
+.phase .body li{padding-left:14px;position:relative;margin-bottom:6px;}
+.phase .body li:before{content:"→";position:absolute;left:0;color:var(--secondary);font-weight:700;}
+
+/* verdict */
+.verdict{background:var(--gradient-header);color:#fff;border-radius:12px;padding:26px 30px;margin:20px 0;}
+.verdict .vt{font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:#9DB7DE;margin-bottom:8px;}
+.verdict .vv{font-size:19px;font-weight:800;margin-bottom:10px;letter-spacing:-.2px;}
+.verdict p{font-size:13px;color:#dbe6f7;margin:0;}
+
+/* footer */
+.site-footer{margin-top:40px;background:#0F2440;color:#c9d6e8;}
+.f-top{display:flex;align-items:center;gap:14px;padding:20px 40px;border-bottom:1px solid rgba(255,255,255,.1);}
+.f-top img{height:22px;}
+.f-top .fb{font-size:12.5px;color:#8FA6C4;letter-spacing:.5px;}
+.f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;padding:30px 40px;}
+.f-cols h5{font-size:11.5px;letter-spacing:1.4px;text-transform:uppercase;color:#fff;margin-bottom:10px;}
+.f-cols p,.f-cols li{font-size:11.5px;line-height:1.75;color:#9FB3CE;}
+.f-cols ul{list-style:none;}
+.f-cols a{color:#9FB3CE;text-decoration:none;}
+.f-cols a:hover{color:#fff;text-decoration:underline;}
+.f-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:14px 40px;
+  border-top:1px solid rgba(255,255,255,.1);font-size:11px;color:#7E93AF;letter-spacing:.4px;}
+
+@media(max-width:900px){
+  .header-main{grid-template-columns:1fr;gap:22px;padding:26px 22px;}
+  .classification{padding:8px 22px;}
+  .header-tags{padding:0 22px 18px;}
+  .wrap{padding:0 22px 60px;}
+  .chart-grid{grid-template-columns:1fr;}
+  .f-cols{grid-template-columns:1fr 1fr;padding:24px 22px;}
+  .f-top,.f-bottom{padding:16px 22px;}
+  .doc-title{font-size:22px;}
+  .sec-title{font-size:18px;}
+  .toc{padding:8px 14px;flex-wrap:nowrap;overflow-x:auto;}
+  .toc a{font-size:11px;padding:5px 9px;}
+}
+
+@media print{
+  .toc,.lang-switcher{display:none !important;}
+  body{font-size:10.5pt;}
+  .site-header{background:#1B365D !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  section{page-break-inside:avoid;padding:20px 0 6px;}
+  .chart-box{page-break-inside:avoid;box-shadow:none;}
+  .canvas-wrap{height:230px;}
+  .site-footer{background:#0F2440 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+
+<div class="lang-switcher">
+  <button class="active" data-lang="vi" onclick="switchLang('vi')">VI</button>
+  <button data-lang="cn" onclick="switchLang('cn')">CN</button>
+  <button data-lang="en" onclick="switchLang('en')">EN</button>
+</div>
+
+<header class="site-header">
+  <div class="classification">
+    <span class="badge-conf">CONFIDENTIAL</span>
+    <span class="vi">Đề xuất dành riêng cho KIGIMEX</span>
+    <span class="cn">专为 KIGIMEX 编制的方案</span>
+    <span class="en">Prepared exclusively for KIGIMEX</span>
+    <span class="sep">|</span>
+    <span>Alibaba.com GGS Vietnam</span>
+  </div>
+
+  <div class="header-main">
+    <div>
+      <div class="brand">
+        <img src="https://v2.kigimex.com.vn/wp-content/uploads/2026/09/logo-kigimex-13.png" alt="KIGIMEX" style="height:50px;background:#fff;padding:5px 12px;border-radius:6px">
+        <span class="x">×</span>
+        <img src="https://s.alicdn.com/@logo/logo_en_light_horizontal_default_full.png" alt="Alibaba.com">
+        <span class="ggs">GGS VIETNAM</span>
+      </div>
+      <div class="doc-kicker">
+        <span class="vi">Đề xuất hợp tác kinh doanh</span>
+        <span class="cn">商务合作方案</span>
+        <span class="en">Business partnership proposal</span>
+      </div>
+      <div class="doc-title"><span class="vi">Đưa <span class="accent">Gạo</span> và <span class="accent">Cá cơm</span> KIGIMEX lên Alibaba.com</span><span class="cn">将 KIGIMEX <span class="accent">大米</span>与<span class="accent">小公鱼</span>推向 Alibaba.com</span><span class="en">Taking KIGIMEX <span class="accent">rice</span> and <span class="accent">anchovy</span> to Alibaba.com</span></div>
+      <div class="doc-industry">
+        <span class="vi">Kế hoạch 90 ngày · Dữ liệu thị trường &amp; dữ liệu sản phẩm trên sàn · Q4/2026</span>
+        <span class="cn">90 天计划 · 市场数据与平台产品数据 · 2026 年第四季度</span>
+        <span class="en">90-day plan · Market and platform product data · Q4 2026</span>
+      </div>
+      <div class="doc-sub">
+        <span class="vi">Xây dựng riêng theo định hướng thị trường của KIGIMEX: gạo đi Châu Phi, Philippines, châu Á, UAE và tiến tới EU; cá cơm đi Hàn Quốc, Singapore, Malaysia và các thị trường mới.</span>
+        <span class="cn">依据 KIGIMEX 的市场方向定制：大米面向非洲、菲律宾、亚洲、阿联酋并拓展欧盟；小公鱼面向韩国、新加坡、马来西亚及新兴市场。</span>
+        <span class="en">Built around KIGIMEX's market direction: rice to Africa, the Philippines, Asia, the UAE and into the EU; anchovy to Korea, Singapore, Malaysia and new markets.</span>
+      </div>
+    </div>
+    <div>
+      <table class="meta-table">
+        <tr><td><span class="vi">Mã tài liệu</span><span class="cn">文件编号</span><span class="en">Document ID</span></td><td>DOC-PROP-KIGIMEX-2026-001</td></tr>
+        <tr><td><span class="vi">Phiên bản</span><span class="cn">版本</span><span class="en">Version</span></td><td>1.0</td></tr>
+        <tr><td><span class="vi">Ngày</span><span class="cn">日期</span><span class="en">Date</span></td><td>29/10/2026</td></tr>
+        <tr><td><span class="vi">Khách hàng</span><span class="cn">客户</span><span class="en">Client</span></td><td>KIGIMEX (KGM)</td></tr>
+        <tr><td><span class="vi">Người chuẩn bị</span><span class="cn">编制人</span><span class="en">Prepared by</span></td><td>Nguyễn Hoài Nam</td></tr>
+        <tr><td><span class="vi">Hiệu lực</span><span class="cn">有效期</span><span class="en">Validity</span></td><td>30/11/2026</td></tr>
+        <tr><td><span class="vi">Trạng thái</span><span class="cn">状态</span><span class="en">Status</span></td><td><span class="status-pill">FOR REVIEW</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="header-tags">
+    <span class="htag red">KIGIMEX · KGM</span>
+    <span class="htag">GẠO · HS 1006</span>
+    <span class="htag"><span class="vi">CÁ CƠM · HS 0305.59</span><span class="cn">小公鱼 · HS 0305.59</span><span class="en">ANCHOVY · HS 0305.59</span></span>
+    <span class="htag up">50+ <span class="vi">năm</span><span class="cn">年</span><span class="en">years</span></span>
+    <span class="htag hot">HALAL · ISO 22000</span>
+  </div>
+</header>
+
+<nav class="toc">
+  <a href="#s01"><span class="num">01</span><span class="vi">Tóm tắt</span><span class="cn">摘要</span><span class="en">Summary</span></a>
+  <a href="#s02"><span class="num">02</span><span class="vi">Định hướng KH</span><span class="cn">客户方向</span><span class="en">Client direction</span></a>
+  <a href="#s03"><span class="num">03</span><span class="vi">Cơ hội Gạo</span><span class="cn">大米机会</span><span class="en">Rice opportunity</span></a>
+  <a href="#s04"><span class="num">04</span><span class="vi">Cơ hội Cá cơm</span><span class="cn">小公鱼机会</span><span class="en">Anchovy opportunity</span></a>
+  <a href="#s05"><span class="num">05</span><span class="vi">Vì sao Alibaba</span><span class="cn">为何选择</span><span class="en">Why Alibaba</span></a>
+  <a href="#s06"><span class="num">06</span><span class="vi">Gạo trên sàn</span><span class="cn">平台大米</span><span class="en">Rice on platform</span></a>
+  <a href="#s07"><span class="num">07</span><span class="vi">Cá cơm trên sàn</span><span class="cn">平台小公鱼</span><span class="en">Anchovy on platform</span></a>
+  <a href="#s08"><span class="num">08</span><span class="vi">Đối thủ</span><span class="cn">竞争对手</span><span class="en">Competitors</span></a>
+  <a href="#s09"><span class="num">09</span><span class="vi">Người mua</span><span class="cn">买家画像</span><span class="en">Buyers</span></a>
+  <a href="#s10"><span class="num">10</span><span class="vi">Khoảng trống</span><span class="cn">现状差距</span><span class="en">Gap audit</span></a>
+  <a href="#s11"><span class="num">11</span><span class="vi">Giải pháp</span><span class="cn">解决方案</span><span class="en">Solution</span></a>
+  <a href="#s12"><span class="num">12</span><span class="vi">90 ngày</span><span class="cn">90 天</span><span class="en">90 days</span></a>
+  <a href="#s13"><span class="num">13</span><span class="vi">KPI &amp; ROI</span><span class="cn">指标与回报</span><span class="en">KPI &amp; ROI</span></a>
+  <a href="#s14"><span class="num">14</span><span class="vi">Bước tiếp</span><span class="cn">下一步</span><span class="en">Next steps</span></a>
+</nav>
+
+<main class="wrap">
+
+<!-- 01 -->
+<section id="s01">
+  <div class="sec-head">
+    <div class="sec-num">01</div>
+    <div>
+      <div class="sec-title"><span class="vi">Tóm tắt đề xuất</span><span class="cn">方案摘要</span><span class="en">Executive summary</span></div>
+      <div class="sec-sub"><span class="vi">Ba luận điểm và một đề nghị hợp tác cụ thể</span><span class="cn">三个论点与一项具体合作建议</span><span class="en">Three arguments and one concrete proposal</span></div>
+    </div>
+  </div>
+
+  <div class="blk-vi">
+    <p>KIGIMEX có ba thứ mà phần lớn nhà cung cấp trên Alibaba.com không có: <strong>50 năm hoạt động</strong>, <strong>năng lực sản xuất thật</strong> (5 xí nghiệp lương thực, 1 xí nghiệp cá cơm, 300.000 m², 300+ nhân sự) và <strong>bộ chứng nhận phù hợp đúng thị trường mục tiêu</strong> (ISO 9001, ISO 22000, HALAL). Đây chính là ba yếu tố quyết định việc một buyer B2B quốc tế có mở hồ sơ hay không.</p>
+    <p>Thị trường mà KIGIMEX đang hướng tới đều đang mở: Philippines nhập 1,71 tỷ USD gạo mỗi năm và Việt Nam đã chiếm 81,7% thị phần tại đó; UAE nhập 784 triệu USD và tăng 21,3%; Malaysia nhập 31,9 triệu USD cá cơm khô, trong đó Việt Nam đứng số 1 về giá trị; Hàn Quốc nhập 12,1 triệu USD cá cơm khô và Việt Nam chiếm 89% khối lượng. Đây không phải thị trường cần "tạo" mà là thị trường cần <strong>giành lại bằng hiện diện đúng cách</strong>.</p>
+    <p>Vấn đề hiện tại rất cụ thể: tính đến 29/10/2026, <strong>KIGIMEX chưa có gian hàng nào trên Alibaba.com</strong> (đã kiểm tra bằng tìm kiếm trực tiếp trên sàn). Trong khi đó, 126 nhà cung cấp cá cơm và 187 nhà cung cấp gạo — phần lớn nhỏ hơn KIGIMEX rất nhiều — đang nhận RFQ từ đúng những buyer này mỗi ngày.</p>
+  </div>
+  <div class="blk-cn">
+    <p>KIGIMEX 拥有 Alibaba.com 上多数供应商所不具备的三项条件：<strong>50 年经营历史</strong>、<strong>真实产能</strong>（5 家粮食厂、1 家小公鱼厂、30 万 m²、300+ 员工）以及<strong>契合目标市场的认证组合</strong>（ISO 9001、ISO 22000、HALAL）。这三点正是国际 B2B 买家决定是否打开资料的关键。</p>
+    <p>KIGIMEX 所瞄准的市场均在开放：菲律宾每年进口 17.1 亿美元大米，越南已占当地 81.7% 份额；阿联酋进口 7.84 亿美元，增长 21.3%；马来西亚进口 3,190 万美元干小公鱼，越南按金额居第一；韩国进口 1,210 万美元，越南占数量 89%。这些不是需要"创造"的市场，而是需要<strong>以正确方式重新夺回</strong>的市场。</p>
+    <p>当前问题很具体：截至 2026/10/29，<strong>KIGIMEX 在 Alibaba.com 上没有任何店铺</strong>（已通过平台直接检索确认）。与此同时，126 家小公鱼供应商和 187 家大米供应商——多数规模远小于 KIGIMEX——每天都在从这些买家手中获取 RFQ。</p>
+  </div>
+  <div class="blk-en">
+    <p>KIGIMEX has three things most Alibaba.com suppliers lack: <strong>50 years in business</strong>, <strong>real production capacity</strong> (five food enterprises, one anchovy plant, 300,000 m², 300+ staff) and <strong>a certification set that matches its target markets</strong> (ISO 9001, ISO 22000, HALAL). Those three decide whether an international B2B buyer opens a profile at all.</p>
+    <p>Every market KIGIMEX is targeting is open: the Philippines imports US$1.71 bn of rice a year and Vietnam already holds 81.7% share there; the UAE imports US$784 m, up 21.3%; Malaysia imports US$31.9 m of dried anchovy with Vietnam ranked first by value; Korea imports US$12.1 m with Vietnam holding 89% of volume. These are not markets to create — they are markets to <strong>reclaim through the right presence</strong>.</p>
+    <p>The current problem is specific: as of 29 Oct 2026, <strong>KIGIMEX has no store on Alibaba.com</strong> (confirmed by direct platform search). Meanwhile 126 anchovy suppliers and 187 rice suppliers — most far smaller than KIGIMEX — receive RFQs from exactly these buyers every day.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="val">0</div><div class="lbl"><span class="vi">Gian hàng của KIGIMEX trên Alibaba.com</span><span class="cn">KIGIMEX 在 Alibaba.com 的店铺数</span><span class="en">KIGIMEX stores on Alibaba.com</span></div><div class="chg down"><span class="vi">Kiểm tra 29/10/2026</span><span class="cn">2026/10/29 核查</span><span class="en">Checked 29 Oct 2026</span></div></div>
+    <div class="stat"><div class="val">187</div><div class="lbl"><span class="vi">Nhà cung cấp gạo đang cạnh tranh trên sàn</span><span class="cn">平台上竞争的大米供应商</span><span class="en">Rice suppliers competing on the platform</span></div><div class="chg neutral">158 <span class="vi">listing từ khoá "rice"</span><span class="cn">个 "rice" listing</span><span class="en">listings for "rice"</span></div></div>
+    <div class="stat"><div class="val">126</div><div class="lbl"><span class="vi">Nhà cung cấp cá cơm khô trên sàn</span><span class="cn">平台上干小公鱼供应商</span><span class="en">Dried anchovy suppliers on the platform</span></div><div class="chg neutral">49 <span class="vi">listing từ khoá "dried anchovy"</span><span class="cn">个 "dried anchovy" listing</span><span class="en">listings for "dried anchovy"</span></div></div>
+    <div class="stat"><div class="val"><span class="vi">US$4,7M</span><span class="cn">US$4.7M</span><span class="en">US$4.7M</span></div><div class="lbl"><span class="vi">Nhập khẩu cá cơm khô Hàn + Sing + Malay (2024)</span><span class="cn">韩/新/马 干小公鱼进口（2024）</span><span class="en">KR + SG + MY dried anchovy imports (2024)</span></div><div class="chg">VN <span class="vi">dẫn đầu ở cả 3 thị trường</span><span class="cn">在三个市场均领先</span><span class="en">leads in all three</span></div></div>
+  </div>
+  <div class="note"><span class="vi">Ghi chú số liệu: US$4,7M là tổng giá trị nhập khẩu cá cơm khô (HS 030559) của Hàn Quốc (2024, 12,13 triệu USD) + Malaysia (2024, 31,89 triệu USD) + Singapore (2023, 10,51 triệu USD — năm mới nhất có dữ liệu). Chi tiết ở Section 04.</span><span class="cn">注：470 万美元为韩国（2024 年 1,213 万）+ 马来西亚（2024 年 3,189 万）+ 新加坡（2023 年 1,051 万，最新可得年份）干小公鱼（HS 030559）进口额合计。详见第 04 节。</span><span class="en">Note: US$4.7 m combines Korea (2024, US$12.13 m) + Malaysia (2024, US$31.89 m) + Singapore (2023, US$10.51 m — latest available year) of dried anchovy imports (HS 030559). See Section 04.</span></div>
+
+  <div class="verdict">
+    <div class="vt"><span class="vi">Đề nghị hợp tác</span><span class="cn">合作建议</span><span class="en">The proposal</span></div>
+    <div class="vv"><span class="vi">90 ngày · 2 ngành hàng · 1 gian hàng chuyên nghiệp thay vì 20 gian hàng nghiệp dư</span><span class="cn">90 天 · 2 个品类 · 1 个专业店铺，而非 20 个业余店铺</span><span class="en">90 days · two categories · one professional storefront instead of twenty amateur ones</span></div>
+    <div class="blk-vi"><p>Chúng tôi đề xuất đưa KIGIMEX lên Alibaba.com theo mô hình <strong>"hai trụ, một gian hàng"</strong>: gạo là trụ khối lượng (Africa, Philippines, châu Á, UAE), cá cơm là trụ biên lợi nhuận (Hàn, Sing, Malay, thị trường mới), EU là mục tiêu nâng cấp ở giai đoạn 2. Toàn bộ nội dung, chứng nhận và bộ SKU được xây trong 30 ngày đầu; 60 ngày còn lại dồn vào RFQ và chuyển đổi.</p></div>
+    <div class="blk-cn"><p>我们建议以<strong>"双支柱、单店铺"</strong>模式将 KIGIMEX 推上 Alibaba.com：大米为规模支柱（非洲、菲律宾、亚洲、阿联酋），小公鱼为利润支柱（韩国、新加坡、马来西亚、新兴市场），欧盟作为第二阶段升级目标。全部内容、认证与 SKU 组合在前 30 天建成；其余 60 天集中做 RFQ 与转化。</p></div>
+    <div class="blk-en"><p>We propose launching KIGIMEX on Alibaba.com as a <strong>"two pillars, one store"</strong> model: rice as the volume pillar (Africa, the Philippines, Asia, the UAE), anchovy as the margin pillar (Korea, Singapore, Malaysia, new markets), with the EU as a phase-2 upgrade. All content, certification and SKU sets are built in the first 30 days; the remaining 60 focus on RFQs and conversion.</p></div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="s02">
+  <div class="sec-head">
+    <div class="sec-num">02</div>
+    <div>
+      <div class="sec-title"><span class="vi">Định hướng của KIGIMEX &amp; cách chúng tôi đọc định hướng đó</span><span class="cn">KIGIMEX 的方向与我们的解读</span><span class="en">KIGIMEX's direction — and how we read it</span></div>
+      <div class="sec-sub"><span class="vi">Sản phẩm × thị trường × người mua mục tiêu</span><span class="cn">产品 × 市场 × 目标买家</span><span class="en">Product × market × target buyer</span></div>
+    </div>
+  </div>
+
+  <div class="cl-box">
+    <div class="ttl"><span class="vi">Định hướng do KIGIMEX cung cấp</span><span class="cn">KIGIMEX 提供的方向</span><span class="en">Direction provided by KIGIMEX</span></div>
+    <div class="blk-vi"><p><strong>Gạo:</strong> Châu Phi, Philippines, châu Á, UAE — đang hướng tới EU.<br><strong>Cá cơm:</strong> Hàn Quốc, Singapore, Malaysia và các thị trường mới có nhu cầu.<br><strong>Chân dung người mua mục tiêu:</strong> (1) nhà nhập khẩu trực tiếp — gạo và cá cơm; (2) chuỗi siêu thị — gạo và cá cơm; (3) công ty thương mại — cá cơm.</p></div>
+    <div class="blk-cn"><p><strong>大米：</strong>非洲、菲律宾、亚洲、阿联酋——并在推进欧盟。<br><strong>小公鱼：</strong>韩国、新加坡、马来西亚及有需求的新兴市场。<br><strong>目标买家画像：</strong>(1) 直接进口商——大米与小公鱼；(2) 连锁超市——大米与小公鱼；(3) 贸易公司——小公鱼。</p></div>
+    <div class="blk-en"><p><strong>Rice:</strong> Africa, the Philippines, Asia, the UAE — moving towards the EU.<br><strong>Anchovy:</strong> Korea, Singapore, Malaysia and new markets with demand.<br><strong>Target buyers:</strong> (1) direct importers — rice and anchovy; (2) supermarket chains — rice and anchovy; (3) trading companies — anchovy.</p></div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th style="width:16%"><span class="vi">Ngành hàng</span><span class="cn">品类</span><span class="en">Category</span></th>
+        <th style="width:22%"><span class="vi">Thị trường ưu tiên</span><span class="cn">优先市场</span><span class="en">Priority markets</span></th>
+        <th style="width:20%"><span class="vi">Vai trò trong danh mục</span><span class="cn">组合中的角色</span><span class="en">Role in the portfolio</span></th>
+        <th style="width:20%"><span class="vi">Điểm mạnh KIGIMEX dùng được</span><span class="cn">可用的 KIGIMEX 优势</span><span class="en">KIGIMEX strength to use</span></th>
+        <th style="width:22%"><span class="vi">Điều kiện thắng trên sàn</span><span class="cn">平台取胜条件</span><span class="en">What wins on the platform</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><strong><span class="vi">Gạo</span><span class="cn">大米</span><span class="en">Rice</span></strong><br><span class="small">HS 1006</span></td>
+          <td><span class="vi">Africa (Bờ Biển Ngà, Bénin), Philippines, châu Á, UAE → EU (giai đoạn 2)</span><span class="cn">非洲（科特迪瓦、贝宁）、菲律宾、亚洲、阿联酋 → 欧盟（第二阶段）</span><span class="en">Africa (Côte d'Ivoire, Benin), Philippines, Asia, UAE → EU (phase 2)</span></td>
+          <td><span class="vi">Trụ <strong>khối lượng</strong> — đơn hàng 500–5.000 tấn, chu kỳ đều</span><span class="cn"><strong>规模</strong>支柱——500–5,000 吨订单，周期稳定</span><span class="en"><strong>Volume</strong> pillar — 500–5,000 t orders, steady cycle</span></td>
+          <td><span class="vi">5 xí nghiệp lương thực; 50 năm uy tín; HALAL cho Trung Đông; ISO 22000</span><span class="cn">5 家粮食厂；50 年信誉；面向中东的 HALAL；ISO 22000</span><span class="en">Five rice enterprises; 50-year track record; HALAL for the Middle East; ISO 22000</span></td>
+          <td><span class="vi">Giá USD/tấn rõ ràng, MOQ 20–25 tấn, chứng nhận hiển thị, giao hàng đúng hạn</span><span class="cn">明确的美元/吨报价、20–25 吨起订、认证展示、准时交付</span><span class="en">Clear US$/tonne pricing, 20–25 t MOQ, visible certification, on-time delivery</span></td>
+        </tr>
+        <tr>
+          <td><strong><span class="vi">Cá cơm chế biến</span><span class="cn">小公鱼制品</span><span class="en">Processed anchovy</span></strong><br><span class="small">HS 0305.59</span></td>
+          <td><span class="vi">Hàn Quốc, Singapore, Malaysia; thị trường mới: Mỹ (kênh châu Á), Úc, EU ethnic, Trung Đông</span><span class="cn">韩国、新加坡、马来西亚；新兴：美国（亚裔渠道）、澳大利亚、欧盟 ethnic、中东</span><span class="en">Korea, Singapore, Malaysia; new: US Asian channel, Australia, EU ethnic, Middle East</span></td>
+          <td><span class="vi">Trụ <strong>biên lợi nhuận</strong> — giá trị đơn nhỏ hơn nhưng biên cao hơn gạo</span><span class="cn"><strong>利润</strong>支柱——订单额较小但毛利高于大米</span><span class="en"><strong>Margin</strong> pillar — smaller order value, higher margin than rice</span></td>
+          <td><span class="vi">1 xí nghiệp cá cơm chuyên dụng; ISO 22000; HALAL; kinh nghiệm thị trường châu Á</span><span class="cn">1 家专用小公鱼厂；ISO 22000；HALAL；亚洲市场经验</span><span class="en">Dedicated anchovy plant; ISO 22000; HALAL; Asian market experience</span></td>
+          <td><span class="vi">Phân hạng theo kích cỡ, độ khô, tạp chất; bao bì chống ẩm; hồ sơ kiểm nghiệm</span><span class="cn">按规格分级、干度、杂质；防潮包装；检测资料</span><span class="en">Size grading, dryness, foreign matter; moisture-barrier packaging; test reports</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Bản đồ ưu tiên: 6 thị trường mục tiêu theo giá trị nhập khẩu</span><span class="cn">优先地图：按进口额排列的 6 个目标市场</span><span class="en">Priority map: six target markets by import value</span></h4>
+    <div class="cap"><span class="vi">Gạo: giá trị nhập khẩu 2025 (triệu USD) · Cá cơm: giá trị nhập khẩu 2024 (triệu USD)</span><span class="cn">大米：2025 年进口额（百万美元）· 小公鱼：2024 年进口额（百万美元）</span><span class="en">Rice: 2025 import value (US$ m) · Anchovy: 2024 import value (US$ m)</span></div>
+    <div class="canvas-wrap"><canvas id="c01"></canvas></div>
+    <div class="src"><span class="vi">Nguồn: World's Top Exports/ITC (gạo, 2025); Tridge HS 030559 (cá cơm, 2024). EU là tổng nhập khẩu gạo khu vực châu Âu (14,9% × 34,6 tỷ USD).</span><span class="cn">来源：World's Top Exports/ITC（大米 2025）；Tridge HS 030559（小公鱼 2024）。欧盟为区域大米进口总额（14.9% × 346 亿美元）。</span><span class="en">Sources: World's Top Exports/ITC (rice, 2025); Tridge HS 030559 (anchovy, 2024). The EU figure is the regional rice import total (14.9% × US$34.6 bn).</span></div>
+  </div>
+
+  <div class="insight">
+    <div class="ttl"><span class="vi">Điểm chúng tôi muốn KIGIMEX lưu ý</span><span class="cn">希望 KIGIMEX 注意的一点</span><span class="en">One point we want KIGIMEX to note</span></div>
+    <div class="blk-vi"><p>Danh mục của KIGIMEX đang được tổ chức theo <em>sản phẩm</em>, nhưng buyer trên Alibaba.com tìm theo <em>thị trường + chủng loại</em>. Cùng một khách hàng ở Malaysia có thể vừa mua gạo vừa mua cá cơm — Malaysia nhập 777 triệu USD gạo và 31,9 triệu USD cá cơm khô mỗi năm. Điều này có nghĩa: nếu gian hàng được tổ chức đúng, KIGIMEX có thể bán <strong>hai ngành hàng cho cùng một buyer</strong> và tăng giá trị đơn gấp đôi mà không tăng chi phí tiếp cận.</p></div>
+    <div class="blk-cn"><p>KIGIMEX 的产品线按<em>产品</em>组织，但 Alibaba.com 的买家按<em>市场 + 品类</em>搜索。同一个马来西亚客户可能同时采购大米与小公鱼——马来西亚每年进口 7.77 亿美元大米和 3,190 万美元干小公鱼。这意味着：若店铺结构正确，KIGIMEX 可以<strong>向同一买家销售两个品类</strong>，在不增加获客成本的前提下把客单价翻倍。</p></div>
+    <div class="blk-en"><p>KIGIMEX's portfolio is organised by <em>product</em>, but Alibaba.com buyers search by <em>market + category</em>. The same Malaysian customer may buy both rice and anchovy — Malaysia imports US$777 m of rice and US$31.9 m of dried anchovy a year. That means: with the right store structure, KIGIMEX can sell <strong>two categories to the same buyer</strong> and double order value without doubling acquisition cost.</p></div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section id="s03">
+  <div class="sec-head">
+    <div class="sec-num">03</div>
+    <div>
+      <div class="sec-title"><span class="vi">Cơ hội thị trường Gạo theo đúng 5 hướng KIGIMEX chọn</span><span class="cn">按 KIGIMEX 五个方向的的大米市场机会</span><span class="en">The rice opportunity across KIGIMEX's five directions</span></div>
+      <div class="sec-sub"><span class="vi">Châu Phi · Philippines · châu Á · UAE · EU</span><span class="cn">非洲 · 菲律宾 · 亚洲 · 阿联酋 · 欧盟</span><span class="en">Africa · Philippines · Asia · UAE · EU</span></div>
+    </div>
+  </div>
+
+  <div class="blk-vi"><p>Năm 2025, thế giới nhập khẩu 34,6 tỷ USD gạo; Việt Nam xuất khoảng 8,0 triệu tấn trị giá 4,0–4,1 tỷ USD, đứng thứ 3 toàn cầu với 8,9% thị phần giá trị. Điều đáng chú ý: <strong>5 hướng thị trường KIGIMEX chọn chiếm tới 84% tổng giá trị nhập khẩu gạo toàn cầu</strong> — tức là KIGIMEX đang nhắm đúng phần lớn thị trường, vấn đề chỉ là kênh tiếp cận.</p></div>
+  <div class="blk-cn"><p>2025 年全球大米进口 346 亿美元；越南出口约 800 万吨、40–41 亿美元，以 8.9% 的金额份额居全球第三。值得注意的是：<strong>KIGIMEX 选定的 5 个市场方向合计占全球大米进口总值的 84%</strong>——也就是说方向正确，问题只在触达渠道。</p></div>
+  <div class="blk-en"><p>In 2025 the world imported US$34.6 bn of rice; Vietnam shipped about 8.0 Mt worth US$4.0–4.1 bn, ranking third globally with 8.9% of value. Notably, <strong>KIGIMEX's five chosen directions account for 84% of global rice import value</strong> — the direction is right; only the channel is missing.</p></div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th style="width:15%"><span class="vi">Thị trường</span><span class="cn">市场</span><span class="en">Market</span></th>
+        <th class="num" style="width:13%"><span class="vi">NK 2025</span><span class="cn">2025 进口额</span><span class="en">Imports 2025</span></th>
+        <th class="num" style="width:9%"><span class="vi">YoY</span><span class="cn">同比</span><span class="en">YoY</span></th>
+        <th style="width:33%"><span class="vi">Vì sao phù hợp với KIGIMEX</span><span class="cn">为何适合 KIGIMEX</span><span class="en">Why it fits KIGIMEX</span></th>
+        <th style="width:30%"><span class="vi">Yêu cầu để thắng</span><span class="cn">取胜要求</span><span class="en">What it takes to win</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Africa</strong><br><span class="small">Bờ Biển Ngà · Bénin · Senegal</span></td>
+          <td class="num">US$8,87B<br><span class="small">25,7% <span class="vi">toàn cầu</span><span class="cn">全球</span><span class="en">global</span></span></td>
+          <td class="num"><span class="tag tag-up">+10–22%</span></td>
+          <td><span class="vi">Bờ Biển Ngà 1,11 tỷ USD (+10,2%), Bénin 864 triệu USD (+21,8%) — hai thị trường tăng trưởng mạnh nhất trong top 10. Khẩu vị đơn giản: gạo trắng 25% tấm, bao 50kg, giá CIF cạnh tranh.</span><span class="cn">科特迪瓦 11.1 亿美元（+10.2%）、贝宁 8.64 亿美元（+21.8%）——前十强中增长最快。需求简单：25% 碎白米、50 公斤包装、有竞争力的 CIF 价。</span><span class="en">Côte d'Ivoire US$1.11 bn (+10.2%) and Benin US$864 m (+21.8%) are the fastest-growing in the top ten. Simple requirements: 25% broken white rice, 50 kg bags, competitive CIF.</span></td>
+          <td><span class="vi">Giá cạnh tranh với Ấn Độ/Pakistan; ổn định lô lớn; Bénin là trung tâm tái xuất sang Niger, Burkina Faso, Nigeria.</span><span class="cn">与印度/巴基斯坦比价；大批量稳定；贝宁是尼日尔、布基纳法索、尼日利亚的转口中心。</span><span class="en">Price against India/Pakistan; large-lot consistency; Benin re-exports to Niger, Burkina Faso and Nigeria.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Philippines</strong> <span class="tag tag-hot">KEY</span></td>
+          <td class="num">US$1,71B</td>
+          <td class="num"><span class="tag tag-dn">-31,9%</span></td>
+          <td><span class="vi">Thị trường gạo lớn nhất thế giới theo giá trị. Việt Nam đã chiếm 81,7% (1,4 tỷ USD) — KIGIMEX có lợi thế sân nhà về logistics (5–7 ngày) và quan hệ thương mại sẵn có.</span><span class="cn">全球按金额最大的大米市场。越南已占 81.7%（14 亿美元）——KIGIMEX 拥有物流（5–7 天）与既有贸易关系的主场优势。</span><span class="en">The world's largest rice market by value. Vietnam already holds 81.7% (US$1.4 bn) — KIGIMEX has a home advantage in logistics (5–7 days) and existing trade ties.</span></td>
+          <td><span class="vi">Dự báo nhập 5,5 triệu tấn 2026, nối lại từ 11/2026. Cần chứng nhận chất lượng và khả năng giao nhanh theo mùa.</span><span class="cn">2026 年预计进口 550 万吨，11 月起恢复。需质量认证与季节性快速交付能力。</span><span class="en">Forecast 5.5 Mt in 2026 with a restart from Nov 2026. Needs quality certification and seasonal fast delivery.</span></td>
+        </tr>
+        <tr>
+          <td><strong>Asia</strong><br><span class="small">Malaysia · Indonesia · Singapore</span></td>
+          <td class="num">US$15,4B<br><span class="small">44,6% <span class="vi">toàn cầu</span><span class="cn">全球</span><span class="en">global</span></span></td>
+          <td class="num"><span class="tag tag-up">+6,8%</span><br><span class="small">Japan</span></td>
+          <td><span class="vi">Malaysia nhập 777 triệu USD, là thị trường mua <em>cả gạo và cá cơm</em> — điểm giao thoa quan trọng nhất trong danh mục KIGIMEX. Nhật 670 triệu USD (+6,8%) là thị trường biên cao nhất châu Á.</span><span class="cn">马来西亚进口 7.77 亿美元，是<em>同时采购大米与小公鱼</em>的市场——KIGIMEX 组合中最重要的交叉点。日本 6.7 亿美元（+6.8%）是亚洲毛利最高的市场。</span><span class="en">Malaysia imports US$777 m and buys <em>both rice and anchovy</em> — the single most important overlap in KIGIMEX's portfolio. Japan at US$670 m (+6.8%) is Asia's highest-margin market.</span></td>
+          <td><span class="vi">Halal (Malaysia/Indonesia), kiểm dịch thực vật, dư lượng thuốc BVTV thấp (Nhật).</span><span class="cn">清真（马来西亚/印尼）、植检、低农残（日本）。</span><span class="en">Halal (Malaysia/Indonesia), phytosanitary clearance, low pesticide residues (Japan).</span></td>
+        </tr>
+        <tr>
+          <td><strong>UAE</strong> <span class="tag tag-hot">RE-EXPORT</span></td>
+          <td class="num">US$783,8M</td>
+          <td class="num"><span class="tag tag-up">+21,3%</span></td>
+          <td><span class="vi">Cửa ngõ tái xuất sang Đông Phi và Trung Đông. Tăng 21,3% trong 2025. Khách hàng đa quốc tịch, ưa bao bì thương hiệu 5–25kg và sản phẩm HALAL.</span><span class="cn">通往东非与中东的转口门户，2025 年增长 21.3%。客户多国籍，偏好 5–25 公斤品牌包装与 HALAL 产品。</span><span class="en">Re-export gateway to East Africa and the Middle East, up 21.3% in 2025. Multinational buyers favour 5–25 kg branded packs and HALAL products.</span></td>
+          <td><span class="vi">HALAL là lợi thế trực tiếp của KIGIMEX; cần năng lực đóng gói bán lẻ và nhãn song ngữ.</span><span class="cn">HALAL 是 KIGIMEX 的直接优势；需零售包装能力与双语标签。</span><span class="en">HALAL is a direct KIGIMEX advantage; needs retail packaging capability and bilingual labels.</span></td>
+        </tr>
+        <tr>
+          <td><strong>EU</strong> <span class="tag tag-ot">PHASE 2</span></td>
+          <td class="num">US$5,16B<br><span class="small">14,9% <span class="vi">toàn cầu</span><span class="cn">全球</span><span class="en">global</span></span></td>
+          <td class="num"><span class="tag tag-ot">—</span></td>
+          <td><span class="vi">Thị trường biên cao nhất: gạo thơm, hữu cơ, ST25 bán giá gấp 1,5–2 lần gạo trắng. KIGIMEX có EVFTA và đang trong lộ trình sang EU.</span><span class="cn">毛利最高的市场：香米、有机、ST25 售价比白米高 1.5–2 倍。KIGIMEX 拥有 EVFTA 且正推进欧盟。</span><span class="en">The highest-margin market: fragrant, organic and ST25 rice sell at 1.5–2× white rice. KIGIMEX has EVFTA and is already moving into the EU.</span></td>
+          <td><span class="vi">MRL thuốc BVTV rất thấp, C/O EUR.1 đúng hạn, truy xuất nguồn gốc, chứng nhận hữu cơ nếu bán organic.</span><span class="cn">农残限量极低、EUR.1 产地证及时、可追溯、有机认证（如售有机）。</span><span class="en">Very low MRLs, on-time EUR.1 certificates, traceability, organic certification if selling organic.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><span class="vi">Nguồn: World's Top Exports / ITC Trade Map, dữ liệu hải quan 2025 (HS 1006). Giá trị châu Phi và châu Á tính theo tỷ trọng khu vực (25,7% và 44,6%) nhân tổng nhập khẩu toàn cầu 34,6 tỷ USD. Tăng trưởng khu vực châu Á lấy theo Nhật làm đại diện.</span><span class="cn">来源：World's Top Exports / ITC Trade Map，2025 年海关数据（HS 1006）。非洲与亚洲数值按区域占比（25.7%、44.6%）乘以全球进口总额 346 亿美元计算。亚洲增长率以日本为代表。</span><span class="en">Source: World's Top Exports / ITC Trade Map, 2025 customs data (HS 1006). Africa and Asia values apply regional shares (25.7% and 44.6%) to the US$34.6 bn global total. The Asia growth figure uses Japan as proxy.</span></div>
+
+  <div class="chart-grid">
+    <div class="chart-box">
+      <h4><span class="vi">Giá FOB gạo 5% tấm: 10/2025 vs 10/2026</span><span class="cn">5% 碎米 FOB：2025/10 vs 2026/10</span><span class="en">5% broken FOB: Oct 2025 vs Oct 2026</span></h4>
+      <div class="cap"><span class="vi">USD/tấn — giá đã phục hồi 15–41%</span><span class="cn">美元/吨——价格回升 15–41%</span><span class="en">US$/tonne — prices recovered 15–41%</span></div>
+      <div class="canvas-wrap sm"><canvas id="c02"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <h4><span class="vi">Cơ cấu giá trị nhập khẩu gạo 2025 của 5 thị trường mục tiêu</span><span class="cn">2025 年五个目标市场的大米进口额构成</span><span class="en">2025 rice import value across the five target markets</span></h4>
+      <div class="cap"><span class="vi">Triệu USD</span><span class="cn">百万美元</span><span class="en">US$ million</span></div>
+      <div class="canvas-wrap sm"><canvas id="c03"></canvas></div>
+    </div>
+  </div>
+  <div class="src"><span class="vi">Nguồn: VFA/Oryza 27/10/2026 (giá); World's Top Exports 2025 (giá trị nhập khẩu).</span><span class="cn">来源：VFA/Oryza 2026/10/27（价格）；World's Top Exports 2025（进口额）。</span><span class="en">Sources: VFA/Oryza, 27 Oct 2026 (prices); World's Top Exports 2025 (import values).</span></div>
+
+  <div class="insight">
+    <div class="ttl"><span class="vi">Chiến lược giá theo từng hướng thị trường</span><span class="cn">分市场的价格策略</span><span class="en">Pricing strategy per direction</span></div>
+    <div class="blk-vi"><p>Không thể dùng một bảng giá cho cả 5 thị trường. <strong>Châu Phi</strong> cần giá thấp nhất (cạnh tranh trực tiếp Ấn Độ 385–389 USD/tấn) và chấp nhận biên mỏng 8–12%. <strong>Philippines</strong> trả cao hơn nhờ logistics ngắn nhưng yêu cầu ổn định. <strong>UAE và EU</strong> trả cao nhất nhưng đòi bao bì, chứng nhận và tuân thủ. Vì vậy trên Alibaba.com, KIGIMEX nên niêm yết <strong>3 nhóm giá riêng</strong> thay vì một mức giá chung — đây cũng là cách để buyer tự chọn đúng phân khúc và giảm thời gian đàm phán.</p></div>
+    <div class="blk-cn"><p>无法用一套价格覆盖 5 个市场。<strong>非洲</strong>需要最低价（与印度 385–389 美元/吨直接竞争），可接受 8–12% 薄利。<strong>菲律宾</strong>因短物流愿意付更高价，但要求稳定。<strong>阿联酋与欧盟</strong>出价最高，但要求包装、认证与合规。因此在 Alibaba.com 上，KIGIMEX 应挂<strong>三档独立报价</strong>而非统一价——这也让买家自行选择细分，缩短议价时间。</p></div>
+    <div class="blk-en"><p>One price list cannot serve five markets. <strong>Africa</strong> needs the lowest price (competing directly with India at US$385–389/t) and accepts thin 8–12% margins. The <strong>Philippines</strong> pays more thanks to short logistics but demands consistency. The <strong>UAE and EU</strong> pay the most but require packaging, certification and compliance. So on Alibaba.com KIGIMEX should list <strong>three separate price tiers</strong> rather than one — which also lets buyers self-select and shortens negotiation.</p></div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section id="s04">
+  <div class="sec-head">
+    <div class="sec-num">04</div>
+    <div>
+      <div class="sec-title"><span class="vi">Cơ hội thị trường Cá cơm: Hàn Quốc · Singapore · Malaysia</span><span class="cn">小公鱼市场机会：韩国 · 新加坡 · 马来西亚</span><span class="en">The anchovy opportunity: Korea · Singapore · Malaysia</span></div>
+      <div class="sec-sub"><span class="vi">Số liệu hải quan HS 030559 — thị trường nhỏ nhưng Việt Nam đã dẫn đầu</span><span class="cn">HS 030559 海关数据——市场不大，但越南已居首位</span><span class="en">HS 030559 customs data — small markets where Vietnam already leads</span></div>
+    </div>
+  </div>
+
+  <div class="blk-vi">
+    <p>Đây là điểm mạnh nhất trong đề xuất này. Cá cơm khô (HS 030559) là ngành hàng nhỏ về giá trị nhưng <strong>Việt Nam đã ở vị thế dẫn đầu</strong> ở cả ba thị trường KIGIMEX nhắm tới — điều hiếm thấy ở bất kỳ ngành hàng nào khác.</p>
+    <p>Hàn Quốc: nhập 2.600 tấn trị giá 12,13 triệu USD năm 2024, tăng liên tục từ 9,37 triệu USD (2022) — tức <strong>+29,5% trong 2 năm</strong>. Việt Nam chiếm 2.314 tấn, tương đương <strong>89% khối lượng và 79,6% giá trị</strong>. Đây là thị trường có mật độ giá trị cao nhất: 4,66 USD/kg bình quân.</p>
+    <p>Malaysia: thị trường lớn nhất trong ba nước với 16.378 tấn / 31,89 triệu USD năm 2024, nhưng đang <strong>giảm</strong> từ 37,32 triệu USD (2022). Việt Nam đứng số 1 về giá trị (15,49 triệu USD, 48,6%) nhưng chỉ đứng thứ 2 về khối lượng — vì Thái Lan bán 10.105 tấn chỉ với 8,54 triệu USD (0,85 USD/kg), trong khi gạo Việt bán 4.038 tấn được 15,49 triệu USD (<strong>3,83 USD/kg</strong>). Nói cách khác: Việt Nam bán ít hơn nhưng bán đắt gấp 4,5 lần.</p>
+    <p>Singapore: 1.975 tấn / 10,51 triệu USD (2023), giá bình quân 5,32 USD/kg — cao nhất trong ba thị trường, phản ánh vai trò trung tâm tái xuất và phân phối cao cấp.</p>
+  </div>
+  <div class="blk-cn">
+    <p>这是本方案最有力的一点。干小公鱼（HS 030559）金额不大，但<strong>越南在 KIGIMEX 瞄准的三个市场均处领先</strong>——这在任何其他品类中都罕见。</p>
+    <p>韩国：2024 年进口 2,600 吨、1,213 万美元，自 2022 年的 937 万美元持续增长——<strong>两年 +29.5%</strong>。越南占 2,314 吨，相当于<strong>数量的 89%、金额的 79.6%</strong>。这是价值密度最高的市场：均价 4.66 美元/公斤。</p>
+    <p>马来西亚：三国中最大，2024 年 16,378 吨 / 3,189 万美元，但自 2022 年的 3,732 万美元<strong>下滑</strong>。越南按金额居第一（1,549 万美元，48.6%），按数量仅第二——因为泰国以 1,0105 万吨仅卖 854 万美元（0.85 美元/公斤），而越南 4,038 吨卖 1,549 万美元（<strong>3.83 美元/公斤</strong>）。换言之：越南卖得少，但单价高出 4.5 倍。</p>
+    <p>新加坡：1,975 吨 / 1,051 万美元（2023），均价 5.32 美元/公斤——三国中最高，反映其转口与高端分销中心地位。</p>
+  </div>
+  <div class="blk-en">
+    <p>This is the strongest point in the proposal. Dried anchovy (HS 030559) is small in value, yet <strong>Vietnam already leads</strong> in all three markets KIGIMEX is targeting — rare in any category.</p>
+    <p>Korea: 2,600 t worth US$12.13 m in 2024, rising steadily from US$9.37 m in 2022 — <strong>+29.5% in two years</strong>. Vietnam supplied 2,314 t, equal to <strong>89% of volume and 79.6% of value</strong>. This is the highest value-density market: US$4.66/kg average.</p>
+    <p>Malaysia: the largest of the three at 16,378 t / US$31.89 m in 2024, but <strong>declining</strong> from US$37.32 m in 2022. Vietnam ranks first by value (US$15.49 m, 48.6%) but only second by volume — because Thailand ships 10,105 t for just US$8.54 m (US$0.85/kg), while Vietnam ships 4,038 t for US$15.49 m (<strong>US$3.83/kg</strong>). In other words: Vietnam sells less but at 4.5× the price.</p>
+    <p>Singapore: 1,975 t / US$10.51 m (2023), averaging US$5.32/kg — the highest of the three, reflecting its role as a re-export and premium distribution hub.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="val">89%</div><div class="lbl"><span class="vi">Khối lượng NK cá cơm khô Hàn Quốc đến từ Việt Nam (2024)</span><span class="cn">韩国干小公鱼进口量来自越南的比例（2024）</span><span class="en">Of Korea's dried anchovy import volume came from Vietnam (2024)</span></div><div class="chg"><span class="vi">2.314 / 2.601</span><span class="cn">2,314 / 2,601</span><span class="en">2,314 / 2,601</span> <span class="vi">tấn</span><span class="cn">吨</span><span class="en">tonnes</span></div></div>
+    <div class="stat"><div class="val"><span class="vi">US$3,83</span><span class="cn">US$3.83</span><span class="en">US$3.83</span></div><div class="lbl"><span class="vi">Giá bình quân cá cơm Việt vào Malaysia (USD/kg)</span><span class="cn">越南小公鱼进入马来西亚的均价（美元/公斤）</span><span class="en">Vietnam's average anchovy price into Malaysia (US$/kg)</span></div><div class="chg"><span class="vi">4,5× so với Thái Lan (0,85)</span><span class="cn">为泰国的 4.5 倍（0.85）</span><span class="en">4.5× vs Thailand (0.85)</span></div></div>
+    <div class="stat"><div class="val"><span class="vi">US$31,9M</span><span class="cn">US$31.9M</span><span class="en">US$31.9M</span></div><div class="lbl"><span class="vi">Nhập khẩu cá cơm khô Malaysia 2024</span><span class="cn">2024 年马来西亚干小公鱼进口额</span><span class="en">Malaysia dried anchovy imports 2024</span></div><div class="chg down"><span class="vi">-8,6%</span><span class="cn">-8.6%</span><span class="en">-8.6%</span> <span class="vi">so với 2023</span><span class="cn">同比 2023</span><span class="en">vs 2023</span></div></div>
+    <div class="stat"><div class="val"><span class="vi">US$5,32</span><span class="cn">US$5.32</span><span class="en">US$5.32</span></div><div class="lbl"><span class="vi">Giá bình quân NK cá cơm Singapore (USD/kg, 2023)</span><span class="cn">新加坡干小公鱼进口均价（美元/公斤，2023）</span><span class="en">Singapore's average import price (US$/kg, 2023)</span></div><div class="chg">+14% <span class="vi">so với Hàn Quốc</span><span class="cn">高于韩国 14%</span><span class="en">vs Korea</span></div></div>
+    <div class="stat"><div class="val">US$7,79</div><div class="lbl"><span class="vi">Giá bán buôn cá cơm Hàn Quốc 2026 (USD/kg)</span><span class="cn">2026 年韩国小公鱼批发价（美元/公斤）</span><span class="en">Korea anchovy wholesale price 2026 (US$/kg)</span></div><div class="chg down">-22,5% <span class="vi">từ đỉnh 2024 (10,06)</span><span class="cn">较 2024 年高点（10.06）</span><span class="en">from the 2024 peak (10.06)</span></div></div>
+  </div>
+
+  <div class="chart-grid">
+    <div class="chart-box">
+      <h4><span class="vi">Giá trị nhập khẩu cá cơm khô 2022–2024 (triệu USD)</span><span class="cn">2022–2024 年干小公鱼进口额（百万美元）</span><span class="en">Dried anchovy import value 2022–2024 (US$ m)</span></h4>
+      <div class="cap"><span class="vi">Singapore: 2023 là năm mới nhất có dữ liệu</span><span class="cn">新加坡：2023 为最新可得年份</span><span class="en">Singapore: 2023 is the latest available year</span></div>
+      <div class="canvas-wrap sm"><canvas id="c04"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <h4><span class="vi">Giá bình quân nhập khẩu theo nguồn cung (USD/kg, 2024)</span><span class="cn">按来源国的进口均价（美元/公斤，2024）</span><span class="en">Average import price by origin (US$/kg, 2024)</span></h4>
+      <div class="cap"><span class="vi">Malaysia: Việt Nam bán giá cao gấp 4,5 lần Thái Lan</span><span class="cn">马来西亚：越南价格是泰国的 4.5 倍</span><span class="en">Malaysia: Vietnam prices 4.5× above Thailand</span></div>
+      <div class="canvas-wrap sm"><canvas id="c05"></canvas></div>
+    </div>
+  </div>
+  <div class="src"><span class="vi">Nguồn: Tridge, dữ liệu hải quan HS 030559 (truy cập 29/10/2026). Khối lượng quy đổi từ kg.</span><span class="cn">来源：Tridge，HS 030559 海关数据（2026 年 10 月 29 日访问）。数量由 kg 换算。</span><span class="en">Source: Tridge, HS 030559 customs data (accessed 29 Oct 2026). Volumes converted from kg.</span></div>
+
+  <h3><span class="vi">Điều kiện kỹ thuật để bán vào 3 thị trường</span><span class="cn">进入三个市场的技术要求</span><span class="en">Technical requirements for the three markets</span></h3>
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th style="width:18%"><span class="vi">Yếu tố</span><span class="cn">要素</span><span class="en">Element</span></th>
+        <th style="width:27%"><span class="vi">Hàn Quốc</span><span class="cn">韩国</span><span class="en">Korea</span></th>
+        <th style="width:27%"><span class="vi">Singapore</span><span class="cn">新加坡</span><span class="en">Singapore</span></th>
+        <th style="width:28%"><span class="vi">Malaysia</span><span class="cn">马来西亚</span><span class="en">Malaysia</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="vi">Cơ quan kiểm soát</span><span class="cn">监管机构</span><span class="en">Regulator</span></td><td>MFDS (<span class="vi">an toàn thực phẩm</span><span class="cn">食品安全</span><span class="en">food safety</span>), <span class="vi">hải quan</span><span class="cn">海关</span><span class="en">customs</span></td><td>SFA (<span class="vi">an toàn thực phẩm</span><span class="cn">食品安全</span><span class="en">food safety</span>)</td><td>MAQIS (<span class="vi">kiểm dịch</span><span class="cn">检疫</span><span class="en">quarantine</span>), MOH FSQD (<span class="vi">nhãn</span><span class="cn">标签</span><span class="en">labelling</span>), JAKIM (halal)</td></tr>
+        <tr><td><span class="vi">Tiêu chí chấp nhận chính</span><span class="cn">主要验收标准</span><span class="en">Main acceptance criteria</span></td><td><span class="vi">Kích cỡ đều, độ khô, không tạp chất, không mùi lạ; phân hạng rõ (nhỏ/vừa/lớn)</span><span class="cn">规格均匀、干度、无杂质、无异味；分级清晰（小/中/大）</span><span class="en">Uniform size, dryness, no foreign matter, no off-odour; clear grading (small/medium/large)</span></td><td><span class="vi">Chất lượng cao cấp, bao bì bán lẻ, truy xuất nguồn gốc, nhãn tiếng Anh</span><span class="cn">高端品质、零售包装、可追溯、英文标签</span><span class="en">Premium quality, retail packaging, traceability, English labelling</span></td><td><span class="vi">Sạch (ít cát), độ khô, đồng đều kích cỡ (fine/medium/coarse), không mùi ôi</span><span class="cn">洁净（少沙）、干度、规格均匀（fine/medium/coarse）、无酸败气味</span><span class="en">Cleanliness (low sand), dryness, size consistency (fine/medium/coarse), no rancidity</span></td></tr>
+        <tr><td><span class="vi">Chứng nhận nên có</span><span class="cn">建议认证</span><span class="en">Certifications to hold</span></td><td>HACCP, ISO 22000</td><td>HACCP, ISO 22000, BRCGS</td><td>HACCP, ISO 22000, BRCGS, <strong>Halal (JAKIM)</strong></td></tr>
+        <tr><td><span class="vi">KIGIMEX đã có</span><span class="cn">KIGIMEX 已具备</span><span class="en">KIGIMEX already holds</span></td><td><span class="tag tag-up">ISO 9001 · ISO 22000</span></td><td><span class="tag tag-up">ISO 9001 · ISO 22000</span></td><td><span class="tag tag-up">ISO 9001 · ISO 22000 · HALAL</span></td></tr>
+        <tr><td><span class="vi">Rủi ro chính</span><span class="cn">主要风险</span><span class="en">Main risk</span></td><td><span class="vi">Giá bán buôn giảm 22,5% từ 2024 — áp lực biên</span><span class="cn">批发价较 2024 年下降 22.5%——毛利压力</span><span class="en">Wholesale price down 22.5% from 2024 — margin pressure</span></td><td><span class="vi">Thị trường nhỏ, buyer ít (1 nhà nhập khẩu được ghi nhận trong dữ liệu)</span><span class="cn">市场小、买家少（数据中仅记录 1 家进口商）</span><span class="en">Small market, few buyers (only one importer recorded in the dataset)</span></td><td><span class="vi">Cạnh tranh giá với Thái Lan/Myanmar ở phân khúc phổ thông</span><span class="cn">在大众细分与泰国/缅甸打价格战</span><span class="en">Price competition with Thailand/Myanmar in the mainstream tier</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><span class="vi">Nguồn yêu cầu kỹ thuật: Tridge market curation cho Malaysia (MAQIS, MOH FSQD, JAKIM, HACCP/ISO 22000/BRCGS); thông tin Hàn Quốc và Singapore là thông lệ nhập khẩu thủy sản phổ biến, cần xác nhận lại với đơn vị tư vấn chứng nhận trước khi triển khai.</span><span class="cn">技术要求来源：Tridge 马来西亚市场 curation（MAQIS、MOH FSQD、JAKIM、HACCP/ISO 22000/BRCGS）；韩国与新加坡部分为常见水产进口惯例，实施前需与认证顾问复核。</span><span class="en">Requirements source: Tridge market curation for Malaysia (MAQIS, MOH FSQD, JAKIM, HACCP/ISO 22000/BRCGS); the Korea and Singapore rows reflect common seafood import practice and should be re-confirmed with a certification adviser before launch.</span></div>
+
+  <div class="highlight">
+    <strong><span class="vi">Kết luận cho ngành cá cơm</span><span class="cn">小公鱼品类结论</span><span class="en">Conclusion for the anchovy line</span></strong>
+    <div class="blk-vi" style="margin-top:8px"><p>Tổng giá trị nhập khẩu của ba thị trường chỉ khoảng 45–54 triệu USD/năm — không phải thị trường tỷ đô. Nhưng đây là nơi KIGIMEX có thể <strong>thắng nhanh nhất</strong> vì ba lý do: (1) Việt Nam đã dẫn đầu nguồn cung, không cần tạo niềm tin từ đầu; (2) giá bán cao gấp 4,5 lần hàng Thái Lan ở Malaysia — chứng tỏ thị trường trả tiền cho chất lượng; (3) đối thủ trên Alibaba.com trong ngành này phần lớn là công ty thương mại nhỏ, không có nhà máy. Với một xí nghiệp cá cơm chuyên dụng và ISO 22000, KIGIMEX ở đẳng cấp khác.</p></div>
+    <div class="blk-cn" style="margin-top:8px"><p>三个市场的年进口总额仅约 4,500–5,400 万美元——并非十亿美元级市场。但这是 KIGIMEX 能<strong>最快取胜</strong>的地方，原因有三：(1) 越南已是领先供应国，无需从零建立信任；(2) 在马来西亚售价是泰国货的 4.5 倍——说明市场愿为品质付费；(3) Alibaba.com 上该品类的对手多为小型贸易公司，没有工厂。拥有专用小公鱼厂与 ISO 22000 的 KIGIMEX 处于另一层级。</p></div>
+    <div class="blk-en" style="margin-top:8px"><p>The three markets together import only US$45–54 m a year — not a billion-dollar market. But this is where KIGIMEX can <strong>win fastest</strong> for three reasons: (1) Vietnam already leads supply, so trust does not need building from zero; (2) prices run 4.5× Thai goods in Malaysia, showing the market pays for quality; (3) most Alibaba.com rivals in this category are small trading companies without a plant. With a dedicated anchovy facility and ISO 22000, KIGIMEX sits at a different level.</p></div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section id="s05">
+  <div class="sec-head">
+    <div class="sec-num">05</div>
+    <div>
+      <div class="sec-title"><span class="vi">Vì sao Alibaba.com là kênh phù hợp với KIGIMEX</span><span class="cn">为何 Alibaba.com 适合 KIGIMEX</span><span class="en">Why Alibaba.com fits KIGIMEX</span></div>
+      <div class="sec-sub"><span class="vi">So sánh với hội chợ và kênh khách hàng truyền thống</span><span class="cn">与展会和传统客户渠道比较</span><span class="en">Compared with trade fairs and traditional client channels</span></div>
+    </div>
+  </div>
+
+  <div class="blk-vi">
+    <p>KIGIMEX đã có khách hàng ở Philippines, Indonesia, châu Phi và Trung Đông — nghĩa là năng lực bán hàng quốc tế không phải vấn đề. Vấn đề là <strong>tốc độ mở rộng</strong>: mỗi khách hàng mới hiện đến từ hội chợ, giới thiệu hoặc quan hệ cá nhân, tức là tuyến tính và phụ thuộc vào lịch hội chợ. Alibaba.com thay đổi cấu trúc đó: gian hàng hoạt động 24/7, buyer chủ động tìm đến, và mỗi RFQ là một cơ hội có ngân sách thực.</p>
+    <p>Điểm quan trọng với một doanh nghiệp niêm yết như KIGIMEX: kênh này <strong>không đòi hỏi đầu tư hạ tầng mới</strong>. Nhà máy, chứng nhận, năng lực giao hàng đã có sẵn — chỉ cần chuyển hóa thành nội dung số đúng chuẩn buyer quốc tế.</p>
+  </div>
+  <div class="blk-cn">
+    <p>KIGIMEX 已在菲律宾、印尼、非洲与中东拥有客户——国际销售能力不是问题。问题在于<strong>扩张速度</strong>：目前每个新客户来自展会、转介或个人关系，呈线性且受展会档期限制。Alibaba.com 改变了这一结构：店铺 7×24 小时运作、买家主动上门、每个 RFQ 都是带预算的真实机会。</p>
+    <p>对 KIGIMEX 这样的上市公司尤其重要：该渠道<strong>不需要新建产能</strong>。厂房、认证、交付能力都已具备——只需转化为符合国际买家标准的数字内容。</p>
+  </div>
+  <div class="blk-en">
+    <p>KIGIMEX already sells into the Philippines, Indonesia, Africa and the Middle East — international selling capability is not the issue. The issue is <strong>speed of expansion</strong>: each new customer currently comes from a trade fair, a referral or a personal relationship, which is linear and depends on fair calendars. Alibaba.com changes that structure: the store runs 24/7, buyers come to you, and every RFQ carries a real budget.</p>
+    <p>Critically for a listed company like KIGIMEX, the channel <strong>requires no new infrastructure</strong>. Plant, certification and delivery capacity already exist — they only need converting into digital content that meets international buyer standards.</p>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th style="width:22%"><span class="vi">Kênh</span><span class="cn">渠道</span><span class="en">Channel</span></th>
+        <th style="width:19%"><span class="vi">Chi phí / buyer mới</span><span class="cn">单个新买家成本</span><span class="en">Cost per new buyer</span></th>
+        <th style="width:19%"><span class="vi">Thời gian tới đơn đầu</span><span class="cn">首单周期</span><span class="en">Time to first order</span></th>
+        <th style="width:20%"><span class="vi">Độ phủ địa lý</span><span class="cn">地理覆盖</span><span class="en">Geographic reach</span></th>
+        <th style="width:20%"><span class="vi">Phù hợp nhất với</span><span class="cn">最适合</span><span class="en">Best for</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><strong><span class="vi">Hội chợ quốc tế</span><span class="cn">国际展会</span><span class="en">Trade fair</span></strong><br><span class="small">Gulfood, SIAL, VIFA</span></td><td><span class="vi">Cao (vé, gian hàng, đi lại, mẫu)</span><span class="cn">高（门票、展位、差旅、样品）</span><span class="en">High (booth, travel, samples)</span></td><td>3–9 <span class="vi">tháng</span><span class="cn">个月</span><span class="en">months</span></td><td><span class="vi">TB — phụ thuộc vị trí gian hàng</span><span class="cn">中等——取决于展位位置</span><span class="en">Medium — depends on booth position</span></td><td><span class="vi">Quan hệ trực tiếp, hàng mẫu cao cấp</span><span class="cn">直接关系、高端样品</span><span class="en">Direct relationships, premium samples</span></td></tr>
+        <tr><td><strong><span class="vi">Khách quen / giới thiệu</span><span class="cn">老客户 / 转介</span><span class="en">Existing clients / referrals</span></strong></td><td><span class="vi">Thấp</span><span class="cn">低</span><span class="en">Low</span></td><td>1–3 <span class="vi">tháng</span><span class="cn">个月</span><span class="en">months</span></td><td><span class="vi">Thấp — lặp lại tệp khách cũ</span><span class="cn">低——局限于老客户群</span><span class="en">Low — repeats the same base</span></td><td><span class="vi">Tăng đơn, giữ chân</span><span class="cn">增单、留存</span><span class="en">Upselling, retention</span></td></tr>
+        <tr><td><strong><span class="vi">Alibaba.com</span><span class="cn">Alibaba.com</span><span class="en">Alibaba.com</span></strong> <span class="tag tag-hot"><span class="vi">ĐỀ XUẤT</span><span class="cn">建议</span><span class="en">PROPOSED</span></span></td><td><span class="vi">Trung bình, cố định theo năm</span><span class="cn">中等，按年固定</span><span class="en">Medium, fixed annually</span></td><td>2–4 <span class="vi">tháng</span><span class="cn">个月</span><span class="en">months</span></td><td><span class="vi">Cao — 200+ thị trường, buyer chủ động</span><span class="cn">高——200+ 市场，买家主动</span><span class="en">High — 200+ markets, inbound buyers</span></td><td><span class="vi">Mở rộng có hệ thống, đo lường được</span><span class="cn">系统性、可衡量的扩张</span><span class="en">Systematic, measurable expansion</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Đánh giá 3 kênh theo 5 tiêu chí (thang 1–5)</span><span class="cn">按 5 项指标评估三种渠道（1–5 分）</span><span class="en">Three channels scored on five criteria (1–5)</span></h4>
+    <div class="cap"><span class="vi">Đánh giá định tính của AM — không phải số liệu thống kê</span><span class="cn">AM 的定性评估——非统计数据</span><span class="en">Qualitative AM assessment — not statistical data</span></div>
+    <div class="canvas-wrap"><canvas id="c06"></canvas></div>
+  </div>
+
+  <div class="insight">
+    <div class="ttl"><span class="vi">Ba lợi thế cấu trúc riêng của ngành thực phẩm B2B</span><span class="cn">食品 B2B 的三个结构性优势</span><span class="en">Three structural advantages in B2B food</span></div>
+    <div class="blk-vi"><p><strong>1. Buyer tìm theo thông số, không theo cảm hứng.</strong> "Gạo 5% tấm bao 25kg" là một truy vấn có ngân sách phía sau — tỷ lệ chuyển đổi cao hơn nhiều so với hàng tiêu dùng. <strong>2. Đơn hàng lặp lại.</strong> Một buyer gạo đã chốt thường đặt lại mỗi 1–2 tháng, nên chi phí có được khách được phân bổ qua nhiều đơn. <strong>3. Không có biên giới mùa vụ.</strong> Trong khi hội chợ chỉ diễn ra vài ngày mỗi năm, gian hàng nhận RFQ cả 12 tháng — đúng với chu kỳ thu hoạch 3 vụ của KIGIMEX.</p></div>
+    <div class="blk-cn"><p><strong>1. 买家按参数搜索，而非凭感觉。</strong>"5% 碎米 25 公斤装"是带预算的查询——转化率远高于消费品。<strong>2. 订单可复购。</strong>成交的大米买家通常每 1–2 个月复购，获客成本可分摊到多单。<strong>3. 没有季节边界。</strong>展会每年只有几天，而店铺 12 个月都在接收 RFQ——正契合 KIGIMEX 一年三季的收获周期。</p></div>
+    <div class="blk-en"><p><strong>1. Buyers search by specification, not inspiration.</strong> "5% broken rice 25 kg bag" is a query with a budget behind it — far higher conversion than consumer goods. <strong>2. Orders repeat.</strong> A rice buyer who closes usually reorders every 1–2 months, spreading acquisition cost across many orders. <strong>3. No seasonal border.</strong> Fairs last a few days a year; a storefront takes RFQs all twelve months — matching KIGIMEX's three-crop cycle.</p></div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section id="s06">
+  <div class="sec-head">
+    <div class="sec-num">06</div>
+    <div>
+      <div class="sec-title"><span class="vi">Gạo trên Alibaba.com: mặt bằng cạnh tranh thực tế</span><span class="cn">Alibaba.com 上的大米：真实竞争格局</span><span class="en">Rice on Alibaba.com: the real competitive floor</span></div>
+      <div class="sec-sub"><span class="vi">158 listing · 187 nhà cung cấp · dải giá và điểm yếu của đối thủ</span><span class="cn">158 个 listing · 187 家供应商 · 价格区间与对手弱点</span><span class="en">158 listings · 187 suppliers · price bands and rival weaknesses</span></div>
+    </div>
+  </div>
+
+  <div class="blk-vi">
+    <p>Khảo sát trực tiếp ngày 29/10/2026: từ khoá <em>rice</em> trả về <strong>158 sản phẩm và 187 nhà cung cấp</strong>. Con số này nghe lớn nhưng chất lượng rất phân tán — phần lớn là công ty thương mại bán 5–8 loại nông sản cùng lúc, không có nhà máy, không công bố doanh thu, và niêm yết giá theo đơn vị không so sánh được (bao 1kg, "1 container", MOQ 1 tấn).</p>
+    <p>Về giá, thị trường đang phân thành 4 dải rõ rệt: gạo trắng 25% tấm 380–450 USD/tấn; gạo trắng 5% tấm 425–550; Jasmine 480–750; ST25/thơm cao cấp 610–750; Hom Mali Thái Lan 1.000–1.100. <strong>Khoảng trống lớn nhất nằm ở 550–610 USD/tấn</strong> — dải giá "cao cấp nhưng chưa phải xa xỉ" mà gần như không có nhà cung cấp Việt Nam nào niêm yết rõ ràng.</p>
+  </div>
+  <div class="blk-cn">
+    <p>2026/10/29 直接调研：关键词 <em>rice</em> 返回 <strong>158 个产品、187 家供应商</strong>。数字看似庞大，但质量分散——多数是同时销售 5–8 种农产品的贸易公司，没有工厂、不公布营收，报价单位也无法比较（1 公斤袋、"1 个柜"、起订 1 吨）。</p>
+    <p>价格分为 4 个明显区间：25% 碎白米 380–450 美元/吨；5% 碎白米 425–550；Jasmine 480–750；ST25/高端香米 610–750；泰国 Hom Mali 1,000–1,100。<strong>最大空白在 550–610 美元/吨</strong>——"高端但非奢侈"区间，几乎没有越南供应商清晰挂牌。</p>
+  </div>
+  <div class="blk-en">
+    <p>Direct survey on 29 Oct 2026: the keyword <em>rice</em> returns <strong>158 products and 187 suppliers</strong>. That sounds large, but quality is scattered — most are trading companies selling 5–8 agricultural products at once, with no plant, no published revenue, and prices quoted in units that cannot be compared (1 kg bags, "1 container", 1-tonne MOQ).</p>
+    <p>Pricing splits into four clear bands: white 25% broken at US$380–450/t; white 5% broken US$425–550; Jasmine US$480–750; ST25/premium US$610–750; Thai Hom Mali US$1,000–1,100. <strong>The biggest gap sits at US$550–610/t</strong> — the "premium but not luxury" band where almost no Vietnamese supplier lists clearly.</p>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th class="num" style="width:4%">#</th>
+        <th style="width:34%"><span class="vi">Sản phẩm đang niêm yết</span><span class="cn">在售产品</span><span class="en">Listed product</span></th>
+        <th class="num" style="width:14%"><span class="vi">Giá</span><span class="cn">价格</span><span class="en">Price</span></th>
+        <th class="num" style="width:12%"><span class="vi">MOQ</span><span class="cn">起订量</span><span class="en">MOQ</span></th>
+        <th style="width:24%"><span class="vi">Nhà cung cấp</span><span class="cn">供应商</span><span class="en">Supplier</span></th>
+        <th style="width:12%"><span class="vi">Link</span><span class="cn">链接</span><span class="en">Link</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>CAMOLINO Organic Vietnamese Rice 5% Broken</td><td class="num">US$540–600/t</td><td class="num">10 t</td><td>FRESHGOODS GROUP <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/CAMOLINO-High-Quality-Organic-Vietnamese-Rice_50037885202.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">2</td><td>Fragrant Rice Wholesale Direct from Factory</td><td class="num">US$600–630/t</td><td class="num">25 t</td><td>SUNRISE INS <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Fragrant-Rice-Wholesale-Direct-from-Factory_10000032581126.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">3</td><td>Vietnam Jasmine Rice 5% Broken — HACCP</td><td class="num">US$500–550/t</td><td class="num">100 t</td><td>VIETGRO <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Vietnam-High-Quality-Jasmine-Rice-5_50032591369.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">4</td><td>2026 Crop Jasmine Rice From Vietnam</td><td class="num">US$500–600/t</td><td class="num">26 t</td><td>FRESHGOODS GROUP <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/2026-Crop-Jasmine-Rice-From-Vietnam_11000018927758.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">5</td><td>Economy Long Grain White Rice 25% Broken</td><td class="num">US$380–450/t</td><td class="num">5 t</td><td>RICE &amp; MORE <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Economy-Long-Grain-White-Rice-Riz_10000041855242.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">6</td><td>Vietnam OM5451 Fragrant White Rice 0% Broken</td><td class="num">US$590/t</td><td class="num">1 kg</td><td>VAN BACH TUNG <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Vietnam-OM5451-Fragrant-White-Rice-0_1601630876983.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">7</td><td>Premium Vietnamese Brown Rice — Natural</td><td class="num">US$468–613/t</td><td class="num">27 t</td><td>VILACONIC <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Premium-Vietnamese-Brown-Rice-Natural-Healthy_10000043081466.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">8</td><td>Thai Hom Mali Jasmine Rice 100% Premium</td><td class="num">US$1.000–1.100/t</td><td class="num">18 t</td><td>KITTICHAI GOLDEN RICE <span class="tag tag-ot">TH</span></td><td><a href="https://www.alibaba.com/product-detail/Thai-Hom-Mali-Jasmine-Rice-100_103210204.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">9</td><td>1121 White Basmati Rice — Premium Clean</td><td class="num">US$0,95 / container</td><td class="num">1 container</td><td>CROSSWINS <span class="tag tag-ot">IN</span></td><td><a href="https://www.alibaba.com/product-detail/1121-White-Basmati-Rice-Premium-Clean_1601631693392.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">10</td><td>IR 64 Sella Parboiled 5% Broken</td><td class="num">US$370/t</td><td class="num">10 t</td><td>KYAARI FOODS <span class="tag tag-ot">IN</span></td><td><a href="https://www.alibaba.com/product-detail/IR-64-Sella-Parboiled-AD-Dried_10000043824254.html" target="_blank" rel="noopener">View</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><span class="vi">Tất cả listing trên là URL thật, lấy từ kết quả tìm kiếm Alibaba.com ngày 29/10/2026. Giá là nguyên văn niêm yết, có thể thay đổi theo mùa vụ và số lượng đàm phán. Listing #9 niêm yết giá theo container (không phải theo tấn) — chính là một trong những lỗi trình bày mà buyer B2B loại ngay.</span><span class="cn">以上均为真实 URL，取自 2026/10/29 Alibaba.com 搜索结果。价格为挂牌原文，可能随季节与议价数量变动。第 9 条按整柜报价（非按吨）——正是 B2B 买家会立即淘汰的展示错误之一。</span><span class="en">All listings above are real URLs taken from Alibaba.com search results on 29 Oct 2026. Prices are the listed text and may change with season and negotiated volume. Listing #9 quotes per container rather than per tonne — exactly one of the presentation errors that makes B2B buyers drop a supplier.</span></div>
+
+  <div class="chart-grid">
+    <div class="chart-box">
+      <h4><span class="vi">Dải giá gạo theo phân khúc (USD/tấn)</span><span class="cn">各细分大米价格区间（美元/吨）</span><span class="en">Rice price bands by segment (US$/tonne)</span></h4>
+      <div class="cap"><span class="vi">Khoảng trống 550–610 USD/tấn là cơ hội định vị</span><span class="cn">550–610 美元/吨的空白即定位机会</span><span class="en">The US$550–610 gap is the positioning opportunity</span></div>
+      <div class="canvas-wrap sm"><canvas id="c07"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <h4><span class="vi">Mật độ cạnh tranh theo từ khoá</span><span class="cn">按关键词的竞争密度</span><span class="en">Competitive density by keyword</span></h4>
+      <div class="cap"><span class="vi">Số listing và số nhà cung cấp (29/10/2026)</span><span class="cn">listing 数与供应商数（2026/10/29）</span><span class="en">Listings and suppliers (29 Oct 2026)</span></div>
+      <div class="canvas-wrap sm"><canvas id="c08"></canvas></div>
+    </div>
+  </div>
+
+  <div class="insight">
+    <div class="ttl"><span class="vi">Ba điểm yếu của đối thủ mà KIGIMEX có thể khai thác ngay</span><span class="cn">KIGIMEX 可立即利用的三个对手弱点</span><span class="en">Three rival weaknesses KIGIMEX can exploit immediately</span></div>
+    <div class="blk-vi"><p><strong>1. Không chứng minh được năng lực sản xuất.</strong> Phần lớn gian hàng không có ảnh nhà máy, không công bố công suất, không có video dây chuyền. KIGIMEX có 300.000 m² và 5 xí nghiệp — đây là lợi thế truyền thông trực tiếp. <strong>2. Niêm yết giá không so sánh được.</strong> MOQ 1kg, giá theo container, thiếu Incoterms. Chỉ cần niêm yết chuẩn (USD/tấn, FOB/CIF, MOQ 20–25 tấn) là đã vượt 80% đối thủ. <strong>3. Không có chứng nhận hiển thị.</strong> HACCP/ISO 22000/HALAL của KIGIMEX nếu đặt đúng chỗ trong gian hàng sẽ là bộ lọc loại bỏ phần lớn đối thủ cùng phân khúc.</p></div>
+    <div class="blk-cn"><p><strong>1. 无法证明产能。</strong>多数店铺没有厂房照片、不公布产能、没有产线视频。KIGIMEX 拥有 30 万 m² 与 5 家工厂——这是直接的传播优势。<strong>2. 报价无法比较。</strong>起订 1 公斤、按整柜报价、缺 Incoterms。只要按标准挂牌（美元/吨、FOB/CIF、20–25 吨起订）就已超越 80% 的对手。<strong>3. 未展示认证。</strong>KIGIMEX 的 HACCP/ISO 22000/HALAL 若放在店铺正确位置，将成为筛掉同层级对手的过滤器。</p></div>
+    <div class="blk-en"><p><strong>1. They cannot prove capacity.</strong> Most stores have no plant photos, no published capacity, no production-line video. KIGIMEX has 300,000 m² and five plants — a direct communication advantage. <strong>2. Their pricing is incomparable.</strong> 1 kg MOQs, per-container quotes, missing Incoterms. Simply listing to standard (US$/tonne, FOB/CIF, 20–25 t MOQ) already beats 80% of rivals. <strong>3. No visible certification.</strong> KIGIMEX's HACCP/ISO 22000/HALAL, placed correctly on the store, becomes a filter that removes most same-tier competitors.</p></div>
+  </div>
+</section>
+
+<!-- 07 -->
+<section id="s07">
+  <div class="sec-head">
+    <div class="sec-num">07</div>
+    <div>
+      <div class="sec-title"><span class="vi">Cá cơm trên Alibaba.com: ít đối thủ thật, nhiều đối thủ hình thức</span><span class="cn">Alibaba.com 上的小公鱼：真实对手少，形式对手多</span><span class="en">Anchovy on Alibaba.com: few real rivals, many paper ones</span></div>
+      <div class="sec-sub"><span class="vi">49 listing · 126 nhà cung cấp · giá 1,80–10 USD/kg</span><span class="cn">49 个 listing · 126 家供应商 · 1.80–10 美元/公斤</span><span class="en">49 listings · 126 suppliers · US$1.80–10/kg</span></div>
+    </div>
+  </div>
+
+  <div class="blk-vi">
+    <p>Đây là ngành hàng KIGIMEX có lợi thế rõ nhất. Từ khoá <em>dried anchovy</em> chỉ trả về <strong>49 sản phẩm</strong> — rất ít so với 158 của gạo — nhưng lại có tới <strong>126 nhà cung cấp</strong>. Nghĩa là trung bình mỗi nhà cung cấp chỉ có 0,4 sản phẩm: phần lớn mở gian hàng rồi bỏ trống, hoặc đăng 1–2 listing rồi không duy trì.</p>
+    <p>Về giá, dải niêm yết phổ biến 1,80–6,80 USD/kg cho cá cơm khô nguyên con, tương đương 1.800–6.800 USD/tấn. Cá cơm hun khói và cá cơm hữu cơ cao hơn: 4,50–6,50 USD/kg. Đáng chú ý: mức giá này <strong>cao hơn nhiều so với giá nhập khẩu bình quân vào Hàn Quốc (4,66 USD/kg) và Malaysia (1,95 USD/kg)</strong> — phản ánh việc nhà cung cấp trên sàn đang định giá theo đơn lẻ, trong khi buyer nhập khẩu mua theo container và có nhiều đòn bẩy đàm phán.</p>
+  </div>
+  <div class="blk-cn">
+    <p>这是 KIGIMEX 优势最明显的品类。关键词 <em>dried anchovy</em> 仅返回 <strong>49 个产品</strong>——远少于大米的 158 个——却有 <strong>126 家供应商</strong>。也就是说平均每家只有 0.4 个产品：多数开店后闲置，或只挂 1–2 个 listing 便不再维护。</p>
+    <p>价格方面，整条干小公鱼常见挂牌 1.80–6.80 美元/公斤（1,800–6,800 美元/吨）；烟熏与有机款更高：4.50–6.50 美元/公斤。值得注意的是：这些价格<strong>明显高于韩国（4.66 美元/公斤）与马来西亚（1.95 美元/公斤）的进口均价</strong>——说明平台卖家按零散订单定价，而进口买家按整柜采购且议价空间大。</p>
+  </div>
+  <div class="blk-en">
+    <p>This is the category where KIGIMEX has the clearest edge. The keyword <em>dried anchovy</em> returns only <strong>49 products</strong> — far fewer than rice's 158 — yet there are <strong>126 suppliers</strong>. On average each supplier has 0.4 products: most open a store and leave it idle, or post one or two listings and stop maintaining them.</p>
+    <p>On price, whole dried anchovy lists at US$1.80–6.80/kg (US$1,800–6,800/t); smoked and organic versions run higher at US$4.50–6.50/kg. Notably these prices sit <strong>well above average import prices into Korea (US$4.66/kg) and Malaysia (US$1.95/kg)</strong> — showing that platform sellers price for spot orders while import buyers purchase by container with far more negotiating leverage.</p>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th class="num" style="width:4%">#</th>
+        <th style="width:33%"><span class="vi">Sản phẩm đang niêm yết</span><span class="cn">在售产品</span><span class="en">Listed product</span></th>
+        <th class="num" style="width:14%"><span class="vi">Giá</span><span class="cn">价格</span><span class="en">Price</span></th>
+        <th class="num" style="width:12%"><span class="vi">MOQ</span><span class="cn">起订量</span><span class="en">MOQ</span></th>
+        <th style="width:25%"><span class="vi">Nhà cung cấp</span><span class="cn">供应商</span><span class="en">Supplier</span></th>
+        <th style="width:12%"><span class="vi">Link</span><span class="cn">链接</span><span class="en">Link</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Premium Dried Anchovy — Export Standard</td><td class="num">US$1,90–2,60/kg</td><td class="num">10.000 kg</td><td>VIET D.E.L.T.A <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Hot-Product-2025-Premium-Dried-Anchovy_10000036054364.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">2</td><td>Whole Dried Anchovies — Sun-Dried, Natural, Salted</td><td class="num">US$2,50–3,50/kg</td><td class="num">500 kg</td><td>VIET D.E.L.T.A <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Premium-Grade-Whole-Dried-Anchovies-From_10000029209458.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">3</td><td>Premium Dried Anchovy — Clean, Sun-Dried, High Protein</td><td class="num">US$2.700–2.900/t</td><td class="num">7 t</td><td>VIET D.E.L.T.A <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Vietnam-Premium-Dried-Anchovy-Clean-Sun_10000037611219.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">4</td><td>Raw Dried Anchovy Vietnam — HACCP Certified</td><td class="num">US$2,80–3,00/kg</td><td class="num">10 kg</td><td>KIM CHAU SEAFOOD <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Premium-Raw-Dried-Anchovy-Vietnam-Non_10000039503818.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">5</td><td>Sun-Dried Anchovy Salted — Soup Stock Grade</td><td class="num">US$2,90–3,50/kg</td><td class="num">10 kg</td><td>99 GOLD DATA <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Sun-Dried-Anchovy-Fish-Salted-Type_10000037069618.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">6</td><td>Deepbody Whole Dried Anchovy — Grade A, Box</td><td class="num">US$2,50–3,20/kg</td><td class="num">20.000 kg</td><td>M.I.T VIET NAM <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Deepbody-Whole-Dried-Anchovy-Fish-Grade_10000024200498.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">7</td><td>Anchovies Dried 100% Clean — Bulk</td><td class="num">US$3,20–6,80/kg</td><td class="num">500 kg</td><td>TAKIMEX GLOBAL <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Anchovies-Dried-by-100-Clean-Product_10000016030825.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">8</td><td>Salted Dry Anchovy — No Head, Fresh Style</td><td class="num">US$3,60–3,90/kg</td><td class="num">100 kg</td><td>SAFIMEX <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Salted-Dry-Seafood-Wholesale-Dried-Anchovy_10000047218814.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">9</td><td>Dried Smoked Anchovy — Savory Seafood</td><td class="num">US$4,50–6,50/kg</td><td class="num">100 kg</td><td>BLUE LOTUS FARM <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/POPULAR-PICK-Safe-Dried-Smoked-Anchovy_10000042969959.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">10</td><td>New Season 2026 — Sun Dry, Low-Salt, 3–7cm</td><td class="num">US$2,50/kg</td><td class="num">1.000 kg</td><td>NEW SPRING <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/NEW-SPRING-New-Season-2026-100_11000010258831.html" target="_blank" rel="noopener">View</a></td></tr>
+        <tr><td class="num">11</td><td>Premium Vietnamese Sun-Dried Anchovies</td><td class="num">US$3–6/kg</td><td class="num">1 kg</td><td>WELLTECH VN <span class="tag tag-vn">VN</span></td><td><a href="https://www.alibaba.com/product-detail/Premium-Vietnamese-Sun-Dried-Anchovies-Flavorful_10000034302578.html" target="_blank" rel="noopener">View</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><span class="vi">URL thật, lấy từ kết quả tìm kiếm Alibaba.com ngày 29/10/2026. Giá niêm yết theo kg hoặc theo tấn tùy listing; cột giá giữ nguyên đơn vị gốc. Lưu ý: 11/11 listing đại diện đều của nhà cung cấp Việt Nam — cho thấy ngành này trên sàn gần như do Việt Nam chi phối, nhưng không có thương hiệu nào chiếm ưu thế rõ rệt.</span><span class="cn">真实 URL，取自 2026/10/29 Alibaba.com 搜索结果。价格按 kg 或吨挂牌，价格列保留原始单位。注意：11/11 代表 listing 均来自越南供应商——说明该品类在平台上几乎由越南主导，但没有明显领先品牌。</span><span class="en">Real URLs from Alibaba.com search results on 29 Oct 2026. Prices are quoted per kg or per tonne depending on the listing; the price column keeps the original unit. Note that all 11 representative listings are Vietnamese suppliers — the category is almost entirely Vietnam-dominated on the platform, yet no single brand dominates.</span></div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Dải giá cá cơm khô trên sàn so với giá nhập khẩu thực tế (USD/kg)</span><span class="cn">平台干小公鱼价格区间与实际进口价对比（美元/公斤）</span><span class="en">Dried anchovy platform price bands vs actual import prices (US$/kg)</span></h4>
+    <div class="cap"><span class="vi">Cột: dải giá niêm yết trên Alibaba.com · Điểm: giá nhập khẩu bình quân 2024</span><span class="cn">柱状：Alibaba.com 挂牌区间 · 点：2024 年进口均价</span><span class="en">Bars: Alibaba.com listed ranges · Dots: 2024 average import price</span></div>
+    <div class="canvas-wrap"><canvas id="c09"></canvas></div>
+    <div class="src"><span class="vi">Nguồn: khảo sát listing Alibaba.com 29/10/2026; Tridge HS 030559 (giá nhập khẩu 2024).</span><span class="cn">来源：2026/10/29 Alibaba.com listing 调研；Tridge HS 030559（2024 年进口价）。</span><span class="en">Sources: Alibaba.com listing survey 29 Oct 2026; Tridge HS 030559 (2024 import prices).</span></div>
+  </div>
+
+  <div class="highlight">
+    <strong><span class="vi">Đọc gì từ con số 126 nhà cung cấp nhưng chỉ 49 listing?</span><span class="cn">126 家供应商却只有 49 个 listing，说明什么？</span><span class="en">What does 126 suppliers but only 49 listings mean?</span></strong>
+    <div class="blk-vi" style="margin-top:8px"><p>Đây là dấu hiệu của một ngành hàng <strong>bị bỏ ngỏ</strong>, không phải ngành hàng cạnh tranh. Nhà cung cấp mở gian hàng để "có mặt" nhưng không đầu tư nội dung, vì họ nghĩ cá cơm là hàng nhỏ. Thực tế ngược lại: buyer cá cơm là buyer chuyên nghiệp (nhà máy thực phẩm, chuỗi siêu thị châu Á, nhà phân phối ethnic), ít lựa chọn nên dễ trung thành. Với một nhà cung cấp có nhà máy thật, 20–30 listing chất lượng cao là đủ để chiếm vị trí dẫn đầu ngành hàng này trên sàn — điều gần như không thể làm được ở ngành gạo.</p></div>
+    <div class="blk-cn" style="margin-top:8px"><p>这是一个<strong>被忽视</strong>的品类，而非竞争激烈的品类。供应商开店只为"占位"，不投入内容，因为他们认为小公鱼是小生意。事实相反：小公鱼买家是专业买家（食品工厂、亚洲超市连锁、ethnic 分销商），选择少因此更易忠诚。对拥有真实工厂的供应商而言，20–30 个高质量 listing 就足以在该品类占据平台领先地位——这在大米品类几乎不可能。</p></div>
+    <div class="blk-en" style="margin-top:8px"><p>This signals a <strong>neglected</strong> category, not a competitive one. Suppliers open a store for presence but invest nothing in content because they see anchovy as small business. The opposite is true: anchovy buyers are professional (food factories, Asian supermarket chains, ethnic distributors) with few alternatives, so they stay loyal. For a supplier with a real plant, 20–30 high-quality listings are enough to take category leadership on the platform — nearly impossible in rice.</p></div>
+  </div>
+</section>
+
+<!-- 08 -->
+<section id="s08">
+  <div class="sec-head">
+    <div class="sec-num">08</div>
+    <div>
+      <div class="sec-title"><span class="vi">Đối thủ đang bán trên Alibaba.com — đã xác minh từng gian hàng</span><span class="cn">Alibaba.com 上的竞争对手——逐一核实店铺</span><span class="en">Competitors selling on Alibaba.com — store by store</span></div>
+      <div class="sec-sub"><span class="vi">10 gian hàng Việt Nam đã mở trực tiếp và đọc hồ sơ ngày 28–29/10/2026</span><span class="cn">2026/10/28–29 直接打开并阅读资料的 10 家越南店铺</span><span class="en">Ten Vietnamese stores opened and profiled on 28–29 Oct 2026</span></div>
+    </div>
+  </div>
+
+  <div class="blk-vi"><p>Đây là danh sách đối thủ thực tế, không phải danh sách mẫu. Mỗi gian hàng dưới đây đã được mở trực tiếp trên Alibaba.com và đọc trường <em>Total Annual Revenue</em> trong Company Profile. Cột cuối ghi rõ điểm yếu so với KIGIMEX — đây chính là căn cứ để định vị.</p></div>
+  <div class="blk-cn"><p>以下是真实对手名单，非示例。每家店铺均在 Alibaba.com 直接打开，并读取 Company Profile 中的 <em>Total Annual Revenue</em>。最后一列列出相对 KIGIMEX 的弱点——这正是定位依据。</p></div>
+  <div class="blk-en"><p>This is a real competitor list, not a sample. Every store below was opened on Alibaba.com and its <em>Total Annual Revenue</em> read from the Company Profile. The last column states the weakness relative to KIGIMEX — the basis for positioning.</p></div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th class="num" style="width:4%">#</th>
+        <th style="width:22%"><span class="vi">Công ty</span><span class="cn">公司</span><span class="en">Company</span></th>
+        <th style="width:11%"><span class="vi">Ngành</span><span class="cn">品类</span><span class="en">Category</span></th>
+        <th style="width:17%"><span class="vi">Doanh thu công bố</span><span class="cn">公布营收</span><span class="en">Published revenue</span></th>
+        <th style="width:9%"><span class="vi">Năm</span><span class="cn">年限</span><span class="en">Years</span></th>
+        <th style="width:25%"><span class="vi">Điểm yếu so với KIGIMEX</span><span class="cn">相对 KIGIMEX 的弱点</span><span class="en">Weakness vs KIGIMEX</span></th>
+        <th style="width:12%"><span class="vi">Link</span><span class="cn">链接</span><span class="en">Link</span></th>
+      </tr></thead>
+      <tbody>
+        <tr class="grp-row"><td colspan="7"><span class="vi">Nhóm bán gạo</span><span class="cn">大米组</span><span class="en">Rice group</span></td></tr>
+        <tr><td class="num">1</td><td><strong>SUNRISE INS COMPANY LIMITED</strong><br><span class="small">TP.HCM</span></td><td><span class="tag tag-vn"><span class="vi">GẠO</span><span class="cn">大米</span><span class="en">RICE</span></span> <span class="tag tag-cl"><span class="vi">CÁ CƠM</span><span class="cn">小公鱼</span><span class="en">ANCHOVY</span></span></td><td><strong>Above US$100M</strong></td><td>~6</td><td><span class="vi">Đối thủ mạnh nhất: bán cả gạo và cá cơm. Nhưng là công ty thương mại, không có nhà máy cá cơm chuyên dụng.</span><span class="cn">最强对手：同时销售大米与小公鱼。但属贸易公司，没有专用小公鱼工厂。</span><span class="en">The strongest rival: sells both rice and anchovy — but is a trading company without a dedicated anchovy plant.</span></td><td><a href="https://vn1538142718xnrr.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+        <tr><td class="num">2</td><td><strong>FRESHGOODS GROUP</strong><br><span class="small">Nghệ An</span></td><td><span class="tag tag-vn"><span class="vi">GẠO</span><span class="cn">大米</span><span class="en">RICE</span></span></td><td><strong>US$50M – 100M</strong></td><td>~11</td><td><span class="vi">Mạnh về nội dung (listing ảnh đẹp, giá rõ) nhưng danh mục dàn trải, không có cá cơm.</span><span class="cn">内容较强（图片好、报价清晰），但品类分散，无小公鱼。</span><span class="en">Strong content (good imagery, clear pricing) but a scattered portfolio and no anchovy.</span></td><td><a href="https://vn1228705265qxrr.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+        <tr><td class="num">3</td><td><strong>RICE &amp; MORE CO., LTD</strong><br><span class="small">TP.HCM</span></td><td><span class="tag tag-vn"><span class="vi">GẠO</span><span class="cn">大米</span><span class="en">RICE</span></span></td><td><strong>US$10M – 50M</strong></td><td>~4</td><td><span class="vi">Chỉ 4 năm, chưa có bề dày; không có chứng nhận nổi bật hiển thị.</span><span class="cn">仅 4 年，积淀不足；未展示突出认证。</span><span class="en">Only four years old, thin track record, no prominent certification displayed.</span></td><td><a href="https://vn19082960113bjlg.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+        <tr><td class="num">4</td><td><strong>VILACONIC</strong><br><span class="small">Nghệ An</span></td><td><span class="tag tag-vn"><span class="vi">GẠO</span><span class="cn">大米</span><span class="en">RICE</span></span> <span class="tag tag-cl"><span class="vi">CÁ CƠM</span><span class="cn">小公鱼</span><span class="en">ANCHOVY</span></span></td><td><strong>US$5M – 10M</strong> <span class="small">(store 1)</span><br><strong>US$50M – 100M</strong> <span class="small">(store 2)</span></td><td>~16</td><td><span class="vi">Vận hành nhiều gian hàng song song, doanh thu khai không nhất quán giữa các store — dấu hiệu thiếu kiểm soát thương hiệu.</span><span class="cn">同时运营多个店铺，各店营收申报不一致——品牌管控薄弱的迹象。</span><span class="en">Runs several stores in parallel with inconsistent revenue declarations — a sign of weak brand control.</span></td><td><a href="https://vilaconic.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+        <tr><td class="num">5</td><td><strong>MEKONG FOOD CORPORATION</strong><br><span class="small">ĐBSCL</span></td><td><span class="tag tag-vn"><span class="vi">GẠO</span><span class="cn">大米</span><span class="en">RICE</span></span></td><td><span class="vi">Không công bố</span><span class="cn">未公布</span><span class="en">Not published</span><br><span class="small"><span class="vi">Vốn 350 tỷ VND · 18.800 m²</span><span class="cn">注册资本 3,500 亿越盾 · 18,800 m²</span><span class="en">Capital VND 350 bn · 18,800 m²</span></span></td><td>~5</td><td><span class="vi">Quy mô nhà máy nhỏ hơn KIGIMEX khoảng 16 lần (18.800 m² so với 300.000 m²).</span><span class="cn">厂房面积比 KIGIMEX 小约 16 倍（18,800 m² 对 300,000 m²）。</span><span class="en">Plant footprint roughly 16× smaller than KIGIMEX (18,800 m² vs 300,000 m²).</span></td><td><a href="https://mekonggroup.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+        <tr class="grp-row"><td colspan="7"><span class="vi">Nhóm bán cá cơm / hải sản khô</span><span class="cn">小公鱼 / 干海产组</span><span class="en">Anchovy / dried seafood group</span></td></tr>
+        <tr><td class="num">6</td><td><strong>VIET D.E.L.T.A INDUSTRIAL CO., LTD</strong><br><span class="small">TP.HCM</span></td><td><span class="tag tag-cl"><span class="vi">CÁ CƠM</span><span class="cn">小公鱼</span><span class="en">ANCHOVY</span></span></td><td><strong>US$10M – 50M</strong></td><td>~14</td><td><span class="vi">Đối thủ trực tiếp số 1 ở cá cơm: có 3 listing cá cơm, giá 1,80–3,50 USD/kg. Nhưng danh mục chính là dừa, sắn, thức ăn chăn nuôi — cá cơm chỉ là ngành phụ.</span><span class="cn">小公鱼领域第一直接对手：有 3 个 listing，1.80–3.50 美元/公斤。但主营为椰子、木薯、饲料——小公鱼只是副业。</span><span class="en">The No.1 direct anchovy rival with three listings at US$1.80–3.50/kg — but its core is coconut, cassava and animal feed; anchovy is a side line.</span></td><td><a href="https://vdelta.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+        <tr><td class="num">7</td><td><strong>KIM CHAU SEAFOOD LIMITED COMPANY</strong><br><span class="small">Lâm Đồng</span></td><td><span class="tag tag-cl"><span class="vi">CÁ CƠM</span><span class="cn">小公鱼</span><span class="en">ANCHOVY</span></span></td><td><span class="vi">Không công bố</span><span class="cn">未公布</span><span class="en">Not published</span><br><span class="small">51–100 <span class="vi">nhân sự</span><span class="cn">员工</span><span class="en">staff</span></span></td><td>~12</td><td><span class="vi">Chuyên cá cơm/cá khô nhưng quy mô nhân sự nhỏ (51–100), không công bố doanh thu — thiếu tín hiệu tin cậy với buyer lớn.</span><span class="cn">专注小公鱼/鱼干，但人员规模小（51–100），未公布营收——对大买家缺乏可信信号。</span><span class="en">Focused on anchovy and dried fish but small (51–100 staff) and publishes no revenue — weak trust signal for large buyers.</span></td><td><a href="https://kimchauseafood.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+        <tr><td class="num">8</td><td><strong>DAM SEN PRODUCING TRADING SEAFOOD CO., LTD</strong><br><span class="small">Lâm Đồng</span></td><td><span class="tag tag-cl"><span class="vi">CÁ CƠM</span><span class="cn">小公鱼</span><span class="en">ANCHOVY</span></span></td><td><span class="vi">Không công bố</span><span class="cn">未公布</span><span class="en">Not published</span><br><span class="small">51–100 <span class="vi">nhân sự</span><span class="cn">员工</span><span class="en">staff</span></span></td><td>~21</td><td><span class="vi">Có bề dày nhưng định vị là snack hải sản khô, không phải nguyên liệu B2B cho nhà máy.</span><span class="cn">有积淀，但定位为干海产零食，而非面向工厂的 B2B 原料。</span><span class="en">Has history but positions as dried seafood snacks, not B2B raw material for factories.</span></td><td><a href="https://vn19077242596hlqs.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+        <tr><td class="num">9</td><td><strong>SAFIMEX JOINT STOCK COMPANY</strong><br><span class="small">TP.HCM</span></td><td><span class="tag tag-cl"><span class="vi">CÁ CƠM</span><span class="cn">小公鱼</span><span class="en">ANCHOVY</span></span></td><td><strong>US$2,5M – 5M</strong></td><td>~8</td><td><span class="vi">Danh mục trải rộng (mì, cao su, gỗ, thực phẩm khô) — cá cơm không phải trọng tâm, khó tạo uy tín chuyên ngành.</span><span class="cn">品类宽泛（面条、橡胶、木材、干货）——小公鱼非重点，难建立专业信誉。</span><span class="en">Broad portfolio (noodles, rubber, wood, dried food) with anchovy off-centre — hard to build category authority.</span></td><td><a href="https://safimex.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+        <tr><td class="num">10</td><td><strong>99 GOLD DATA</strong><br><span class="small">TP.HCM</span></td><td><span class="tag tag-cl"><span class="vi">CÁ CƠM</span><span class="cn">小公鱼</span><span class="en">ANCHOVY</span></span></td><td><strong>Below US$1M</strong></td><td>~8</td><td><span class="vi">Nhỏ nhất nhóm nhưng nội dung tốt nhất: 60 đơn hàng, 52 đánh giá 4,7/5 — chứng minh nội dung tốt có thể bù quy mô nhỏ. KIGIMEX cần vượt qua bằng nội dung tương đương + quy mô thật.</span><span class="cn">组内最小但内容最好：60 单、52 条 4.7/5 评价——证明好内容可弥补规模。KIGIMEX 需以同等内容 + 真实规模超越。</span><span class="en">Smallest in the group but the best content: 60 orders and 52 reviews at 4.7/5 — proof that content can offset scale. KIGIMEX must beat it with equal content plus genuine scale.</span></td><td><a href="https://99golddata.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Profile</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><span class="vi">Nguồn: mở trực tiếp Company Profile trên Alibaba.com ngày 28–29/10/2026. Doanh thu lấy từ trường <em>Total Annual Revenue</em>; trường hợp không công bố, ghi rõ dữ liệu thay thế. "Năm" tính từ <em>Year Established</em> đến 2026 (một số trường hợp là số năm hoạt động trên Alibaba). VILACONIC vận hành nhiều store với mức doanh thu khai khác nhau — báo cáo ghi cả hai để minh bạch.</span><span class="cn">来源：2026/10/28–29 在 Alibaba.com 直接打开 Company Profile。营收取自 <em>Total Annual Revenue</em>；未公布者注明替代数据。"年限"由 <em>Year Established</em> 计至 2026 年（部分为平台运营年数）。VILACONIC 运营多个店铺且营收申报不同——报告同时列出以示透明。</span><span class="en">Source: Company Profiles opened directly on Alibaba.com on 28–29 Oct 2026. Revenue comes from <em>Total Annual Revenue</em>; where unpublished, the substitute data is stated. "Years" is computed from <em>Year Established</em> to 2026 (in some cases it reflects years on the platform). VILACONIC runs multiple stores with differing revenue declarations — both are shown for transparency.</span></div>
+
+  <div class="chart-box">
+    <h4><span class="vi">KIGIMEX đứng ở đâu trong nhóm đối thủ (theo quy mô công bố)</span><span class="cn">KIGIMEX 在对手群体中的位置（按公布规模）</span><span class="en">Where KIGIMEX sits among rivals (by published scale)</span></h4>
+    <div class="cap"><span class="vi">Doanh thu công bố trên Alibaba.com · KIGIMEX chưa có gian hàng nên chưa có mức công bố</span><span class="cn">Alibaba.com 公布营收 · KIGIMEX 尚无店铺，故无公布值</span><span class="en">Revenue published on Alibaba.com · KIGIMEX has no store, so no published tier</span></div>
+    <div class="canvas-wrap"><canvas id="c10"></canvas></div>
+  </div>
+
+  <div class="insight">
+    <div class="ttl"><span class="vi">Kết luận cạnh tranh</span><span class="cn">竞争结论</span><span class="en">Competitive conclusion</span></div>
+    <div class="blk-vi"><p>Trong 10 đối thủ đã xác minh, chỉ <strong>2 công ty bán được cả gạo và cá cơm</strong> (SUNRISE INS và VILACONIC) — và cả hai đều là công ty thương mại đa ngành, không có xí nghiệp cá cơm riêng. <strong>Không đối thủ nào có đồng thời: nhà máy cá cơm chuyên dụng + 50 năm hoạt động + HALAL + 300.000 m².</strong> Đây chính là khoảng trống định vị: KIGIMEX không cần giành vị trí của ai, mà cần chiếm một vị trí chưa ai đứng — "nhà sản xuất thực phẩm lâu năm, đa ngành, có chứng nhận, phục vụ cả gạo và cá cơm".</p></div>
+    <div class="blk-cn"><p>在已核实的 10 家对手中，仅 <strong>2 家同时销售大米与小公鱼</strong>（SUNRISE INS 与 VILACONIC）——且两者均为多品类贸易公司，没有独立小公鱼厂。<strong>没有任何对手同时具备：专用小公鱼厂 + 50 年历史 + HALAL + 30 万 m²。</strong>这正是定位空白：KIGIMEX 不必抢占他人位置，而应占据无人占据的位置——"经营半个世纪、多品类、有认证、同时供应大米与小公鱼的生产商"。</p></div>
+    <div class="blk-en"><p>Of the ten verified rivals, only <strong>two sell both rice and anchovy</strong> (SUNRISE INS and VILACONIC) — and both are multi-category trading companies without a dedicated anchovy plant. <strong>No competitor combines: a dedicated anchovy facility + 50 years + HALAL + 300,000 m².</strong> That is the positioning gap: KIGIMEX does not need to displace anyone, only to occupy a position nobody holds — "a long-established, multi-category, certified manufacturer supplying both rice and anchovy".</p></div>
+  </div>
+</section>
+
+<!-- 09 -->
+<section id="s09">
+  <div class="sec-head">
+    <div class="sec-num">09</div>
+    <div>
+      <div class="sec-title"><span class="vi">Chân dung người mua mục tiêu — đúng 3 nhóm KIGIMEX xác định</span><span class="cn">目标买家画像——对应 KIGIMEX 指定的三类</span><span class="en">Target buyer personas — the three groups KIGIMEX named</span></div>
+      <div class="sec-sub"><span class="vi">Nhà nhập khẩu trực tiếp · Chuỗi siêu thị · Công ty thương mại</span><span class="cn">直接进口商 · 连锁超市 · 贸易公司</span><span class="en">Direct importers · Supermarket chains · Trading companies</span></div>
+    </div>
+  </div>
+
+  <div class="blk-vi"><p>Ba nhóm buyer KIGIMEX xác định là đúng, nhưng mỗi nhóm cần một cách trình bày khác nhau trên gian hàng. Điểm khác biệt quyết định: <strong>nhà nhập khẩu trực tiếp</strong> quan tâm giá và tiến độ; <strong>chuỗi siêu thị</strong> quan tâm bao bì, nhãn, chứng nhận và khả năng truy xuất; <strong>công ty thương mại</strong> quan tâm tốc độ báo giá và độ linh hoạt chủng loại. Dưới đây là 6 chân dung chi tiết (mỗi nhóm × 2 ngành hàng).</p></div>
+  <div class="blk-cn"><p>KIGIMEX 指定的三类买家是正确的，但每类在店铺上需要不同的呈现方式。决定性差异：<strong>直接进口商</strong>关注价格与交期；<strong>连锁超市</strong>关注包装、标签、认证与可追溯；<strong>贸易公司</strong>关注报价速度与品类灵活度。以下为 6 个细分画像（每类 × 2 品类）。</p></div>
+  <div class="blk-en"><p>The three buyer groups KIGIMEX named are right, but each needs a different presentation on the store. The decisive difference: <strong>direct importers</strong> care about price and schedule; <strong>supermarket chains</strong> care about packaging, labelling, certification and traceability; <strong>trading companies</strong> care about quote speed and category flexibility. Below are six detailed personas (each group × two categories).</p></div>
+
+  <div class="personas">
+    <div class="persona">
+      <div class="top"><div class="avatar">🚢</div><div><div class="nm"><span class="vi">Nhà nhập khẩu trực tiếp — GẠO</span><span class="cn">直接进口商——大米</span><span class="en">Direct importer — RICE</span></div><div class="rg">Africa · Philippines · <span class="vi">châu Á</span><span class="cn">亚洲</span><span class="en">Asia</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>500–5.000 <span class="vi">tấn/đơn</span><span class="cn">吨/单</span><span class="en">t/order</span></dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Giá CIF/FOB, tiến độ giao, ổn định chất lượng theo lô</span><span class="cn">CIF/FOB 价格、交付进度、批次质量稳定</span><span class="en">CIF/FOB price, delivery schedule, lot consistency</span></dd>
+        <dt><span class="vi">Loại ngay nếu</span><span class="cn">立即淘汰若</span><span class="en">Drops you if</span></dt><dd><span class="vi">Giá không theo USD/tấn, không nêu Incoterms, MOQ quá nhỏ</span><span class="cn">价格不按美元/吨、未说明 Incoterms、起订量过小</span><span class="en">Price not in US$/tonne, no Incoterms, MOQ too small</span></dd>
+      </dl>
+      <div style="margin-top:8px"><span class="kw">vietnam rice 25% broken</span><span class="kw">rice 50kg bag CIF</span><span class="kw">jasmine rice 5% broken</span></div>
+    </div>
+
+    <div class="persona anch">
+      <div class="top"><div class="avatar">🐟</div><div><div class="nm"><span class="vi">Nhà nhập khẩu trực tiếp — CÁ CƠM</span><span class="cn">直接进口商——小公鱼</span><span class="en">Direct importer — ANCHOVY</span></div><div class="rg">Korea · Malaysia · Singapore</div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>5–20 <span class="vi">tấn/đơn</span><span class="cn">吨/单</span><span class="en">t/order</span></dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Phân hạng kích cỡ, độ khô, tạp chất, giá/kg ổn định theo mùa</span><span class="cn">规格分级、干度、杂质、按季稳定的公斤价</span><span class="en">Size grading, dryness, foreign matter, seasonal price stability</span></dd>
+        <dt><span class="vi">Loại ngay nếu</span><span class="cn">立即淘汰若</span><span class="en">Drops you if</span></dt><dd><span class="vi">Không có ảnh cận hạt, không nêu kích cỡ (cm), không có COA</span><span class="cn">无近景图、未标规格（cm）、无 COA</span><span class="en">No close-up photos, no size spec (cm), no COA</span></dd>
+      </dl>
+      <div style="margin-top:8px"><span class="kw">dried anchovy 3-7cm</span><span class="kw">anchovy HACCP</span><span class="kw">dried anchovy bulk</span></div>
+    </div>
+
+    <div class="persona">
+      <div class="top"><div class="avatar">🛒</div><div><div class="nm"><span class="vi">Chuỗi siêu thị — GẠO</span><span class="cn">连锁超市——大米</span><span class="en">Supermarket chain — RICE</span></div><div class="rg">UAE · EU · Malaysia</div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>20–100 <span class="vi">tấn/SKU</span><span class="cn">吨/SKU</span><span class="en">t/SKU</span></dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Bao bì 5/10/25kg, nhãn song ngữ, HALAL, chứng nhận, truy xuất</span><span class="cn">5/10/25 公斤包装、双语标签、HALAL、认证、可追溯</span><span class="en">5/10/25 kg packs, bilingual labels, HALAL, certification, traceability</span></dd>
+        <dt><span class="vi">Loại ngay nếu</span><span class="cn">立即淘汰若</span><span class="en">Drops you if</span></dt><dd><span class="vi">Chỉ bán bao PP không nhãn, không có ảnh bao bì bán lẻ</span><span class="cn">只售无标 PP 袋、无零售包装图</span><span class="en">Only unbranded PP bags, no retail pack images</span></dd>
+      </dl>
+      <div style="margin-top:8px"><span class="kw">jasmine rice 5kg retail</span><span class="kw">halal rice supplier</span><span class="kw">private label rice</span></div>
+    </div>
+
+    <div class="persona anch">
+      <div class="top"><div class="avatar">🏪</div><div><div class="nm"><span class="vi">Chuỗi siêu thị — CÁ CƠM</span><span class="cn">连锁超市——小公鱼</span><span class="en">Supermarket chain — ANCHOVY</span></div><div class="rg">Korea · Singapore · <span class="vi">Malaysia</span><span class="cn">马来西亚</span><span class="en">Malaysia</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>2–10 <span class="vi">tấn/SKU</span><span class="cn">吨/SKU</span><span class="en">t/SKU</span></dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Bao 50/100g–1kg, nhãn dinh dưỡng, độ sạch (ít cát), hạn dùng dài</span><span class="cn">50/100g–1 公斤包装、营养标签、洁净度（少沙）、长保质期</span><span class="en">50/100 g–1 kg packs, nutrition labels, cleanliness, long shelf life</span></dd>
+        <dt><span class="vi">Loại ngay nếu</span><span class="cn">立即淘汰若</span><span class="en">Drops you if</span></dt><dd><span class="vi">Không có kiểm nghiệm vi sinh, bao bì không chống ẩm</span><span class="cn">无微生物检测、包装不防潮</span><span class="en">No microbiological testing, non-barrier packaging</span></dd>
+      </dl>
+      <div style="margin-top:8px"><span class="kw">anchovy retail pack</span><span class="kw">dried anchovy 100g</span><span class="kw">ikan bilis supplier</span></div>
+    </div>
+
+    <div class="persona anch">
+      <div class="top"><div class="avatar">🔁</div><div><div class="nm"><span class="vi">Công ty thương mại — CÁ CƠM</span><span class="cn">贸易公司——小公鱼</span><span class="en">Trading company — ANCHOVY</span></div><div class="rg">Singapore · UAE · <span class="vi">tái xuất</span><span class="cn">转口</span><span class="en">re-export</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>1–5 <span class="vi">tấn/đơn, tần suất cao</span><span class="cn">吨/单，频次高</span><span class="en">t/order, high frequency</span></dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Tốc độ báo giá (<2h), nhiều chủng loại để ghép container, chiết khấu theo số lượng</span><span class="cn">报价速度（<2 小时）、多品类拼柜、按量折扣</span><span class="en">Quote speed (<2 h), enough variety to fill a container, volume discounts</span></dd>
+        <dt><span class="vi">Loại ngay nếu</span><span class="cn">立即淘汰若</span><span class="en">Drops you if</span></dt><dd><span class="vi">Phản hồi chậm, chỉ có 1 SKU, không linh hoạt đóng gói</span><span class="cn">回复慢、仅 1 个 SKU、包装不灵活</span><span class="en">Slow replies, a single SKU, inflexible packaging</span></dd>
+      </dl>
+      <div style="margin-top:8px"><span class="kw">dried seafood mixed container</span><span class="kw">anchovy distributor</span><span class="kw">dried fish wholesale</span></div>
+    </div>
+
+    <div class="persona">
+      <div class="top"><div class="avatar">🏛️</div><div><div class="nm"><span class="vi">Đấu thầu / mua tập trung — GẠO</span><span class="cn">招标 / 集中采购——大米</span><span class="en">Tender / central buying — RICE</span></div><div class="rg">Africa · <span class="vi">Trung Đông</span><span class="cn">中东</span><span class="en">Middle East</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>20.000–50.000 <span class="vi">tấn/hợp đồng</span><span class="cn">吨/合同</span><span class="en">t/contract</span></dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Năng lực bảo lãnh, kinh nghiệm 3–5 năm, tiêu chuẩn quy định</span><span class="cn">保函能力、3–5 年经验、规定标准</span><span class="en">Guarantee capacity, 3–5 years' experience, mandated standards</span></dd>
+        <dt><span class="vi">Loại ngay nếu</span><span class="cn">立即淘汰若</span><span class="en">Drops you if</span></dt><dd><span class="vi">Không chứng minh được năng lực sản xuất và lịch sử giao hàng</span><span class="cn">无法证明产能与交付历史</span><span class="en">Cannot evidence capacity and delivery history</span></dd>
+      </dl>
+      <div style="margin-top:8px"><span class="kw">rice tender 50kg</span><span class="kw">white rice 25% broken</span><span class="kw">rice supply contract</span></div>
+    </div>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Phân bổ nhu cầu theo nhóm buyer — ước tính của AM</span><span class="cn">按买家类型的需求分布——AM 估算</span><span class="en">Demand split by buyer group — AM estimate</span></h4>
+    <div class="cap"><span class="vi">Tỷ trọng tương đối trong tổng nhu cầu B2B của hai ngành hàng</span><span class="cn">两个品类 B2B 总需求中的相对占比</span><span class="en">Relative weight in combined B2B demand across both categories</span></div>
+    <div class="canvas-wrap"><canvas id="c11"></canvas></div>
+    <div class="src"><span class="vi">Nguồn: ước tính của AM dựa trên cơ cấu thị trường (S03, S04) và đặc điểm đơn hàng — không phải số liệu thống kê chính thức.</span><span class="cn">来源：AM 基于市场结构（S03、S04）与订单特征估算，非官方统计。</span><span class="en">Source: AM estimate based on market structure (S03, S04) and order characteristics — not official statistics.</span></div>
+  </div>
+
+  <div class="insight">
+    <div class="ttl"><span class="vi">Một gian hàng, hai cách nói</span><span class="cn">一个店铺，两种表达</span><span class="en">One store, two voices</span></div>
+    <div class="blk-vi"><p>Buyer gạo mua bằng <em>thông số và giá</em>; buyer cá cơm mua bằng <em>hình ảnh và độ tin cậy về vệ sinh</em>. Vì vậy gian hàng không nên trình bày hai ngành hàng theo cùng một khuôn. Khuyến nghị: <strong>trang chủ chia hai khối rõ ràng</strong>, mỗi khối dùng bộ ảnh, thông số và từ khoá riêng; phần giới thiệu doanh nghiệp (50 năm, 300.000 m², chứng nhận) đặt ở vị trí dùng chung vì đây là yếu tố tạo niềm tin cho cả hai nhóm.</p></div>
+    <div class="blk-cn"><p>大米买家按<em>参数与价格</em>采购；小公鱼买家按<em>图片与卫生可信度</em>采购。因此店铺不应以同一模板呈现两个品类。建议：<strong>首页分为两个清晰区块</strong>，各自使用专属图片、参数与关键词；企业介绍（50 年、30 万 m²、认证）放在共用位置，因为这是两类买家共同的信任来源。</p></div>
+    <div class="blk-en"><p>Rice buyers purchase on <em>specification and price</em>; anchovy buyers purchase on <em>imagery and hygiene confidence</em>. The store should therefore not present both categories in one template. Recommendation: <strong>split the homepage into two clear blocks</strong>, each with its own imagery, specs and keywords, while the corporate story (50 years, 300,000 m², certification) sits in a shared position because it builds trust for both groups.</p></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section id="s10">
+  <div class="sec-head">
+    <div class="sec-num">10</div>
+    <div>
+      <div class="sec-title"><span class="vi">Khoảng trống hiện tại của KIGIMEX trên kênh số</span><span class="cn">KIGIMEX 在数字渠道的现状差距</span><span class="en">KIGIMEX's current gap on the digital channel</span></div>
+      <div class="sec-sub"><span class="vi">Kiểm tra ngày 29/10/2026: chưa có gian hàng, trong khi tài sản cần thiết đã có sẵn</span><span class="cn">2026/10/29 核查：尚无店铺，但所需资产已具备</span><span class="en">Checked 29 Oct 2026: no store yet, while the required assets already exist</span></div>
+    </div>
+  </div>
+
+  <div class="cl-box">
+    <div class="ttl"><span class="vi">Kết quả kiểm tra</span><span class="cn">核查结果</span><span class="en">Audit result</span></div>
+    <div class="blk-vi"><p>Tìm kiếm trên Alibaba.com với từ khoá <em>kigimex</em> và <em>kien giang import export</em> (tab supplier) ngày 28–29/10/2026: <strong>không tìm thấy gian hàng nào của KIGIMEX</strong>. Kết quả trả về là các nhà cung cấp Trung Quốc không liên quan (mã sản phẩm trùng chữ "KG/KM"), cùng vài công ty Việt Nam khác nhưng không phải KIGIMEX.</p></div>
+    <div class="blk-cn"><p>2026/10/28–29 在 Alibaba.com 以关键词 <em>kigimex</em> 与 <em>kien giang import export</em>（supplier 页签）检索：<strong>未发现 KIGIMEX 的任何店铺</strong>。结果为不相关的中国供应商（产品代码含 "KG/KM"）及若干其他越南公司。</p></div>
+    <div class="blk-en"><p>Searching Alibaba.com for <em>kigimex</em> and <em>kien giang import export</em> (supplier tab) on 28–29 Oct 2026: <strong>no KIGIMEX store was found</strong>. Results returned unrelated Chinese suppliers (product codes containing "KG/KM") and several other Vietnamese companies.</p></div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th style="width:26%"><span class="vi">Tài sản cần cho gian hàng</span><span class="cn">店铺所需资产</span><span class="en">Asset needed for the store</span></th>
+        <th style="width:14%"><span class="vi">Trạng thái</span><span class="cn">状态</span><span class="en">Status</span></th>
+        <th style="width:32%"><span class="vi">Hiện có gì</span><span class="cn">现有</span><span class="en">What exists</span></th>
+        <th style="width:28%"><span class="vi">Cần làm</span><span class="cn">需完成</span><span class="en">What is needed</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="vi">Năng lực sản xuất &amp; quy mô</span><span class="cn">产能与规模</span><span class="en">Capacity &amp; scale</span></td><td><span class="tag tag-up"><span class="vi">ĐÃ CÓ</span><span class="cn">已具备</span><span class="en">READY</span></span></td><td><span class="vi">5 xí nghiệp lương thực, 1 xí nghiệp cá cơm, 300.000 m², 300+ nhân sự</span><span class="cn">5 家粮食厂、1 家小公鱼厂、30 万 m²、300+ 员工</span><span class="en">Five rice plants, one anchovy plant, 300,000 m², 300+ staff</span></td><td><span class="vi">Chụp ảnh/video nhà máy, đo công suất theo tấn/tháng</span><span class="cn">拍摄厂房照片/视频，按吨/月核算产能</span><span class="en">Shoot plant photo/video, quantify capacity in t/month</span></td></tr>
+        <tr><td><span class="vi">Chứng nhận</span><span class="cn">认证</span><span class="en">Certification</span></td><td><span class="tag tag-up"><span class="vi">ĐÃ CÓ</span><span class="cn">已具备</span><span class="en">READY</span></span></td><td>ISO 9001:2015, ISO 22000:2018, HALAL</td><td><span class="vi">Scan bản gốc, đăng vào mục Certifications, ghi ngày hiệu lực</span><span class="cn">扫描原件，上传至 Certifications，注明有效期</span><span class="en">Scan originals, upload to Certifications, state validity dates</span></td></tr>
+        <tr><td><span class="vi">Lịch sử xuất khẩu</span><span class="cn">出口历史</span><span class="en">Export track record</span></td><td><span class="tag tag-up"><span class="vi">ĐÃ CÓ</span><span class="cn">已具备</span><span class="en">READY</span></span></td><td><span class="vi">Philippines, Indonesia, Africa, Trung Đông; 500+ đối tác</span><span class="cn">菲律宾、印尼、非洲、中东；500+ 合作伙伴</span><span class="en">Philippines, Indonesia, Africa, Middle East; 500+ partners</span></td><td><span class="vi">Chọn 3–5 thị trường tiêu biểu để đưa vào hồ sơ (không nêu tên khách nếu chưa được phép)</span><span class="cn">选 3–5 个代表市场写入资料（未经许可不列客户名）</span><span class="en">Select 3–5 representative markets for the profile (no client names without permission)</span></td></tr>
+        <tr><td><span class="vi">Pháp lý &amp; mã số doanh nghiệp</span><span class="cn">法务与营业执照</span><span class="en">Legal &amp; business registration</span></td><td><span class="tag tag-up"><span class="vi">ĐÃ CÓ</span><span class="cn">已具备</span><span class="en">READY</span></span></td><td><span class="vi">Công ty cổ phần niêm yết UPCoM (KGM) từ 2017</span><span class="cn">2017 年起在 UPCoM 上市的股份公司（KGM）</span><span class="en">Listed joint stock company (KGM) on UPCoM since 2017</span></td><td><span class="vi">Chuẩn bị giấy phép XNK, ĐKKD, báo cáo thường niên</span><span class="cn">准备进出口许可证、营业执照、年报</span><span class="en">Prepare import-export licence, business registration, annual report</span></td></tr>
+        <tr><td><span class="vi">Gian hàng trên Alibaba.com</span><span class="cn">Alibaba.com 店铺</span><span class="en">Alibaba.com store</span></td><td><span class="tag tag-dn"><span class="vi">CHƯA CÓ</span><span class="cn">尚无</span><span class="en">MISSING</span></span></td><td><span class="vi">Không có (xác minh 29/10/2026)</span><span class="cn">无（2026/10/29 核实）</span><span class="en">None (verified 29 Oct 2026)</span></td><td><span class="vi">Mở tài khoản, chọn gói, xác minh doanh nghiệp (Verified)</span><span class="cn">开户、选套餐、企业认证（Verified）</span><span class="en">Open account, select package, complete Verified onboarding</span></td></tr>
+        <tr><td><span class="vi">Bộ nội dung sản phẩm</span><span class="cn">产品内容体系</span><span class="en">Product content set</span></td><td><span class="tag tag-dn"><span class="vi">CHƯA CÓ</span><span class="cn">尚无</span><span class="en">MISSING</span></span></td><td><span class="vi">Website hiện có ảnh sản phẩm cơ bản, chưa có bộ thông số chuẩn B2B</span><span class="cn">官网有基础产品图片，缺 B2B 标准参数</span><span class="en">Website has basic product photos; no B2B-grade spec sheets</span></td><td><span class="vi">Xây 40–60 listing (25–35 gạo, 15–25 cá cơm), mỗi listing 5–6 ảnh + video + bảng thông số</span><span class="cn">建 40–60 个 listing（大米 25–35、小公鱼 15–25），每个 5–6 图 + 视频 + 参数表</span><span class="en">Build 40–60 listings (25–35 rice, 15–25 anchovy), each with 5–6 images + video + spec table</span></td></tr>
+        <tr><td><span class="vi">Cấu trúc giá &amp; MOQ</span><span class="cn">价格与起订结构</span><span class="en">Pricing &amp; MOQ structure</span></td><td><span class="tag tag-dn"><span class="vi">CHƯA CÓ</span><span class="cn">尚无</span><span class="en">MISSING</span></span></td><td><span class="vi">Giá hiện báo theo yêu cầu từng khách</span><span class="cn">现按客户逐单报价</span><span class="en">Prices quoted per customer on request</span></td><td><span class="vi">Xây 3 dải giá (Africa / Philippines-Asia / UAE-EU) + MOQ theo container</span><span class="cn">建立三档价格（非洲 / 菲亚 / 阿联酋-欧盟）+ 按柜起订</span><span class="en">Build three price tiers (Africa / Philippines-Asia / UAE-EU) with container-based MOQ</span></td></tr>
+        <tr><td><span class="vi">Nhân sự vận hành gian hàng</span><span class="cn">店铺运营人员</span><span class="en">Store operations staffing</span></td><td><span class="tag tag-dn"><span class="vi">CHƯA CÓ</span><span class="cn">尚无</span><span class="en">MISSING</span></span></td><td><span class="vi">Chưa có người phụ trách kênh</span><span class="cn">尚无渠道负责人</span><span class="en">No channel owner yet</span></td><td><span class="vi">1 nhân sự phụ trách + quy trình phản hồi RFQ <2 giờ</span><span class="cn">1 名负责人 + RFQ <2 小时回复流程</span><span class="en">One owner plus an RFQ response process under two hours</span></td></tr>
+        <tr><td><span class="vi">Đo lường &amp; báo cáo</span><span class="cn">衡量与报告</span><span class="en">Measurement &amp; reporting</span></td><td><span class="tag tag-dn"><span class="vi">CHƯA CÓ</span><span class="cn">尚无</span><span class="en">MISSING</span></span></td><td><span class="vi">Chưa có KPI kênh số</span><span class="cn">无数字渠道 KPI</span><span class="en">No digital-channel KPIs</span></td><td><span class="vi">Bật đo lường response time, on-time dispatch, reorder rate</span><span class="cn">启用响应时间、准时发货、复购率指标</span><span class="en">Enable response time, on-time dispatch, reorder-rate tracking</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Mức độ sẵn sàng của từng tài sản (thang 0–100%)</span><span class="cn">各项资产的就绪度（0–100%）</span><span class="en">Readiness of each asset (0–100%)</span></h4>
+    <div class="cap"><span class="vi">Đánh giá của AM sau khi đối chiếu hồ sơ công khai và kiểm tra trên sàn</span><span class="cn">AM 依据公开资料与平台核查后的评估</span><span class="en">AM assessment after reviewing public materials and the platform check</span></div>
+    <div class="canvas-wrap"><canvas id="c12"></canvas></div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section id="s11">
+  <div class="sec-head">
+    <div class="sec-num">11</div>
+    <div>
+      <div class="sec-title"><span class="vi">Giải pháp đề xuất cho KIGIMEX</span><span class="cn">为 KIGIMEX 建议的解决方案</span><span class="en">The proposed solution for KIGIMEX</span></div>
+      <div class="sec-sub"><span class="vi">Ba cấu hình gói và phân chia trách nhiệm hai bên</span><span class="cn">三种套餐配置与双方职责划分</span><span class="en">Three package configurations and the split of responsibilities</span></div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th style="width:22%"><span class="vi">Hạng mục</span><span class="cn">项目</span><span class="en">Item</span></th>
+        <th style="width:24%"><span class="vi">START — Hiện diện chuẩn</span><span class="cn">START——标准入驻</span><span class="en">START — standard presence</span></th>
+        <th style="width:27%"><span class="vi">GROWTH — Đề xuất cho KIGIMEX</span><span class="cn">GROWTH——为 KIGIMEX 推荐</span><span class="en">GROWTH — recommended for KIGIMEX</span></th>
+        <th style="width:27%"><span class="vi">LEADER — Dẫn đầu ngành hàng</span><span class="cn">LEADER——品类领先</span><span class="en">LEADER — category leadership</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><strong><span class="vi">Mục tiêu</span><span class="cn">目标</span><span class="en">Objective</span></strong></td><td><span class="vi">Có mặt đúng chuẩn, thu RFQ tự nhiên</span><span class="cn">标准化入驻，获取自然 RFQ</span><span class="en">Be present to standard, capture organic RFQs</span></td><td><span class="vi">Tăng lượng RFQ và chuyển đổi đơn đầu</span><span class="cn">提升 RFQ 量与首单转化</span><span class="en">Increase RFQ volume and first-order conversion</span></td><td><span class="vi">Chiếm vị trí dẫn đầu ngành cá cơm + gạo thơm</span><span class="cn">占据小公鱼与香米品类领先地位</span><span class="en">Own leadership in anchovy and fragrant rice</span></td></tr>
+        <tr><td><strong><span class="vi">Gian hàng &amp; xác minh</span><span class="cn">店铺与认证</span><span class="en">Storefront &amp; verification</span></strong></td><td><span class="vi">1 gian hàng, hồ sơ đầy đủ</span><span class="cn">1 个店铺，资料完整</span><span class="en">One store, complete profile</span></td><td><span class="vi">1 gian hàng + Verified + Certifications đầy đủ</span><span class="cn">1 个店铺 + Verified + 完整 Certifications</span><span class="en">One store + Verified + full Certifications</span></td><td><span class="vi">Verified Premium + kiểm định nhà máy + hiển thị ưu tiên</span><span class="cn">Verified 高级版 + 验厂 + 优先展示</span><span class="en">Verified Premium + plant inspection + priority placement</span></td></tr>
+        <tr><td><strong><span class="vi">Số listing</span><span class="cn">listing 数</span><span class="en">Listings</span></strong></td><td>20–25</td><td><strong>40–60</strong> <span class="small">(<span class="vi">25–35 gạo · 15–25 cá cơm</span><span class="cn">大米 25–35 · 小公鱼 15–25</span><span class="en">25–35 rice · 15–25 anchovy</span>)</span></td><td>80–120</td></tr>
+        <tr><td><strong><span class="vi">Quảng cáo từ khoá</span><span class="cn">关键词广告</span><span class="en">Keyword advertising</span></strong></td><td><span class="vi">Không</span><span class="cn">无</span><span class="en">None</span></td><td><span class="vi">KWA cho 8–10 từ khoá chủ lực (2 ngành)</span><span class="cn">8–10 个核心关键词 KWA（两品类）</span><span class="en">KWA on 8–10 core keywords (both categories)</span></td><td><span class="vi">KWA toàn diện + tối ưu theo tuần</span><span class="cn">全量 KWA + 每周优化</span><span class="en">Full KWA with weekly optimisation</span></td></tr>
+        <tr><td><strong><span class="vi">Nội dung &amp; hình ảnh</span><span class="cn">内容与图片</span><span class="en">Content &amp; imagery</span></strong></td><td><span class="vi">KIGIMEX cung cấp ảnh, AM chuẩn hóa</span><span class="cn">KIGIMEX 提供图片，AM 标准化</span><span class="en">KIGIMEX supplies photos, AM standardises</span></td><td><span class="vi">AM xây bộ nội dung, KIGIMEX duyệt; có video nhà máy</span><span class="cn">AM 搭建内容，KIGIMEX 审核；含厂房视频</span><span class="en">AM builds content, KIGIMEX approves; includes plant video</span></td><td><span class="vi">Đội nội dung chuyên trách + chụp ảnh tại nhà máy</span><span class="cn">专属内容团队 + 工厂实拍</span><span class="en">Dedicated content team + on-site shoot</span></td></tr>
+        <tr><td><strong><span class="vi">Xử lý RFQ</span><span class="cn">RFQ 处理</span><span class="en">RFQ handling</span></strong></td><td><span class="vi">KIGIMEX tự xử lý</span><span class="cn">KIGIMEX 自行处理</span><span class="en">Handled by KIGIMEX</span></td><td><span class="vi">Quy trình &lt;2 giờ + mẫu trả lời + phân loại buyer</span><span class="cn"><2 小时流程 + 回复模板 + 买家分级</span><span class="en">Under-2-hour process + reply templates + buyer triage</span></td><td><span class="vi">AM hỗ trợ first-response + nuôi dưỡng buyer dài hạn</span><span class="cn">AM 协助首次响应 + 长期培育买家</span><span class="en">AM supports first response + long-term buyer nurturing</span></td></tr>
+        <tr><td><strong><span class="vi">Báo cáo</span><span class="cn">报告</span><span class="en">Reporting</span></strong></td><td><span class="vi">Theo quý</span><span class="cn">按季度</span><span class="en">Quarterly</span></td><td><span class="vi">Hàng tháng: RFQ, tỷ lệ chốt, thời gian phản hồi, từ khoá hiệu quả</span><span class="cn">月度：RFQ、成交率、响应时间、关键词效果</span><span class="en">Monthly: RFQs, close rate, response time, keyword performance</span></td><td><span class="vi">Hàng tuần + dashboard + so sánh đối thủ</span><span class="cn">每周 + 看板 + 对手对比</span><span class="en">Weekly + dashboard + competitor benchmarking</span></td></tr>
+        <tr><td><strong><span class="vi">Chi phí (giả định mô hình)</span><span class="cn">成本（模型假设）</span><span class="en">Cost (model assumption)</span></strong></td><td>US$4.200/<span class="vi">năm</span><span class="cn">年</span><span class="en">yr</span></td><td><strong>US$10.800/<span class="vi">năm</span><span class="cn">年</span><span class="en">yr</span></strong></td><td>US$21.600/<span class="vi">năm</span><span class="cn">年</span><span class="en">yr</span></td></tr>
+        <tr><td><strong><span class="vi">Phù hợp khi</span><span class="cn">适用情形</span><span class="en">Best when</span></strong></td><td><span class="vi">Cần kiểm chứng kênh trước khi mở rộng</span><span class="cn">需先验证渠道再扩张</span><span class="en">Validating the channel before scaling</span></td><td><span class="vi">Muốn kết quả trong 90 ngày với 2 ngành hàng song song</span><span class="cn">希望 90 天内两个品类并行出成果</span><span class="en">Wanting results within 90 days across both categories</span></td><td><span class="vi">Đặt mục tiêu dẫn đầu ngành cá cơm trên sàn trong 12 tháng</span><span class="cn">目标 12 个月内成为平台小公鱼品类第一</span><span class="en">Targeting category leadership in anchovy within 12 months</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><strong><span class="vi">Lưu ý về chi phí:</span><span class="cn">关于成本：</span><span class="en">On costs:</span></strong>
+    <span class="vi"> Mức chi phí trên là <strong>giả định của mô hình</strong> để minh họa cơ chế ROI, không phải báo giá chính thức. Báo giá thực tế phụ thuộc hợp đồng GGS và quy mô doanh nghiệp — sẽ được xác nhận riêng trước khi ký.</span>
+    <span class="cn"> 上述成本为<strong>模型假设</strong>，用于说明 ROI 机制，并非正式报价。实际价格取决于 GGS 合同与企业规模——签约前将单独确认。</span>
+    <span class="en"> The costs above are <strong>model assumptions</strong> illustrating the ROI mechanic, not official pricing. Actual pricing depends on the GGS contract and company size and will be confirmed separately before signing.</span>
+  </div>
+
+  <h3><span class="vi">Phân chia trách nhiệm</span><span class="cn">职责划分</span><span class="en">Split of responsibilities</span></h3>
+  <div class="chart-grid" style="grid-template-columns:1fr 1fr">
+    <div class="chart-box" style="margin:0">
+      <h4><span class="vi">Alibaba.com GGS Vietnam thực hiện</span><span class="cn">Alibaba.com GGS Vietnam 负责</span><span class="en">Delivered by Alibaba.com GGS Vietnam</span></h4>
+      <div style="font-size:12.5px;margin-top:8px">
+        <p><span class="vi">1. Mở gian hàng và hoàn tất xác minh doanh nghiệp (Verified).<br>2. Xây cấu trúc gian hàng 2 khối: Gạo / Cá cơm.<br>3. Chuẩn hóa 40–60 listing theo USD/tấn–USD/kg, MOQ container, Incoterms.<br>4. Viết nội dung song ngữ, tối ưu từ khoá theo dữ liệu buyer.<br>5. Thiết lập quy trình RFQ &lt;2 giờ và mẫu trả lời chuẩn.<br>6. Chạy KWA, tối ưu theo tuần.<br>7. Báo cáo tháng + đối chiếu KPI.</span><span class="cn">1. 开设店铺并完成企业认证（Verified）。<br>2. 搭建双区块店铺结构：大米 / 小公鱼。<br>3. 按美元/吨–美元/公斤、整柜起订、Incoterms 标准化 40–60 个 listing。<br>4. 撰写双语内容，按买家数据优化关键词。<br>5. 建立 <2 小时 RFQ 流程与标准回复模板。<br>6. 投放 KWA，按周优化。<br>7. 月度报告 + KPI 对照。</span><span class="en">1. Open the store and complete Verified onboarding.<br>2. Build a two-block store structure: Rice / Anchovy.<br>3. Standardise 40–60 listings to US$/tonne–US$/kg, container MOQ, Incoterms.<br>4. Write bilingual copy and optimise keywords against buyer data.<br>5. Set up the under-2-hour RFQ process and reply templates.<br>6. Run KWA with weekly optimisation.<br>7. Monthly reporting against KPIs.</span></p>
+      </div>
+    </div>
+    <div class="chart-box" style="margin:0;border-left:4px solid var(--client)">
+      <h4><span class="vi">KIGIMEX thực hiện</span><span class="cn">KIGIMEX 负责</span><span class="en">Delivered by KIGIMEX</span></h4>
+      <div style="font-size:12.5px;margin-top:8px">
+        <p><span class="vi">1. Cung cấp bộ ảnh sản phẩm gốc + ảnh/video nhà máy, kho.<br>2. Bản scan chứng nhận ISO 9001, ISO 22000, HALAL còn hiệu lực.<br>3. Bảng thông số kỹ thuật thực tế (tỷ lệ tấm, độ ẩm, kích cỡ cá, tạp chất).<br>4. Khung giá sàn và biên tối thiểu cho 3 dải thị trường.<br>5. Công suất khả dụng theo tháng cho từng ngành hàng.<br>6. Chỉ định 1 nhân sự phụ trách kênh + phê duyệt nội dung trong 48 giờ.<br>7. Xác nhận mẫu và điều kiện giao hàng với buyer.</span><span class="cn">1. 提供产品原始图片 + 厂房/仓库图片与视频。<br>2. 有效期内的 ISO 9001、ISO 22000、HALAL 证书扫描件。<br>3. 实际技术参数表（碎米率、水分、鱼体规格、杂质）。<br>4. 三档市场的底价框架与最低毛利。<br>5. 各品类每月可用产能。<br>6. 指定 1 名渠道负责人 + 48 小时内内容审批。<br>7. 与买家确认样品与交付条件。</span><span class="en">1. Original product photos + plant and warehouse photos/video.<br>2. Valid ISO 9001, ISO 22000 and HALAL certificate scans.<br>3. Real technical specs (broken ratio, moisture, fish size, foreign matter).<br>4. Floor-price framework and minimum margin for the three market tiers.<br>5. Monthly available capacity per category.<br>6. One named channel owner + content approval within 48 hours.<br>7. Sample and delivery confirmation with buyers.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section id="s12">
+  <div class="sec-head">
+    <div class="sec-num">12</div>
+    <div>
+      <div class="sec-title"><span class="vi">Lộ trình 90 ngày</span><span class="cn">90 天路线图</span><span class="en">The 90-day roadmap</span></div>
+      <div class="sec-sub"><span class="vi">Từ ngày ký đến đơn hàng đầu tiên</span><span class="cn">从签约到首单</span><span class="en">From signature to first order</span></div>
+    </div>
+  </div>
+
+  <div class="phases">
+    <div class="phase">
+      <div class="ph"><span class="vi">NGÀY 1–30 · NỀN TẢNG</span><span class="cn">第 1–30 天 · 基础</span><span class="en">DAY 1–30 · FOUNDATION</span></div>
+      <div class="body"><ul>
+        <li><span class="vi">Mở tài khoản, hoàn tất Verified, tải 3 chứng nhận</span><span class="cn">开户、完成 Verified、上传 3 项认证</span><span class="en">Open account, complete Verified, upload three certificates</span></li>
+        <li><span class="vi">Chụp ảnh/video nhà máy, kho, dây chuyền sấy cá cơm</span><span class="cn">拍摄厂房、仓库、小公鱼烘干线照片与视频</span><span class="en">Shoot plant, warehouse and anchovy drying line</span></li>
+        <li><span class="vi">Chốt bảng thông số kỹ thuật 2 ngành hàng</span><span class="cn">确定两个品类的技术参数表</span><span class="en">Finalise spec sheets for both categories</span></li>
+        <li><span class="vi">Dựng 40–60 listing (đợt 1: 25 listing chủ lực)</span><span class="cn">建 40–60 个 listing（首批 25 个主推）</span><span class="en">Build 40–60 listings (wave 1: 25 hero listings)</span></li>
+        <li><span class="vi">Thiết lập 3 dải giá và MOQ theo container</span><span class="cn">设定三档价格与整柜起订</span><span class="en">Set three price tiers and container MOQ</span></li>
+      </ul></div>
+    </div>
+    <div class="phase">
+      <div class="ph"><span class="vi">NGÀY 31–60 · HIỂN THỊ</span><span class="cn">第 31–60 天 · 曝光</span><span class="en">DAY 31–60 · VISIBILITY</span></div>
+      <div class="body"><ul>
+        <li><span class="vi">Hoàn tất đợt 2 listing (tổng 40–60)</span><span class="cn">完成第二批 listing（合计 40–60）</span><span class="en">Complete wave 2 (40–60 total)</span></li>
+        <li><span class="vi">Chạy KWA 8–10 từ khoá: rice, jasmine rice, dried anchovy, anchovy HACCP</span><span class="cn">投放 8–10 个关键词 KWA：rice、jasmine rice、dried anchovy、anchovy HACCP</span><span class="en">Run KWA on 8–10 keywords: rice, jasmine rice, dried anchovy, anchovy HACCP</span></li>
+        <li><span class="vi">Tham gia RFQ hàng ngày, phân loại buyer theo 3 nhóm</span><span class="cn">每日参与 RFQ，按三类买家分级</span><span class="en">Join RFQs daily, triage buyers into the three groups</span></li>
+        <li><span class="vi">Bật đo lường response time, on-time dispatch</span><span class="cn">启用响应时间与准时发货指标</span><span class="en">Enable response-time and on-time dispatch tracking</span></li>
+        <li><span class="vi">Báo cáo tháng 1: từ khoá nào ra RFQ, từ khoá nào không</span><span class="cn">第 1 月报告：哪些关键词带来 RFQ</span><span class="en">Month-1 report: which keywords produce RFQs</span></li>
+      </ul></div>
+    </div>
+    <div class="phase">
+      <div class="ph"><span class="vi">NGÀY 61–90 · CHUYỂN ĐỔI</span><span class="cn">第 61–90 天 · 转化</span><span class="en">DAY 61–90 · CONVERSION</span></div>
+      <div class="body"><ul>
+        <li><span class="vi">Gửi mẫu 5–10kg cho buyer đủ điều kiện (gạo) và 1–2kg (cá cơm)</span><span class="cn">向合格买家寄样 5–10 公斤（大米）、1–2 公斤（小公鱼）</span><span class="en">Send 5–10 kg rice and 1–2 kg anchovy samples to qualified buyers</span></li>
+        <li><span class="vi">Chốt đơn đầu tiên; ghi lại toàn bộ nội dung đàm phán</span><span class="cn">成交首单；完整记录谈判内容</span><span class="en">Close the first order; log the full negotiation</span></li>
+        <li><span class="vi">Tối ưu lại listing dựa trên câu hỏi thực tế của buyer</span><span class="cn">按买家实际问题优化 listing</span><span class="en">Re-optimise listings based on real buyer questions</span></li>
+        <li><span class="vi">Đánh giá lại gói dịch vụ và mục tiêu quý 2</span><span class="cn">复评套餐与第二季度目标</span><span class="en">Re-evaluate the package and Q2 targets</span></li>
+      </ul></div>
+    </div>
+    <div class="phase">
+      <div class="ph"><span class="vi">THÁNG 4–6 · MỞ RỘNG</span><span class="cn">第 4–6 月 · 扩张</span><span class="en">MONTH 4–6 · SCALE</span></div>
+      <div class="body"><ul>
+        <li><span class="vi">Mở nội dung riêng cho EU (gạo) và Mỹ/Úc (cá cơm)</span><span class="cn">为欧盟（大米）与美国/澳洲（小公鱼）开设专属内容</span><span class="en">Open dedicated content for the EU (rice) and US/Australia (anchovy)</span></li>
+        <li><span class="vi">Xây nhãn bán lẻ 5/10/25kg cho UAE và EU</span><span class="cn">为阿联酋与欧盟建立 5/10/25 公斤零售品牌</span><span class="en">Build 5/10/25 kg retail branding for the UAE and EU</span></li>
+        <li><span class="vi">Thêm SKU phụ phẩm gạo (tấm, cám) cho buyer công nghiệp</span><span class="cn">为工业买家增加大米副产品 SKU（碎米、米糠）</span><span class="en">Add rice by-product SKUs (broken, bran) for industrial buyers</span></li>
+        <li><span class="vi">Mục tiêu: 1 ngành hàng vào top hiển thị của từ khoá chính</span><span class="cn">目标：一个品类进入核心关键词展示前列</span><span class="en">Target: one category in the top visibility tier for its main keyword</span></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section id="s13">
+  <div class="sec-head">
+    <div class="sec-num">13</div>
+    <div>
+      <div class="sec-title"><span class="vi">KPI &amp; mô hình ROI</span><span class="cn">KPI 与 ROI 模型</span><span class="en">KPIs &amp; the ROI model</span></div>
+      <div class="sec-sub"><span class="vi">Mục tiêu 90 ngày và dự phóng 12 tháng với giả định minh bạch</span><span class="cn">90 天目标与 12 个月预测（假设透明）</span><span class="en">90-day targets and a 12-month projection with transparent assumptions</span></div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th style="width:34%"><span class="vi">Chỉ số</span><span class="cn">指标</span><span class="en">Metric</span></th>
+        <th class="num" style="width:22%"><span class="vi">Mục tiêu 90 ngày</span><span class="cn">90 天目标</span><span class="en">90-day target</span></th>
+        <th class="num" style="width:22%"><span class="vi">Mục tiêu tháng 6</span><span class="cn">第 6 月目标</span><span class="en">Month-6 target</span></th>
+        <th style="width:22%"><span class="vi">Cách đo</span><span class="cn">衡量方式</span><span class="en">How measured</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="vi">Hồ sơ gian hàng hoàn thiện</span><span class="cn">店铺资料完整度</span><span class="en">Profile completeness</span></td><td class="num">100%</td><td class="num">100%</td><td><span class="vi">Alibaba Seller Center</span><span class="cn">Alibaba Seller Center</span><span class="en">Alibaba Seller Center</span></td></tr>
+        <tr><td><span class="vi">Listing đang hoạt động</span><span class="cn">在售 listing 数</span><span class="en">Active listings</span></td><td class="num">40–60</td><td class="num">80–100</td><td><span class="vi">Đếm trực tiếp trên gian hàng</span><span class="cn">店铺直接清点</span><span class="en">Direct count on the store</span></td></tr>
+        <tr><td><span class="vi">RFQ nhận được / tháng</span><span class="cn">每月收到 RFQ</span><span class="en">RFQs received / month</span></td><td class="num">20–35</td><td class="num">50–80</td><td><span class="vi">Báo cáo RFQ của sàn</span><span class="cn">平台 RFQ 报告</span><span class="en">Platform RFQ report</span></td></tr>
+        <tr><td><span class="vi">Tỷ lệ phản hồi trong 2 giờ</span><span class="cn">2 小时内响应率</span><span class="en">Response within 2 hours</span></td><td class="num">≥ 90%</td><td class="num">≥ 95%</td><td><span class="vi">Response time trên sàn</span><span class="cn">平台响应时间</span><span class="en">Platform response time</span></td></tr>
+        <tr><td><span class="vi">RFQ → báo giá</span><span class="cn">RFQ → 报价</span><span class="en">RFQ → quotation</span></td><td class="num">≥ 40%</td><td class="num">≥ 55%</td><td><span class="vi">CRM nội bộ</span><span class="cn">内部 CRM</span><span class="en">Internal CRM</span></td></tr>
+        <tr><td><span class="vi">Đơn hàng mới</span><span class="cn">新订单数</span><span class="en">New orders</span></td><td class="num">2–4</td><td class="num">6–10 / <span class="vi">quý</span><span class="cn">季度</span><span class="en">quarter</span></td><td><span class="vi">Hợp đồng / LC thực tế</span><span class="cn">实际合同 / LC</span><span class="en">Signed contracts / LCs</span></td></tr>
+        <tr><td><span class="vi">Giá trị đơn bình quân — gạo</span><span class="cn">平均订单额——大米</span><span class="en">Average order value — rice</span></td><td class="num">US$150–240K</td><td class="num">US$200–300K</td><td><span class="vi">Hợp đồng thực tế</span><span class="cn">实际合同</span><span class="en">Actual contracts</span></td></tr>
+        <tr><td><span class="vi">Giá trị đơn bình quân — cá cơm</span><span class="cn">平均订单额——小公鱼</span><span class="en">Average order value — anchovy</span></td><td class="num">US$30–50K</td><td class="num">US$40–70K</td><td><span class="vi">Hợp đồng thực tế</span><span class="cn">实际合同</span><span class="en">Actual contracts</span></td></tr>
+        <tr><td><span class="vi">Tỷ lệ đặt lại (reorder)</span><span class="cn">复购率</span><span class="en">Reorder rate</span></td><td class="num">—</td><td class="num">≥ 30%</td><td><span class="vi">Đơn lặp lại / tổng buyer</span><span class="cn">重复订单/买家总数</span><span class="en">Repeat orders / total buyers</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note"><span class="vi">Các mục tiêu trên là <strong>định hướng cam kết vận hành</strong> (số listing, thời gian phản hồi, tỷ lệ báo giá) và <strong>dự phóng kết quả kinh doanh</strong> (số đơn, giá trị đơn) dựa trên giả định về nhu cầu thị trường. Không phải cam kết doanh số. Sẽ được điều chỉnh sau 30 ngày đầu dựa trên lượng RFQ thực tế.</span><span class="cn">上述目标包括<strong>运营承诺方向</strong>（listing 数、响应时间、报价率）与基于需求假设的<strong>业务结果预测</strong>（订单数、订单额）。非销售承诺，将在前 30 天后按实际 RFQ 量调整。</span><span class="en">These targets combine <strong>operational commitments</strong> (listing count, response time, quote rate) with <strong>business-result forecasts</strong> (order count, order value) based on demand assumptions. They are not a revenue guarantee and will be adjusted after the first 30 days against actual RFQ volume.</span></div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th style="width:40%"><span class="vi">Giả định của mô hình</span><span class="cn">模型假设</span><span class="en">Model assumption</span></th>
+        <th class="num" style="width:30%"><span class="vi">Gạo</span><span class="cn">大米</span><span class="en">Rice</span></th>
+        <th class="num" style="width:30%"><span class="vi">Cá cơm</span><span class="cn">小公鱼</span><span class="en">Anchovy</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="vi">Số đơn/tháng khi đạt công suất (base case)</span><span class="cn">满负荷月订单数（基准情形）</span><span class="en">Orders/month at run-rate (base case)</span></td><td class="num">1,0</td><td class="num">1,2</td></tr>
+        <tr><td><span class="vi">Giá trị đơn bình quân</span><span class="cn">平均订单额</span><span class="en">Average order value</span></td><td class="num">US$180.000</td><td class="num">US$40.000</td></tr>
+        <tr><td><span class="vi">Biên lợi nhuận gộp</span><span class="cn">毛利率</span><span class="en">Gross margin</span></td><td class="num">8%</td><td class="num">15%</td></tr>
+        <tr><td><span class="vi">Lợi nhuận gộp/tháng</span><span class="cn">月毛利</span><span class="en">Gross profit/month</span></td><td class="num">US$14.400</td><td class="num">US$7.200</td></tr>
+        <tr><td><strong><span class="vi">Tổng lợi nhuận gộp/tháng</span><span class="cn">合计月毛利</span><span class="en">Total gross profit/month</span></strong></td><td class="num" colspan="2"><strong>US$21.600</strong></td></tr>
+        <tr><td><span class="vi">Chi phí nền tảng (gói GROWTH, giả định)</span><span class="cn">平台成本（GROWTH 套餐，假设）</span><span class="en">Platform cost (GROWTH package, assumed)</span></td><td class="num" colspan="2">US$10.800/<span class="vi">năm</span><span class="cn">年</span><span class="en">yr</span></td></tr>
+        <tr><td><span class="vi">Độ trễ khởi động</span><span class="cn">启动爬坡</span><span class="en">Ramp-up</span></td><td class="num" colspan="2">20% / 35% / 50% / 70% / 85% <span class="vi">tháng 1–5</span><span class="cn">第 1–5 月</span><span class="en">months 1–5</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Lợi nhuận ròng tích lũy 12 tháng theo 3 kịch bản (USD)</span><span class="cn">12 个月三种情形的累计净利（美元）</span><span class="en">Cumulative net profit over 12 months, three scenarios (US$)</span></h4>
+    <div class="cap"><span class="vi">Đường dưới 0 = chưa hoàn vốn lũy kế · Đã trừ chi phí nền tảng US$10.800</span><span class="cn">低于 0 表示累计未回本 · 已扣除平台成本 10,800 美元</span><span class="en">Below zero means payback not yet reached · net of the US$10,800 platform cost</span></div>
+    <div class="canvas-wrap"><canvas id="c13"></canvas></div>
+    <div class="src"><span class="vi">Mô hình của AM từ các giả định nêu trên. Kịch bản thận trọng = 50% base case; lạc quan = 160% base case.</span><span class="cn">AM 依据上述假设建模。保守情形 = 基准的 50%；乐观 = 基准的 160%。</span><span class="en">AM model built on the assumptions above. Conservative = 50% of base case; optimistic = 160%.</span></div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section id="s14">
+  <div class="sec-head">
+    <div class="sec-num">14</div>
+    <div>
+      <div class="sec-title"><span class="vi">Bước tiếp theo &amp; cam kết</span><span class="cn">后续步骤与承诺</span><span class="en">Next steps &amp; commitments</span></div>
+      <div class="sec-sub"><span class="vi">Những việc cần làm trong 14 ngày tới</span><span class="cn">未来 14 天需完成事项</span><span class="en">What to do in the next 14 days</span></div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <div class="vt"><span class="vi">Kết luận</span><span class="cn">结论</span><span class="en">Conclusion</span></div>
+    <div class="vv"><span class="vi">KIGIMEX đã có sản phẩm, chứng nhận và thị trường. Thiếu duy nhất một thứ: hiện diện số đúng chuẩn.</span><span class="cn">KIGIMEX 已具备产品、认证与市场。唯一缺少的是：标准化的数字存在。</span><span class="en">KIGIMEX already has the product, the certification and the markets. It is missing one thing: a properly built digital presence.</span></div>
+    <div class="blk-vi"><p>Chúng tôi không đề nghị KIGIMEX thay đổi cách làm kinh doanh. Chúng tôi đề nghị chuyển hóa những gì KIGIMEX đã có — 50 năm, 300.000 m², ISO 22000, HALAL, 500+ đối tác — thành nội dung mà buyer quốc tế có thể kiểm chứng trong 3 phút. Trong ngành gạo, nơi 187 nhà cung cấp đang cạnh tranh bằng giá, và trong ngành cá cơm, nơi 126 nhà cung cấp nhưng chỉ có 49 listing, việc làm đúng chuẩn đã là lợi thế.</p></div>
+    <div class="blk-cn"><p>我们并非建议 KIGIMEX 改变经营方式。我们建议把 KIGIMEX 已有的东西——50 年、30 万 m²、ISO 22000、HALAL、500+ 合作伙伴——转化为买家 3 分钟内可验证的内容。在大米领域（187 家供应商以价格竞争）和小公鱼领域（126 家供应商却只有 49 个 listing），做到标准本身就是优势。</p></div>
+    <div class="blk-en"><p>We are not asking KIGIMEX to change how it does business. We are asking it to convert what it already has — 50 years, 300,000 m², ISO 22000, HALAL, 500+ partners — into content an international buyer can verify in three minutes. In rice, where 187 suppliers compete on price, and in anchovy, where 126 suppliers share just 49 listings, doing it to standard is itself the advantage.</p></div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table class="data">
+      <thead><tr>
+        <th style="width:8%"><span class="vi">Mốc</span><span class="cn">时点</span><span class="en">When</span></th>
+        <th style="width:42%"><span class="vi">Việc cần làm</span><span class="cn">需完成事项</span><span class="en">Action</span></th>
+        <th style="width:24%"><span class="vi">Bên thực hiện</span><span class="cn">负责方</span><span class="en">Owner</span></th>
+        <th style="width:26%"><span class="vi">Kết quả</span><span class="cn">结果</span><span class="en">Output</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="tag tag-hot">T+3</span></td><td><span class="vi">Họp thống nhất phạm vi: 2 ngành hàng, 5 thị trường ưu tiên, cấu hình gói</span><span class="cn">会议确认范围：两个品类、五个优先市场、套餐配置</span><span class="en">Scope meeting: two categories, five priority markets, package configuration</span></td><td>KIGIMEX + AM</td><td><span class="vi">Biên bản thống nhất phạm vi</span><span class="cn">范围确认纪要</span><span class="en">Agreed scope note</span></td></tr>
+        <tr><td><span class="tag tag-hot">T+7</span></td><td><span class="vi">KIGIMEX gửi bộ ảnh, chứng nhận, bảng thông số kỹ thuật</span><span class="cn">KIGIMEX 提交图片、认证、技术参数表</span><span class="en">KIGIMEX submits photos, certificates, spec sheets</span></td><td>KIGIMEX</td><td><span class="vi">Bộ tài sản số đầy đủ</span><span class="cn">完整数字资产包</span><span class="en">Complete digital asset pack</span></td></tr>
+        <tr><td><span class="tag tag-hot">T+10</span></td><td><span class="vi">AM hoàn tất bản nháp 25 listing chủ lực để KIGIMEX duyệt</span><span class="cn">AM 完成 25 个主推 listing 草稿供审核</span><span class="en">AM completes 25 hero listing drafts for approval</span></td><td>AM</td><td><span class="vi">25 listing sẵn sàng duyệt</span><span class="cn">25 个待审 listing</span><span class="en">25 listings ready for review</span></td></tr>
+        <tr><td><span class="tag tag-ot">T+14</span></td><td><span class="vi">Ký hợp đồng, mở tài khoản, khởi động lộ trình 90 ngày</span><span class="cn">签约、开户、启动 90 天路线图</span><span class="en">Sign, open the account, start the 90-day roadmap</span></td><td>KIGIMEX + AM</td><td><span class="vi">Gian hàng đi vào vận hành</span><span class="cn">店铺进入运营</span><span class="en">Store goes live</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight">
+    <div class="ttl"><span class="vi">Ba câu hỏi chúng tôi cần KIGIMEX trả lời để hoàn thiện đề xuất</span><span class="cn">完善方案所需 KIGIMEX 回答的三个问题</span><span class="en">Three questions we need KIGIMEX to answer</span></div>
+    <div class="blk-vi"><p><strong>1.</strong> Trong 2 ngành hàng, ngành nào ưu tiên trong 90 ngày đầu nếu nguồn lực có hạn? <strong>2.</strong> Công suất khả dụng thực tế mỗi tháng cho đơn hàng xuất khẩu mới là bao nhiêu tấn (gạo) và tấn (cá cơm)? <strong>3.</strong> Khung giá sàn và biên lợi nhuận tối thiểu cho 3 dải thị trường (Africa / Philippines-Asia / UAE-EU) là bao nhiêu? Ba câu trả lời này sẽ được đưa thẳng vào bảng giá và nội dung listing, thay thế các giả định trong báo cáo này.</p></div>
+    <div class="blk-cn"><p><strong>1.</strong> 若资源有限，90 天内优先哪个品类？<strong>2.</strong> 每月可用于新增出口订单的实际产能是多少吨（大米）与吨（小公鱼）？<strong>3.</strong> 三档市场（非洲 / 菲亚 / 阿联酋-欧盟）的底价框架与最低毛利是多少？这三个答案将直接写入价格表与 listing 内容，替代本报告中的假设。</p></div>
+    <div class="blk-en"><p><strong>1.</strong> With limited resources in the first 90 days, which category comes first? <strong>2.</strong> What is the real monthly capacity available for new export orders, in tonnes (rice) and tonnes (anchovy)? <strong>3.</strong> What are the floor-price framework and minimum margin for the three market tiers (Africa / Philippines-Asia / UAE-EU)? Those three answers go straight into the price sheet and listing copy, replacing the assumptions in this document.</p></div>
+  </div>
+
+  <div class="note"><span class="vi">Miễn trừ trách nhiệm: Báo cáo tổng hợp từ nguồn công khai (World's Top Exports/ITC Trade Map, VFA/Oryza, Tridge HS 030559, USDA, website KIGIMEX) và khảo sát trực tiếp Alibaba.com ngày 28–29/10/2026. Các đánh giá định tính và mô hình ROI là quan điểm của AM, không phải cam kết kết quả kinh doanh. Số liệu chi phí gói là giả định mô hình, sẽ được thay bằng báo giá chính thức.</span><span class="cn">免责声明：本报告汇总自公开来源（World's Top Exports/ITC Trade Map、VFA/Oryza、Tridge HS 030559、USDA、KIGIMEX 官网）及 2026/10/28–29 对 Alibaba.com 的直接调研。定性评估与 ROI 模型为 AM 观点，不构成经营结果承诺。套餐成本为模型假设，将以正式报价替换。</span><span class="en">Disclaimer: this proposal compiles public sources (World's Top Exports/ITC Trade Map, VFA/Oryza, Tridge HS 030559, USDA, the KIGIMEX website) and direct Alibaba.com research on 28–29 Oct 2026. Qualitative assessments and the ROI model are the AM's view, not a commitment of business results. Package costs are model assumptions and will be replaced by official pricing.</span></div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="f-top">
+    <img src="https://s.alicdn.com/@logo/logo_en_light_horizontal_default_full.png" alt="Alibaba.com">
+    <span class="fb">Alibaba.com — GGS Vietnam</span>
+  </div>
+  <div class="f-cols">
+    <div>
+      <h5><span class="vi">Giới thiệu</span><span class="cn">关于</span><span class="en">About</span></h5>
+      <p><span class="vi">Alibaba.com là nền tảng thương mại điện tử B2B toàn cầu, kết nối nhà cung cấp Việt Nam với hơn 200 thị trường. Đề xuất này thuộc chương trình GGS (Global Gold Supplier) Vietnam, xây riêng cho KIGIMEX.</span><span class="cn">Alibaba.com 是全球 B2B 电商平台，连接越南供应商与 200 多个市场。本方案属于 GGS（Global Gold Supplier）越南项目，专为 KIGIMEX 编制。</span><span class="en">Alibaba.com is a global B2B e-commerce platform connecting Vietnamese suppliers with 200+ markets. This proposal is part of the GGS (Global Gold Supplier) Vietnam programme, built specifically for KIGIMEX.</span></p>
+    </div>
+    <div>
+      <h5><span class="vi">Liên hệ</span><span class="cn">联系</span><span class="en">Contact</span></h5>
+      <ul>
+        <li>GGS Vietnam — Account Management</li>
+        <li><span class="vi">Người chuẩn bị:</span><span class="cn">编制人：</span><span class="en">Prepared by:</span> Nguyễn Hoài Nam</li>
+        <li><span class="vi">Mã tài liệu:</span><span class="cn">文件编号：</span><span class="en">Document ID:</span> DOC-PROP-KIGIMEX-2026-001</li>
+        <li><span class="vi">Ngày:</span><span class="cn">日期：</span><span class="en">Date:</span> 29/10/2026</li>
+      </ul>
+    </div>
+    <div>
+      <h5><span class="vi">Pháp lý</span><span class="cn">法律</span><span class="en">Legal</span></h5>
+      <p><span class="vi">Tài liệu này là đề xuất thương mại, không phải hợp đồng. Số liệu thị trường có thể thay đổi và cần kiểm chứng lại trước khi đưa vào hợp đồng. Không phát tán ngoài phạm vi được phép.</span><span class="cn">本文件为商务提案，非合同。市场数据可能变化，写入合同前需重新核实。不得在授权范围外传播。</span><span class="en">This document is a commercial proposal, not a contract. Market data may change and must be re-verified before use in a contract. Do not distribute beyond the authorised scope.</span></p>
+    </div>
+    <div>
+      <h5><span class="vi">Tài nguyên</span><span class="cn">资源</span><span class="en">Resources</span></h5>
+      <ul>
+        <li><a href="https://www.alibaba.com" target="_blank" rel="noopener">Alibaba.com</a></li>
+        <li><a href="https://kigimex.com.vn/" target="_blank" rel="noopener">KIGIMEX</a></li>
+        <li><a href="https://e.vietfood.org.vn/" target="_blank" rel="noopener">Vietnam Food Association</a></li>
+        <li><a href="https://www.trademap.org/" target="_blank" rel="noopener">ITC Trade Map</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="f-bottom">
+    <span>DOC-PROP-KIGIMEX-2026-001 · v1.0 · 29/10/2026 · Alibaba.com GGS Vietnam</span>
+    <span>© 2026 Alibaba.com. <span class="vi">Bảo lưu mọi quyền.</span><span class="cn">版权所有。</span><span class="en">All rights reserved.</span></span>
+  </div>
+</footer>
+
+<script>
+var TITLES={
+  vi:'\u0110\u1ec1 xu\u1ea5t h\u1ee3p t\u00e1c KIGIMEX \u00d7 Alibaba.com \u2014 G\u1ea1o & C\u00e1 c\u01a1m \u2014 10/2026',
+  cn:'KIGIMEX \u00d7 Alibaba.com \u5408\u4f5c\u65b9\u6848 \u2014 \u5927\u7c73\u4e0e\u5c0f\u516c\u9c7c \u2014 2026\u5e7410\u6708',
+  en:'KIGIMEX \u00d7 Alibaba.com Partnership Proposal \u2014 Rice & Anchovy \u2014 Oct 2026'
+};
+function switchLang(lang){
+  document.documentElement.className = 'lang-' + lang;
+  document.documentElement.lang = lang;
+  if(TITLES[lang]){document.title=TITLES[lang];}
+  document.querySelectorAll('.lang-switcher button').forEach(function(btn){
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+(function(){
+  var NAVY='#1B365D', ORANGE='#E8740C', GREEN='#2E8B57', BLUE='#2D5AA0', LBLUE='#7FA6D9',
+      RED='#C62828', CLIENT='#0B5C8A', GREY='#9AA5B8';
+  var PALETTE=[NAVY,BLUE,ORANGE,GREEN,LBLUE,CLIENT,RED,'#8A6D00','#B08968'];
+
+  Chart.defaults.font.family="'Be Vietnam Pro','Inter',sans-serif";
+  Chart.defaults.font.size=11.5;
+  Chart.defaults.color='#5A6072';
+  Chart.defaults.plugins.legend.labels.boxWidth=12;
+  Chart.defaults.plugins.legend.labels.padding=12;
+  Chart.defaults.layout.padding={left:8,right:6,top:4,bottom:4};
+
+  function money(v){return Math.round(v).toLocaleString('en-US');}
+
+  /* c01 — target market map */
+  new Chart(document.getElementById('c01'),{
+    type:'bar',
+    data:{labels:['Asia — rice','Africa — rice','EU — rice','Philippines — rice','UAE — rice','Malaysia — anchovy','Korea — anchovy','Singapore — anchovy'],
+      datasets:[
+        {label:'Rice imports (US$ m)',data:[15400,8870,5160,1714,784,null,null,null],
+          backgroundColor:NAVY,borderRadius:4,xAxisID:'x'},
+        {label:'Anchovy imports (US$ m)',data:[null,null,null,null,null,31.9,12.13,10.51],
+          backgroundColor:ORANGE,borderRadius:4,xAxisID:'x1'}
+      ]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'top'},
+        tooltip:{callbacks:{label:function(c){return c.dataset.label+': US$ '+c.parsed.x+' m';}}}},
+      scales:{
+        x:{beginAtZero:true,position:'bottom',title:{display:true,text:'Rice — US$ million (2025)'},grid:{color:'#EEF1F5'}},
+        x1:{beginAtZero:true,position:'top',title:{display:true,text:'Anchovy — US$ million (2024)'},
+            grid:{display:false},ticks:{color:ORANGE,maxTicksLimit:5}},
+        y:{grid:{display:false},ticks:{font:{size:10.5}}}}}
+  });
+
+  /* c02 — rice 5% broken price comparison */
+  new Chart(document.getElementById('c02'),{
+    type:'bar',
+    data:{labels:['India','Thailand','Pakistan','Myanmar','Vietnam*'],
+      datasets:[
+        {label:'Oct 2025',data:[366,337,349,328,374],backgroundColor:LBLUE,borderRadius:4},
+        {label:'Oct 2026',data:[387,477,414,467,507.5],backgroundColor:ORANGE,borderRadius:4}
+      ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'top'},
+        tooltip:{callbacks:{label:function(c){return c.dataset.label+': US$ '+c.parsed.y+'/t';}}}},
+      scales:{y:{beginAtZero:true,title:{display:true,text:'US$/tonne FOB'},grid:{color:'#EEF1F5'}},x:{grid:{display:false}}}}
+  });
+
+  /* c03 — rice import value of 5 target markets */
+  new Chart(document.getElementById('c03'),{
+    type:'doughnut',
+    data:{labels:['Asia','Africa','EU','Philippines','UAE'],
+      datasets:[{data:[15400,8870,5160,1714,784],backgroundColor:PALETTE,borderWidth:2,borderColor:'#fff'}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'55%',
+      plugins:{legend:{position:'right',labels:{font:{size:10.5}}},
+        tooltip:{callbacks:{label:function(c){return c.label+': US$ '+money(c.parsed)+' m';}}}}}
+  });
+
+  /* c04 — anchovy import value by year */
+  new Chart(document.getElementById('c04'),{
+    type:'bar',
+    data:{labels:['Korea','Malaysia','Singapore'],
+      datasets:[
+        {label:'2022',data:[9.37,37.32,12.28],backgroundColor:'#C3D3E6',borderRadius:4},
+        {label:'2023',data:[9.92,34.87,10.51],backgroundColor:LBLUE,borderRadius:4},
+        {label:'2024',data:[12.13,31.89,null],backgroundColor:ORANGE,borderRadius:4}
+      ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'top'},
+        tooltip:{callbacks:{label:function(c){return c.dataset.label+': US$ '+c.parsed.y+' m';}}}},
+      scales:{y:{beginAtZero:true,title:{display:true,text:'US$ million'},grid:{color:'#EEF1F5'}},x:{grid:{display:false}}}}
+  });
+
+  /* c05 — average import price by origin */
+  new Chart(document.getElementById('c05'),{
+    type:'bar',
+    data:{labels:['Malaysia','Korea'],
+      datasets:[
+        {label:'Vietnam',data:[3.83,4.17],backgroundColor:ORANGE,borderRadius:4},
+        {label:'Thailand',data:[0.85,null],backgroundColor:GREY,borderRadius:4},
+        {label:'Myanmar',data:[3.19,null],backgroundColor:'#B08968',borderRadius:4},
+        {label:'China',data:[7.61,9.43],backgroundColor:RED,borderRadius:4}
+      ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'top'},
+        tooltip:{callbacks:{label:function(c){return c.dataset.label+': US$ '+c.parsed.y+'/kg';}}}},
+      scales:{y:{beginAtZero:true,title:{display:true,text:'US$/kg'},grid:{color:'#EEF1F5'}},x:{grid:{display:false}}}}
+  });
+
+  /* c06 — channel radar */
+  new Chart(document.getElementById('c06'),{
+    type:'radar',
+    data:{labels:['Cost control','Market reach','Speed to first order','Measurability','Repeat-order potential'],
+      datasets:[
+        {label:'Trade fair',data:[3,3.5,2,2.5,3],borderColor:GREY,backgroundColor:'rgba(154,165,184,.15)',borderWidth:2,pointRadius:3},
+        {label:'Referral / existing clients',data:[4.5,1.5,4,2,3.5],borderColor:BLUE,backgroundColor:'rgba(45,90,160,.15)',borderWidth:2,pointRadius:3},
+        {label:'Alibaba.com',data:[3.5,5,3.5,5,4.5],borderColor:ORANGE,backgroundColor:'rgba(232,116,12,.20)',borderWidth:2.5,pointRadius:3}
+      ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom'}},
+      scales:{r:{beginAtZero:true,max:5,ticks:{stepSize:1,backdropColor:'transparent'},pointLabels:{font:{size:10.5}}}}}
+  });
+
+  /* c07 — rice price bands */
+  new Chart(document.getElementById('c07'),{
+    type:'bar',
+    data:{labels:['White 25% broken','White 5% broken','Jasmine','ST25 / premium','Brown rice','Hom Mali (TH)'],
+      datasets:[{label:'US$/tonne',data:[[380,450],[425,550],[480,750],[610,750],[468,613],[1000,1100]],
+        backgroundColor:[NAVY,BLUE,ORANGE,'#E8740C','#B08968','#8A6D00'],borderRadius:4}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+        tooltip:{callbacks:{label:function(c){return 'US$ '+c.raw[0]+' – '+c.raw[1]+'/t';}}}},
+      scales:{x:{beginAtZero:true,title:{display:true,text:'US$/tonne'},grid:{color:'#EEF1F5'}},
+        y:{grid:{display:false},ticks:{font:{size:10.5}}}}}
+  });
+
+  /* c08 — competitive density */
+  new Chart(document.getElementById('c08'),{
+    type:'bar',
+    data:{labels:['rice','jasmine rice','dried anchovy'],
+      datasets:[
+        {label:'Products',data:[158,87,49],backgroundColor:NAVY,borderRadius:4},
+        {label:'Suppliers',data:[187,null,126],backgroundColor:ORANGE,borderRadius:4}
+      ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'top'}},
+      scales:{y:{beginAtZero:true,title:{display:true,text:'Count on Alibaba.com'},grid:{color:'#EEF1F5'}},x:{grid:{display:false}}}}
+  });
+
+  /* c09 — anchovy platform price ranges */
+  new Chart(document.getElementById('c09'),{
+    type:'bar',
+    data:{labels:['Whole dried — entry','Whole dried — premium','Smoked','Organic / specialty','Retail pack'],
+      datasets:[{label:'Listed range (US$/kg)',data:[[1.8,3.5],[2.5,6.8],[4.5,6.5],[3,10],[2.9,6.8]],
+        backgroundColor:[ORANGE,CLIENT,'#7FA6D9',GREEN,'#B08968'],borderRadius:4}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+        tooltip:{callbacks:{label:function(c){return 'US$ '+c.raw[0]+' – '+c.raw[1]+'/kg';}}}},
+      scales:{x:{beginAtZero:true,title:{display:true,text:'US$/kg (listed)'},grid:{color:'#EEF1F5'}},
+        y:{grid:{display:false},ticks:{font:{size:10.5}}}}}
+  });
+
+  /* c10 — competitor revenue tiers */
+  new Chart(document.getElementById('c10'),{
+    type:'bar',
+    data:{labels:['Above US$100M','US$50–100M','US$10–50M','US$5–10M','US$1–2.5M','Not published'],
+      datasets:[{label:'Suppliers',data:[1,1,1,2,2,14],
+        backgroundColor:[NAVY,BLUE,LBLUE,GREEN,ORANGE,RED],borderRadius:4}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{y:{beginAtZero:true,title:{display:true,text:'Number of suppliers'},grid:{color:'#EEF1F5'}},
+        x:{ticks:{font:{size:10},maxRotation:30},grid:{display:false}}}}
+  });
+
+  /* c11 — buyer personas */
+  new Chart(document.getElementById('c11'),{
+    type:'polarArea',
+    data:{labels:['Rice — direct importer','Anchovy — direct importer','Rice — supermarket chain','Anchovy — supermarket chain','Anchovy — trading company','Rice — tender buyer'],
+      datasets:[{data:[30,14,16,10,20,10],
+        backgroundColor:['rgba(27,54,93,.75)','rgba(11,92,138,.75)','rgba(45,90,160,.7)','rgba(127,166,217,.8)','rgba(232,116,12,.75)','rgba(154,165,184,.75)']}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'right',labels:{font:{size:10}}},
+        tooltip:{callbacks:{label:function(c){return c.label+': '+c.parsed.r+'%';}}}},
+      scales:{r:{beginAtZero:true,ticks:{backdropColor:'transparent',stepSize:10}}}}
+  });
+
+  /* c12 — readiness */
+  new Chart(document.getElementById('c12'),{
+    type:'bar',
+    data:{labels:['Capacity & scale','Certification','Export track record','Legal & registration','Alibaba store','Product content','Pricing & MOQ','Store staffing','Measurement'],
+      datasets:[{label:'Readiness %',data:[90,85,80,100,0,15,20,10,5],
+        backgroundColor:function(ctx){var v=ctx.raw;return v>=70?GREEN:(v>=40?ORANGE:RED);},borderRadius:4}]},
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{beginAtZero:true,max:100,title:{display:true,text:'% ready'},grid:{color:'#EEF1F5'}},
+        y:{grid:{display:false},ticks:{font:{size:10.5}}}}}
+  });
+
+  /* c13 — ROI cumulative */
+  new Chart(document.getElementById('c13'),{
+    type:'line',
+    data:{labels:['M1','M2','M3','M4','M5','M6','M7','M8','M9','M10','M11','M12'],
+      datasets:[
+        {label:'Conservative (50%)',data:[-8640,-4860,540,8100,17280,28080,38880,49680,60480,71280,82080,92880],
+          borderColor:GREY,backgroundColor:'rgba(154,165,184,.10)',borderWidth:2,fill:true,tension:.3,pointRadius:2},
+        {label:'Base case',data:[-6480,1080,11880,27000,45360,66960,88560,110160,131760,153360,174960,196560],
+          borderColor:ORANGE,backgroundColor:'rgba(232,116,12,.12)',borderWidth:2.5,fill:true,tension:.3,pointRadius:2},
+        {label:'Optimistic (160%)',data:[-3888,8208,25488,49680,79056,113616,148176,182736,217296,251856,286416,320976],
+          borderColor:GREEN,backgroundColor:'rgba(46,139,87,.10)',borderWidth:2,fill:true,tension:.3,pointRadius:2}
+      ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{position:'top'},
+        tooltip:{callbacks:{label:function(c){return c.dataset.label+': US$ '+money(c.parsed.y);}}}},
+      scales:{y:{title:{display:true,text:'Cumulative net profit (US$)'},grid:{color:'#EEF1F5'},
+        ticks:{callback:function(v){return money(v);}}},x:{grid:{display:false}}}}
+  });
+})();
+</script>
+</body>
+</html>
