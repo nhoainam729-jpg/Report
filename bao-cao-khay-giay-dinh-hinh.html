@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo cáo chuyên sâu: Khay giấy định hình Việt Nam xuất khẩu &amp; tối ưu chuyển đổi trên Alibaba.com</title>
+<meta name="author" content="Alibaba B2B Expert">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --moss-900:#2F3B26; --moss-700:#4A5D3A; --moss-500:#6B8255; --moss-300:#A8B894; --moss-100:#E8EDE1;
+  --kraft-900:#4A3A28; --kraft-700:#8B6F47; --kraft-500:#B08D5E; --kraft-200:#E4D8C4; --kraft-100:#F3EBDD;
+  --cream:#FBF9F5; --paper:#FFFFFF; --ink:#232B1D; --ink-soft:#5C6653; --line:#DED8CB;
+  --rust:#B4552F; --gold:#C9A227; --navy:#2F5A73;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",-apple-system,"Helvetica Neue",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;font-size:15px}
+a{color:var(--kraft-700)}
+.sidebar{position:fixed;top:0;left:0;width:280px;height:100vh;overflow-y:auto;background:linear-gradient(180deg,var(--moss-900),#26301E);color:#E8EDE1;padding:26px 0 40px;z-index:50}
+.sidebar::-webkit-scrollbar{width:6px}
+.sidebar::-webkit-scrollbar-thumb{background:#4A5D3A;border-radius:4px}
+.sb-brand{padding:0 24px 18px;border-bottom:1px solid rgba(232,237,225,.15);margin-bottom:14px}
+.sb-brand .k{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--moss-300);font-weight:600}
+.sb-brand h1{font-size:16px;font-weight:600;color:#fff;line-height:1.35;margin-top:6px}
+.sb-brand .sub{font-size:11.5px;color:#9FAE8C;margin-top:4px}
+.sb-nav{list-style:none;padding:0 12px}
+.sb-nav a{display:block;padding:8px 14px;color:#C9D3BA;text-decoration:none;font-size:13px;border-radius:7px;border-left:3px solid transparent;transition:.18s;margin-bottom:1px;line-height:1.45}
+.sb-nav a:hover{background:rgba(232,237,225,.09);color:#fff;text-decoration:none}
+.sb-nav a.active{background:rgba(176,141,94,.28);border-left-color:var(--kraft-500);color:#fff;font-weight:600}
+.sb-nav .grp{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#7E8F6C;padding:14px 14px 5px;font-weight:700}
+.sb-foot{padding:18px 24px 0;margin-top:14px;border-top:1px solid rgba(232,237,225,.15);font-size:11px;color:#8B9A78;line-height:1.6}
+.main{margin-left:280px;max-width:1120px;padding:0 46px 90px}
+.hero{background:linear-gradient(135deg,var(--moss-700) 0%,var(--moss-900) 55%,#3A4A2E 100%);color:#F3F1E8;margin:0 -46px 40px;padding:56px 46px 46px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;bottom:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(176,141,94,.32),transparent 68%)}
+.hero .eyebrow{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--moss-300);font-weight:700}
+.hero h2{font-size:31px;line-height:1.24;margin:14px 0 12px;font-weight:700;max-width:820px;color:#fff}
+.hero p{max-width:780px;color:#D6DECB;font-size:14.5px}
+.hero .meta{margin-top:24px;display:flex;gap:26px;flex-wrap:wrap;font-size:12.5px;color:#A9B896;border-top:1px solid rgba(232,237,225,.18);padding-top:16px}
+.hero .meta b{color:#fff;font-weight:600}
+section{padding-top:52px;scroll-margin-top:18px}
+h3.sec{font-size:23px;font-weight:700;color:var(--moss-900);letter-spacing:-.01em;padding-bottom:10px;border-bottom:2px solid var(--moss-300);margin-bottom:12px}
+h3.sec .n{display:inline-block;background:var(--kraft-700);color:#fff;font-size:12.5px;padding:3px 10px;border-radius:5px;margin-right:12px;vertical-align:middle;font-weight:700;letter-spacing:.06em}
+h4{font-size:16.5px;font-weight:700;color:var(--moss-700);margin:34px 0 10px}
+h5{font-size:14.5px;font-weight:700;color:var(--kraft-900);margin:22px 0 8px}
+p{margin-bottom:12px;color:#39412F}
+.lead{font-size:15.5px;color:var(--ink-soft);margin-bottom:18px}
+ul,ol{margin:0 0 14px 20px}
+li{margin-bottom:6px;color:#39412F}
+strong{color:var(--moss-900);font-weight:700}
+code{background:var(--kraft-100);padding:1px 6px;border-radius:4px;font-size:13px;color:var(--kraft-900);font-family:Consolas,monospace}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:22px 0 26px}
+.kpi{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--kraft-500);border-radius:9px;padding:16px 17px}
+.kpi .v{font-size:25px;font-weight:700;color:var(--moss-700);line-height:1.1;letter-spacing:-.02em}
+.kpi .v small{font-size:12.5px;font-weight:600;color:var(--kraft-700)}
+.kpi .l{font-size:12.3px;color:var(--ink-soft);margin-top:5px;line-height:1.45}
+.kpi.alt{border-left-color:var(--moss-500)} .kpi.alt .v{color:var(--kraft-700)}
+.kpi.red{border-left-color:var(--rust)} .kpi.red .v{color:var(--rust)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:22px 24px;margin:20px 0}
+.card.warn{background:#FDF6EE;border-color:var(--kraft-200);border-left:4px solid var(--rust)}
+.card.tip{background:var(--moss-100);border-color:var(--moss-300);border-left:4px solid var(--moss-500)}
+.card.gold{background:#FCF7E6;border-color:#EBD79F;border-left:4px solid var(--gold)}
+.card h5{margin-top:0}
+.chart-wrap{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:20px 22px 14px;margin:22px 0}
+.chart-title{font-size:14.5px;font-weight:700;color:var(--moss-900);margin-bottom:3px}
+.chart-sub{font-size:12.2px;color:var(--ink-soft);margin-bottom:14px}
+.canvas-box{position:relative;width:100%}
+.tbl-scroll{overflow-x:auto;margin:18px 0;border-radius:10px;border:1px solid var(--line);background:var(--paper)}
+table{width:100%;border-collapse:collapse;font-size:13px;background:var(--paper);min-width:620px}
+th{background:var(--moss-700);color:#fff;text-align:left;padding:10px 12px;font-weight:600;font-size:12.4px}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:#39412F}
+tbody tr:nth-child(even){background:#FAF8F3}
+tbody tr:hover{background:var(--moss-100)}
+tbody tr:last-child td{border-bottom:none}
+td.c,th.c{text-align:center}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tag{display:inline-block;font-size:11.2px;padding:2px 8px;border-radius:11px;font-weight:600;white-space:nowrap}
+.t-red{background:#F7E3DA;color:#8E3E1E;border:1px solid #E4C0AE}
+.t-amb{background:#FBF0D8;color:#8A6410;border:1px solid #EBD79F}
+.t-grn{background:var(--moss-100);color:#3D5230;border:1px solid var(--moss-300)}
+.t-blu{background:#E3EDF3;color:#2F5A73;border:1px solid #B8D2E0}
+.badge-n{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--kraft-700);color:#fff;font-size:12.5px;font-weight:700;margin-right:10px;flex:0 0 auto}
+.flow{display:flex;flex-direction:column;margin:22px 0}
+.flow-step{display:flex;gap:16px;position:relative;padding-bottom:22px}
+.flow-step:last-child{padding-bottom:0}
+.flow-step::before{content:"";position:absolute;left:13px;top:28px;bottom:0;width:2px;background:var(--moss-300)}
+.flow-step:last-child::before{display:none}
+.flow-body{flex:1}
+.flow-body h5{margin:0 0 4px}
+.flow-body p{margin:0;font-size:13.4px;color:var(--ink-soft)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+.mini{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.mini h5{margin-top:0;font-size:14px}
+.mini ul{margin:0 0 0 18px;font-size:13.1px}
+.src{font-size:11.6px;color:#8A8F7E;font-style:italic;margin-top:6px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.shot{margin:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:#fff}
+.shot img{width:100%;display:block;cursor:zoom-in}
+.shot figcaption{font-size:11.4px;color:var(--ink-soft);padding:8px 10px;border-top:1px solid var(--line);background:#FAF8F3;line-height:1.45}
+.footer{margin-top:70px;padding:28px 0 0;border-top:2px solid var(--moss-300);font-size:12.4px;color:var(--ink-soft)}
+.footer h4{color:var(--moss-700);font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 10px}
+.lightbox{position:fixed;inset:0;background:rgba(20,26,16,.9);display:none;align-items:center;justify-content:center;z-index:300;padding:30px;cursor:zoom-out}
+.lightbox.on{display:flex}
+.lightbox img{max-width:96vw;max-height:92vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+@media(max-width:1000px){.sidebar{display:none}.main{margin-left:0;padding:0 20px 60px}.hero{margin:0 -20px 30px;padding:36px 20px}.two-col,.shots{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="sidebar">
+  <div class="sb-brand">
+    <div class="k">Báo cáo chuyên sâu ngành hàng</div>
+    <h1>Khay giấy định hình Việt Nam xuất khẩu</h1>
+    <div class="sub">Phân tích thị trường · Chuyển đổi · Lộ trình Alibaba</div>
+  </div>
+  <ul class="sb-nav">
+    <li class="grp">Tổng quan</li>
+    <li><a href="#tomtat">Tóm tắt điều hành</a></li>
+    <li class="grp">Phần 1 — Thị trường</li>
+    <li><a href="#thitruong">1.1 Thị trường toàn cầu</a></li>
+    <li><a href="#vietnam">1.2 Việt Nam trong chuỗi cung ứng</a></li>
+    <li><a href="#nhucau">1.3 Động lực &amp; thị trường mục tiêu</a></li>
+    <li class="grp">Phần 2 — Chuyển đổi</li>
+    <li><a href="#phuongphap">2.1 Phương pháp &amp; dữ liệu</a></li>
+    <li><a href="#hc">2.2 Phễu chuyển đổi — HC Packaging</a></li>
+    <li><a href="#vina">2.3 Phễu chuyển đổi — Vina Green</a></li>
+    <li><a href="#benchmark">2.4 So sánh &amp; benchmark ngành</a></li>
+    <li><a href="#nutthat">2.5 Nút thắt &amp; bài học</a></li>
+    <li class="grp">Phần 3 — Buyer tiềm năng</li>
+    <li><a href="#buyer">3.1 Quy mô tệp buyer trên Alibaba</a></li>
+    <li><a href="#chandung">3.2 Chân dung buyer ngành bao bì</a></li>
+    <li class="grp">Phần 4 — Lộ trình</li>
+    <li><a href="#lotrinh">4.1 Lộ trình tham gia Alibaba</a></li>
+    <li><a href="#kpi">4.2 Bộ KPI cần đạt</a></li>
+    <li class="grp">Kết luận</li>
+    <li><a href="#ketluan">5. Kết luận &amp; khuyến nghị</a></li>
+  </ul>
+  <div class="sb-foot">Dữ liệu vận hành: 2 gian hàng<br>ngành Packaging &amp; Printing<br>Kỳ báo cáo: 07–09/2026</div>
+</nav>
+
+<main class="main">
+  <header class="hero">
+    <div class="eyebrow">Phân tích thị trường · Phễu chuyển đổi · Lộ trình hội viên</div>
+    <h2>Khay giấy định hình Việt Nam xuất khẩu: từ tiềm năng thị trường đến chuyển đổi thực tế trên Alibaba.com</h2>
+    <p>Phân tích chuyên sâu dựa trên dữ liệu vận hành thực tế của hai gian hàng ngành Bao bì &amp; In ấn, giải mã tỷ lệ chuyển đổi từ khách truy cập sang cơ hội kinh doanh, và xác định chính xác điểm nghẽn cần xử lý.</p>
+    <div class="meta">
+      <div><b>Ngành:</b> Molded pulp / khay giấy định hình</div>
+      <div><b>Dữ liệu:</b> 2 gian hàng · 07–09/2026</div>
+      <div><b>Chỉ số:</b> Visitors → Inquiries → Buyers</div>
+      <div><b>Nền tảng:</b> Alibaba.com</div>
+    </div>
+  </header>
+
+  <!-- ============ TÓM TẮT ============ -->
+  <section id="tomtat">
+    <h3 class="sec">Tóm tắt điều hành</h3>
+    <p class="lead">Câu hỏi trung tâm của báo cáo: <strong>với cùng một nguồn hàng khay giấy định hình, vì sao hai nhà bán có kết quả chênh nhau hơn 10 lần?</strong> Dữ liệu vận hành cho thấy câu trả lời không nằm ở chất lượng sản phẩm hay tỷ lệ chuyển đổi, mà ở <strong>lưu lượng</strong> và <strong>tốc độ phản hồi</strong>.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="v">4,2 → 6,3 <small>tỷ USD</small></div><div class="l">Quy mô thị trường molded pulp toàn cầu 2024 → 2030, CAGR ~5,9%</div></div>
+      <div class="kpi alt"><div class="v">14,7<small>×</small></div><div class="l">Khoảng cách lưu lượng khách truy cập giữa 2 gian hàng (2.440 vs 166)</div></div>
+      <div class="kpi"><div class="v">2,13<small>%</small></div><div class="l">Tỷ lệ khách truy cập → gửi yêu cầu hỏi hàng của gian hàng dẫn đầu</div></div>
+      <div class="kpi red"><div class="v">10,4 <small>giờ</small></div><div class="l">Thời gian phản hồi của gian hàng yếu — gấp 11 lần doanh nghiệp dẫn đầu (0,92 giờ)</div></div>
+    </div>
+
+    <div class="card tip">
+      <h5>Năm kết luận cốt lõi</h5>
+      <ol>
+        <li><strong>Tỷ lệ chuyển đổi khách → yêu cầu hỏi hàng rất ổn định (1,6% – 3,0%) ở cả hai gian hàng.</strong> Đây <em>không phải</em> điểm khác biệt lớn. Gian hàng nhỏ thậm chí có tỷ lệ chuyển đổi cao hơn (3,01% so với 2,13%).</li>
+        <li><strong>Khác biệt thực sự nằm ở lưu lượng.</strong> Gian hàng A có 91.574 lượt hiển thị và 2.440 khách truy cập; gian hàng B chỉ có 7.888 lượt hiển thị và 166 khách — chênh 11,6× về hiển thị.</li>
+        <li><strong>Chất lượng sản phẩm không phải nút thắt.</strong> Gian hàng nhỏ có <em>tỷ lệ sản phẩm đạt điểm chất lượng ≥5,5 cao gấp đôi</em> (33,6% so với 14,7%), nhưng không đầu tư quảng cáo từ khóa (số dư KWA = 0).</li>
+        <li><strong>Tốc độ phản hồi là điểm rò rỉ lớn thứ hai.</strong> 10,38 giờ so với mức 0,92 giờ của nhóm dẫn đầu — trong khi buyer B2B thường liên hệ 3–5 nhà cung cấp cùng lúc.</li>
+        <li><strong>Tệp buyer trên Alibaba lớn hơn nhiều so với quy mô hiện tại của cả hai.</strong> Doanh nghiệp dẫn đầu ngành đạt 6.987 cơ hội kinh doanh và 4.459 người mua trả phí mỗi tháng — gấp 24 lần gian hàng mạnh nhất trong mẫu.</li>
+      </ol>
+    </div>
+
+    <div class="card gold">
+      <h5>Hàm ý hành động</h5>
+      <p style="margin-bottom:0">Nếu gian hàng B giữ nguyên tỷ lệ chuyển đổi 3,01% nhưng đạt mức lưu lượng của gian hàng A (2.440 khách truy cập), số yêu cầu hỏi hàng sẽ tăng từ <strong>5 lên khoảng 73 mỗi tháng</strong> — gấp 14,7 lần, mà không cần thay đổi sản phẩm. Đòn bẩy nằm ở <strong>đầu tư hiển thị (KWA + Showcase)</strong> và <strong>rút ngắn thời gian phản hồi</strong>.</p>
+    </div>
+  </section>
+
+  <!-- ============ 1.1 ============ -->
+  <section id="thitruong">
+    <h3 class="sec"><span class="n">1.1</span>Thị trường khay giấy định hình toàn cầu</h3>
+    <p class="lead">Khay giấy định hình (molded pulp / molded fiber) thuộc nhóm sản phẩm bột giấy đúc — nguyên liệu tái chế, phân hủy sinh học, thay thế trực tiếp nhựa dùng một lần và xốp EPS trong đóng gói.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Nguồn nghiên cứu</th><th>Quy mô cơ sở</th><th>Dự báo</th><th class="c">CAGR</th></tr></thead>
+        <tbody>
+          <tr><td>Grand View Research — Molded Pulp Packaging</td><td>4,2 tỷ USD (2024)</td><td>6,3 tỷ USD (2030)</td><td class="c">5,9%</td></tr>
+          <tr><td>MarketsandMarkets — Molded Pulp Packaging</td><td>8,02 tỷ USD (2026)</td><td>10,82 tỷ USD (2031)</td><td class="c">~6,2%</td></tr>
+          <tr><td>Smithers — Moulded Pulp Packaging</td><td>4,5 tỷ USD (2025) · 12,6 triệu tấn</td><td>Tăng trưởng tới 2030</td><td class="c">4,1%</td></tr>
+          <tr><td>Molded Fiber Packaging (phạm vi rộng hơn)</td><td>10,2 tỷ USD (2025)</td><td>17,1 tỷ USD (2034)</td><td class="c">~5,9%</td></tr>
+          <tr><td><strong>Grand View Research — riêng thị trường Mỹ</strong></td><td><strong>995 triệu USD (2023)</strong></td><td>Tăng trưởng 2024–2030</td><td class="c"><strong>6,3%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Các nguồn có phạm vi định nghĩa khác nhau (molded pulp thuần vs molded fiber bao gồm cả vật liệu khác), nên quy mô tuyệt đối không đồng nhất. Điểm đồng thuận: <strong>tăng trưởng 4–6%/năm</strong>, riêng thị trường Mỹ tăng nhanh hơn mặt bằng chung.</p>
+
+    <div class="card">
+      <h5>Vì sao thị trường Mỹ tăng nhanh hơn?</h5>
+      <ul style="margin-bottom:0">
+        <li><strong>Làn sóng cấm nhựa dùng một lần</strong> ở cấp bang và thành phố thúc đẩy chuyển đổi sang khay giấy cho thực phẩm, trứng và nông sản.</li>
+        <li><strong>Áp lực ESG từ chuỗi bán lẻ lớn:</strong> nhà bán lẻ yêu cầu nhà cung cấp giảm bao bì nhựa, tạo nhu cầu kéo từ hạ nguồn.</li>
+        <li><strong>Thương mại điện tử &amp; giao hàng:</strong> nhu cầu khay định hình bảo vệ sản phẩm trong vận chuyển tăng theo quy mô giao hàng.</li>
+        <li><strong>Chi phí nguyên liệu:</strong> bột giấy tái chế rẻ và sẵn có hơn nhựa nguyên sinh trong nhiều phân khúc.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 1.2 ============ -->
+  <section id="vietnam">
+    <h3 class="sec"><span class="n">1.2</span>Việt Nam trong chuỗi cung ứng</h3>
+    <p class="lead">Việt Nam có lợi thế ở tầng sản xuất: nguyên liệu bột giấy tái chế sẵn có, chi phí lao động cạnh tranh, và ngành bao bì giấy đang mở rộng nhanh. Tuy nhiên mức độ hiện diện của doanh nghiệp Việt trong nhóm sản phẩm chuyên biệt này trên thương mại điện tử B2B còn mỏng.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="v">2,85 <small>tỷ USD</small></div><div class="l">Quy mô phân khúc bao bì giấy của Việt Nam năm 2025</div></div>
+      <div class="kpi alt"><div class="v">11,6<small>%</small></div><div class="l">CAGR dự báo của ngành bao bì carton Việt Nam 2024–2033 (1,13 → 3,05 tỷ USD)</div></div>
+      <div class="kpi"><div class="v">4823.70</div><div class="l">Mã HS cho "sản phẩm bột giấy đúc/ép" — bao gồm khay trứng và khay định hình</div></div>
+    </div>
+
+    <h4>Cấu trúc nguồn cung toàn cầu (HS 4823.70)</h4>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Quốc gia/vùng</th><th class="c">Giá trị xuất khẩu</th><th>Vị thế</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Trung Quốc</strong></td><td class="c">334,9 triệu USD</td><td>Dẫn đầu tuyệt đối về quy mô và giá</td></tr>
+          <tr><td><strong>Đức</strong></td><td class="c">103,7 triệu USD</td><td>Dẫn đầu châu Âu, tập trung phân khúc chất lượng cao</td></tr>
+          <tr><td><strong>Việt Nam</strong></td><td class="c">Data Not Available</td><td>Chưa nằm trong nhóm dẫn đầu xuất khẩu toàn cầu — dư địa tăng trưởng còn lớn</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Nguồn: dữ liệu thương mại HS 4823.70 (OEC/WITS, năm cơ sở 2021). Số liệu riêng của Việt Nam cho mã này chưa được công bố tách biệt trong các nguồn tra cứu được — ghi nhận là <em>Data Not Available</em> thay vì suy đoán.</p>
+
+    <div class="card warn">
+      <h5>Khoảng trống chiến lược</h5>
+      <p style="margin-bottom:0">Việt Nam chưa nằm trong nhóm dẫn đầu xuất khẩu sản phẩm bột giấy đúc, trong khi ngành bao bì giấy tổng thể lại tăng trưởng hai chữ số. Nghĩa là <strong>năng lực sản xuất đã có nhưng kênh bán quốc tế chưa được khai thác tương xứng</strong> — đúng khoảng trống mà kênh B2B trực tuyến có thể lấp.</p>
+    </div>
+  </section>
+
+  <!-- ============ 1.3 ============ -->
+  <section id="nhucau">
+    <h3 class="sec"><span class="n">1.3</span>Động lực nhu cầu &amp; thị trường mục tiêu</h3>
+
+    <h4>Phân khúc sản phẩm và thị trường phù hợp</h4>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Dòng sản phẩm</th><th>Ứng dụng</th><th>Thị trường mục tiêu</th><th class="c">Tiềm năng</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Khay trứng</strong> (egg tray 10/12/30 quả)</td><td>Trang trại, nhà phân phối trứng, bán lẻ</td><td>Mỹ, EU, Nhật, Hàn</td><td class="c"><span class="tag t-grn">Cao</span></td></tr>
+          <tr><td><strong>Khay nông sản</strong> (trái cây, rau củ)</td><td>Đóng gói xuất khẩu nông sản, siêu thị</td><td>Mỹ, EU, Trung Đông</td><td class="c"><span class="tag t-grn">Cao</span></td></tr>
+          <tr><td><strong>Khay thiết bị điện tử</strong></td><td>Bảo vệ linh kiện, hàng dễ vỡ</td><td>Mỹ, EU, Nhật, Hàn</td><td class="c"><span class="tag t-blu">Trung bình–cao</span></td></tr>
+          <tr><td><strong>Khay thực phẩm / food service</strong></td><td>Chuỗi nhà hàng, giao hàng, sự kiện</td><td>Mỹ, EU, Úc</td><td class="c"><span class="tag t-grn">Cao</span></td></tr>
+          <tr><td><strong>Khay mỹ phẩm &amp; quà tặng</strong></td><td>Đóng gói cao cấp, thương hiệu</td><td>EU, Nhật, Mỹ</td><td class="c"><span class="tag t-amb">Ngách biên cao</span></td></tr>
+          <tr><td><strong>Khay công nghiệp / logistic</strong></td><td>Kê hàng, vận chuyển nội bộ</td><td>Mỹ, EU</td><td class="c"><span class="tag t-blu">Trung bình</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h5>Ba yếu tố buyer quan tâm nhất ở nhóm hàng này</h5>
+      <ol style="margin-bottom:0">
+        <li><strong>Chứng nhận an toàn thực phẩm</strong> — với khay trứng/thực phẩm: FDA (Mỹ), EU 1935/2004, tiêu chuẩn tiếp xúc thực phẩm.</li>
+        <li><strong>Khả năng tùy biến khuôn và in ấn</strong> — buyer thường cần khuôn riêng, logo, kích thước theo sản phẩm của họ.</li>
+        <li><strong>MOQ và chi phí khuôn</strong> — chi phí mở khuôn là rào cản lớn nhất với đơn hàng thử nghiệm; nhà bán linh hoạt về MOQ có lợi thế rõ rệt.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 2.1 ============ -->
+  <section id="phuongphap">
+    <h3 class="sec"><span class="n">2.1</span>Phương pháp &amp; dữ liệu phân tích</h3>
+    <p class="lead">Phân tích dựa trên dữ liệu vận hành thực tế của hai gian hàng ngành <strong>Packaging &amp; Printing</strong> trên Alibaba.com, kỳ 07–09/2026. Toàn bộ số liệu được đọc trực tiếp từ dashboard ORION và báo cáo "Hiệu quả cơ hội kinh doanh" do nền tảng xuất ra — không suy diễn, không ngoại suy.</p>
+
+    <h4>Định nghĩa các chỉ số trong phễu</h4>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Chỉ số</th><th>Ý nghĩa</th><th>Cách dùng trong phân tích</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Search impressions</strong></td><td>Số lần sản phẩm hiển thị trong kết quả tìm kiếm</td><td>Đo mức độ phủ của danh mục sản phẩm</td></tr>
+          <tr><td><strong>Search clicks</strong></td><td>Số lượt nhấp từ kết quả tìm kiếm</td><td>Tính CTR — chất lượng tiêu đề &amp; ảnh sản phẩm</td></tr>
+          <tr><td><strong>Unique visitors</strong></td><td>Số khách truy cập duy nhất vào gian hàng</td><td>Mẫu số của mọi tỷ lệ chuyển đổi</td></tr>
+          <tr><td><strong>Visitors with inquiries</strong></td><td>Số khách thực sự gửi yêu cầu hỏi hàng</td><td><strong>Tỷ lệ chuyển đổi cốt lõi</strong> (khách → cơ hội)</td></tr>
+          <tr><td><strong>Inquiries</strong></td><td>Số yêu cầu hỏi hàng nhận được</td><td>Đo khối lượng cơ hội bán hàng</td></tr>
+          <tr><td><strong>Messages</strong></td><td>Tin nhắn trao đổi với buyer</td><td>Cùng inquiries tạo thành cơ hội kinh doanh</td></tr>
+          <tr><td><strong>Business opportunities</strong></td><td>Tổng cơ hội kinh doanh ghi nhận</td><td>Xấp xỉ <em>Inquiries + Messages</em></td></tr>
+          <tr><td><strong>Paying buyers</strong></td><td>Số người mua đã từng phát sinh đơn</td><td>Chỉ số <strong>lũy kế</strong> — không phải chuyển đổi trong tháng</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Lưu ý phương pháp: "Business opportunities" gần bằng "Inquiries + Messages" (tháng 9/2026: HC 55 + 243 = 298 so với 295 báo cáo; Vina Green 5 + 24 = 29 so với 28). Chênh lệch 1–3 đơn vị do thời điểm chốt số liệu giữa hai báo cáo.</p>
+
+    <h4>Ảnh gốc dữ liệu vận hành</h4>
+    <div class="shots">
+      <figure class="shot">
+        <img src="https://sc04.alicdn.com/kf/Sad71cd6352694057b3f5dee1765836999.jpg" alt="HC Packaging - Star Rating và Operation Data" loading="lazy" onclick="zoom(this.src)">
+        <figcaption><strong>HC Packaging</strong> — Star Rating &amp; Operation Data: 3.056 sản phẩm PIS, 2.234 khách truy cập/30 ngày, 174 buyer được phản hồi</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="https://sc04.alicdn.com/kf/Sba69fd57a41946d38a018e2f50bd8f6eJ.jpg" alt="Business Opportunities Performance - HC Packaging" loading="lazy" onclick="zoom(this.src)">
+        <figcaption><strong>HC Packaging</strong> — Business Opportunities Performance (09/2026): 295 cơ hội, 55 yêu cầu, 239 tin nhắn, 158 người mua trả phí</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="https://sc04.alicdn.com/kf/S4def54be2a4546638cb78cf16ee63536o.jpg" alt="Vina Green - Star Rating" loading="lazy" onclick="zoom(this.src)">
+        <figcaption><strong>Vina Green</strong> — Star Rating: 2.420 sản phẩm PIS, 166 khách truy cập/30 ngày, 17 buyer được phản hồi, GMV 90 ngày = 0</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="https://sc04.alicdn.com/kf/S1603c23b49504f2f961899d30626e397P.jpg" alt="Hiệu quả cơ hội kinh doanh - Vina Green" loading="lazy" onclick="zoom(this.src)">
+        <figcaption><strong>Vina Green</strong> — Hiệu quả cơ hội kinh doanh (09/2026): 28 cơ hội, 5 yêu cầu, 23 tin nhắn, 9 người mua trả phí</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="https://sc04.alicdn.com/kf/S27d8f737b4d0470d84882e6d2ec570d6D.jpg" alt="HC Packaging - Store performance" loading="lazy" onclick="zoom(this.src)">
+        <figcaption><strong>HC Packaging</strong> — Store's performance 07–09/2026: lưu lượng, CTR, yêu cầu hỏi hàng, thời gian phản hồi theo từng tháng</figcaption>
+      </figure>
+      <figure class="shot">
+        <img src="https://sc04.alicdn.com/kf/S5b2544f209294e2d8e39a3298e9db4cfZ.jpg" alt="Vina Green - Store performance" loading="lazy" onclick="zoom(this.src)">
+        <figcaption><strong>Vina Green</strong> — Store's performance 07–09/2026: cùng bộ chỉ số, cho thấy khoảng cách lưu lượng rõ rệt</figcaption>
+      </figure>
+    </div>
+    <p class="src">Ảnh do khách hàng cung cấp, chụp từ giao diện quản trị Alibaba.com (ORION). Bấm vào ảnh để phóng to.</p>
+  </section>
+
+  <!-- ============ 2.2 ============ -->
+  <section id="hc">
+    <h3 class="sec"><span class="n">2.2</span>Phễu chuyển đổi — HC Packaging Vietnam</h3>
+    <p class="lead"><strong>Hồ sơ gian hàng:</strong> hội viên 5 năm, đã xác minh (Verified), 3.143 sản phẩm (3.056 sản phẩm đạt chuẩn PIS), 60/60 vị trí Showcase đang dùng, có số dư quảng cáo KWA đang hoạt động. Đánh giá sao hiện tại 5/5.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Chỉ số</th><th class="c">07/2026</th><th class="c">08/2026</th><th class="c">09/2026</th><th class="c">Tổng quý</th></tr></thead>
+        <tbody>
+          <tr><td>Search impressions</td><td class="c num">82.514</td><td class="c num">85.860</td><td class="c num">91.574</td><td class="c num">259.948</td></tr>
+          <tr><td>Page views</td><td class="c num">4.590</td><td class="c num">4.511</td><td class="c num">4.658</td><td class="c num">13.759</td></tr>
+          <tr><td><strong>Unique visitors</strong></td><td class="c num">2.279</td><td class="c num">2.261</td><td class="c num"><strong>2.440</strong></td><td class="c num"><strong>6.980</strong></td></tr>
+          <tr><td>Search clicks</td><td class="c num">1.665</td><td class="c num">1.846</td><td class="c num">1.976</td><td class="c num">5.487</td></tr>
+          <tr><td>CTR (click/impression)</td><td class="c num">2,02%</td><td class="c num">2,15%</td><td class="c num">2,16%</td><td class="c num">2,11%</td></tr>
+          <tr><td><strong>Visitors with inquiries</strong></td><td class="c num">42</td><td class="c num">36</td><td class="c num">52</td><td class="c num">130</td></tr>
+          <tr><td><strong>Inquiries</strong></td><td class="c num">43</td><td class="c num">36</td><td class="c num">55</td><td class="c num">134</td></tr>
+          <tr><td>Messages</td><td class="c num">311</td><td class="c num">232</td><td class="c num">243</td><td class="c num">786</td></tr>
+          <tr><td>Tỷ lệ phản hồi</td><td class="c num">88,68%</td><td class="c num">90,68%</td><td class="c num">93,66%</td><td class="c num">—</td></tr>
+          <tr><td>Thời gian phản hồi</td><td class="c num">5,72 giờ</td><td class="c num">5,51 giờ</td><td class="c num">5,35 giờ</td><td class="c num">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="v">2,13<small>%</small></div><div class="l">Khách truy cập → gửi yêu cầu hỏi hàng (52/2.440, tháng 9)</div></div>
+      <div class="kpi alt"><div class="v">2,25</div><div class="l">Yêu cầu hỏi hàng trên mỗi 100 khách truy cập</div></div>
+      <div class="kpi"><div class="v">12,1<small>%</small></div><div class="l">Cơ hội kinh doanh trên mỗi 100 khách truy cập (295/2.440)</div></div>
+      <div class="kpi alt"><div class="v">158</div><div class="l">Người mua trả phí ghi nhận (chỉ số lũy kế), 38 buyer có đơn ≥10.000 USD</div></div>
+    </div>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Lưu lượng khách truy cập theo tháng — khoảng cách 14,7 lần</div>
+      <div class="chart-sub">Unique visitors/tháng · 07–09/2026 · Nguồn: dashboard Alibaba.com</div>
+      <div class="canvas-box" style="height:260px"><canvas id="c1"></canvas></div>
+    </div>
+
+    <div class="card">
+      <h5>Đọc phễu của HC Packaging</h5>
+      <ul style="margin-bottom:0">
+        <li><strong>Đầu phễu mạnh:</strong> 91.574 lượt hiển thị tạo ra 1.976 lượt nhấp (CTR 2,16%) và 2.440 khách truy cập — cao hơn 23% so với số click, cho thấy có thêm nguồn truy cập trực tiếp/giới thiệu.</li>
+        <li><strong>Giữa phễu ổn định:</strong> cứ 100 khách thì khoảng 2,1 người gửi yêu cầu — mức hợp lý cho ngành bao bì B2B.</li>
+        <li><strong>Cuối phễu là điểm yếu:</strong> 158 người mua trả phí chỉ đạt <strong>69% trung bình ngành</strong> (229) và 38 buyer đơn ≥10.000 USD chỉ bằng <strong>50% trung bình ngành</strong> (76). Tỷ lệ chuyển đổi sau yêu cầu còn thấp.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 2.3 ============ -->
+  <section id="vina">
+    <h3 class="sec"><span class="n">2.3</span>Phễu chuyển đổi — Vina Green Pack</h3>
+    <p class="lead"><strong>Hồ sơ gian hàng:</strong> hội viên 1 năm (tham gia nền tảng từ 2020 nhưng mới có 1 năm hội viên trả phí gần đây), 2.584 sản phẩm, 20/20 vị trí Showcase, <strong>số dư KWA = 0</strong> (không chạy quảng cáo từ khóa), GMV 90 ngày = 0 USD. Đánh giá sao hiện tại 2/5.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Chỉ số</th><th class="c">07/2026</th><th class="c">08/2026</th><th class="c">09/2026</th><th class="c">Tổng quý</th></tr></thead>
+        <tbody>
+          <tr><td>Search impressions</td><td class="c num">7.889</td><td class="c num">7.839</td><td class="c num">7.888</td><td class="c num">23.616</td></tr>
+          <tr><td>Page views</td><td class="c num">366</td><td class="c num">310</td><td class="c num">324</td><td class="c num">1.000</td></tr>
+          <tr><td><strong>Unique visitors</strong></td><td class="c num">171</td><td class="c num">169</td><td class="c num"><strong>166</strong></td><td class="c num"><strong>506</strong></td></tr>
+          <tr><td>Search clicks</td><td class="c num">126</td><td class="c num">119</td><td class="c num">119</td><td class="c num">364</td></tr>
+          <tr><td>CTR (click/impression)</td><td class="c num">1,60%</td><td class="c num">1,52%</td><td class="c num">1,51%</td><td class="c num">1,54%</td></tr>
+          <tr><td><strong>Visitors with inquiries</strong></td><td class="c num">3</td><td class="c num">3</td><td class="c num">5</td><td class="c num">11</td></tr>
+          <tr><td><strong>Inquiries</strong></td><td class="c num">3</td><td class="c num">4</td><td class="c num">5</td><td class="c num">12</td></tr>
+          <tr><td>Messages</td><td class="c num">23</td><td class="c num">20</td><td class="c num">24</td><td class="c num">67</td></tr>
+          <tr><td>Tỷ lệ phản hồi</td><td class="c num">60,87%</td><td class="c num">77,27%</td><td class="c num">77,27%</td><td class="c num">—</td></tr>
+          <tr><td>Thời gian phản hồi</td><td class="c num">15,79 giờ</td><td class="c num">10,60 giờ</td><td class="c num">10,38 giờ</td><td class="c num">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="v">3,01<small>%</small></div><div class="l">Khách truy cập → gửi yêu cầu hỏi hàng (5/166) — <strong>cao hơn</strong> gian hàng A</div></div>
+      <div class="kpi alt"><div class="v">3,01</div><div class="l">Yêu cầu hỏi hàng trên mỗi 100 khách truy cập</div></div>
+      <div class="kpi"><div class="v">17,0<small>%</small></div><div class="l">Cơ hội kinh doanh trên mỗi 100 khách truy cập</div></div>
+      <div class="kpi red"><div class="v">77,27<small>%</small></div><div class="l">Tỷ lệ phản hồi — thấp hơn trung bình ngành 88,17%, kém xa nhóm dẫn đầu 100%</div></div>
+    </div>
+
+    <div class="card gold">
+      <h5>Phát hiện quan trọng: chuyển đổi tốt hơn, nhưng lưu lượng quá nhỏ</h5>
+      <p style="margin-bottom:0">Vina Green đạt tỷ lệ chuyển đổi khách → yêu cầu <strong>3,01%</strong>, cao hơn HC Packaging (2,13%). Tính trên mỗi 100 khách truy cập, Vina Green tạo ra <strong>17,0 cơ hội kinh doanh</strong> so với 12,1 của HC. Nói cách khác: <em>gian hàng này không có vấn đề về sản phẩm hay thông điệp bán hàng</em> — vấn đề là quá ít người biết đến gian hàng.</p>
+    </div>
+
+    <div class="card warn">
+      <h5>Bằng chứng bổ sung: chất lượng sản phẩm không phải nút thắt</h5>
+      <ul style="margin-bottom:0">
+        <li>Vina Green có <strong>868/2.584 sản phẩm đạt điểm chất lượng ≥5,5 (33,6%)</strong>, trong khi HC Packaging chỉ có <strong>463/3.143 (14,7%)</strong>.</li>
+        <li>Vina Green có ít sản phẩm hơn 22% nhưng tỷ lệ sản phẩm chất lượng cao <strong>gấp 2,3 lần</strong>.</li>
+        <li>Dù vậy, Vina Green chỉ có <strong>7.888 lượt hiển thị</strong> so với <strong>91.574</strong> của HC — chênh 11,6 lần.</li>
+        <li>Khác biệt cốt lõi: HC có <strong>60 vị trí Showcase và ngân sách KWA đang chạy</strong>; Vina Green có 20 Showcase và <strong>KWA = 0</strong>.</li>
+      </ul>
+    </div>
+    <p class="src">Kết luận này dựa trên tương quan dữ liệu quan sát được, không phải quan hệ nhân quả đã kiểm chứng thực nghiệm. Tuy nhiên mức độ tương đồng về ngành hàng và thời gian khảo sát khiến so sánh có ý nghĩa thực tiễn.</p>
+  </section>
+
+  <!-- ============ 2.4 ============ -->
+  <section id="benchmark">
+    <h3 class="sec"><span class="n">2.4</span>So sánh &amp; benchmark với ngành</h3>
+    <p class="lead">Đặt hai gian hàng lên cùng thang đo với trung bình ngành và nhóm dẫn đầu (dữ liệu báo cáo tháng 09/2026, ngành Packaging &amp; Printing).</p>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Tỷ lệ chuyển đổi trên mỗi 100 khách truy cập</div>
+      <div class="chart-sub">Tháng 09/2026 · Số yêu cầu hỏi hàng và cơ hội kinh doanh tính trên 100 unique visitors</div>
+      <div class="canvas-box" style="height:260px"><canvas id="c2"></canvas></div>
+    </div>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Chỉ số (09/2026)</th><th class="c">HC Packaging</th><th class="c">Vina Green</th><th class="c">TB ngành</th><th class="c">Dẫn đầu ngành</th></tr></thead>
+        <tbody>
+          <tr><td>Business opportunities</td><td class="c num">295 <span class="tag t-amb">82%</span></td><td class="c num">28 <span class="tag t-red">7,8%</span></td><td class="c num">361</td><td class="c num">6.987</td></tr>
+          <tr><td>Inquiries</td><td class="c num">55 <span class="tag t-grn">145%</span></td><td class="c num">5 <span class="tag t-red">13%</span></td><td class="c num">38</td><td class="c num">1.153</td></tr>
+          <tr><td>Messages</td><td class="c num">239 <span class="tag t-amb">79%</span></td><td class="c num">23 <span class="tag t-red">7,6%</span></td><td class="c num">304</td><td class="c num">5.777</td></tr>
+          <tr><td>Tỷ lệ phản hồi</td><td class="c num">90,68%</td><td class="c num">77,27%</td><td class="c num">88,17%</td><td class="c num">100,00%</td></tr>
+          <tr><td>Người mua hoạt động</td><td class="c num">270 <span class="tag t-amb">84%</span></td><td class="c num">27 <span class="tag t-red">8,4%</span></td><td class="c num">321</td><td class="c num">6.193</td></tr>
+          <tr><td>Người mua L2+</td><td class="c num">223 <span class="tag t-amb">82%</span></td><td class="c num">20 <span class="tag t-red">7,4%</span></td><td class="c num">272</td><td class="c num">5.256</td></tr>
+          <tr><td><strong>Người mua trả phí</strong></td><td class="c num">158 <span class="tag t-red">69%</span></td><td class="c num">9 <span class="tag t-red">3,9%</span></td><td class="c num">229</td><td class="c num">4.459</td></tr>
+          <tr><td><strong>Buyer có đơn ≥ 10.000 USD</strong></td><td class="c num">38 <span class="tag t-red">50%</span></td><td class="c num">2 <span class="tag t-red">2,6%</span></td><td class="c num">76</td><td class="c num">1.312</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Nhãn % thể hiện tỷ lệ so với trung bình ngành. Dữ liệu từ báo cáo "Hiệu quả cơ hội kinh doanh" và "Store's performance", kỳ 09/2026.</p>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Vị thế so với trung bình ngành (%)</div>
+      <div class="chart-sub">100% = trung bình ngành · Càng cao càng tốt · 09/2026</div>
+      <div class="canvas-box" style="height:280px"><canvas id="c3"></canvas></div>
+    </div>
+
+    <div class="card">
+      <h5>Ba nhận định từ benchmark</h5>
+      <ol style="margin-bottom:0">
+        <li><strong>HC Packaging vượt trung bình ở khâu thu hút, nhưng dưới trung bình ở khâu chốt đơn.</strong> Inquiries đạt 145% trung bình ngành, nhưng người mua trả phí chỉ 69% và buyer đơn lớn chỉ 50%. Nghĩa là <em>có nhiều cơ hội nhưng tỷ lệ chốt chưa tương xứng</em>.</li>
+        <li><strong>Vina Green ở dưới trung bình ở mọi chỉ số,</strong> thấp nhất ở người mua trả phí (3,9%) và buyer đơn lớn (2,6%).</li>
+        <li><strong>Khoảng cách với nhóm dẫn đầu là rất lớn nhưng cũng là thước đo quy mô cơ hội:</strong> một doanh nghiệp dẫn đầu ngành đạt 6.987 cơ hội và 4.459 người mua trả phí mỗi tháng.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 2.5 ============ -->
+  <section id="nutthat">
+    <h3 class="sec"><span class="n">2.5</span>Nút thắt &amp; bài học</h3>
+
+    <h4>Ba nút thắt theo thứ tự tác động</h4>
+    <div class="flow">
+      <div class="flow-step"><span class="badge-n">1</span><div class="flow-body"><h5>Lưu lượng — tác động lớn nhất</h5><p>Chênh 11,6 lần về lượt hiển thị và 14,7 lần về khách truy cập. Đây là nguyên nhân trực tiếp khiến số cơ hội chênh 10,5 lần. Nguyên nhân gốc: thiếu ngân sách KWA và ít vị trí Showcase (20 so với 60).</p></div></div>
+      <div class="flow-step"><span class="badge-n">2</span><div class="flow-body"><h5>Tốc độ phản hồi — tác động trực tiếp tới tỷ lệ chốt</h5><p>Vina Green phản hồi trung bình 10,38 giờ, chậm gấp 11 lần nhóm dẫn đầu (0,92 giờ) và gấp 2,8 lần trung bình ngành (3,66 giờ). Buyer B2B thường liên hệ song song nhiều nhà cung cấp — ai trả lời trước thường thắng.</p></div></div>
+      <div class="flow-step"><span class="badge-n">3</span><div class="flow-body"><h5>Chuyển đổi sau yêu cầu — nút thắt của gian hàng mạnh</h5><p>HC Packaging có lượng yêu cầu tốt nhưng tỷ lệ người mua trả phí và buyer đơn lớn thấp hơn trung bình. Vấn đề nằm ở chất lượng tư vấn, báo giá, chính sách mẫu và MOQ — không phải ở khâu thu hút.</p></div></div>
+    </div>
+
+    <div class="chart-wrap">
+      <div class="chart-title">Thời gian phản hồi — điểm rò rỉ chi phí thấp, tác động cao</div>
+      <div class="chart-sub">Giờ/phản hồi trung bình · 09/2026 · Càng thấp càng tốt</div>
+      <div class="canvas-box" style="height:240px"><canvas id="c4"></canvas></div>
+    </div>
+
+    <h4>Mô phỏng: nếu Vina Green có lưu lượng của HC Packaging</h4>
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Kịch bản</th><th class="c">Khách truy cập/tháng</th><th class="c">Tỷ lệ chuyển đổi</th><th class="c">Yêu cầu hỏi hàng/tháng</th><th class="c">Cơ hội kinh doanh/tháng</th></tr></thead>
+        <tbody>
+          <tr><td>Hiện tại (09/2026)</td><td class="c num">166</td><td class="c num">3,01%</td><td class="c num">5</td><td class="c num">28</td></tr>
+          <tr><td><strong>Nếu đạt lưu lượng của HC</strong></td><td class="c num">2.440</td><td class="c num">3,01%</td><td class="c num"><strong>73</strong></td><td class="c num"><strong>≈412</strong></td></tr>
+          <tr><td>Chênh lệch</td><td class="c num">14,7×</td><td class="c num">—</td><td class="c num">14,7×</td><td class="c num">14,7×</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Mô phỏng tuyến tính giả định tỷ lệ chuyển đổi không đổi khi lưu lượng tăng. Trong thực tế tỷ lệ có thể giảm nhẹ khi mở rộng tệp khách, nên đây là mức trần tham khảo, không phải cam kết.</p>
+
+    <div class="card tip">
+      <h5>Bài học rút ra cho doanh nghiệp khay giấy định hình</h5>
+      <ol style="margin-bottom:0">
+        <li><strong>Đừng tối ưu tỷ lệ chuyển đổi trước khi có lưu lượng.</strong> Ở mức 166 khách/tháng, mọi nỗ lực tăng tỷ lệ chuyển đổi chỉ tạo thêm 1–2 yêu cầu. Tăng lưu lượng tạo ra hàng chục.</li>
+        <li><strong>Sản phẩm tốt không tự tạo lưu lượng.</strong> Vina Green có tỷ lệ sản phẩm chất lượng cao gấp 2,3 lần nhưng không hiển thị được vì thiếu quảng cáo và vị trí trưng bày.</li>
+        <li><strong>Tốc độ phản hồi là khoản đầu tư rẻ nhất.</strong> Rút từ 10 giờ xuống dưới 2 giờ không cần ngân sách quảng cáo, chỉ cần quy trình và người trực.</li>
+        <li><strong>Đo lường theo phễu, không theo cảm giác.</strong> Cùng một gian hàng có thể mạnh ở đầu phễu và yếu ở cuối — cần nhìn riêng từng tầng.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 3.1 ============ -->
+  <section id="buyer">
+    <h3 class="sec"><span class="n">3.1</span>Quy mô tệp buyer trên Alibaba.com</h3>
+    <p class="lead">Đây là phần trả lời trực tiếp câu hỏi: <strong>"buyer trên Alibaba tiềm năng đến mức nào?"</strong> Báo cáo ngành cung cấp luôn hiển thị song song ba mốc: doanh nghiệp của bạn, trung bình ngành, và doanh nghiệp dẫn đầu. Khoảng cách giữa mốc thứ hai và mốc thứ ba chính là quy mô nhu cầu đang tồn tại trong ngành.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Chỉ số (ngành Packaging &amp; Printing, 09/2026)</th><th class="c">Trung bình ngành</th><th class="c">Dẫn đầu ngành</th><th class="c">Hệ số</th></tr></thead>
+        <tbody>
+          <tr><td>Cơ hội kinh doanh / tháng</td><td class="c num">361</td><td class="c num">6.987</td><td class="c num">19,4×</td></tr>
+          <tr><td>Yêu cầu hỏi hàng / tháng</td><td class="c num">38</td><td class="c num">1.153</td><td class="c num">30,3×</td></tr>
+          <tr><td>Tin nhắn / tháng</td><td class="c num">304</td><td class="c num">5.777</td><td class="c num">19,0×</td></tr>
+          <tr><td>Người mua hoạt động / tháng</td><td class="c num">321</td><td class="c num">6.193</td><td class="c num">19,3×</td></tr>
+          <tr><td>Người mua cấp L2+ / tháng</td><td class="c num">272</td><td class="c num">5.256</td><td class="c num">19,3×</td></tr>
+          <tr><td><strong>Người mua trả phí / tháng</strong></td><td class="c num">229</td><td class="c num">4.459</td><td class="c num">19,5×</td></tr>
+          <tr><td><strong>Buyer có đơn ≥ 10.000 USD / tháng</strong></td><td class="c num">76</td><td class="c num">1.312</td><td class="c num">17,3×</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Nguồn: báo cáo "Hiệu quả cơ hội kinh doanh", ngành Packaging &amp; Printing, kỳ 09/2026, do chính nền tảng tổng hợp từ dữ liệu toàn ngành.</p>
+
+    <div class="kpi-grid">
+      <div class="kpi"><div class="v">6.193</div><div class="l">Người mua hoạt động mỗi tháng của một doanh nghiệp dẫn đầu ngành bao bì</div></div>
+      <div class="kpi alt"><div class="v">1.312</div><div class="l">Buyer đặt đơn ≥10.000 USD mỗi tháng — tệp khách hàng giá trị cao</div></div>
+      <div class="kpi"><div class="v">4.459</div><div class="l">Người mua trả phí mỗi tháng — tức đã thực sự phát sinh giao dịch</div></div>
+    </div>
+
+    <div class="card">
+      <h5>Diễn giải con số này một cách thận trọng</h5>
+      <ul style="margin-bottom:0">
+        <li><strong>Đây là dữ liệu của một doanh nghiệp dẫn đầu, không phải của toàn ngành.</strong> Nó cho biết <em>mức trần khả thi</em> khi vận hành tốt, không phải mức trung bình mà mọi nhà bán đều đạt được.</li>
+        <li><strong>1.312 buyer đơn lớn/tháng không có nghĩa là 1.312 đơn hàng.</strong> Đây là số người mua có tổng giá trị đơn tích lũy từ 10.000 USD — một buyer có thể đặt nhiều đơn nhỏ.</li>
+        <li><strong>Ý nghĩa thực tiễn:</strong> chỉ cần chiếm <strong>1% tệp buyer của nhóm dẫn đầu</strong> (khoảng 62 người mua hoạt động/tháng), một doanh nghiệp khay giấy định hình đã có nền tảng đơn hàng xuất khẩu ổn định.</li>
+        <li><strong>Hai gian hàng trong mẫu cộng lại chỉ đạt 323 cơ hội/tháng</strong> — tương đương 4,6% của <em>một</em> doanh nghiệp dẫn đầu. Dư địa tăng trưởng còn rất lớn.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 3.2 ============ -->
+  <section id="chandung">
+    <h3 class="sec"><span class="n">3.2</span>Chân dung buyer ngành bao bì trên Alibaba</h3>
+    <p class="lead">Hiểu buyer là điều kiện để thiết kế gian hàng và kịch bản phản hồi đúng. Dưới đây là các nhóm buyer điển hình của ngành bao bì, đặc điểm và yêu cầu chính.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Nhóm buyer</th><th>Đặc điểm</th><th>Điều họ quan tâm nhất</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Nhà nhập khẩu / phân phối bao bì</strong></td><td>Đặt hàng khối lượng lớn, nhiều chủng loại, thường có kho riêng</td><td>Giá trên mỗi đơn vị, độ ổn định nguồn cung, thời gian giao hàng</td></tr>
+          <tr><td><strong>Chuỗi bán lẻ &amp; siêu thị</strong></td><td>Yêu cầu tiêu chuẩn cao, cần chứng nhận, kiểm toán nhà máy</td><td>Chứng nhận an toàn thực phẩm, truy xuất nguồn gốc, bao bì có thương hiệu</td></tr>
+          <tr><td><strong>Nhà sản xuất thực phẩm / nông sản</strong></td><td>Cần khay vừa khít với sản phẩm, thường yêu cầu khuôn riêng</td><td>Khả năng tùy biến khuôn, MOQ, chi phí mở khuôn</td></tr>
+          <tr><td><strong>Chuỗi F&amp;B / food service</strong></td><td>Đặt hàng định kỳ, khối lượng vừa, cần giao nhanh</td><td>Giá, tính sẵn có, khả năng giao hàng lặp lại</td></tr>
+          <tr><td><strong>Nhà bán thương mại điện tử</strong></td><td>Đơn nhỏ, nhiều SKU, cần bao bì đẹp và nhẹ</td><td>MOQ thấp, in ấn, thời gian sản xuất mẫu</td></tr>
+          <tr><td><strong>Công ty thương mại / sourcing</strong></td><td>Trung gian cho thương hiệu lớn, đàm phán kỹ</td><td>Hồ sơ năng lực, chứng nhận, khả năng đáp ứng đơn lớn</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card tip">
+      <h5>Điều gì khiến buyer quyết định nhắn tin cho một gian hàng?</h5>
+      <ol style="margin-bottom:0">
+        <li><strong>Ảnh và tiêu đề sản phẩm khớp nhu cầu</strong> — quyết định việc có nhấp vào hay không (CTR).</li>
+        <li><strong>Thông tin rõ ràng ngay trên trang sản phẩm</strong> — kích thước, chất liệu, MOQ, chứng nhận, thời gian giao.</li>
+        <li><strong>Tín hiệu tin cậy</strong> — huy hiệu xác minh, số năm hoạt động, đánh giá, chứng nhận.</li>
+        <li><strong>Cảm giác được phản hồi nhanh</strong> — nhiều buyer rời trang nếu thấy thời gian phản hồi tính bằng ngày.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 4.1 ============ -->
+  <section id="lotrinh">
+    <h3 class="sec"><span class="n">4.1</span>Lộ trình tham gia Alibaba.com</h3>
+    <p class="lead">Lộ trình dưới đây được thiết kế cho doanh nghiệp sản xuất khay giấy định hình lần đầu tham gia kênh B2B quốc tế, dựa trên chính các cấu phần mà dashboard vận hành của Alibaba.com đo lường: hồ sơ xác minh, gian hàng, sản phẩm, Showcase, quảng cáo từ khóa và chất lượng phản hồi.</p>
+
+    <div class="flow">
+      <div class="flow-step"><span class="badge-n">0</span><div class="flow-body">
+        <h5>Giai đoạn 0 — Chuẩn bị nội lực (2–4 tuần)</h5>
+        <p>Hoàn thiện giấy phép kinh doanh và hồ sơ pháp lý; chụp bộ ảnh nhà xưởng và sản phẩm; chuẩn bị bảng giá theo MOQ; xác định chứng nhận cần có (an toàn thực phẩm, ISO, FSC nếu có); chuẩn bị mẫu sẵn sàng gửi.</p>
+        <p style="margin-top:6px"><strong>Đầu ra:</strong> hồ sơ năng lực + bộ tài sản hình ảnh + bảng giá.</p>
+      </div></div>
+      <div class="flow-step"><span class="badge-n">1</span><div class="flow-body">
+        <h5>Giai đoạn 1 — Đăng ký &amp; xác minh (1–2 tuần)</h5>
+        <p>Tạo tài khoản nhà bán, chọn gói hội viên, hoàn tất xác minh doanh nghiệp và (nếu chọn gói Verified) đăng ký xác minh on-site bởi bên thứ ba. Đây là bước tạo ra huy hiệu tin cậy — yếu tố ảnh hưởng trực tiếp tới quyết định nhấp và nhắn tin của buyer.</p>
+        <p style="margin-top:6px"><strong>Đầu ra:</strong> tài khoản hoạt động + huy hiệu xác minh.</p>
+      </div></div>
+      <div class="flow-step"><span class="badge-n">2</span><div class="flow-body">
+        <h5>Giai đoạn 2 — Xây gian hàng &amp; danh mục sản phẩm (2–3 tuần)</h5>
+        <p>Thiết kế minisite theo nhận diện thương hiệu; đăng 50–100 sản phẩm đầu tiên với tiêu đề chuẩn từ khóa, ảnh đa góc, thông số đầy đủ; phân bổ tối đa vị trí Showcase; tải lên video nhà xưởng và bộ chứng nhận.</p>
+        <p style="margin-top:6px"><strong>Đầu ra:</strong> gian hàng đầy đủ + danh mục sản phẩm nền tảng.</p>
+      </div></div>
+      <div class="flow-step"><span class="badge-n">3</span><div class="flow-body">
+        <h5>Giai đoạn 3 — Tạo lưu lượng (liên tục, từ tháng 2)</h5>
+        <p>Khởi chạy quảng cáo từ khóa (KWA) cho nhóm từ khóa cốt lõi; tham gia báo giá qua RFQ; đăng ký các sự kiện và chiến dịch theo mùa của nền tảng; mở rộng danh mục sản phẩm dựa trên dữ liệu tìm kiếm thực tế.</p>
+        <p style="margin-top:6px"><strong>Đầu ra:</strong> lưu lượng khách truy cập tăng đều theo tháng.</p>
+      </div></div>
+      <div class="flow-step"><span class="badge-n">4</span><div class="flow-body">
+        <h5>Giai đoạn 4 — Chuyển đổi &amp; mở rộng (từ tháng 3)</h5>
+        <p>Thiết lập quy trình phản hồi dưới 2 giờ; chuẩn hóa kịch bản báo giá và chính sách mẫu; dùng CRM để theo dõi buyer; đo lường theo phễu và tối ưu từng tầng; nâng cấp gói khi các chỉ số nền đã ổn định.</p>
+        <p style="margin-top:6px"><strong>Đầu ra:</strong> đơn hàng đầu tiên + bộ chỉ số vận hành ổn định.</p>
+      </div></div>
+    </div>
+
+    <div class="card warn">
+      <h5>Thứ tự ưu tiên ngân sách — đừng đảo lộn</h5>
+      <p style="margin-bottom:0">Dữ liệu hai gian hàng cho thấy một sai lầm phổ biến: <strong>đầu tư vào sản phẩm và hình ảnh nhưng không đầu tư vào hiển thị</strong>. Vina Green có chất lượng sản phẩm tốt hơn nhưng KWA = 0, dẫn tới lưu lượng chỉ bằng 1/14,7. Trình tự đúng là: <em>xác minh → gian hàng đủ tốt → tạo lưu lượng → tối ưu chuyển đổi</em>. Không nên tối ưu chuyển đổi khi chưa có lưu lượng.</p>
+    </div>
+  </section>
+
+  <!-- ============ 4.2 ============ -->
+  <section id="kpi">
+    <h3 class="sec"><span class="n">4.2</span>Bộ KPI cần đạt</h3>
+    <p class="lead">Các mốc dưới đây được suy ra từ dữ liệu thực tế của hai gian hàng và benchmark ngành, dùng làm thước đo nội bộ theo từng giai đoạn.</p>
+
+    <div class="tbl-scroll">
+      <table>
+        <thead><tr><th>Chỉ số</th><th class="c">Mốc tham chiếu hiện tại</th><th class="c">Mục tiêu giai đoạn 1</th><th class="c">Mục tiêu giai đoạn 2</th></tr></thead>
+        <tbody>
+          <tr><td>Unique visitors / tháng</td><td class="c num">166 – 2.440</td><td class="c num">≥ 800</td><td class="c num">≥ 2.000</td></tr>
+          <tr><td>CTR (click/impression)</td><td class="c num">1,5% – 2,2%</td><td class="c num">≥ 2,0%</td><td class="c num">≥ 2,5%</td></tr>
+          <tr><td>Tỷ lệ khách → yêu cầu</td><td class="c num">2,1% – 3,0%</td><td class="c num">≥ 2,5%</td><td class="c num">≥ 3,0%</td></tr>
+          <tr><td>Yêu cầu hỏi hàng / tháng</td><td class="c num">5 – 55</td><td class="c num">≥ 20</td><td class="c num">≥ 50</td></tr>
+          <tr><td>Tỷ lệ phản hồi</td><td class="c num">77% – 94%</td><td class="c num">≥ 95%</td><td class="c num">≥ 99%</td></tr>
+          <tr><td>Thời gian phản hồi</td><td class="c num">5,4 – 10,4 giờ</td><td class="c num">&lt; 3 giờ</td><td class="c num">&lt; 1 giờ</td></tr>
+          <tr><td>Điểm sao gian hàng</td><td class="c num">2/5 – 5/5</td><td class="c num">≥ 4/5</td><td class="c num">5/5</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="src">Mốc tham chiếu lấy từ dữ liệu 07–09/2026 của hai gian hàng; mục tiêu là khuyến nghị của báo cáo, không phải cam kết của nền tảng.</p>
+  </section>
+
+  <!-- ============ 5 ============ -->
+  <section id="ketluan">
+    <h3 class="sec">Kết luận &amp; khuyến nghị</h3>
+
+    <div class="card tip">
+      <h5>Ba việc cần làm ngay</h5>
+      <ol style="margin-bottom:0">
+        <li><strong>Mở lưu lượng trước.</strong> Với ngành hàng này, lưu lượng đang là biến số quyết định: chênh 14,7 lần về khách truy cập tạo ra chênh 10,5 lần về cơ hội. Ưu tiên ngân sách KWA và tối đa vị trí Showcase.</li>
+        <li><strong>Đưa thời gian phản hồi xuống dưới 2 giờ.</strong> Đây là thay đổi không tốn ngân sách quảng cáo nhưng tác động trực tiếp tới tỷ lệ chốt — đặc biệt khi buyer liên hệ song song nhiều nhà cung cấp.</li>
+        <li><strong>Đầu tư chứng nhận và bằng chứng năng lực.</strong> Với khay giấy tiếp xúc thực phẩm, hồ sơ xác minh và chứng nhận là điều kiện để buyer Mỹ đưa vào danh sách thử nghiệm.</li>
+      </ol>
+    </div>
+
+    <p>Về dài hạn, cơ hội của ngành là có thật: thị trường molded pulp tăng trưởng 4–6%/năm, riêng Mỹ tăng nhanh hơn, trong khi Việt Nam chưa nằm trong nhóm dẫn đầu xuất khẩu sản phẩm bột giấy đúc. Kết hợp năng lực sản xuất sẵn có với kênh B2B quốc tế được vận hành đúng cách là con đường khả thi để chiếm thị phần.</p>
+
+    <div class="card">
+      <h5>Giới hạn của báo cáo</h5>
+      <ul style="margin-bottom:0">
+        <li>Phân tích dựa trên <strong>hai gian hàng</strong> — cỡ mẫu nhỏ, không đại diện cho toàn ngành. Các kết luận mang tính định hướng, không phải kết luận thống kê.</li>
+        <li>Dữ liệu "người mua trả phí" và "buyer đơn ≥10.000 USD" là <strong>chỉ số lũy kế</strong>, không phải chuyển đổi trong tháng.</li>
+        <li>Mô phỏng tăng lưu lượng là phép ngoại suy tuyến tính, chưa tính đến việc tỷ lệ chuyển đổi có thể giảm khi mở rộng tệp khách.</li>
+        <li>Số liệu thị trường molded pulp từ nhiều nguồn có phạm vi định nghĩa khác nhau nên quy mô tuyệt đối không đồng nhất; báo cáo chỉ dùng phần tăng trưởng làm căn cứ định hướng.</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <h4>Nguồn dữ liệu &amp; trích dẫn</h4>
+      <p style="margin-bottom:8px"><strong>Dữ liệu vận hành:</strong> ảnh chụp dashboard Alibaba.com (ORION) và báo cáo "Hiệu quả cơ hội kinh doanh" của hai gian hàng, kỳ 07–09/2026, do khách hàng cung cấp.</p>
+      <p style="margin-bottom:8px"><strong>Gian hàng tham chiếu:</strong>
+        <a href="https://vinagreenpackalibaba.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">Vina Green Pack — Alibaba Store</a> ·
+        <a href="https://vn1401114654pfab.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">HC Packaging Vietnam — Alibaba Store</a>
+      </p>
+      <p style="margin-bottom:8px"><strong>Dữ liệu thị trường:</strong>
+        <a href="https://www.grandviewresearch.com/industry-analysis/molded-pulp-packaging-market" target="_blank" rel="noopener">Grand View Research — Molded Pulp Packaging</a> ·
+        <a href="https://www.grandviewresearch.com/industry-analysis/us-molded-pulp-packaging-market-report" target="_blank" rel="noopener">Grand View Research — U.S. Molded Pulp Packaging</a> ·
+        <span style="color:#8A8F7E">Smithers — The Future of Moulded Pulp Packaging to 2030 (trích dẫn theo tên; trang gốc chặn truy cập tự động)</span> ·
+        <span style="color:#8A8F7E">MarketsandMarkets — Molded Pulp Packaging (trích dẫn theo tên; trang gốc chặn truy cập tự động)</span>
+      </p>
+      <p style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line)"><strong>Tuyên bố miễn trừ trách nhiệm:</strong> Dữ liệu vận hành trong báo cáo là số liệu nội bộ của hai gian hàng do khách hàng cung cấp, không phải số liệu công khai của Alibaba.com. Benchmark "trung bình ngành" và "dẫn đầu ngành" do nền tảng tổng hợp và có thể thay đổi theo kỳ báo cáo. Các mô phỏng là phép ngoại suy tham khảo, không phải cam kết kết quả kinh doanh.</p>
+      <p style="font-size:12px;color:#8A8F7E;margin-top:8px">Ngày thực hiện: 14/10/2026 · Phiên bản: Tiếng Việt</p>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lb" onclick="this.classList.remove('on')"><img id="lbimg" src="" alt=""></div>
+<script>
+const moss='#4A5D3A', mossL='#6B8255', mossLL='#8FA37B', kraft='#B08D5E', kraftD='#8B6F47', navy='#2F5A73', rust='#B4552F', sand='#C9B99A';
+Chart.defaults.font.family="'Segoe UI', Arial, sans-serif";
+Chart.defaults.font.size=12;
+Chart.defaults.color='#5C6653';
+
+/* c1 — lưu lượng */
+new Chart(document.getElementById('c1'),{
+  type:'bar',
+  data:{ labels:['07/2026','08/2026','09/2026'],
+    datasets:[
+      {label:'HC Packaging', data:[2279,2261,2440], backgroundColor:moss, borderRadius:5, barPercentage:.65},
+      {label:'Vina Green', data:[171,169,166], backgroundColor:kraft, borderRadius:5, barPercentage:.65}
+    ]},
+  options:{responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{position:'bottom',labels:{boxWidth:12,padding:14}},
+      tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y.toLocaleString('vi-VN')+' khách'}}},
+    scales:{y:{beginAtZero:true, title:{display:true,text:'Unique visitors'}, grid:{color:'#EDE8DD'}}, x:{grid:{display:false}}}}
+});
+
+/* c2 — tỷ lệ trên 100 khách */
+new Chart(document.getElementById('c2'),{
+  type:'bar',
+  data:{ labels:['Yêu cầu hỏi hàng / 100 khách','Cơ hội kinh doanh / 100 khách'],
+    datasets:[
+      {label:'HC Packaging', data:[2.25,12.21], backgroundColor:moss, borderRadius:5, barPercentage:.6},
+      {label:'Vina Green', data:[3.01,17.47], backgroundColor:kraft, borderRadius:5, barPercentage:.6}
+    ]},
+  options:{responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{position:'bottom',labels:{boxWidth:12,padding:14}},
+      tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y+' / 100 khách'}}},
+    scales:{y:{beginAtZero:true, title:{display:true,text:'Số lượng trên 100 khách'}, grid:{color:'#EDE8DD'}}, x:{grid:{display:false}}}}
+});
+
+/* c3 — vị thế so với trung bình ngành */
+new Chart(document.getElementById('c3'),{
+  type:'bar',
+  data:{ labels:['Cơ hội kinh doanh','Yêu cầu hỏi hàng','Người mua trả phí','Buyer đơn ≥ $10k'],
+    datasets:[
+      {label:'HC Packaging', data:[81.7,144.7,69.0,50.0], backgroundColor:moss, borderRadius:5, barPercentage:.6},
+      {label:'Vina Green', data:[7.8,13.2,3.9,2.6], backgroundColor:kraft, borderRadius:5, barPercentage:.6},
+      {type:'line', label:'Trung bình ngành (100%)', data:[100,100,100,100], borderColor:rust, borderDash:[6,4], borderWidth:2, pointRadius:0, fill:false}
+    ]},
+  options:{responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{position:'bottom',labels:{boxWidth:12,padding:12}},
+      tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.parsed.y+'%'}}},
+    scales:{y:{beginAtZero:true, title:{display:true,text:'% so với trung bình ngành'}, grid:{color:'#EDE8DD'}}, x:{grid:{display:false}}}}
+});
+
+/* c4 — thời gian phản hồi */
+new Chart(document.getElementById('c4'),{
+  type:'bar',
+  data:{ labels:['Dẫn đầu ngành','Trung bình ngành','HC Packaging','Vina Green'],
+    datasets:[{label:'Giờ / phản hồi', data:[0.92,3.66,5.35,10.38],
+      backgroundColor:[mossL, mossL, moss, rust], borderRadius:5, barPercentage:.55}]},
+  options:{indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false},
+      tooltip:{callbacks:{label:c=>c.parsed.x+' giờ'}}},
+    scales:{x:{beginAtZero:true, title:{display:true,text:'Giờ'}, grid:{color:'#EDE8DD'}}, y:{grid:{display:false}}}}
+});
+
+/* lightbox */
+function zoom(src){
+  document.getElementById('lbimg').src=src;
+  document.getElementById('lb').classList.add('on');
+}
+
+/* scrollspy */
+const links=[...document.querySelectorAll('.sb-nav a')];
+const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      const link=links.find(l=>l.getAttribute('href')==='#'+e.target.id);
+      if(link) link.classList.add('active');
+    }
+  });
+},{rootMargin:'-12% 0px -76% 0px'});
+secs.forEach(s=>obs.observe(s));
+</script>
+</body>
+</html>
