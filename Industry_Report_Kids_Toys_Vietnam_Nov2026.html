@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="vi" class="lang-vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Báo cáo ngành hàng Đồ chơi trẻ em (Kids' Toys) — Alibaba.com GGS Vietnam</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{
+  --primary:#1B365D; --secondary:#E8740C; --accent:#2E8B57; --accent2:#2D5AA0;
+  --bg-light:#F8F9FA; --text-dark:#1A1A2E; --text-muted:#5A6072; --border:#E2E8F0;
+  --danger:#C0392B; --warn:#B7791F;
+  --gradient-header:linear-gradient(135deg,#1B365D 0%,#2D5AA0 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Be Vietnam Pro',sans-serif;color:var(--text-dark);font-size:14.5px;line-height:1.7;background:#fff;-webkit-font-smoothing:antialiased}
+html.lang-vi body{font-family:'Be Vietnam Pro',sans-serif}
+html.lang-en body{font-family:'Inter',sans-serif}
+html.lang-cn body{font-family:'Noto Sans SC',sans-serif}
+html.lang-vi .cn,html.lang-vi .en,html.lang-vi .blk-cn,html.lang-vi .blk-en{display:none!important}
+html.lang-cn .vi,html.lang-cn .en,html.lang-cn .blk-vi,html.lang-cn .blk-en{display:none!important}
+html.lang-en .vi,html.lang-en .cn,html.lang-en .blk-vi,html.lang-en .blk-cn{display:none!important}
+html.lang-vi .vi{display:inline!important}
+html.lang-cn .cn{display:inline!important}
+html.lang-en .en{display:inline!important}
+html.lang-vi .blk-vi{display:block!important}
+html.lang-cn .blk-cn{display:block!important}
+html.lang-en .blk-en{display:block!important}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- Language switcher ---------- */
+.lang-switcher{position:fixed;top:14px;right:14px;z-index:9999;display:flex;gap:2px;background:rgba(27,54,93,.94);padding:4px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.22)}
+.lang-switcher button{border:0;background:transparent;color:#cfd8e6;font:600 12px/1 'Inter',sans-serif;padding:7px 13px;border-radius:999px;cursor:pointer;letter-spacing:.4px}
+.lang-switcher button.active{background:var(--secondary);color:#fff}
+
+/* ---------- Header ---------- */
+.classification{background:#7B1E1E;color:#fff;font-size:11.5px;letter-spacing:.6px;text-transform:uppercase;padding:7px 0}
+.classification .wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.badge-conf{background:var(--danger);border:1px solid rgba(255,255,255,.5);padding:2px 9px;border-radius:3px;font-weight:700;font-size:10.5px}
+header.main-head{background:var(--gradient-header);color:#fff;padding:34px 0 26px}
+.head-grid{display:grid;grid-template-columns:1.35fr .85fr;gap:38px;align-items:start}
+.logo-row{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+.logo-row img{height:32px;display:block}
+.logo-row .ggs{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#b9cbe6;border-left:1px solid rgba(255,255,255,.35);padding-left:14px}
+.doc-kicker{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:#9fb8da;margin-bottom:8px}
+h1.doc-title{font-size:30px;line-height:1.25;font-weight:800;letter-spacing:-.3px}
+h1.doc-title small{display:block;font-size:19px;font-weight:600;color:#ffd9b0;margin-top:8px;letter-spacing:0}
+.doc-meta{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:16px 18px;font-size:12.5px}
+.doc-meta div{display:flex;justify-content:space-between;gap:12px;padding:5px 0;border-bottom:1px dashed rgba(255,255,255,.14)}
+.doc-meta div:last-child{border-bottom:0}
+.doc-meta span:first-child{color:#a9c1de}
+.doc-meta span:last-child{font-weight:600;text-align:right}
+.status-final{color:#7BE3A8}
+.tag-bar{background:rgba(0,0,0,.18);border-top:1px solid rgba(255,255,255,.12);margin-top:26px;padding:12px 0}
+.tag-bar .wrap{display:flex;gap:8px;flex-wrap:wrap}
+.tag{font-size:11.5px;padding:4px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.28);color:#dbe6f3}
+.tag.vn{background:rgba(192,57,43,.85);border-color:transparent;color:#fff}
+.tag.cn{background:rgba(232,116,12,.85);border-color:transparent;color:#fff}
+.tag.other{background:rgba(45,90,160,.9);border-color:transparent;color:#fff}
+
+/* ---------- TOC ---------- */
+nav.toc{position:sticky;top:0;z-index:900;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 3px 14px rgba(27,54,93,.07)}
+nav.toc .wrap{display:flex;gap:7px;overflow-x:auto;padding:10px 24px;scrollbar-width:thin}
+@media(min-width:900px){nav.toc .wrap{padding-right:172px}}
+nav.toc a{white-space:nowrap;font-size:12px;font-weight:500;color:var(--primary);text-decoration:none;padding:6px 11px;border:1px solid var(--border);border-radius:999px;transition:.15s}
+nav.toc a:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+
+/* ---------- Sections ---------- */
+main{padding:14px 0 60px}
+section{padding:44px 0 10px;border-bottom:1px solid var(--border);scroll-margin-top:74px}
+section:last-of-type{border-bottom:0}
+.sec-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:8px}
+.sec-num{font:800 13px/1 'Inter',sans-serif;color:#fff;background:var(--primary);min-width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;letter-spacing:.5px}
+h2{font-size:21px;font-weight:700;color:var(--primary);letter-spacing:-.2px;line-height:1.3}
+.sec-sub{font-size:12.5px;color:var(--text-muted);margin:2px 0 0}
+h3{font-size:15.5px;font-weight:700;color:var(--primary);margin:26px 0 10px;padding-left:11px;border-left:3px solid var(--secondary)}
+p{margin-bottom:11px;color:#26303f}
+p.lead{font-size:15px;color:#1f2a3a}
+ul,ol{margin:0 0 12px 20px}
+li{margin-bottom:6px}
+strong{color:var(--primary);font-weight:600}
+
+/* ---------- Stat cards ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:13px;margin:16px 0 20px}
+.stat{background:var(--bg-light);border:1px solid var(--border);border-top:3px solid var(--secondary);border-radius:10px;padding:15px 16px}
+.stat .v{font:800 23px/1.15 'Inter',sans-serif;color:var(--primary);letter-spacing:-.6px}
+.stat .l{font-size:12px;color:var(--text-muted);margin-top:6px;line-height:1.45}
+.stat .c{font-size:11.5px;margin-top:7px;font-weight:600;color:var(--accent)}
+.stat .c.down{color:var(--danger)}
+.stat .c.flat{color:var(--warn)}
+
+/* ---------- Charts ---------- */
+.chart-box{border:1px solid var(--border);border-radius:10px;box-shadow:0 2px 12px rgba(27,54,93,.06);padding:20px 22px 14px;margin:16px 0 20px;background:#fff}
+.chart-box h4{font-size:13.5px;font-weight:600;color:var(--primary);margin-bottom:3px}
+.chart-box .cap{font-size:11.5px;color:var(--text-muted);margin-bottom:12px}
+.canvas-wrap{position:relative;height:320px}
+.canvas-wrap.sm{height:270px}
+@media(max-width:640px){.canvas-wrap{height:250px}}
+
+/* ---------- Tables ---------- */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:10px;margin:14px 0 8px;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:12.8px;min-width:620px}
+thead th{background:var(--primary);color:#fff;font-weight:600;text-align:left;padding:10px 11px;font-size:12px;letter-spacing:.2px;position:sticky;top:0}
+tbody td{padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.55}
+tbody tr:nth-child(even){background:#FAFBFC}
+tbody tr:hover{background:#F1F6FB}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.tfoot{font-size:11.5px;color:var(--text-muted);margin:6px 0 18px;line-height:1.55}
+
+/* ---------- Callouts ---------- */
+.insight{border-left:4px solid var(--secondary);background:linear-gradient(90deg,rgba(232,116,12,.07),rgba(232,116,12,0));padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0}
+.insight .t{font-weight:700;color:var(--secondary);font-size:13px;margin-bottom:5px;letter-spacing:.2px}
+.insight p:last-child{margin-bottom:0}
+.highlight{background:#FFF8E1;border:1px solid #F0D48A;border-radius:8px;padding:14px 18px;margin:16px 0}
+.highlight .t{font-weight:700;color:#8A6D1F;font-size:13px;margin-bottom:5px}
+.highlight p:last-child{margin-bottom:0}
+.note{font-size:11.5px;color:var(--text-muted);margin:6px 0 16px}
+
+/* ---------- SWOT ---------- */
+.swot{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.swot > div{border-radius:10px;padding:16px 18px;border:1px solid}
+.swot h5{font-size:13.5px;font-weight:700;margin-bottom:9px;letter-spacing:.3px}
+.swot ul{margin:0 0 0 18px}
+.swot li{font-size:12.8px;margin-bottom:6px}
+.sw-s{background:#EAF7EF;border-color:#BFE3CC}.sw-s h5{color:#1F6B43}
+.sw-w{background:#FDEDEC;border-color:#F5C6C0}.sw-w h5{color:#A03528}
+.sw-o{background:#EAF1FA;border-color:#C2D5EE}.sw-o h5{color:#1B4C83}
+.sw-t{background:#FFF7E0;border-color:#F0DCA0}.sw-t h5{color:#8A6D1F}
+@media(max-width:760px){.swot{grid-template-columns:1fr}}
+
+/* ---------- Personas ---------- */
+.personas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:16px 0}
+.persona{border:1px solid var(--border);border-radius:10px;padding:16px 17px;background:#fff;box-shadow:0 1px 8px rgba(27,54,93,.05)}
+.persona .ph{display:flex;align-items:center;gap:11px;margin-bottom:10px}
+.persona .av{width:42px;height:42px;border-radius:50%;background:var(--gradient-header);color:#fff;display:flex;align-items:center;justify-content:center;font-size:19px;flex:0 0 42px}
+.persona .nm{font-weight:700;color:var(--primary);font-size:14px;line-height:1.25}
+.persona .rg{font-size:11.5px;color:var(--text-muted)}
+.persona dl{font-size:12.4px;display:grid;grid-template-columns:96px 1fr;gap:4px 8px;margin:0}
+.persona dt{color:var(--text-muted);font-weight:500}
+.persona dd{margin:0;color:#23303f}
+.persona .kw{margin-top:10px;display:flex;gap:5px;flex-wrap:wrap}
+.persona .kw span{font-size:10.8px;background:#EEF3F9;color:var(--primary);border-radius:4px;padding:2px 7px}
+
+/* ---------- Phases / strategy ---------- */
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin:16px 0}
+.phase{border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:8px;padding:13px 15px;background:var(--bg-light)}
+.phase .pn{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary);font-weight:700}
+.phase .pt{font-weight:700;color:var(--primary);font-size:13.5px;margin:4px 0 6px}
+.phase p{font-size:12.4px;margin:0;color:#33404f}
+
+/* ---------- Verdict ---------- */
+.verdict{background:var(--gradient-header);color:#fff;border-radius:12px;padding:24px 26px;margin:18px 0}
+.verdict .vt{font-size:11.5px;letter-spacing:2px;text-transform:uppercase;color:#ffd9b0;margin-bottom:8px}
+.verdict h3{color:#fff;border-left-color:var(--secondary);margin:0 0 10px;font-size:18px}
+.verdict p{color:#e3ecf7;margin-bottom:8px}
+.verdict strong{color:#fff;font-weight:700}
+
+/* ---------- Footer ---------- */
+footer{background:#122740;color:#b9cbe6;margin-top:30px}
+.f-top{background:rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.1);padding:16px 0}
+.f-top .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.f-top img{height:22px}
+.f-top span{font-size:12.5px;color:#9fb8da}
+.f-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;padding:30px 0}
+.f-cols h6{color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.5px;margin-bottom:9px;text-transform:uppercase}
+.f-cols p,.f-cols li{font-size:12px;line-height:1.65;color:#9fb8da}
+.f-cols ul{margin:0;list-style:none}
+.f-cols a{color:#cfe0f3;text-decoration:none;border-bottom:1px dotted rgba(207,224,243,.4)}
+.f-copy{border-top:1px solid rgba(255,255,255,.1);padding:13px 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11.5px;color:#8ba6c6}
+@media(max-width:820px){.head-grid{grid-template-columns:1fr;gap:22px}.f-cols{grid-template-columns:1fr 1fr}}
+
+/* ---------- Print ---------- */
+@media print{
+  .lang-switcher,nav.toc{display:none!important}
+  body{font-size:10.5pt}
+  section{page-break-inside:avoid;border-bottom:0;padding:16px 0}
+  .chart-box,.stat,.persona,table{page-break-inside:avoid}
+  header.main-head{background:#1B365D!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .canvas-wrap{height:250px}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+
+<div class="lang-switcher">
+  <button class="active" data-lang="vi" onclick="switchLang('vi')">VI</button>
+  <button data-lang="cn" onclick="switchLang('cn')">CN</button>
+  <button data-lang="en" onclick="switchLang('en')">EN</button>
+</div>
+
+<div class="classification">
+  <div class="wrap">
+    <span class="badge-conf">CONFIDENTIAL</span>
+    <span class="vi">Tài liệu nội bộ — Không phát tán ra ngoài tổ chức</span>
+    <span class="cn">内部文件 —— 请勿对外传播</span>
+    <span class="en">Internal document — Do not distribute externally</span>
+  </div>
+</div>
+
+<header class="main-head">
+  <div class="wrap head-grid">
+    <div>
+      <div class="logo-row">
+        <img src="https://s.alicdn.com/@logo/logo_en_light_horizontal_default_full.png" alt="Alibaba.com">
+        <span class="ggs">GGS Vietnam</span>
+      </div>
+      <div class="doc-kicker">
+        <span class="vi">Báo cáo phân tích ngành hàng</span>
+        <span class="cn">行业分析报告</span>
+        <span class="en">Industry Analysis Report</span>
+      </div>
+      <h1 class="doc-title">
+        <span class="vi">ĐỒ CHƠI TRẺ EM</span>
+        <span class="cn">儿童玩具</span>
+        <span class="en">KIDS' TOYS</span>
+        <small>
+          <span class="vi">Cơ hội xuất khẩu của nhà cung cấp Việt Nam trên Alibaba.com</span>
+          <span class="cn">越南供应商在 Alibaba.com 的出口机遇</span>
+          <span class="en">Export opportunities for Vietnamese suppliers on Alibaba.com</span>
+        </small>
+      </h1>
+    </div>
+    <div class="doc-meta">
+      <div><span>Document ID</span><span>DOC-IND-TOYS-2026-001</span></div>
+      <div><span>Version</span><span>1.0</span></div>
+      <div><span class="vi">Ngày phát hành</span><span class="cn">发布日期</span><span class="en">Issue date</span><span>09/11/2026</span></div>
+      <div><span class="vi">Thực hiện</span><span class="cn">编制</span><span class="en">Prepared by</span><span>GGS Account Manager</span></div>
+      <div><span class="vi">Phạm vi</span><span class="cn">范围</span><span class="en">Scope</span><span class="vi">Việt Nam / Toàn cầu</span><span class="cn">越南 / 全球</span><span class="en">Vietnam / Global</span></div>
+      <div><span>Status</span><span class="status-final">FINAL</span></div>
+    </div>
+  </div>
+  <div class="tag-bar">
+    <div class="wrap">
+      <span class="tag vn">Việt Nam · 12 <span class="vi">nhà cung cấp</span><span class="cn">家供应商</span><span class="en">suppliers</span></span>
+      <span class="tag cn">China · 10</span>
+      <span class="tag other"><span class="vi">7 quốc gia khác</span><span class="cn">另 7 个国家</span><span class="en">7 other countries</span></span>
+      <span class="tag">HS 9503</span>
+      <span class="tag">$123.0B <span class="vi">bán lẻ toàn cầu 2025</span><span class="cn">2025 全球零售</span><span class="en">global retail 2025</span></span>
+      <span class="tag">#2 <span class="vi">nhà xuất khẩu thế giới</span><span class="cn">全球出口国排名</span><span class="en">world exporter</span></span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#s1"><span class="vi">01 Tổng quan</span><span class="cn">01 市场概览</span><span class="en">01 Overview</span></a>
+    <a href="#s2"><span class="vi">02 Xu hướng mua</span><span class="cn">02 采购趋势</span><span class="en">02 Buying trends</span></a>
+    <a href="#s3"><span class="vi">03 Nước cung cấp</span><span class="cn">03 供应国</span><span class="en">03 Suppliers</span></a>
+    <a href="#s4"><span class="vi">04 Nước nhập khẩu</span><span class="cn">04 进口国</span><span class="en">04 Importers</span></a>
+    <a href="#s5"><span class="vi">05 Lợi thế VN</span><span class="cn">05 越南优势</span><span class="en">05 VN advantage</span></a>
+    <a href="#s6"><span class="vi">06 Điểm mạnh/cần cải thiện</span><span class="cn">06 优势与短板</span><span class="en">06 Strengths/gaps</span></a>
+    <a href="#s7"><span class="vi">07 Nhà cung cấp tiêu biểu</span><span class="cn">07 典型供应商</span><span class="en">07 Featured suppliers</span></a>
+    <a href="#s8"><span class="vi">08 Sản phẩm tiêu biểu</span><span class="cn">08 典型产品</span><span class="en">08 Featured products</span></a>
+    <a href="#s9"><span class="vi">09 Chân dung người mua</span><span class="cn">09 买家画像</span><span class="en">09 Buyer personas</span></a>
+    <a href="#s10"><span class="vi">10 Phân tích giá</span><span class="cn">10 价格分析</span><span class="en">10 Pricing</span></a>
+    <a href="#s11"><span class="vi">11 Chiến lược</span><span class="cn">11 竞争策略</span><span class="en">11 Strategy</span></a>
+    <a href="#s12"><span class="vi">12 SWOT</span><span class="cn">12 SWOT</span><span class="en">12 SWOT</span></a>
+    <a href="#s13"><span class="vi">13 Đầu tư &amp; ROI</span><span class="cn">13 投入与回报</span><span class="en">13 Investment &amp; ROI</span></a>
+    <a href="#s14"><span class="vi">14 Kết luận</span><span class="cn">14 结论</span><span class="en">14 Conclusion</span></a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ 01 ============ -->
+<section id="s1">
+  <div class="sec-head">
+    <div class="sec-num">01</div>
+    <div>
+      <h2><span class="vi">Tổng quan thị trường toàn cầu</span><span class="cn">全球市场概览</span><span class="en">Global market overview</span></h2>
+      <div class="sec-sub"><span class="vi">Quy mô, tăng trưởng và cấu trúc ngành đồ chơi trẻ em</span><span class="cn">儿童玩具行业的规模、增长与结构</span><span class="en">Size, growth and structure of the kids' toys industry</span></div>
+    </div>
+  </div>
+
+  <p class="lead">
+    <span class="vi">Đồ chơi trẻ em là một trong số ít ngành hàng tiêu dùng có nhu cầu ổn định quanh năm và tăng mạnh theo mùa lễ hội. Năm 2025, doanh số bán lẻ đồ chơi toàn cầu đạt <strong>123,0 tỷ USD</strong>, tăng 8% so với 2024 — mức tăng trưởng cao nhất trong 5 năm gần đây theo The Toy Association.</span>
+    <span class="cn">儿童玩具是少数全年需求稳定、并随节庆季显著放大的消费品类之一。2025 年全球玩具零售额达 <strong>1,230 亿美元</strong>，同比增长 8%——为近五年来最高增速（The Toy Association）。</span>
+    <span class="en">Kids' toys is one of the few consumer categories with steady year-round demand that spikes during the holiday season. Global toy retail sales reached <strong>USD 123.0 billion</strong> in 2025, up 8% year on year — the strongest growth in five years according to The Toy Association.</span>
+  </p>
+
+  <div class="stats">
+    <div class="stat"><div class="v">$123.0B</div><div class="l"><span class="vi">Bán lẻ đồ chơi toàn cầu 2025</span><span class="cn">2025 全球玩具零售额</span><span class="en">Global toy retail 2025</span></div><div class="c">+8.0% YoY</div></div>
+    <div class="stat"><div class="v">$207.1B</div><div class="l"><span class="vi">Dự báo quy mô thị trường 2035 (SNS Insider)</span><span class="cn">2035 年市场规模预测（SNS Insider）</span><span class="en">Forecast market size 2035 (SNS Insider)</span></div><div class="c">CAGR 5.73%</div></div>
+    <div class="stat"><div class="v">$92.5B</div><div class="l"><span class="vi">Kim ngạch xuất khẩu đồ chơi thế giới 2025</span><span class="cn">2025 全球玩具出口额</span><span class="en">World toy exports 2025</span></div><div class="c">+10.0% YoY</div></div>
+    <div class="stat"><div class="v">$76.96B</div><div class="l"><span class="vi">Thị trường đồ chơi giáo dục 2026</span><span class="cn">2026 教育玩具市场</span><span class="en">Educational toys market 2026</span></div><div class="c">CAGR 8.53%</div></div>
+  </div>
+
+  <h3><span class="vi">Cấu trúc thị trường và phân khúc chính</span><span class="cn">市场结构与主要细分</span><span class="en">Market structure and key segments</span></h3>
+  <p>
+    <span class="vi">Trong tổng kim ngạch xuất khẩu 92,5 tỷ USD năm 2025, <strong>đồ chơi truyền thống (HS 9503)</strong> chiếm 63,2 tỷ USD (68,4%), phần còn lại 29,2 tỷ USD là máy trò chơi điện tử. Đồ chơi truyền thống gần như đi ngang (−0,7% so với 2024) trong khi nhóm đồ chơi giáo dục, đồ chơi gỗ và đồ chơi bền vững tăng hai chữ số. Đây là điểm quan trọng với nhà cung cấp Việt Nam: tăng trưởng không đến từ việc bán nhiều đồ chơi nhựa giá rẻ hơn, mà từ việc dịch chuyển lên các phân khúc có giá trị gia tăng và chứng nhận an toàn.</span>
+    <span class="cn">在 2025 年 925 亿美元的出口总额中，<strong>传统玩具（HS 9503）</strong>为 632 亿美元（68.4%），其余 292 亿美元为电子游戏机。传统玩具基本持平（较 2024 年 −0.7%），而教育玩具、木制玩具与可持续玩具实现两位数增长。对越南供应商而言这意味着：增长不来自更便宜地卖塑料玩具，而来自向高附加值、具备安全认证的细分升级。</span>
+    <span class="en">Of the USD 92.5 billion exported in 2025, <strong>traditional toys (HS 9503)</strong> accounted for USD 63.2 billion (68.4%); the remaining USD 29.2 billion was video game consoles. Traditional toys were broadly flat (−0.7% vs 2024), while educational, wooden and sustainable toys grew at double digits. That matters for Vietnamese suppliers: growth does not come from selling cheaper plastic toys, but from moving up into higher-value, safety-certified segments.</span>
+  </p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Phân khúc</span><span class="cn">细分</span><span class="en">Segment</span></th>
+        <th><span class="vi">Đặc điểm nhu cầu</span><span class="cn">需求特征</span><span class="en">Demand characteristics</span></th>
+        <th><span class="vi">Mức tăng</span><span class="cn">增速</span><span class="en">Growth</span></th>
+        <th><span class="vi">Hàm ý cho VN</span><span class="cn">对越南的意义</span><span class="en">Implication for VN</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="vi">Đồ chơi giáo dục / STEM</span><span class="cn">教育 / STEM 玩具</span><span class="en">Educational / STEM</span></td>
+          <td><span class="vi">Phụ huynh trả giá cao cho kỹ năng học tập; chu kỳ mua lặp lại theo độ tuổi</span><span class="cn">家长愿为学习能力付费；随年龄段复购</span><span class="en">Parents pay a premium for learning outcomes; repeat purchase by age band</span></td>
+          <td><span class="vi">CAGR 8,53% (2026–2034)</span><span class="cn">CAGR 8.53%（2026–2034）</span><span class="en">CAGR 8.53% (2026–2034)</span></td>
+          <td><span class="vi">Thế mạnh đồ chơi gỗ Việt Nam</span><span class="cn">越南木制玩具的强项</span><span class="en">Strength of Vietnamese wooden toys</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Thú nhồi bông &amp; búp bê</span><span class="cn">毛绒与玩偶</span><span class="en">Plush &amp; dolls</span></td>
+          <td><span class="vi">Đơn hàng lớn, giá trị đơn vị thấp, cạnh tranh bằng thiết kế và IP</span><span class="cn">订单量大、单价低，靠设计与 IP 竞争</span><span class="en">Large orders, low unit value, competition via design and IP</span></td>
+          <td><span class="vi">Ổn định</span><span class="cn">稳定</span><span class="en">Stable</span></td>
+          <td><span class="vi">Đã có nhà máy lớn tại Hải Dương</span><span class="cn">海阳已有大型工厂</span><span class="en">Large plant already in Hai Duong</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Xe, mô hình điều khiển, đồ chơi điện tử</span><span class="cn">车类、遥控与电子玩具</span><span class="en">Vehicles, RC, electronic</span></td>
+          <td><span class="vi">Chu kỳ sản phẩm ngắn, phụ thuộc linh kiện và chứng nhận FCC/CE</span><span class="cn">产品周期短，依赖元器件与 FCC/CE 认证</span><span class="en">Short product cycles, component-dependent, FCC/CE driven</span></td>
+          <td><span class="vi">Trung bình</span><span class="cn">中等</span><span class="en">Moderate</span></td>
+          <td><span class="vi">Cần chuỗi cung ứng điện tử hỗ trợ</span><span class="cn">需电子供应链配套</span><span class="en">Needs electronics supply chain</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Đồ chơi ngoài trời &amp; vận động</span><span class="cn">户外与运动玩具</span><span class="en">Outdoor &amp; active play</span></td>
+          <td><span class="vi">Giá trị đơn hàng cao, chi phí logistics lớn, mùa vụ rõ</span><span class="cn">订单金额高、物流成本大、季节性强</span><span class="en">High order value, heavy logistics, strong seasonality</span></td>
+          <td><span class="vi">Trung bình–cao</span><span class="cn">中高</span><span class="en">Moderate–high</span></td>
+          <td><span class="vi">Lợi thế cảng biển và gỗ keo</span><span class="cn">港口与相思木优势</span><span class="en">Port access and acacia wood</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Đồ chơi sơ sinh (0–3 tuổi)</span><span class="cn">婴幼儿玩具（0–3 岁）</span><span class="en">Infant toys (0–3)</span></td>
+          <td><span class="vi">Rào cản chứng nhận cao nhất (EN 71, CPSIA, CPC), biên lợi nhuận tốt</span><span class="cn">认证门槛最高（EN 71、CPSIA、CPC），毛利较好</span><span class="en">Highest certification barriers (EN 71, CPSIA, CPC), better margin</span></td>
+          <td><span class="vi">Cao</span><span class="cn">高</span><span class="en">High</span></td>
+          <td><span class="vi">Khoảng trống lớn nhất của VN</span><span class="cn">越南最大空白</span><span class="en">Largest gap for VN</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Đồ chơi bền vững / gỗ / vật liệu tái chế</span><span class="cn">可持续 / 木制 / 再生材料玩具</span><span class="en">Sustainable / wooden / recycled</span></td>
+          <td><span class="vi">Người mua EU, Bắc Âu ưu tiên FSC, không nhựa, bao bì tái chế</span><span class="cn">欧盟与北欧买家看重 FSC、无塑料、再生包装</span><span class="en">EU/Nordic buyers prioritise FSC, plastic-free, recycled packaging</span></td>
+          <td><span class="vi">CAGR 12,7% (2025–2032)</span><span class="cn">CAGR 12.7%（2025–2032）</span><span class="en">CAGR 12.7% (2025–2032)</span></td>
+          <td><span class="vi">Khớp nhất với năng lực hiện có</span><span class="cn">与现有能力最匹配</span><span class="en">Best fit with existing capability</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tfoot">
+    <span class="vi">Nguồn: The Toy Association (Global Sales Data, 2025); SNS Insider (07/2026); Fortune Business Insights (2026); World's Top Exports / ITC Trade Map (10/2026); Grand View Research (đồ chơi bền vững).</span>
+    <span class="cn">来源：The Toy Association（2025 全球销售数据）；SNS Insider（2026-07）；Fortune Business Insights（2026）；World's Top Exports / ITC Trade Map（2026-10）；Grand View Research。</span>
+    <span class="en">Sources: The Toy Association (Global Sales Data, 2025); SNS Insider (Jul 2026); Fortune Business Insights (2026); World's Top Exports / ITC Trade Map (Oct 2026); Grand View Research (sustainable toys).</span>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Kim ngạch xuất khẩu đồ chơi toàn cầu, 2021–2025</span><span class="cn">全球玩具出口额，2021–2025</span><span class="en">Global toy exports, 2021–2025</span></h4>
+    <div class="cap"><span class="vi">Đơn vị: tỷ USD · cột = giá trị, đường = tăng trưởng so với năm trước</span><span class="cn">单位：十亿美元 · 柱=金额，线=同比增长</span><span class="en">USD billion · bars = value, line = YoY growth</span></div>
+    <div class="canvas-wrap"><canvas id="c1"></canvas></div>
+  </div>
+
+  <div class="insight">
+    <div class="t"><span class="vi">Điểm cốt lõi cho AM</span><span class="cn">对客户经理的关键结论</span><span class="en">Key takeaway for the AM</span></div>
+    <p>
+      <span class="vi">Ngành đang tăng trưởng nhưng <strong>không tăng đều giữa các phân khúc</strong>. Khi tư vấn khách hàng, đừng bán "ngành đồ chơi đang tăng 8%"; hãy chỉ ra phân khúc cụ thể mà khách có năng lực sản xuất: đồ chơi gỗ giáo dục, đồ chơi sơ sinh có chứng nhận, hoặc plush có thiết kế riêng. Đây là ba nhóm mà dữ liệu người mua trên Alibaba.com cho thấy ít nhà cung cấp Việt Nam cạnh tranh trực tiếp.</span>
+      <span class="cn">行业在增长，但<strong>各细分增速并不均衡</strong>。向客户推介时不要只说"行业增长 8%"，而要指出与其产能匹配的具体细分：木制教育玩具、具认证的婴幼儿玩具、或自有设计的毛绒玩具。这三类在 Alibaba.com 买家数据中，越南供应商的直接竞争最少。</span>
+      <span class="en">The industry is growing but <strong>growth is uneven across segments</strong>. When advising a client, do not sell "toys are growing 8%"; point to the segment their production capability fits: wooden educational toys, certified infant toys, or design-led plush. These are the three groups where Alibaba.com buyer activity shows the fewest directly competing Vietnamese suppliers.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 02 ============ -->
+<section id="s2">
+  <div class="sec-head">
+    <div class="sec-num">02</div>
+    <div>
+      <h2><span class="vi">Xu hướng mua hàng 12 tháng gần nhất</span><span class="cn">近 12 个月采购趋势</span><span class="en">Buying trends over the last 12 months</span></h2>
+      <div class="sec-sub"><span class="vi">Mùa vụ đặt hàng, dịch chuyển phân khúc và các yếu tố chi phí</span><span class="cn">下单季节性、细分迁移与成本因素</span><span class="en">Order seasonality, segment shift and cost factors</span></div>
+    </div>
+  </div>
+
+  <p>
+    <span class="vi">Đồ chơi là ngành có mùa vụ đặt hàng rất rõ: nhà nhập khẩu phải nhận hàng trước tháng 9 để kịp mùa lễ hội, nên đơn hàng sản xuất tập trung từ tháng 4 đến tháng 8. Với nhà cung cấp Việt Nam, điều này có nghĩa <strong>quyết định lên sàn và tối ưu listing phải hoàn tất trước tháng 3</strong> để kịp chu kỳ tìm nguồn của người mua.</span>
+    <span class="cn">玩具行业下单季节性非常明显：进口商必须在 9 月前收货以赶上节庆季，因此生产订单集中在 4–8 月。对越南供应商而言，这意味着<strong>入驻与 listing 优化必须在 3 月前完成</strong>，才能赶上买家的寻源周期。</span>
+    <span class="en">Toys have a pronounced ordering season: importers must receive goods before September to be ready for the holiday season, so production orders cluster between April and August. For Vietnamese suppliers this means <strong>onboarding and listing optimisation must be completed before March</strong> to catch the buyer sourcing cycle.</span>
+  </p>
+
+  <div class="chart-box">
+    <h4><span class="vi">Chỉ số mùa vụ nhu cầu đặt hàng đồ chơi (12 tháng)</span><span class="cn">玩具采购需求季节性指数（12 个月）</span><span class="en">Toy sourcing demand seasonality index (12 months)</span></h4>
+    <div class="cap"><span class="vi">Chỉ số mô hình hóa của báo cáo (trung bình = 100), dựa trên chu kỳ giao hàng ngành và mốc lễ hội — không phải dữ liệu chính thức của Alibaba.com</span><span class="cn">本报告建模指数（均值=100），基于行业交付周期与节庆节点，非 Alibaba.com 官方数据</span><span class="en">Report-modelled index (average = 100) based on industry lead times and holiday cut-offs — not official Alibaba.com data</span></div>
+    <div class="canvas-wrap"><canvas id="c2"></canvas></div>
+  </div>
+
+  <h3><span class="vi">Xu hướng chính và tác động đến nhà cung cấp Việt Nam</span><span class="cn">主要趋势及对越南供应商的影响</span><span class="en">Key trends and impact on Vietnamese suppliers</span></h3>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Xu hướng</span><span class="cn">趋势</span><span class="en">Trend</span></th>
+        <th><span class="vi">Mô tả / bằng chứng</span><span class="cn">描述 / 依据</span><span class="en">Description / evidence</span></th>
+        <th><span class="vi">Tác động đến VN</span><span class="cn">对越南的影响</span><span class="en">Impact on VN</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="vi">Dịch chuyển sản xuất khỏi Trung Quốc</span><span class="cn">产能从中国外移</span><span class="en">Manufacturing shift out of China</span></td>
+          <td><span class="vi">LEGO khánh thành nhà máy 1 tỷ USD tại Bình Dương (04/2025); MGA Entertainment dự kiến chuyển 40% sản xuất sang Ấn Độ, Việt Nam, Indonesia trong 6 năm</span><span class="cn">LEGO 于 2025 年 4 月在平阳投产 10 亿美元工厂；MGA Entertainment 计划 6 年内将 40% 产能转至印度、越南、印尼</span><span class="en">LEGO opened its USD 1 billion Binh Duong plant (Apr 2025); MGA Entertainment plans to move 40% of manufacturing to India, Vietnam and Indonesia within six years</span></td>
+          <td><span class="vi">Cơ hội lớn nhất trong 5 năm tới; nhưng lợi thế thuộc về nhà máy có chứng nhận, không phải trader</span><span class="cn">未来五年最大机会；但优势属于有认证的工厂而非贸易商</span><span class="en">Largest opportunity in five years; advantage goes to certified factories, not traders</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Thuế nhập khẩu Mỹ leo thang</span><span class="cn">美国进口关税上升</span><span class="en">Rising US import tariffs</span></td>
+          <td><span class="vi">HTS 9503.00.00 nhập khẩu từ Việt Nam chịu tổng thuế suất 12,5% (ghi nhận 06/10/2026)</span><span class="cn">自越南进口的 HTS 9503.00.00 合计税率 12.5%（2026-10-06 记录）</span><span class="en">HTS 9503.00.00 imports from Vietnam carry a 12.5% total duty rate (recorded 6 Oct 2026)</span></td>
+          <td><span class="vi">Vẫn thấp hơn mức áp cho nhiều nguồn khác, nhưng giá FOB phải tính lại toàn bộ landed cost</span><span class="cn">仍低于多数其他来源国，但 FOB 报价需重算落地成本</span><span class="en">Still lower than many alternative origins, but FOB quotes must be rebuilt on landed cost</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Đồ chơi bền vững tăng nhanh</span><span class="cn">可持续玩具快速增长</span><span class="en">Sustainable toys growing fast</span></td>
+          <td><span class="vi">Thị trường đồ chơi bền vững 28,5 tỷ USD (2025), CAGR 12,7% đến 2032</span><span class="cn">2025 年可持续玩具市场 285 亿美元，至 2032 年 CAGR 12.7%</span><span class="en">Sustainable toy market USD 28.5 billion (2025), 12.7% CAGR to 2032</span></td>
+          <td><span class="vi">Khớp với đồ chơi gỗ, mây tre đan, vải lanh của VN</span><span class="cn">契合越南木制、藤编、亚麻类玩具</span><span class="en">Fits VN wooden, rattan and linen toys</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">"Kidulting" — người lớn mua đồ chơi</span><span class="cn">"Kidult" —— 成人购买玩具</span><span class="en">"Kidulting" — adults buying toys</span></td>
+          <td><span class="vi">Thị trường đồ chơi Mỹ (~46 tỷ USD) đang được định hình lại bởi nhóm người mua trưởng thành (CNBC, 10/2026)</span><span class="cn">美国玩具市场（约 460 亿美元）正被成人买家重塑（CNBC，2026-10）</span><span class="en">The USD 46 billion US toy market is being reshaped by adult buyers (CNBC, Oct 2026)</span></td>
+          <td><span class="vi">Mở nhóm hàng mới: mô hình, puzzle người lớn, plush sưu tầm</span><span class="cn">开辟新品类：模型、成人拼图、收藏毛绒</span><span class="en">Opens new lines: models, adult puzzles, collectible plush</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Chứng nhận an toàn là điều kiện vào cửa</span><span class="cn">安全认证成为准入门槛</span><span class="en">Safety certification as entry ticket</span></td>
+          <td><span class="vi">Nhà cung cấp Trung Quốc đạt chứng nhận CE/CPC/EN 71 hàng loạt; thu hồi sản phẩm do hạt nước nở vẫn xảy ra tại Mỹ (10/2026)</span><span class="cn">中国供应商普遍持有 CE/CPC/EN 71；美国仍发生水珠膨胀导致的召回（2026-10）</span><span class="en">Chinese suppliers hold CE/CPC/EN 71 at scale; US recalls still occur over expanding water beads (Oct 2026)</span></td>
+          <td><span class="vi">Thiếu chứng nhận là lý do chính khiến listing VN không thắng thầu</span><span class="cn">缺认证是越南 listing 无法中标的主因</span><span class="en">Missing certification is the main reason VN listings lose bids</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tfoot">
+    <span class="vi">Nguồn: VnExpress / Manufacturing.net (04/2025); The Jakarta Post (03/2025); Airlift USA tariff record HTS 9503.00.00 (10/2026); CNBC (10/2026); Grand View Research; KY3 (10/2026).</span>
+    <span class="cn">来源：VnExpress / Manufacturing.net（2025-04）；The Jakarta Post（2025-03）；Airlift USA 关税记录 HTS 9503.00.00（2026-10）；CNBC（2026-10）；Grand View Research；KY3（2026-10）。</span>
+    <span class="en">Sources: VnExpress / Manufacturing.net (Apr 2025); The Jakarta Post (Mar 2025); Airlift USA tariff record HTS 9503.00.00 (Oct 2026); CNBC (Oct 2026); Grand View Research; KY3 (Oct 2026).</span>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Dải giá FOB quan sát theo phân khúc (Alibaba.com, 11/2026)</span><span class="cn">各细分观察到的 FOB 价格区间（Alibaba.com，2026-11）</span><span class="en">Observed FOB price ranges by segment (Alibaba.com, Nov 2026)</span></h4>
+    <div class="cap"><span class="vi">Đơn vị: USD/sản phẩm · giá niêm yết thấp nhất – cao nhất trên listing thực tế</span><span class="cn">单位：美元/件 · 实际 listing 最低–最高挂牌价</span><span class="en">USD per unit · lowest–highest listed price on actual listings</span></div>
+    <div class="canvas-wrap"><canvas id="c3"></canvas></div>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Cơ cấu thị trường nhận xuất khẩu đồ chơi Việt Nam (2024)</span><span class="cn">越南玩具出口目的地结构（2024）</span><span class="en">Destination mix of Vietnam's toy exports (2024)</span></h4>
+    <div class="cap"><span class="vi">HS 9503 · tổng 3,41 tỷ USD · Nguồn: OEC / UN Comtrade</span><span class="cn">HS 9503 · 合计 34.1 亿美元 · 来源：OEC / UN Comtrade</span><span class="en">HS 9503 · USD 3.41 billion total · Source: OEC / UN Comtrade</span></div>
+    <div class="canvas-wrap sm"><canvas id="c4"></canvas></div>
+  </div>
+</section>
+
+<!-- ============ 03 ============ -->
+<section id="s3">
+  <div class="sec-head">
+    <div class="sec-num">03</div>
+    <div>
+      <h2><span class="vi">Các quốc gia cung cấp tiêu biểu</span><span class="cn">主要供应国</span><span class="en">Leading supplying countries</span></h2>
+      <div class="sec-sub"><span class="vi">Ai đang giữ thị phần và thị phần đó đang dịch chuyển về đâu</span><span class="cn">谁掌握份额，份额正流向何处</span><span class="en">Who holds the share and where it is shifting</span></div>
+    </div>
+  </div>
+
+  <p>
+    <span class="vi">Năm 2025, 15 quốc gia đứng đầu chiếm 90,5% kim ngạch xuất khẩu đồ chơi toàn cầu. Trung Quốc vẫn dẫn đầu với 47,0 tỷ USD (50,8% thị phần), nhưng đang giảm 22,7% so với 2021. Ngược lại, <strong>Việt Nam tăng 359,8% trong 5 năm</strong> — mức tăng nhanh nhất trong toàn bộ nhóm dẫn đầu, đưa kim ngạch từ dưới 2 tỷ USD lên 8,9 tỷ USD và trở thành nhà cung cấp số 2 thế giới.</span>
+    <span class="cn">2025 年，前 15 个国家占全球玩具出口额的 90.5%。中国仍以 470 亿美元（50.8% 份额）领先，但较 2021 年下降 22.7%。相反，<strong>越南五年增长 359.8%</strong>——为领先群体中增速最快，出口额从不足 20 亿美元升至 89 亿美元，成为全球第二大供应国。</span>
+    <span class="en">In 2025 the top 15 countries accounted for 90.5% of global toy exports. China still leads with USD 47.0 billion (50.8% share) but is down 22.7% versus 2021. Conversely, <strong>Vietnam grew 359.8% over five years</strong> — the fastest in the leading group — lifting exports from under USD 2 billion to USD 8.9 billion and becoming the world's number two supplier.</span>
+  </p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>#</th>
+        <th><span class="vi">Quốc gia</span><span class="cn">国家</span><span class="en">Country</span></th>
+        <th class="num"><span class="vi">XK 2025 (tỷ USD)</span><span class="cn">2025 出口（十亿美元）</span><span class="en">2025 exports (USD bn)</span></th>
+        <th class="num"><span class="vi">Thị phần</span><span class="cn">份额</span><span class="en">Share</span></th>
+        <th><span class="vi">Sản phẩm chính</span><span class="cn">主要产品</span><span class="en">Main products</span></th>
+        <th><span class="vi">Nhận định</span><span class="cn">研判</span><span class="en">Assessment</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td><td>China</td><td class="num">47.0</td><td class="num">50.8%</td>
+          <td><span class="vi">Nhựa, điện tử, mô hình, toàn dải sản phẩm</span><span class="cn">塑料、电子、模型，全线产品</span><span class="en">Plastic, electronics, models, full range</span></td>
+          <td><span class="vi">Dẫn đầu tuyệt đối nhưng đang thu hẹp; chi phí và rủi ro thuế đẩy đơn hàng sang nơi khác</span><span class="cn">绝对领先但份额收缩；成本与关税风险推动订单外流</span><span class="en">Absolutely dominant but shrinking; cost and tariff risk push orders elsewhere</span></td>
+        </tr>
+        <tr>
+          <td>2</td><td><strong>Vietnam</strong></td><td class="num">8.9</td><td class="num">9.6%</td>
+          <td><span class="vi">Đồ chơi gỗ, plush, đồ chơi ngoài trời, lắp ráp gia công</span><span class="cn">木制玩具、毛绒、户外玩具、代工组装</span><span class="en">Wooden toys, plush, outdoor toys, contract assembly</span></td>
+          <td><span class="vi">Tăng nhanh nhất nhóm dẫn đầu (+359,8%/5 năm); hưởng lợi trực tiếp từ dịch chuyển chuỗi cung ứng</span><span class="cn">领先群体中增速最快（5 年 +359.8%）；直接受益于供应链转移</span><span class="en">Fastest grower in the leading group (+359.8% over 5 years); direct beneficiary of supply-chain relocation</span></td>
+        </tr>
+        <tr>
+          <td>3</td><td>Czech Republic</td><td class="num">4.2</td><td class="num">4.5%</td>
+          <td><span class="vi">Mô hình, đồ chơi lắp ghép, sản phẩm cho EU</span><span class="cn">模型、拼装玩具，面向欧盟</span><span class="en">Models, building sets, EU-oriented output</span></td>
+          <td><span class="vi">Lợi thế nearshore EU; không cạnh tranh trực tiếp ở phân khúc giá thấp</span><span class="cn">近岸欧盟优势；不在低价段直接竞争</span><span class="en">EU nearshore advantage; no direct competition at low price points</span></td>
+        </tr>
+        <tr>
+          <td>4</td><td>Germany</td><td class="num">3.9</td><td class="num">4.2%</td>
+          <td><span class="vi">Đồ chơi gỗ cao cấp, mô hình, đồ chơi giáo dục</span><span class="cn">高端木制、模型、教育玩具</span><span class="en">Premium wooden, models, educational</span></td>
+          <td><span class="vi">Giảm 13,4%/5 năm; chuyển dần sản xuất ra ngoài nhưng giữ thương hiệu và thiết kế</span><span class="cn">5 年下降 13.4%；产能外移但保留品牌与设计</span><span class="en">Down 13.4% over five years; offshoring production while keeping brand and design</span></td>
+        </tr>
+        <tr>
+          <td>5</td><td>Poland</td><td class="num">2.6</td><td class="num">2.8%</td>
+          <td><span class="vi">Đồ chơi gỗ, đồ chơi trẻ em giá trung</span><span class="cn">木制玩具、中价儿童玩具</span><span class="en">Wooden toys, mid-price kids' toys</span></td>
+          <td><span class="vi">Đối thủ trực tiếp của VN tại EU ở phân khúc gỗ giá trung</span><span class="cn">在欧盟中价木制段是越南的直接对手</span><span class="en">Direct EU competitor to VN in mid-price wooden</span></td>
+        </tr>
+        <tr>
+          <td>6</td><td>Japan</td><td class="num">2.4</td><td class="num">2.6%</td>
+          <td><span class="vi">Mô hình sưu tầm, đồ chơi nhân vật, đồ chơi công nghệ cao</span><span class="cn">收藏模型、角色玩具、高科技玩具</span><span class="en">Collectible models, character toys, high-tech toys</span></td>
+          <td><span class="vi">Giảm 25,4%/5 năm; tập trung IP và giá trị cao, không cạnh tranh giá</span><span class="cn">5 年下降 25.4%；聚焦 IP 与高价值，不打价格战</span><span class="en">Down 25.4% over five years; IP and high value focus, no price war</span></td>
+        </tr>
+        <tr>
+          <td>7</td><td>United States</td><td class="num">2.4</td><td class="num">2.6%</td>
+          <td><span class="vi">Đồ chơi thương hiệu, nội dung IP, sản phẩm cao cấp</span><span class="cn">品牌玩具、IP 内容、高端产品</span><span class="en">Branded toys, IP content, premium products</span></td>
+          <td><span class="vi">Chủ yếu tái xuất và thương hiệu; sản xuất thực tế đặt tại châu Á</span><span class="cn">以再出口与品牌为主；实际生产在亚洲</span><span class="en">Mostly re-exports and brands; actual production sits in Asia</span></td>
+        </tr>
+        <tr>
+          <td>8</td><td>Hong Kong</td><td class="num">2.1</td><td class="num">2.3%</td>
+          <td><span class="vi">Trung tâm giao dịch, mô hình, phụ kiện</span><span class="cn">贸易枢纽、模型、配件</span><span class="en">Trading hub, models, accessories</span></td>
+          <td><span class="vi">Giảm 37,7%/5 năm — mất vai trò trung gian khi mua hàng chuyển trực tuyến</span><span class="cn">5 年下降 37.7%——线上直采削弱其中介地位</span><span class="en">Down 37.7% over five years — disintermediated as sourcing moves online</span></td>
+        </tr>
+        <tr>
+          <td>9</td><td>Netherlands</td><td class="num">1.9</td><td class="num">2.1%</td>
+          <td><span class="vi">Phân phối &amp; tái xuất cho EU</span><span class="cn">面向欧盟的分销与再出口</span><span class="en">EU distribution and re-export</span></td>
+          <td><span class="vi">Cửa ngõ logistics; là đối tác hơn là đối thủ của VN</span><span class="cn">物流门户；对越南更偏向合作伙伴</span><span class="en">Logistics gateway; more partner than competitor to VN</span></td>
+        </tr>
+        <tr>
+          <td>10</td><td>Belgium</td><td class="num">1.8</td><td class="num">1.9%</td>
+          <td><span class="vi">Đồ chơi nhựa, phân phối châu Âu</span><span class="cn">塑料玩具、欧洲分销</span><span class="en">Plastic toys, European distribution</span></td>
+          <td><span class="vi">Tăng 60,1%/5 năm nhờ vai trò trung tâm phân phối</span><span class="cn">5 年增长 60.1%，受益于分销中心地位</span><span class="en">Up 60.1% over five years on its distribution-hub role</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tfoot">
+    <span class="vi">Nguồn: World's Top Exports, tổng hợp từ ITC Trade Map (10/2026), số liệu năm 2025. Thị phần tính trên tổng xuất khẩu đồ chơi toàn cầu (bao gồm máy trò chơi điện tử).</span>
+    <span class="cn">来源：World's Top Exports 基于 ITC Trade Map（2026-10），2025 年数据。份额以全球玩具出口总额（含电子游戏机）计算。</span>
+    <span class="en">Source: World's Top Exports compiled from ITC Trade Map (Oct 2026), 2025 data. Share is of total global toy exports including video game consoles.</span>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Thị phần cung ứng đồ chơi toàn cầu, 2025</span><span class="cn">2025 全球玩具供应份额</span><span class="en">Global toy supply share, 2025</span></h4>
+    <div class="cap"><span class="vi">10 quốc gia dẫn đầu · % trên tổng xuất khẩu 92,5 tỷ USD</span><span class="cn">前 10 个国家 · 占 925 亿美元出口总额的百分比</span><span class="en">Top 10 countries · % of USD 92.5 billion total exports</span></div>
+    <div class="canvas-wrap"><canvas id="c5"></canvas></div>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Tăng trưởng xuất khẩu 5 năm theo quốc gia (2021 → 2025)</span><span class="cn">各国五年出口增长（2021 → 2025）</span><span class="en">Five-year export growth by country (2021 → 2025)</span></h4>
+    <div class="cap"><span class="vi">% thay đổi kim ngạch xuất khẩu đồ chơi · Nguồn: World's Top Exports / ITC</span><span class="cn">玩具出口额变动百分比 · 来源：World's Top Exports / ITC</span><span class="en">% change in toy export value · Source: World's Top Exports / ITC</span></div>
+    <div class="canvas-wrap"><canvas id="c6"></canvas></div>
+  </div>
+</section>
+
+<!-- ============ 04 ============ -->
+<section id="s4">
+  <div class="sec-head">
+    <div class="sec-num">04</div>
+    <div>
+      <h2><span class="vi">Các quốc gia nhập khẩu tiêu biểu</span><span class="cn">主要进口国</span><span class="en">Leading importing countries</span></h2>
+      <div class="sec-sub"><span class="vi">Thị trường nào thực sự chi tiền và cơ hội FTA cho Việt Nam</span><span class="cn">哪些市场真正在花钱，以及越南的 FTA 机会</span><span class="en">Which markets actually spend, and FTA openings for Vietnam</span></div>
+    </div>
+  </div>
+
+  <p>
+    <span class="vi">Năm 2024, thương mại toàn cầu mặt hàng HS 9503 đạt 61,4 tỷ USD, tăng 6,01% so với 2023. Mỹ là thị trường nhập khẩu lớn nhất với 18,9 tỷ USD — gấp 4,5 lần thị trường lớn thứ hai là Đức (4,16 tỷ USD). Với Việt Nam, Mỹ chiếm <strong>47,8% kim ngạch xuất khẩu đồ chơi</strong> (1,63 tỷ USD năm 2024), trong khi thị trường EU lớn nhất là Đức chỉ chiếm 3,5%. Đây là mức tập trung rủi ro cần được nói rõ với khách hàng.</span>
+    <span class="cn">2024 年全球 HS 9503 贸易额达 614 亿美元，较 2023 年增长 6.01%。美国是最大进口市场，189 亿美元，是第二大市场德国（41.6 亿美元）的 4.5 倍。对越南而言，美国占<strong>玩具出口额的 47.8%</strong>（2024 年 16.3 亿美元），而欧盟最大市场德国仅占 3.5%。这一集中度风险必须向客户讲清楚。</span>
+    <span class="en">In 2024 global trade in HS 9503 reached USD 61.4 billion, up 6.01% on 2023. The US is the largest import market at USD 18.9 billion — 4.5 times the second largest, Germany (USD 4.16 billion). For Vietnam, the US accounts for <strong>47.8% of toy export value</strong> (USD 1.63 billion in 2024), while the largest EU market, Germany, accounts for just 3.5%. That concentration risk must be stated plainly to clients.</span>
+  </p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>#</th>
+        <th><span class="vi">Quốc gia / thị trường</span><span class="cn">国家 / 市场</span><span class="en">Country / market</span></th>
+        <th class="num"><span class="vi">NK 2024 (tỷ USD)</span><span class="cn">2024 进口（十亿美元）</span><span class="en">2024 imports (USD bn)</span></th>
+        <th class="num"><span class="vi">Tỉ trọng NK toàn cầu</span><span class="cn">全球进口占比</span><span class="en">Share of world imports</span></th>
+        <th><span class="vi">Xu hướng / ghi chú</span><span class="cn">趋势 / 备注</span><span class="en">Trend / note</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1</td><td>United States</td><td class="num">18.907</td><td class="num">30.8%</td><td><span class="vi">Thị trường quyết định; 75% NK đồ chơi 2024 đến từ Trung Quốc — dư địa thay thế nguồn rất lớn</span><span class="cn">决定性市场；2024 年 75% 玩具进口来自中国——替代空间巨大</span><span class="en">The decisive market; 75% of 2024 toy imports came from China — huge room for origin substitution</span></td></tr>
+        <tr><td>2</td><td>Germany</td><td class="num">4.164</td><td class="num">6.8%</td><td><span class="vi">Ưu tiên chứng nhận EN 71, FSC, đồ chơi gỗ giáo dục</span><span class="cn">重视 EN 71、FSC、木制教育玩具</span><span class="en">Prioritises EN 71, FSC, wooden educational toys</span></td></tr>
+        <tr><td>3</td><td>United Kingdom</td><td class="num">2.915</td><td class="num">4.7%</td><td><span class="vi">Hưởng ưu đãi UKVFTA từ Việt Nam; yêu cầu UKCA</span><span class="cn">自越南进口享 UKVFTA 优惠；要求 UKCA</span><span class="en">Enjoys UKVFTA preference from Vietnam; requires UKCA</span></td></tr>
+        <tr><td>4</td><td>Japan</td><td class="num">2.760</td><td class="num">4.5%</td><td><span class="vi">Thị trường nhập siêu 2,28 tỷ USD; chuộng plush và mô hình chất lượng cao</span><span class="cn">逆差 22.8 亿美元；偏好高品质毛绒与模型</span><span class="en">Net importer by USD 2.28 billion; prefers high-quality plush and models</span></td></tr>
+        <tr><td>5</td><td>France</td><td class="num">2.308</td><td class="num">3.8%</td><td><span class="vi">Thị trường khó tính về thiết kế và an toàn vật liệu</span><span class="cn">对设计与材料安全要求高</span><span class="en">Demanding on design and material safety</span></td></tr>
+        <tr><td>6</td><td>Canada</td><td class="num">1.699</td><td class="num">2.8%</td><td><span class="vi">Hưởng ưu đãi CPTPP từ Việt Nam</span><span class="cn">自越南进口享 CPTPP 优惠</span><span class="en">CPTPP preference from Vietnam</span></td></tr>
+        <tr><td>7</td><td>Poland</td><td class="num">1.694</td><td class="num">2.8%</td><td><span class="vi">Vừa sản xuất vừa nhập khẩu; cửa ngõ vào Đông Âu</span><span class="cn">既生产又进口；中东欧门户</span><span class="en">Both producer and importer; gateway to Central Europe</span></td></tr>
+        <tr><td>8</td><td>Netherlands</td><td class="num">1.680</td><td class="num">2.7%</td><td><span class="vi">Trung tâm phân phối EU (Rotterdam); đơn hàng tổng hợp đa chủng loại</span><span class="cn">欧盟分销中心（鹿特丹）；多品类集合订单</span><span class="en">EU distribution hub (Rotterdam); multi-category consolidated orders</span></td></tr>
+        <tr><td>9</td><td>Czechia</td><td class="num">1.341</td><td class="num">2.2%</td><td><span class="vi">Trung tâm lắp ráp và tái xuất nội EU</span><span class="cn">欧盟内部组装与再出口中心</span><span class="en">Intra-EU assembly and re-export hub</span></td></tr>
+        <tr><td>10</td><td>Australia</td><td class="num">1.323</td><td class="num">2.2%</td><td><span class="vi">Hưởng ưu đãi CPTPP; mùa cao điểm ngược với Bắc bán cầu</span><span class="cn">享 CPTPP 优惠；旺季与北半球相反</span><span class="en">CPTPP preference; peak season opposite to the Northern Hemisphere</span></td></tr>
+        <tr><td>11</td><td>Mexico</td><td class="num">1.192</td><td class="num">1.9%</td><td><span class="vi">Hưởng ưu đãi CPTPP; cửa ngõ vào Bắc Mỹ</span><span class="cn">享 CPTPP 优惠；北美门户</span><span class="en">CPTPP preference; gateway to North America</span></td></tr>
+        <tr><td>12</td><td>Italy</td><td class="num">1.065</td><td class="num">1.7%</td><td><span class="vi">Đồ chơi giáo dục và đồ chơi gỗ</span><span class="cn">教育玩具与木制玩具</span><span class="en">Educational and wooden toys</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tfoot">
+    <span class="vi">Nguồn: UN Comtrade, HS 9503, nhập khẩu năm 2024 (truy vấn API công khai 09/11/2026). Tổng thương mại thế giới 61,4 tỷ USD theo OEC. Tỉ trọng tính trên tổng nhập khẩu toàn cầu.</span>
+    <span class="cn">来源：UN Comtrade HS 9503，2024 年进口额（公共 API 查询，2026-11-09）。全球贸易总额 614 亿美元（OEC）。占比以全球进口总额计算。</span>
+    <span class="en">Source: UN Comtrade, HS 9503, 2024 imports (public API query, 9 Nov 2026). World total USD 61.4 billion per OEC. Share calculated on total world imports.</span>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Giá trị và tỉ trọng nhập khẩu theo thị trường, 2024</span><span class="cn">2024 各市场进口额与占比</span><span class="en">Import value and share by market, 2024</span></h4>
+    <div class="cap"><span class="vi">Cột = tỷ USD (trục trái) · Đường = % tổng nhập khẩu thế giới (trục phải)</span><span class="cn">柱=十亿美元（左轴）· 线=占全球进口%（右轴）</span><span class="en">Bars = USD bn (left axis) · line = % of world imports (right axis)</span></div>
+    <div class="canvas-wrap"><canvas id="c7"></canvas></div>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Cơ cấu nhập khẩu đồ chơi theo khu vực, 2024</span><span class="cn">2024 按地区划分的玩具进口结构</span><span class="en">Toy imports by region, 2024</span></h4>
+    <div class="cap"><span class="vi">% trên tổng nhập khẩu HS 9503 toàn cầu 61,4 tỷ USD</span><span class="cn">占 614 亿美元全球 HS 9503 进口的百分比</span><span class="en">% of USD 61.4 billion global HS 9503 imports</span></div>
+    <div class="canvas-wrap sm"><canvas id="c8"></canvas></div>
+  </div>
+
+  <div class="highlight">
+    <div class="t"><span class="vi">Cơ hội FTA cho nhà cung cấp Việt Nam</span><span class="cn">越南供应商的 FTA 机会</span><span class="en">FTA openings for Vietnamese suppliers</span></div>
+    <p>
+      <span class="vi"><strong>EVFTA</strong> (EU, gồm Đức – Pháp – Hà Lan – Ba Lan – Séc – Ý): ưu đãi thuế quan cho HS 9503 khi có chứng từ xuất xứ hợp lệ. <strong>UKVFTA</strong> (Anh). <strong>CPTPP</strong> (Nhật Bản, Canada, Australia, Mexico) — nhóm này chiếm 15,97 tỷ USD nhập khẩu, tức 26% thị trường toàn cầu. <strong>Mỹ không có FTA</strong> với Việt Nam: hàng nhập chịu thuế MFN, ghi nhận 12,5% cho HTS 9503.00.00 (10/2026) — vì vậy khi chào giá vào Mỹ phải tính landed cost, không chỉ FOB.</span>
+      <span class="cn"><strong>EVFTA</strong>（欧盟：德国、法国、荷兰、波兰、捷克、意大利）：符合原产地规则的 HS 9503 可享关税优惠。<strong>UKVFTA</strong>（英国）。<strong>CPTPP</strong>（日本、加拿大、澳大利亚、墨西哥）合计进口 159.7 亿美元，占全球市场 26%。<strong>美国与越南无 FTA</strong>：适用 MFN 税率，HTS 9503.00.00 记录为 12.5%（2026-10）——因此对美报价必须算落地成本，而不只是 FOB。</span>
+      <span class="en"><strong>EVFTA</strong> (EU: Germany, France, Netherlands, Poland, Czechia, Italy): tariff preference for HS 9503 with valid origin documentation. <strong>UKVFTA</strong> (UK). <strong>CPTPP</strong> (Japan, Canada, Australia, Mexico) — together USD 15.97 billion of imports, 26% of the global market. <strong>The US has no FTA</strong> with Vietnam: goods face MFN duty, recorded at 12.5% for HTS 9503.00.00 (Oct 2026) — so US quotes must be built on landed cost, not FOB alone.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 05 ============ -->
+<section id="s5">
+  <div class="sec-head">
+    <div class="sec-num">05</div>
+    <div>
+      <h2><span class="vi">Lợi thế của nhà cung cấp Việt Nam</span><span class="cn">越南供应商的优势</span><span class="en">Advantages of Vietnamese suppliers</span></h2>
+      <div class="sec-sub"><span class="vi">Vị thế, chi phí, năng lực sản xuất và ưu đãi thương mại</span><span class="cn">地位、成本、产能与贸易优惠</span><span class="en">Position, cost, production capability and trade preferences</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="v">#2</div><div class="l"><span class="vi">Nhà xuất khẩu đồ chơi lớn thứ 2 thế giới (2024, 2025)</span><span class="cn">全球第二大玩具出口国（2024、2025）</span><span class="en">World's #2 toy exporter (2024, 2025)</span></div><div class="c">5.55% <span class="vi">thị phần 2024</span><span class="cn">2024 份额</span><span class="en">share 2024</span></div></div>
+    <div class="stat"><div class="v">$8.9B</div><div class="l"><span class="vi">Kim ngạch xuất khẩu đồ chơi 2025 (9,6% toàn cầu)</span><span class="cn">2025 玩具出口额（全球 9.6%）</span><span class="en">Toy exports 2025 (9.6% of world)</span></div><div class="c">+359.8% / 5 <span class="vi">năm</span><span class="cn">年</span><span class="en">years</span></div></div>
+    <div class="stat"><div class="v">+196.8%</div><div class="l"><span class="vi">Tăng trưởng xuất khẩu đồ chơi truyền thống 2021–2025</span><span class="cn">2021–2025 传统玩具出口增长</span><span class="en">Traditional toy export growth 2021–2025</span></div><div class="c"><span class="vi">Nhanh nhất thế giới</span><span class="cn">全球最快</span><span class="en">Fastest worldwide</span></div></div>
+    <div class="stat"><div class="v">4</div><div class="l"><span class="vi">Hiệp định thương mại lớn đang áp dụng (EVFTA, CPTPP, UKVFTA, RCEP)</span><span class="cn">已生效的主要自贸协定（EVFTA、CPTPP、UKVFTA、RCEP）</span><span class="en">Major FTAs in force (EVFTA, CPTPP, UKVFTA, RCEP)</span></div><div class="c"><span class="vi">26% NK toàn cầu được ưu đãi</span><span class="cn">覆盖全球进口 26%</span><span class="en">26% of world imports covered</span></div></div>
+  </div>
+
+  <h3><span class="vi">So sánh năng lực cạnh tranh: Việt Nam và các nguồn cung chính</span><span class="cn">竞争力对比：越南与主要供应来源</span><span class="en">Competitiveness comparison: Vietnam vs main sources</span></h3>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Tiêu chí</span><span class="cn">指标</span><span class="en">Criterion</span></th>
+        <th>Vietnam</th>
+        <th>China</th>
+        <th>India</th>
+        <th>Indonesia</th>
+        <th>Poland</th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="vi">Kim ngạch XK đồ chơi 2025</span><span class="cn">2025 玩具出口额</span><span class="en">Toy exports 2025</span></td><td><strong>8,9 tỷ USD</strong></td><td>47,0 tỷ USD</td><td><span class="vi">&lt;1,11 tỷ USD*</span><span class="cn">&lt;11.1 亿美元*</span><span class="en">&lt;USD 1.11 bn*</span></td><td>0,65 tỷ USD**</td><td>2,6 tỷ USD</td></tr>
+        <tr><td><span class="vi">Thị phần toàn cầu</span><span class="cn">全球份额</span><span class="en">Global share</span></td><td>9,6%</td><td>50,8%</td><td>—</td><td>0,7%</td><td>2,8%</td></tr>
+        <tr><td><span class="vi">Xu hướng 5 năm</span><span class="cn">五年趋势</span><span class="en">Five-year trend</span></td><td><strong>+359,8%</strong></td><td>−22,7%</td><td>—</td><td>—</td><td>—</td></tr>
+        <tr><td><span class="vi">Chi phí nhân công sản xuất</span><span class="cn">生产人工成本</span><span class="en">Production labour cost</span></td><td><span class="vi">Thấp–trung bình</span><span class="cn">低–中</span><span class="en">Low–medium</span></td><td><span class="vi">Trung bình–cao</span><span class="cn">中–高</span><span class="en">Medium–high</span></td><td><span class="vi">Thấp</span><span class="cn">低</span><span class="en">Low</span></td><td><span class="vi">Thấp–trung bình</span><span class="cn">低–中</span><span class="en">Low–medium</span></td><td><span class="vi">Trung bình (EU)</span><span class="cn">中（欧盟）</span><span class="en">Medium (EU)</span></td></tr>
+        <tr><td><span class="vi">FTA với EU / Anh / Mỹ</span><span class="cn">与欧盟/英国/美国的 FTA</span><span class="en">FTA with EU / UK / US</span></td><td><strong>EU ✓ · UK ✓ · US ✗</strong></td><td>EU ✗ · UK ✗ · US ✗</td><td>EU ✗ · UK ✗ · US ✗</td><td>EU ✗ · UK ✗ · US ✗</td><td>EU ✓ (nội khối)</td></tr>
+        <tr><td><span class="vi">Hệ sinh thái linh kiện &amp; vật liệu</span><span class="cn">零部件与材料生态</span><span class="en">Component &amp; material ecosystem</span></td><td><span class="vi">Trung bình — mạnh về gỗ, vải, mây tre; yếu về linh kiện điện tử</span><span class="cn">中等——木材、织物、藤编强，电子元件弱</span><span class="en">Medium — strong in wood, textile, rattan; weak in electronics</span></td><td><span class="vi">Đầy đủ nhất thế giới</span><span class="cn">全球最完整</span><span class="en">Most complete worldwide</span></td><td><span class="vi">Trung bình</span><span class="cn">中等</span><span class="en">Medium</span></td><td><span class="vi">Trung bình</span><span class="cn">中等</span><span class="en">Medium</span></td><td><span class="vi">Trung bình (nhập từ châu Á)</span><span class="cn">中等（自亚洲进口）</span><span class="en">Medium (imports from Asia)</span></td></tr>
+        <tr><td><span class="vi">Mức độ trưởng thành chứng nhận</span><span class="cn">认证成熟度</span><span class="en">Certification maturity</span></td><td><span class="vi">Đang hình thành; ít nhà máy có CE/CPC/EN 71 đầy đủ</span><span class="cn">形成中；具备完整 CE/CPC/EN 71 的工厂不多</span><span class="en">Emerging; few plants hold full CE/CPC/EN 71</span></td><td><span class="vi">Trưởng thành, phổ cập</span><span class="cn">成熟且普遍</span><span class="en">Mature and widespread</span></td><td><span class="vi">Trung bình</span><span class="cn">中等</span><span class="en">Medium</span></td><td><span class="vi">Trung bình</span><span class="cn">中等</span><span class="en">Medium</span></td><td><span class="vi">Cao (chuẩn EU)</span><span class="cn">高（欧盟标准）</span><span class="en">High (EU standard)</span></td></tr>
+        <tr><td><span class="vi">Thời gian giao hàng đi Mỹ</span><span class="cn">至美国交期</span><span class="en">Lead time to US</span></td><td><span class="vi">30–40 ngày (biển)</span><span class="cn">30–40 天（海运）</span><span class="en">30–40 days (sea)</span></td><td><span class="vi">25–35 ngày</span><span class="cn">25–35 天</span><span class="en">25–35 days</span></td><td><span class="vi">35–45 ngày</span><span class="cn">35–45 天</span><span class="en">35–45 days</span></td><td><span class="vi">30–40 ngày</span><span class="cn">30–40 天</span><span class="en">30–40 days</span></td><td><span class="vi">20–30 ngày (EU)</span><span class="cn">20–30 天（欧盟）</span><span class="en">20–30 days (EU)</span></td></tr>
+        <tr><td><span class="vi">Phân khúc mạnh nhất</span><span class="cn">最强细分</span><span class="en">Strongest segment</span></td><td><span class="vi">Gỗ giáo dục, plush, mây tre, đồ chơi ngoài trời</span><span class="cn">木制教育、毛绒、藤编、户外</span><span class="en">Wooden educational, plush, rattan, outdoor</span></td><td><span class="vi">Nhựa, điện tử, mô hình, mọi phân khúc</span><span class="cn">塑料、电子、模型，全线</span><span class="en">Plastic, electronics, models, all segments</span></td><td><span class="vi">Thủ công, gỗ, crochet</span><span class="cn">手工艺、木制、钩编</span><span class="en">Handicraft, wood, crochet</span></td><td><span class="vi">Plush, đồ chơi nhựa</span><span class="cn">毛绒、塑料玩具</span><span class="en">Plush, plastic toys</span></td><td><span class="vi">Gỗ, đồ chơi trẻ em giá trung</span><span class="cn">木制、中价儿童玩具</span><span class="en">Wooden, mid-price kids' toys</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tfoot">
+    <span class="vi">* Ấn Độ không nằm trong top 15 nhà xuất khẩu đồ chơi 2025, tức dưới ngưỡng 1,11 tỷ USD. ** Indonesia: 0,65 tỷ USD là đồ chơi truyền thống (xếp thứ 14 toàn cầu), không gồm máy trò chơi điện tử. Các tiêu chí định tính là đánh giá của báo cáo dựa trên dữ liệu thương mại và khảo sát listing, không phải chỉ số chính thức.</span>
+    <span class="cn">* 印度未进入 2025 年前 15 大玩具出口国，即低于 11.1 亿美元门槛。** 印尼 6.5 亿美元为传统玩具（全球第 14），不含电子游戏机。定性指标为本报告基于贸易数据与 listing 调研的判断，非官方指数。</span>
+    <span class="en">* India is outside the 2025 top 15 toy exporters, i.e. below the USD 1.11 billion cut-off. ** Indonesia's USD 0.65 billion is traditional toys (14th globally), excluding video game consoles. Qualitative criteria are the report's assessment based on trade data and listing research, not official indices.</span>
+  </div>
+
+  <div class="insight">
+    <div class="t"><span class="vi">Kết luận về lợi thế</span><span class="cn">优势结论</span><span class="en">Conclusion on advantage</span></div>
+    <p>
+      <span class="vi">Lợi thế của Việt Nam <strong>không phải giá rẻ nhất</strong> — Ấn Độ và Indonesia rẻ hơn ở nhiều dòng sản phẩm. Lợi thế thật nằm ở tổ hợp: (1) quy mô đủ lớn để nhận đơn container, (2) ưu đãi thuế quan EU/UK/CPTPP mà Ấn Độ và Trung Quốc không có, (3) năng lực chế biến gỗ và dệt may sẵn có cho plush, (4) khoảng cách địa lý và thời gian giao hàng tốt hơn Ấn Độ đi Mỹ. Khi tư vấn, nên bán "compliance + FTA + gỗ chứng nhận", không bán "giá thấp".</span>
+      <span class="cn">越南的优势<strong>不是最低价</strong>——印度与印尼在多个品类更便宜。真正的优势是组合：(1) 规模足以接整柜订单，(2) 印度与中国没有的欧盟/英国/CPTPP 关税优惠，(3) 既有木材与纺织加工能力可支撑毛绒，(4) 至美国交期优于印度。推介时应卖"合规 + FTA + 认证木材"，而不是"低价"。</span>
+      <span class="en">Vietnam's advantage is <strong>not the lowest price</strong> — India and Indonesia are cheaper on many lines. The real advantage is the combination: (1) scale large enough for container orders, (2) EU/UK/CPTPP tariff preferences that India and China lack, (3) existing wood and textile processing for plush, (4) shorter lead times to the US than India. Sell "compliance + FTA + certified wood", not "low price".</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 06 ============ -->
+<section id="s6">
+  <div class="sec-head">
+    <div class="sec-num">06</div>
+    <div>
+      <h2><span class="vi">Phân tích điểm mạnh và điểm cần cải thiện</span><span class="cn">优势与待改进分析</span><span class="en">Strengths and gaps analysis</span></h2>
+      <div class="sec-sub"><span class="vi">Nhìn từ góc độ người mua quốc tế, không phải từ góc độ nhà sản xuất</span><span class="cn">从国际买家视角，而非工厂视角</span><span class="en">From the international buyer's perspective, not the factory's</span></div>
+    </div>
+  </div>
+
+  <h3><span class="vi">Điểm mạnh đang tạo ra đơn hàng</span><span class="cn">正在带来订单的优势</span><span class="en">Strengths that win orders</span></h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Điểm mạnh</span><span class="cn">优势</span><span class="en">Strength</span></th>
+        <th><span class="vi">Chi tiết</span><span class="cn">细节</span><span class="en">Detail</span></th>
+        <th><span class="vi">Lợi ích cho người mua</span><span class="cn">对买家的价值</span><span class="en">Benefit to buyer</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="vi">Năng lực chế biến gỗ</span><span class="cn">木材加工能力</span><span class="en">Wood processing capability</span></td>
+          <td><span class="vi">Ngành gỗ xuất khẩu đã đạt chuẩn EU về sấy, sơn an toàn, FSC; chuyển một phần sang đồ chơi gỗ giáo dục</span><span class="cn">木业出口已达欧盟烘干、安全涂装、FSC 标准；部分产能可转向木制教育玩具</span><span class="en">The export wood industry already meets EU drying, safe-finish and FSC standards; part of it converts to wooden educational toys</span></td>
+          <td><span class="vi">Có thể đặt đơn gỗ FSC quy mô container mà không cần mở nhà máy mới</span><span class="cn">无需新建工厂即可下整柜 FSC 木制订单</span><span class="en">Container-scale FSC wooden orders without building a new plant</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Ưu đãi thuế quan</span><span class="cn">关税优惠</span><span class="en">Tariff preference</span></td>
+          <td><span class="vi">EVFTA, UKVFTA, CPTPP, RCEP — 26% nhập khẩu đồ chơi toàn cầu nằm trong nhóm được ưu đãi</span><span class="cn">EVFTA、UKVFTA、CPTPP、RCEP——覆盖全球玩具进口 26%</span><span class="en">EVFTA, UKVFTA, CPTPP, RCEP — covering 26% of global toy imports</span></td>
+          <td><span class="vi">Giảm thuế nhập khẩu thực tế, tăng biên lợi nhuận cho nhà phân phối</span><span class="cn">实际降低进口关税，提升分销商毛利</span><span class="en">Real duty savings and better distributor margin</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Chi phí sản xuất cạnh tranh</span><span class="cn">生产成本有竞争力</span><span class="en">Competitive production cost</span></td>
+          <td><span class="vi">Chi phí nhân công thấp hơn Trung Quốc, Ba Lan; năng suất trong các nhà máy FDI đạt chuẩn quốc tế</span><span class="cn">人工成本低于中国、波兰；外资工厂生产率达国际标准</span><span class="en">Labour cost below China and Poland; productivity in FDI plants meets international norms</span></td>
+          <td><span class="vi">Giá FOB tốt hơn 8–15% so với nguồn EU ở cùng tiêu chuẩn</span><span class="cn">同等标准下 FOB 价比欧盟来源低 8–15%</span><span class="en">FOB 8–15% below EU sources at equivalent standard</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Vị trí địa lý &amp; logistics</span><span class="cn">地理与物流</span><span class="en">Geography and logistics</span></td>
+          <td><span class="vi">Cảng Cát Lái, Hải Phòng, Cái Mép; tuyến đi Mỹ 30–40 ngày, đi EU 28–35 ngày</span><span class="cn">吉莱、海防、盖梅港；至美 30–40 天，至欧 28–35 天</span><span class="en">Cat Lai, Hai Phong, Cai Mep ports; 30–40 days to the US, 28–35 to the EU</span></td>
+          <td><span class="vi">Kịp cửa sổ giao hàng mùa lễ hội (phải đến kho trước tháng 9)</span><span class="cn">能赶上节庆交付窗口（9 月前到仓）</span><span class="en">Hits the holiday delivery window (in warehouse before September)</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Chuyển giao công nghệ từ FDI</span><span class="cn">外资技术转移</span><span class="en">Technology transfer from FDI</span></td>
+          <td><span class="vi">LEGO (Bình Dương, 1 tỷ USD, 04/2025) và các nhà máy may mặc – đồ chơi FDI tạo ra lớp kỹ thuật viên và quy trình QA</span><span class="cn">LEGO（平阳，10 亿美元，2025-04）及外资服装—玩具工厂培养技术员与 QA 流程</span><span class="en">LEGO (Binh Duong, USD 1 billion, Apr 2025) and FDI garment-toy plants create a layer of technicians and QA processes</span></td>
+          <td><span class="vi">Nhà mua hàng tin vào năng lực QA khi có nhà máy FDI trong cùng địa bàn</span><span class="cn">同一地区存在外资工厂时，买家更信任 QA 能力</span><span class="en">Buyers trust QA capability when FDI plants operate in the same region</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Nguồn nguyên liệu tự nhiên</span><span class="cn">天然原料</span><span class="en">Natural materials</span></td>
+          <td><span class="vi">Gỗ keo, cao su, mây tre, vải lanh, bông — phù hợp xu hướng đồ chơi không nhựa</span><span class="cn">相思木、橡胶木、藤竹、亚麻、棉——契合无塑料玩具趋势</span><span class="en">Acacia, rubberwood, rattan, linen, cotton — aligned with plastic-free toy demand</span></td>
+          <td><span class="vi">Đáp ứng yêu cầu bền vững mà nguồn Trung Quốc khó đáp ứng ở giá tương đương</span><span class="cn">满足中国来源难以同价实现的可持续要求</span><span class="en">Meets sustainability requirements Chinese sources struggle to match at the same price</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3><span class="vi">Điểm cần cải thiện — và cách xử lý</span><span class="cn">待改进点与应对方式</span><span class="en">Gaps — and how to close them</span></h3>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Thách thức</span><span class="cn">挑战</span><span class="en">Challenge</span></th>
+        <th><span class="vi">Hiện trạng</span><span class="cn">现状</span><span class="en">Current state</span></th>
+        <th><span class="vi">Giải pháp đề xuất</span><span class="cn">建议方案</span><span class="en">Proposed fix</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="vi">Thiếu chứng nhận an toàn</span><span class="cn">安全认证缺失</span><span class="en">Missing safety certification</span></td>
+          <td><span class="vi">Phần lớn hồ sơ nhà cung cấp VN trên Alibaba.com không hiển thị CE / CPC / EN 71, trong khi nhà cung cấp Trung Quốc niêm yết hàng loạt</span><span class="cn">多数越南供应商档案未展示 CE/CPC/EN 71，而中国供应商普遍标注</span><span class="en">Most VN supplier profiles on Alibaba.com show no CE/CPC/EN 71, while Chinese suppliers list them at scale</span></td>
+          <td><span class="vi">Đưa chứng nhận thành điều kiện onboarding: tối thiểu EN 71-1/2/3 + CPC cho thị trường Mỹ; đăng tải chứng thư lên trang công ty</span><span class="cn">将认证列为入驻门槛：至少 EN 71-1/2/3 + 美国市场 CPC；并上传至公司页</span><span class="en">Make certification an onboarding gate: at least EN 71-1/2/3 plus CPC for the US; upload certificates to the company page</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Hồ sơ năng lực yếu</span><span class="cn">企业实力档案薄弱</span><span class="en">Weak company profile</span></td>
+          <td><span class="vi">Nhiều store VN không công bố doanh thu, số nhân sự, diện tích nhà xưởng; thiếu ảnh nhà máy và video quy trình</span><span class="cn">多家越南店铺未披露营收、员工数、厂区面积；缺少工厂照片与流程视频</span><span class="en">Many VN stores disclose no revenue, headcount or plant area; factory photos and process videos are missing</span></td>
+          <td><span class="vi">Chuẩn hóa company profile: doanh thu, số nhân sự, diện tích, công suất tháng, ảnh xưởng, video 60 giây</span><span class="cn">标准化公司档案：营收、员工数、面积、月产能、工厂照片、60 秒视频</span><span class="en">Standardise the profile: revenue, headcount, area, monthly capacity, plant photos, a 60-second video</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Manh mún, thiếu quy mô</span><span class="cn">规模分散</span><span class="en">Fragmented scale</span></td>
+          <td><span class="vi">Đa số nhà cung cấp VN trong ngành là doanh nghiệp nhỏ (11–50 nhân sự) hoặc hộ kinh doanh, khó nhận đơn trên 5.000 pcs</span><span class="cn">多数越南供应商为小微企业（11–50 人）或个体户，难接 5,000 件以上订单</span><span class="en">Most VN suppliers in the category are small (11–50 staff) or household businesses, unable to take orders above 5,000 pcs</span></td>
+          <td><span class="vi">Định vị theo đơn nhỏ – giá trị cao (low MOQ, customization), thay vì đối đầu đơn lớn với Trung Quốc</span><span class="cn">定位小单高值（低 MOQ、定制），而非与中国拼大单</span><span class="en">Position on low-MOQ, high-value customisation instead of fighting China for volume orders</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Nội dung listing kém</span><span class="cn">listing 内容薄弱</span><span class="en">Weak listing content</span></td>
+          <td><span class="vi">Ảnh sản phẩm chụp văn phòng, không có ảnh ngữ cảnh sử dụng; tiêu đề thiếu từ khóa người mua tìm</span><span class="cn">产品图为办公室拍摄，缺少使用场景图；标题缺少买家搜索关键词</span><span class="en">Office-shot product images, no in-use context; titles miss buyer search terms</span></td>
+          <td><span class="vi">Chuẩn 6 ảnh + 1 video: trắng, ngữ cảnh, chi tiết an toàn, đóng gói, kích thước, chứng nhận</span><span class="cn">统一 6 图 + 1 视频：白底、场景、安全细节、包装、尺寸、认证</span><span class="en">Standard 6 images + 1 video: white background, context, safety detail, packaging, dimensions, certification</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Chưa khai thác RFQ</span><span class="cn">未利用 RFQ</span><span class="en">RFQ underused</span></td>
+          <td><span class="vi">Nhà cung cấp VN phản hồi RFQ chậm hơn mức trung bình của ngành; thời gian trả lời trên 4 giờ làm giảm mạnh tỉ lệ thắng</span><span class="cn">越南供应商 RFQ 响应慢于行业均值；超过 4 小时回复会显著降低中标率</span><span class="en">VN suppliers respond to RFQs slower than the category average; replies beyond four hours sharply cut win rates</span></td>
+          <td><span class="vi">Đặt SLA phản hồi dưới 2 giờ trong giờ làm việc; chuẩn bị 3 mẫu báo giá cho 3 dải MOQ</span><span class="cn">工作时间内 2 小时内响应 SLA；为 3 档 MOQ 预备报价模板</span><span class="en">A sub-2-hour response SLA in working hours; three quote templates for three MOQ bands</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">Phụ thuộc một thị trường</span><span class="cn">过度依赖单一市场</span><span class="en">Single-market dependence</span></td>
+          <td><span class="vi">Mỹ chiếm 47,8% kim ngạch xuất khẩu đồ chơi VN; rủi ro thuế và tỷ giá tập trung</span><span class="cn">美国占越南玩具出口 47.8%；关税与汇率风险集中</span><span class="en">The US takes 47.8% of VN toy exports; tariff and FX risk is concentrated</span></td>
+          <td><span class="vi">Mở rộng có chủ đích sang EU (EVFTA), Nhật, Canada, Australia (CPTPP) — nơi thuế quan thấp hơn và ít cạnh tranh hơn</span><span class="cn">有计划拓展欧盟（EVFTA）、日本、加拿大、澳大利亚（CPTPP）——关税更低、竞争更少</span><span class="en">Deliberate expansion into the EU (EVFTA), Japan, Canada, Australia (CPTPP) — lower duty, less competition</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 07 ============ -->
+<section id="s7">
+  <div class="sec-head">
+    <div class="sec-num">07</div>
+    <div>
+      <h2><span class="vi">Nhà cung cấp tiêu biểu trên Alibaba.com</span><span class="cn">Alibaba.com 上的典型供应商</span><span class="en">Featured suppliers on Alibaba.com</span></h2>
+      <div class="sec-sub"><span class="vi">31 nhà cung cấp: 12 Việt Nam · 10 Trung Quốc · 9 quốc gia khác — dữ liệu trích trực tiếp từ trang công ty, 09/11/2026</span><span class="cn">31 家：越南 12 · 中国 10 · 其他 9 国——数据直接取自公司页，2026-11-09</span><span class="en">31 suppliers: 12 Vietnam · 10 China · 9 other countries — data read from company pages, 9 Nov 2026</span></div>
+    </div>
+  </div>
+
+  <p>
+    <span class="vi">Bảng dưới đây là kết quả khảo sát trực tiếp trên Alibaba.com. Mọi đường link đều là URL thực tế đã mở và đọc, không có link suy đoán. Cột doanh thu phản ánh đúng những gì Alibaba.com công bố: nhà cung cấp Trung Quốc hiển thị đầy đủ <em>Total Annual Revenue</em>, trong khi layout hồ sơ mới của các store Việt Nam <strong>không có trường này</strong> — chỉ có <em>Annual Output Value</em> (giá trị sản lượng) và số liệu giao dịch trực tuyến.</span>
+    <span class="cn">下表为在 Alibaba.com 上的直接调研结果。所有链接均为实际打开并读取的 URL，无推测链接。营收列严格反映 Alibaba.com 公示内容：中国供应商完整显示 <em>Total Annual Revenue</em>，而越南店铺的新版档案<strong>无此字段</strong>——仅有 <em>Annual Output Value</em>（年产值）与线上交易数据。</span>
+    <span class="en">The table is the output of direct research on Alibaba.com. Every link is a URL actually opened and read, with no inferred links. The revenue column reflects exactly what Alibaba.com publishes: Chinese suppliers show <em>Total Annual Revenue</em> in full, whereas the new profile layout for Vietnamese stores <strong>does not carry that field</strong> — only <em>Annual Output Value</em> and online transaction data.</span>
+  </p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>#</th>
+        <th><span class="vi">Công ty</span><span class="cn">公司</span><span class="en">Company</span></th>
+        <th><span class="vi">Quốc gia</span><span class="cn">国家</span><span class="en">Country</span></th>
+        <th><span class="vi">Sản phẩm chính</span><span class="cn">主要产品</span><span class="en">Main products</span></th>
+        <th><span class="vi">Doanh thu / quy mô</span><span class="cn">营收 / 规模</span><span class="en">Revenue / scale</span></th>
+        <th class="num"><span class="vi">Năm HĐ</span><span class="cn">年限</span><span class="en">Years</span></th>
+        <th><span class="vi">Gian hàng</span><span class="cn">店铺</span><span class="en">Store</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong>DPG Vietnam Company Limited</strong></td><td>Vietnam <span class="vi">(Thanh Hóa)</span><span class="cn">（清化）</span><span class="en">(Thanh Hoa)</span></td><td><span class="vi">Đồ chơi nhựa, mô hình PVC, đồ chơi ngoài trời</span><span class="cn">塑料玩具、PVC 模型、户外玩具</span><span class="en">Plastic toys, PVC figures, outdoor toys</span></td><td>US$50M – 100M</td><td class="num">1</td><td><a href="https://vn19073755505zrxz.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>2</td><td><strong>YK PLUSH TOY CO., LTD</strong></td><td>Vietnam <span class="vi">(Hải Dương)</span><span class="cn">（海阳）</span><span class="en">(Hai Duong)</span></td><td><span class="vi">Thú nhồi bông, gối cổ du lịch</span><span class="cn">毛绒玩具、旅行颈枕</span><span class="en">Plush &amp; stuffed toys, travel neck pillows</span></td><td><span class="vi">Không công bố (sản lượng &gt;US$100M)</span><span class="cn">未披露（年产值 &gt;1 亿美元）</span><span class="en">Not disclosed (output &gt;USD 100M)</span></td><td class="num">2</td><td><a href="https://ykvn.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>3</td><td>VIETMADE HOUSEHOLD BUSINESS</td><td>Vietnam <span class="vi">(Ninh Bình)</span><span class="cn">（宁平）</span><span class="en">(Ninh Binh)</span></td><td><span class="vi">Đồ chơi gỗ, khay gỗ</span><span class="cn">木制玩具、木托盘</span><span class="en">Wooden toys, wooden trays</span></td><td><span class="vi">Không công bố (sản lượng 1–2,5M)</span><span class="cn">未披露（年产值 100–250 万）</span><span class="en">Not disclosed (output US$1–2.5M)</span></td><td class="num">3</td><td><a href="https://vn1564973444nspa.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>4</td><td>ECO GREEN VIET NAM HOUSEHOLD BUSINESS</td><td>Vietnam <span class="vi">(TP.HCM)</span><span class="cn">（胡志明市）</span><span class="en">(HCMC)</span></td><td><span class="vi">Đồ chơi móc len, đồ chơi gỗ, thủ công</span><span class="cn">钩编玩具、木制玩具、手工艺</span><span class="en">Crochet toys, wooden toys, handicrafts</span></td><td><span class="vi">Không công bố (sản lượng 1–2,5M)</span><span class="cn">未披露（年产值 100–250 万）</span><span class="en">Not disclosed (output US$1–2.5M)</span></td><td class="num">1</td><td><a href="https://ecogreenvietnam.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>5</td><td>JNC HANDICRAFTS COMPANY LIMITED</td><td>Vietnam <span class="vi">(TP.HCM)</span><span class="cn">（胡志明市）</span><span class="en">(HCMC)</span></td><td><span class="vi">Đồ chơi móc len, túi macrame</span><span class="cn">钩编玩具、macrame 包</span><span class="en">Crochet toys, macrame bags</span></td><td><span class="vi">Không công bố (sản lượng &lt;1M)</span><span class="cn">未披露（年产值 &lt;100 万）</span><span class="en">Not disclosed (output &lt;USD 1M)</span></td><td class="num">3</td><td><a href="https://jnchandicrafts.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>6</td><td>VAN HOA VIETNAM TECHNICAL COMPANY LIMITED</td><td>Vietnam <span class="vi">(TP.HCM)</span><span class="cn">（胡志明市）</span><span class="en">(HCMC)</span></td><td><span class="vi">Đồ chơi giải trí, đồ chơi giáo dục</span><span class="cn">娱乐玩具、教育玩具</span><span class="en">Leisure toys, educational toys</span></td><td><span class="vi">Không công bố (sản lượng 0,1–0,3M)</span><span class="cn">未披露（年产值 10–30 万）</span><span class="en">Not disclosed (output US$0.1–0.3M)</span></td><td class="num">1</td><td><a href="https://vn19084385091iija.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>7</td><td>VTN GROUP CO., LTD</td><td>Vietnam</td><td><span class="vi">Đồ chơi gỗ, đồ trang trí gỗ, quà tặng gỗ</span><span class="cn">木制玩具、木制装饰、木礼品</span><span class="en">Wooden toys, wood decor, wood gifts</span></td><td><span class="vi">Không công bố (GMV trực tuyến US$400+)</span><span class="cn">未披露（线上 GMV 400+ 美元）</span><span class="en">Not disclosed (online GMV US$400+)</span></td><td class="num">4</td><td><a href="https://vtngroup.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>8</td><td>VANAN IMPORT-EXPORT CO., LTD</td><td>Vietnam</td><td><span class="vi">Đồ chơi, đồ chơi bóp (squeeze toy), thủ công</span><span class="cn">玩具、解压玩具、手工艺</span><span class="en">Toys, squeeze toys, crafts</span></td><td><span class="vi">Không công bố (GMV US$1.000+)</span><span class="cn">未披露（线上 GMV 1,000+ 美元）</span><span class="en">Not disclosed (online GMV US$1,000+)</span></td><td class="num">1</td><td><a href="https://vananguru.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>9</td><td>CN Đồng Nai – CÔNG TY TNHH TRUNG TRUNG THANH</td><td>Vietnam <span class="vi">(Đồng Nai)</span><span class="cn">（同奈）</span><span class="en">(Dong Nai)</span></td><td><span class="vi">Đồ chơi trẻ em, xe scooter trẻ em, quần áo trẻ em</span><span class="cn">儿童玩具、儿童滑板车、童装</span><span class="en">Kids' toys, kids' scooters, kids' apparel</span></td><td><span class="vi">Không công bố (GMV US$1.000+)</span><span class="cn">未披露（线上 GMV 1,000+ 美元）</span><span class="en">Not disclosed (online GMV US$1,000+)</span></td><td class="num">1</td><td><a href="https://vn19077769869iezl.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>10</td><td>KINH BAC SEALION UNITY JSC</td><td>Vietnam</td><td><span class="vi">Sân chơi trong nhà, trampoline, thiết bị mầm non</span><span class="cn">室内游乐设备、蹦床、幼教设备</span><span class="en">Indoor playground, trampoline, preschool equipment</span></td><td><span class="vi">Không công bố</span><span class="cn">未披露</span><span class="en">Not disclosed</span></td><td class="num">1</td><td><a href="https://kinhbacsealionunity.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>11</td><td>ĐÔNG HÀNG INTERNATIONAL S&T CO.</td><td>Vietnam</td><td><span class="vi">Thảm EVA, đồ chơi sơ sinh, thảm bé</span><span class="cn">EVA 地垫、婴儿玩具、宝宝垫</span><span class="en">EVA mats, baby toys, baby mats</span></td><td><span class="vi">Không công bố (xưởng 12.000+ m²)</span><span class="cn">未披露（厂房 12,000+ ㎡）</span><span class="en">Not disclosed (plant 12,000+ m²)</span></td><td class="num">2</td><td><a href="https://donghangevavietnam.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>12</td><td>ARTEX THIEN THANH CO., LTD</td><td>Vietnam</td><td><span class="vi">Đồ chơi trẻ em, mây tre đan, giỏ mây</span><span class="cn">儿童玩具、藤编、藤篮</span><span class="en">Kids' toys, rattan &amp; seagrass products</span></td><td><span class="vi">Không công bố (GMV US$100+)</span><span class="cn">未披露（线上 GMV 100+ 美元）</span><span class="en">Not disclosed (online GMV US$100+)</span></td><td class="num">2</td><td><a href="https://thienthanhartexport.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>13</td><td>Zhejiang Hengyuan Arts &amp; Crafts Co., Ltd.</td><td>China</td><td><span class="vi">Đồ chơi gỗ, đồ chơi giáo dục</span><span class="cn">木制玩具、教育玩具</span><span class="en">Wooden toys, educational toys</span></td><td>US$10M – 50M</td><td class="num">2</td><td><a href="https://cnhengyuantoys.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>14</td><td>Shantou Mingtong Toys Industrial Co., Ltd.</td><td>China</td><td><span class="vi">Đồ chơi giáo dục, đồ chơi em bé, puzzle</span><span class="cn">教育玩具、婴儿玩具、拼图</span><span class="en">Educational toys, baby toys, puzzles</span></td><td>US$2.5M – 5M</td><td class="num">15</td><td><a href="https://mingtongtoys.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>15</td><td>Taizhou Xingzhuo Toys Co., Ltd.</td><td>China</td><td><span class="vi">Đồ chơi gỗ, bếp đồ chơi</span><span class="cn">木制玩具、玩具厨房</span><span class="en">Wooden toys, play kitchens</span></td><td>US$1M – 2.5M</td><td class="num">9</td><td><a href="https://tzxingzhuo.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>16</td><td>Yunhe Country SN Toys Co., Ltd.</td><td>China</td><td><span class="vi">Đồ chơi gỗ (FSC, CE, EN 71)</span><span class="cn">木制玩具（FSC、CE、EN 71）</span><span class="en">Wooden toys (FSC, CE, EN 71)</span></td><td>US$10M – 50M</td><td class="num">5</td><td><a href="https://harveststory.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>17</td><td>Yiwu Hoye Crafts Co., Ltd.</td><td>China</td><td><span class="vi">Đồ chơi giáo dục, học cụ Montessori</span><span class="cn">教育玩具、蒙氏教具</span><span class="en">Educational toys, Montessori materials</span></td><td>US$5M – 10M</td><td class="num">11</td><td><a href="https://hoye-crafts.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>18</td><td>Yiwu Fengqing Toy Co., Ltd.</td><td>China</td><td><span class="vi">Đồ chơi mầm non, giá vẽ gỗ</span><span class="cn">幼教玩具、木制画架</span><span class="en">Preschool toys, wooden easels</span></td><td>US$5M – 10M</td><td class="num">2</td><td><a href="https://fengqingtoys.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>19</td><td>Guangzhou Beiyang Trading Co., Ltd.</td><td>China</td><td><span class="vi">Đồ chơi gỗ, khối xếp hình, puzzle</span><span class="cn">木制玩具、积木、拼图</span><span class="en">Wooden toys, blocks, puzzles</span></td><td>Above US$100M</td><td class="num">8</td><td><a href="https://gzbeiyang.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>20</td><td>Shenzhen Wefunny Toys Co., Ltd.</td><td>China</td><td><span class="vi">Mô hình nhân vật, đồ chơi DIY</span><span class="cn">角色模型、DIY 玩具</span><span class="en">Action figures, DIY &amp; craft toys</span></td><td>Above US$100M</td><td class="num">4</td><td><a href="https://wefunny.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>21</td><td>Xiamen Hengji Hengxin Trading Co., Ltd.</td><td>China</td><td><span class="vi">Đồ chơi điều khiển, đồ chơi em bé</span><span class="cn">遥控玩具、婴儿玩具</span><span class="en">RC toys, baby toys</span></td><td>US$5M – 10M</td><td class="num">4</td><td><a href="https://hjhx.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>22</td><td>Shantou Yuansheng Trading Co., Ltd.</td><td>China</td><td><span class="vi">Đồ chơi nhà búp bê, RC, đồ chơi ngoài trời</span><span class="cn">娃娃屋、遥控、户外玩具</span><span class="en">Play-house toys, RC, outdoor toys</span></td><td><span class="vi">Không công bố (GMV US$410.000+, 530 đơn)</span><span class="cn">未披露（线上 GMV 41 万+，530 单）</span><span class="en">Not disclosed (online GMV US$410,000+, 530 orders)</span></td><td class="num">6</td><td><a href="https://stystoys.en.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>23</td><td>ARIF HANDICRAFTS</td><td>India</td><td><span class="vi">Puzzle gỗ giáo dục thủ công</span><span class="cn">手工木制教育拼图</span><span class="en">Handmade wooden educational puzzles</span></td><td><span class="vi">Không công bố</span><span class="cn">未披露</span><span class="en">Not disclosed</span></td><td class="num">2</td><td><a href="https://in19075000573dfen.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>24</td><td>INDIAN CONSIGNERS</td><td>India</td><td><span class="vi">Búp bê móc len, thú nhồi bông thủ công</span><span class="cn">钩编玩偶、手工毛绒</span><span class="en">Crochet dolls, handmade plush</span></td><td><span class="vi">Không công bố (GMV &lt;US$1K)</span><span class="cn">未披露（线上 GMV &lt;1,000 美元）</span><span class="en">Not disclosed (online GMV &lt;USD 1K)</span></td><td class="num">9</td><td><a href="https://indianconsigners.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>25</td><td>RAW TO FINE</td><td>Pakistan</td><td><span class="vi">Thú nhồi bông, móc khóa plush</span><span class="cn">毛绒玩具、毛绒钥匙扣</span><span class="en">Plush toys, plush keychains</span></td><td><span class="vi">Không công bố (GMV US$2–5K)</span><span class="cn">未披露（线上 GMV 2–5 千美元）</span><span class="en">Not disclosed (online GMV US$2–5K)</span></td><td class="num">6</td><td><a href="https://rawtofine.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>26</td><td>BORAMI PLASTIK IMALAT LTD. STI.</td><td>Türkiye</td><td><span class="vi">Xe đạp ba bánh trẻ em, xe ride-on</span><span class="cn">儿童三轮车、骑乘玩具</span><span class="en">Kids' tricycles, ride-on toys</span></td><td><span class="vi">Không công bố</span><span class="cn">未披露</span><span class="en">Not disclosed</span></td><td class="num">6</td><td><a href="https://tr1005676938.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>27</td><td>NAKOSAN NAKIS KONFEKSIYON A.S.</td><td>Türkiye</td><td><span class="vi">Chăn quấn em bé cotton hữu cơ, plush sơ sinh</span><span class="cn">有机棉婴儿抱被、婴儿毛绒</span><span class="en">Organic-cotton baby comforters, infant plush</span></td><td><span class="vi">Không công bố</span><span class="cn">未披露</span><span class="en">Not disclosed</span></td><td class="num">12</td><td><a href="https://tr108215421.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>28</td><td>SIAM MANDALAY CO., LTD.</td><td>Thailand</td><td><span class="vi">Puzzle gỗ trí tuệ, đồ chơi giáo dục</span><span class="cn">木制益智拼图、教育玩具</span><span class="en">Wooden brain-teaser puzzles</span></td><td><span class="vi">Không công bố</span><span class="cn">未披露</span><span class="en">Not disclosed</span></td><td class="num">1</td><td><a href="https://th100132362.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>29</td><td>MARTOM SP. Z O.O.</td><td>Poland</td><td><span class="vi">Bộ đồ nghề gỗ cho trẻ, đồ chơi nhập vai</span><span class="cn">木制工具套装、角色扮演玩具</span><span class="en">Wooden workshop sets, pretend play</span></td><td><span class="vi">Không công bố</span><span class="cn">未披露</span><span class="en">Not disclosed</span></td><td class="num">1</td><td><a href="https://pl39193100716rxne.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>30</td><td>Micchi Store LLC</td><td>USA</td><td><span class="vi">Thú nhồi bông, plush cân nặng</span><span class="cn">毛绒玩具、加重毛绒</span><span class="en">Plush &amp; weighted stuffed animals</span></td><td><span class="vi">Không công bố</span><span class="cn">未披露</span><span class="en">Not disclosed</span></td><td class="num">1</td><td><a href="https://us29235582669tank.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+        <tr><td>31</td><td>TRIGON Deutschland GmbH</td><td>Germany</td><td><span class="vi">Thú nhồi bông, dòng Eco-Edition</span><span class="cn">毛绒玩具、Eco-Edition 系列</span><span class="en">Plush animals, Eco-Edition line</span></td><td><span class="vi">Không công bố (5–10 nhân sự)</span><span class="cn">未披露（5–10 人）</span><span class="en">Not disclosed (5–10 staff)</span></td><td class="num">46</td><td><a href="https://de1574650628esrp.trustpass.alibaba.com/company_profile.html" target="_blank" rel="noopener">store</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tfoot">
+    <span class="vi"><strong>Nguồn doanh thu:</strong> trường <em>Total Annual Revenue</em> trên trang Company Profile của từng gian hàng, đọc ngày 09/11/2026. Với nhà cung cấp Việt Nam và một số gian hàng không Trung Quốc, Alibaba.com không hiển thị trường doanh thu (chỉ có <em>Annual Output Value</em> hoặc GMV trực tuyến) — số liệu thay thế được ghi rõ trong ngoặc, không suy diễn. Một số trang <code>trustpass.alibaba.com</code> yêu cầu xác minh captcha, khi đó ô dữ liệu ghi "Không công bố". Số năm hoạt động lấy theo "Years in business" trên Alibaba.com, không phải năm thành lập pháp nhân. Trong 12 nhà cung cấp Việt Nam, dòng 11–12 có đồ chơi ở vị trí thứ 4–5 trong danh mục sản phẩm (chủ lực là thảm EVA và mây tre đan) nên ưu tiên tiếp cận thấp hơn 10 dòng đầu.</span>
+    <span class="cn"><strong>营收来源：</strong>各店铺 Company Profile 页面的 <em>Total Annual Revenue</em> 字段，读取于 2026-11-09。对越南及部分非中国供应商，Alibaba.com 不显示该字段（仅有 <em>Annual Output Value</em> 或线上 GMV）——括号内为替代数据，未作推断。部分 <code>trustpass.alibaba.com</code> 页面触发人机验证，此时记为"未披露"。年限取 Alibaba.com 的 "Years in business"，非工商注册年份。</span>
+    <span class="en"><strong>Revenue source:</strong> the <em>Total Annual Revenue</em> field on each store's Company Profile page, read on 9 Nov 2026. For Vietnamese and some non-Chinese suppliers Alibaba.com does not display that field (only <em>Annual Output Value</em> or online GMV) — the substitute figure is shown in brackets and nothing is inferred. Some <code>trustpass.alibaba.com</code> pages trigger a CAPTCHA; those cells read "Not disclosed". Years refers to Alibaba.com's "Years in business", not the legal incorporation year.</span>
+  </div>
+
+  <div class="insight">
+    <div class="t"><span class="vi">Điều dữ liệu này nói về ngành</span><span class="cn">数据说明了什么</span><span class="en">What this data says about the industry</span></div>
+    <p>
+      <span class="vi">Trong 12 nhà cung cấp Việt Nam, chỉ <strong>2 gian hàng có quy mô doanh thu/sản lượng trên 50 triệu USD</strong> (DPG Vietnam và YK Plush) — cả hai đều là nhà máy FDI hoặc liên doanh. Phần còn lại là doanh nghiệp nhỏ và hộ kinh doanh. Trong khi đó, 10 nhà cung cấp Trung Quốc đều có doanh thu từ 1 triệu đến trên 100 triệu USD và niêm yết chứng nhận CE/CPC/EN 71. Khoảng cách lớn nhất không phải giá, mà là <strong>độ tin cậy hồ sơ</strong>: người mua so sánh hai gian hàng, một bên có doanh thu + chứng nhận + 15 năm hoạt động, một bên để trống.</span>
+      <span class="cn">在 12 家越南供应商中，仅 <strong>2 家店铺的营收/产值超过 5,000 万美元</strong>（DPG Vietnam 与 YK Plush）——两家均为外资或合资工厂。其余为小微企业与个体户。相比之下，10 家中国供应商营收从 100 万到超 1 亿美元，且普遍标注 CE/CPC/EN 71。最大差距不是价格，而是<strong>档案可信度</strong>：买家比较两家店铺，一边有营收、认证与 15 年历史，另一边是空白。</span>
+      <span class="en">Of the 12 Vietnamese suppliers, only <strong>2 stores show revenue/output above USD 50 million</strong> (DPG Vietnam and YK Plush) — both FDI or joint-venture plants. The rest are small businesses and household firms. Meanwhile the 10 Chinese suppliers all show revenue between USD 1 million and over USD 100 million and list CE/CPC/EN 71. The biggest gap is not price but <strong>profile credibility</strong>: a buyer compares one store with revenue, certification and 15 years of history against one that is blank.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 08 ============ -->
+<section id="s8">
+  <div class="sec-head">
+    <div class="sec-num">08</div>
+    <div>
+      <h2><span class="vi">Sản phẩm tiêu biểu trong ngành</span><span class="cn">行业典型产品</span><span class="en">Representative products</span></h2>
+      <div class="sec-sub"><span class="vi">11 listing thực tế trên Alibaba.com với giá và MOQ nguyên văn</span><span class="cn">Alibaba.com 上 11 个实际 listing，价格与 MOQ 原文</span><span class="en">11 actual Alibaba.com listings with verbatim price and MOQ</span></div>
+    </div>
+  </div>
+
+  <p>
+    <span class="vi">Dưới đây là các sản phẩm đại diện cho từng phân khúc, lấy từ trang kết quả tìm kiếm và trang sản phẩm thật trên Alibaba.com. Giá là giá niêm yết theo bậc số lượng, chưa gồm vận chuyển và thuế. Cột "Nguồn" cho biết quốc gia của nhà cung cấp đang niêm yết — dùng để so sánh vị thế giá của Việt Nam.</span>
+    <span class="cn">以下为各细分代表性产品，取自 Alibaba.com 实际搜索结果页与产品页。价格为阶梯挂牌价，不含运费与税费。"来源"列表示挂牌供应商所在国，用于比较越南的价格定位。</span>
+    <span class="en">Below are representative products for each segment, taken from actual Alibaba.com search and product pages. Prices are tiered list prices excluding freight and duty. The origin column shows the listing supplier's country, used to benchmark Vietnam's price position.</span>
+  </p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th>#</th>
+        <th><span class="vi">Phân khúc</span><span class="cn">细分</span><span class="en">Segment</span></th>
+        <th><span class="vi">Tên sản phẩm (nguyên văn)</span><span class="cn">产品名称（原文）</span><span class="en">Product name (verbatim)</span></th>
+        <th class="num"><span class="vi">Giá</span><span class="cn">价格</span><span class="en">Price</span></th>
+        <th class="num">MOQ</th>
+        <th><span class="vi">Nguồn</span><span class="cn">来源</span><span class="en">Origin</span></th>
+        <th><span class="vi">Xem</span><span class="cn">查看</span><span class="en">View</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1</td><td><span class="vi">Gỗ giáo dục</span><span class="cn">木制教育</span><span class="en">Wooden educational</span></td><td>Handmade Wooden Educational Tic tac toe Board Puzzle Game Kindergarten Logical Thinking Training Toys for Kids From India</td><td class="num">$34.99 – 39.99</td><td class="num">10 pcs</td><td>India</td><td><a href="https://www.alibaba.com/product-detail/Handmade-Wooden-Educational-Tic-tac-toe_10000036670630.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>2</td><td><span class="vi">Puzzle gỗ</span><span class="cn">木制拼图</span><span class="en">Wooden puzzle</span></td><td>Solitaire: Wooden Peg Solitaire Puzzle Educational Toy from Intermediate to Advanced Single-Player Challenge By SiamMandalay</td><td class="num">$3.59</td><td class="num">10,000 sets</td><td>Thailand</td><td><a href="https://www.alibaba.com/product-detail/Solitaire-Wooden-Peg-Solitaire-Puzzle-Educational_10000043565216.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>3</td><td><span class="vi">Thú nhồi bông</span><span class="cn">毛绒</span><span class="en">Plush</span></td><td>Hot Selling Low MOQ Plush Reversible Octopus Stuffed Animal Custom Soft Toys Made with PP Cotton Multi-Color for Kids Adults</td><td class="num">$0.62 – 0.93</td><td class="num">50 pcs</td><td>India</td><td><a href="https://www.alibaba.com/product-detail/Hot-selling-Low-MOQ-Plush-reversible_11000005465312.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>4</td><td><span class="vi">Búp bê / móc len</span><span class="cn">玩偶 / 钩编</span><span class="en">Doll / crochet</span></td><td>Cucumber Positive Potato Crochet Stuffed Plush Doll Handmade Crochet Toys Pickled Wool Yarn for Kids Adults By Indian Consigners</td><td class="num">$3 – 4</td><td class="num">100 pcs</td><td>India</td><td><a href="https://www.alibaba.com/product-detail/Handmade-Crochet-Toys-Pickled-Cucumber-Positive_10000031630788.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>5</td><td><span class="vi">Sơ sinh (0–1)</span><span class="cn">婴幼儿（0–1）</span><span class="en">Infant (0–1)</span></td><td>Organic Cotton Baby Comforter Cute Animal Security Blanket Soft Waffle Fabric Soother Toy</td><td class="num">$2.25 – 4.49</td><td class="num">500 pcs</td><td>Türkiye</td><td><a href="https://www.alibaba.com/product-detail/OEM-Organic-Cotton-Baby-Comforter-Toy_11000037253933.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>6</td><td><span class="vi">Xe ride-on</span><span class="cn">骑乘玩具</span><span class="en">Ride-on</span></td><td>New Plastic Tricycle for Kids Baby 2-5 Years Child Tricycle Kids Bike Soft Wheels Child Tricycle Silent Wheel Funny Time Toys</td><td class="num">$10.90 – 11.90</td><td class="num">10 pcs</td><td>Türkiye</td><td><a href="https://www.alibaba.com/product-detail/New-Plastic-Tricycle-for-Kids-Baby_11000000459850.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>7</td><td><span class="vi">Xe điều khiển</span><span class="cn">遥控车</span><span class="en">RC car</span></td><td>1:16 4 Channels RC Car With Led Light 2.4G Radio Remote Control Sports High-speed Drift Car Boys Toys for Children</td><td class="num">$3.85 – 5.82</td><td class="num">50 pcs</td><td>China</td><td><a href="https://www.alibaba.com/product-detail/1-16-4-Channels-RC-Car_1601978254896.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>8</td><td><span class="vi">Lục lạc sơ sinh</span><span class="cn">婴儿摇铃</span><span class="en">Baby rattle</span></td><td>Baby Rattle Toys Rabbit Plush Baby Cartoon Bed Toys Newborn Educational Toy Rabbit Bear Hand Bells</td><td class="num">$1.30 – 2.00</td><td class="num">1,000 pcs</td><td>China</td><td><a href="https://www.alibaba.com/product-detail/Baby-Rattle-Toys-Rabbit-Plush-Baby_1600429344615.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>9</td><td><span class="vi">Sân chơi ngoài trời</span><span class="cn">户外游乐</span><span class="en">Outdoor playground</span></td><td>Feelkids Wholesale Kids Outdoor Playground Slide Backyard Long Wave Slide with Climbing Ladder Children Slide for Home Garden</td><td class="num">$314 – 405</td><td class="num">1 set</td><td>China</td><td><a href="https://www.alibaba.com/product-detail/Feelkids-Wholesale-Kids-Outdoor-Playground-Slide_1601844938890.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>10</td><td><span class="vi">STEM / lắp ghép</span><span class="cn">STEM / 拼装</span><span class="en">STEM / building</span></td><td>Plastic Magnetic Tiles Building Blocks OEM 'Build Mine World Magic Portal' Toddler Toys STEM Sensory Toys</td><td class="num">$5.50 – 15.60</td><td class="num">2 sets</td><td>China</td><td><a href="https://www.alibaba.com/product-detail/Plastic-Magnetic-Tiles-Building-Blocks-OEM_1601519564173.html" target="_blank" rel="noopener">link</a></td></tr>
+        <tr><td>11</td><td><span class="vi">Đồ chơi nhập vai</span><span class="cn">角色扮演</span><span class="en">Pretend play</span></td><td>6510 Kids Workshop Set Wood Tool Toys for Unisex Ages 5-7 Years Tool Box</td><td class="num">$62.13</td><td class="num">1 pc</td><td>Poland</td><td><a href="https://www.alibaba.com/product-detail/6510-Kids-Workshop-Set-Wood-and_11000033473605.html" target="_blank" rel="noopener">link</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tfoot">
+    <span class="vi">Nguồn: trang sản phẩm Alibaba.com, đọc ngày 09/11/2026. Giá và MOQ giữ nguyên định dạng gốc trên trang. Đây là 11 listing đại diện, không phải danh sách đầy đủ của ngành (riêng danh mục đồ chơi Việt Nam trên Alibaba.com hiển thị 73.436 sản phẩm).</span>
+    <span class="cn">来源：Alibaba.com 产品页，读取于 2026-11-09。价格与 MOQ 保留页面原始格式。此为 11 个代表性 listing，非行业全量（仅越南玩具类目在 Alibaba.com 就显示 73,436 个产品）。</span>
+    <span class="en">Source: Alibaba.com product pages, read 9 Nov 2026. Prices and MOQ retain the original page format. These are 11 representative listings, not an exhaustive category list (the Vietnam toy category alone shows 73,436 products on Alibaba.com).</span>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Phân bố 11 sản phẩm mẫu theo dải giá niêm yết</span><span class="cn">11 个样本产品按挂牌价格区间的分布</span><span class="en">Distribution of the 11 sampled products by list-price band</span></h4>
+    <div class="cap"><span class="vi">Số sản phẩm theo dải giá (USD/đơn vị) · tính theo giá thấp nhất trong khoảng niêm yết</span><span class="cn">按价格区间（美元/件）统计产品数 · 以挂牌区间下限计</span><span class="en">Product count by price band (USD/unit) · based on the lower bound of each listed range</span></div>
+    <div class="canvas-wrap sm"><canvas id="c9"></canvas></div>
+  </div>
+
+  <div class="highlight">
+    <div class="t"><span class="vi">Đọc gì từ dải giá này</span><span class="cn">如何解读这些价格</span><span class="en">How to read these price points</span></div>
+    <p>
+      <span class="vi">Thị trường chia thành ba dải rõ rệt: <strong>dưới 5 USD</strong> (plush nhỏ, lục lạc, puzzle nhỏ — cạnh tranh bằng MOQ thấp và tốc độ), <strong>5–50 USD</strong> (bộ lắp ghép, xe ride-on, búp bê thủ công — cạnh tranh bằng thiết kế và chứng nhận), và <strong>trên 50 USD</strong> (sân chơi, bộ đồ nghề gỗ cao cấp — cạnh tranh bằng logistics và dịch vụ). Nhà cung cấp Việt Nam có lợi thế tự nhiên ở dải giữa và dải cao, nơi giá không phải yếu tố quyết định duy nhất.</span>
+      <span class="cn">市场明显分为三段：<strong>5 美元以下</strong>（小毛绒、摇铃、小拼图——靠低 MOQ 与速度竞争）、<strong>5–50 美元</strong>（积木套装、骑乘玩具、手工玩偶——靠设计与认证竞争）、<strong>50 美元以上</strong>（游乐设备、高端木制工具套——靠物流与服务竞争）。越南供应商在中段与高段具有天然优势，因为价格不是唯一决定因素。</span>
+      <span class="en">The market splits into three clear bands: <strong>under USD 5</strong> (small plush, rattles, small puzzles — competed on low MOQ and speed), <strong>USD 5–50</strong> (building sets, ride-ons, handmade dolls — competed on design and certification), and <strong>above USD 50</strong> (playground equipment, premium wooden tool sets — competed on logistics and service). Vietnamese suppliers have a natural advantage in the middle and upper bands, where price is not the only deciding factor.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 09 ============ -->
+<section id="s9">
+  <div class="sec-head">
+    <div class="sec-num">09</div>
+    <div>
+      <h2><span class="vi">Chân dung người mua và hành vi tìm kiếm</span><span class="cn">买家画像与搜索行为</span><span class="en">Buyer personas and search behaviour</span></h2>
+      <div class="sec-sub"><span class="vi">6 nhóm người mua quyết định đơn hàng trên Alibaba.com</span><span class="cn">在 Alibaba.com 下单的 6 类买家</span><span class="en">Six buyer groups that drive orders on Alibaba.com</span></div>
+    </div>
+  </div>
+
+  <p>
+    <span class="vi">Người mua đồ chơi trên Alibaba.com không phải một nhóm đồng nhất. Họ khác nhau ở quy mô đơn, mức độ quan tâm đến chứng nhận và cách ra quyết định. Việc hiểu đúng persona giúp nhà cung cấp Việt Nam viết tiêu đề, chọn ảnh và trả lời RFQ đúng trọng tâm thay vì gửi báo giá chung cho tất cả.</span>
+    <span class="cn">Alibaba.com 上的玩具买家并非同质群体：订单规模、对认证的重视程度与决策方式各不相同。准确理解画像，能帮助越南供应商写对标题、选对图片、答对 RFQ，而不是对所有买家报同一份价格。</span>
+    <span class="en">Toy buyers on Alibaba.com are not a single group. They differ in order size, how much they care about certification, and how they decide. Understanding the persona helps Vietnamese suppliers write the right title, choose the right images and answer RFQs on point instead of sending every buyer the same quote.</span>
+  </p>
+
+  <div class="personas">
+    <div class="persona">
+      <div class="ph"><div class="av">🏬</div><div><div class="nm"><span class="vi">Nhà bán lẻ độc lập</span><span class="cn">独立零售商</span><span class="en">Independent retailer</span></div><div class="rg"><span class="vi">Bắc Mỹ · EU</span><span class="cn">北美 · 欧盟</span><span class="en">North America · EU</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>500 – 3.000 pcs / SKU</dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">MOQ thấp, giao nhanh, mẫu độc</span><span class="cn">低 MOQ、交期快、独家款式</span><span class="en">Low MOQ, fast delivery, exclusive designs</span></dd>
+        <dt><span class="vi">Hành vi</span><span class="cn">行为</span><span class="en">Behaviour</span></dt><dd><span class="vi">Tìm theo từ khóa sản phẩm, so sánh 5–8 nhà cung cấp, đặt mẫu trước</span><span class="cn">按产品词搜索，比较 5–8 家，先打样</span><span class="en">Searches product keywords, compares 5–8 suppliers, samples first</span></dd>
+      </dl>
+      <div class="kw"><span>wooden toys</span><span>low MOQ</span><span>custom plush</span></div>
+    </div>
+
+    <div class="persona">
+      <div class="ph"><div class="av">🏭</div><div><div class="nm"><span class="vi">Nhà nhập khẩu / bán buôn</span><span class="cn">进口商 / 批发商</span><span class="en">Importer / wholesaler</span></div><div class="rg"><span class="vi">Mỹ · EU · Trung Đông</span><span class="cn">美国 · 欧盟 · 中东</span><span class="en">US · EU · Middle East</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>1 container (5.000 – 20.000 pcs)</dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Giá FOB, ổn định chất lượng, chứng nhận đầy đủ</span><span class="cn">FOB 价格、品质稳定、认证齐全</span><span class="en">FOB price, quality consistency, full certification</span></dd>
+        <dt><span class="vi">Hành vi</span><span class="cn">行为</span><span class="en">Behaviour</span></dt><dd><span class="vi">Đăng RFQ, kiểm tra nhà máy, đàm phán theo hợp đồng năm</span><span class="cn">发布 RFQ、验厂、按年度合同谈判</span><span class="en">Posts RFQs, audits factories, negotiates annual contracts</span></dd>
+      </dl>
+      <div class="kw"><span>FOB price</span><span>CE / CPC</span><span>container order</span></div>
+    </div>
+
+    <div class="persona">
+      <div class="ph"><div class="av">🎨</div><div><div class="nm"><span class="vi">Thương hiệu / chủ sở hữu IP</span><span class="cn">品牌方 / IP 持有者</span><span class="en">Brand / IP owner</span></div><div class="rg"><span class="vi">Mỹ · Anh · Nhật</span><span class="cn">美国 · 英国 · 日本</span><span class="en">US · UK · Japan</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>2.000 – 10.000 pcs</dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Bảo mật thiết kế, NDA, kiểm soát chất lượng, không bán tràn lan</span><span class="cn">设计保密、NDA、质控、不串货</span><span class="en">Design confidentiality, NDA, quality control, no grey-market leakage</span></dd>
+        <dt><span class="vi">Hành vi</span><span class="cn">行为</span><span class="en">Behaviour</span></dt><dd><span class="vi">Tìm OEM/ODM, đánh giá năng lực khuôn mẫu và thiết kế</span><span class="cn">寻找 OEM/ODM，评估开模与设计能力</span><span class="en">Looks for OEM/ODM, assesses tooling and design capability</span></dd>
+      </dl>
+      <div class="kw"><span>OEM toy</span><span>ODM</span><span>NDA</span></div>
+    </div>
+
+    <div class="persona">
+      <div class="ph"><div class="av">🛒</div><div><div class="nm"><span class="vi">Người bán thương mại điện tử</span><span class="cn">电商卖家</span><span class="en">E-commerce seller</span></div><div class="rg"><span class="vi">Mỹ · EU · Đông Nam Á</span><span class="cn">美国 · 欧盟 · 东南亚</span><span class="en">US · EU · Southeast Asia</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>100 – 1.000 pcs <span class="vi">(test)</span><span class="cn">（测试单）</span><span class="en">(test orders)</span></dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Ảnh đẹp, đóng gói sẵn, nhãn riêng, tốc độ restock</span><span class="cn">图片精美、可代包装、贴牌、补货快</span><span class="en">Strong photos, ready packaging, private label, fast restock</span></dd>
+        <dt><span class="vi">Hành vi</span><span class="cn">行为</span><span class="en">Behaviour</span></dt><dd><span class="vi">Tìm theo hình ảnh, kiểm tra đánh giá và tỉ lệ giao đúng hạn</span><span class="cn">以图搜索，查看评价与准时交付率</span><span class="en">Image search, checks ratings and on-time delivery rate</span></dd>
+      </dl>
+      <div class="kw"><span>dropship friendly</span><span>private label</span><span>ready to ship</span></div>
+    </div>
+
+    <div class="persona">
+      <div class="ph"><div class="av">🎁</div><div><div class="nm"><span class="vi">Mua hàng khuyến mãi / quà tặng</span><span class="cn">促销 / 礼品采购</span><span class="en">Promo &amp; gift buyer</span></div><div class="rg"><span class="vi">Toàn cầu</span><span class="cn">全球</span><span class="en">Global</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>5.000 – 50.000 pcs</dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Giá đơn vị cực thấp, in logo, đúng deadline chiến dịch</span><span class="cn">极低单价、印 logo、赶活动档期</span><span class="en">Very low unit price, logo print, campaign deadline</span></dd>
+        <dt><span class="vi">Hành vi</span><span class="cn">行为</span><span class="en">Behaviour</span></dt><dd><span class="vi">Đấu thầu 3–5 nhà cung cấp, quyết định trong 1 tuần</span><span class="cn">3–5 家比价，一周内定标</span><span class="en">Bids 3–5 suppliers, decides within a week</span></dd>
+      </dl>
+      <div class="kw"><span>promotional toy</span><span>logo print</span><span>cheap plush</span></div>
+    </div>
+
+    <div class="persona">
+      <div class="ph"><div class="av">🧸</div><div><div class="nm"><span class="vi">Nhà phân phối đồ chơi giáo dục</span><span class="cn">教育玩具分销商</span><span class="en">Educational toy distributor</span></div><div class="rg"><span class="vi">EU · Nhật · Hàn</span><span class="cn">欧盟 · 日本 · 韩国</span><span class="en">EU · Japan · Korea</span></div></div></div>
+      <dl>
+        <dt><span class="vi">Quy mô đơn</span><span class="cn">订单规模</span><span class="en">Order size</span></dt><dd>1.000 – 5.000 pcs</dd>
+        <dt><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></dt><dd><span class="vi">Chứng nhận EN 71 / FSC, tài liệu giáo dục kèm theo, độ tuổi ghi rõ</span><span class="cn">EN 71/FSC 认证、配套教育资料、明确年龄标识</span><span class="en">EN 71 / FSC, accompanying educational material, clear age labelling</span></dd>
+        <dt><span class="vi">Hành vi</span><span class="cn">行为</span><span class="en">Behaviour</span></dt><dd><span class="vi">Tìm theo tiêu chuẩn an toàn, yêu cầu mẫu thử và hồ sơ vật liệu</span><span class="cn">按安全标准搜索，索取样品与材料档案</span><span class="en">Searches by safety standard, requests samples and material files</span></dd>
+      </dl>
+      <div class="kw"><span>Montessori</span><span>EN 71</span><span>FSC wood</span></div>
+    </div>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Phân bổ người mua theo persona (ước tính cơ cấu đơn hàng)</span><span class="cn">买家画像的订单结构分布（估算）</span><span class="en">Buyer distribution by persona (estimated order mix)</span></h4>
+    <div class="cap"><span class="vi">% ước tính của báo cáo dựa trên đặc điểm đơn hàng quan sát trên listing và RFQ; không phải số liệu công bố của Alibaba.com</span><span class="cn">本报告基于 listing 与 RFQ 观察的订单特征估算，非 Alibaba.com 官方数据</span><span class="en">Report estimate based on order patterns observed in listings and RFQs; not official Alibaba.com data</span></div>
+    <div class="canvas-wrap"><canvas id="c10"></canvas></div>
+  </div>
+
+  <div class="insight">
+    <div class="t"><span class="vi">Quy trình tìm nguồn trung bình của người mua</span><span class="cn">买家平均寻源流程</span><span class="en">Typical buyer sourcing journey</span></div>
+    <p>
+      <span class="vi">Người mua thường trải qua 6 bước: (1) tìm bằng từ khóa hoặc ảnh, (2) lọc theo quốc gia và chứng nhận, (3) mở 5–8 gian hàng, (4) so sánh giá và MOQ, (5) gửi RFQ cho 3–5 nhà cung cấp, (6) đặt mẫu trước khi ký đơn. Nhà cung cấp thắng thầu thường là bên <strong>trả lời RFQ trong vòng 2 giờ</strong> và có sẵn ảnh chứng nhận, bảng giá theo bậc MOQ, và video nhà xưởng — không nhất thiết là bên rẻ nhất.</span>
+      <span class="cn">买家通常经历 6 步：(1) 关键词或图片搜索，(2) 按国家与认证筛选，(3) 打开 5–8 家店铺，(4) 比较价格与 MOQ，(5) 向 3–5 家发 RFQ，(6) 下单前打样。中标者往往是<strong>2 小时内回复 RFQ</strong>、且备有认证图片、MOQ 阶梯报价与工厂视频的供应商——不一定是价格最低的那家。</span>
+      <span class="en">Buyers typically go through six steps: (1) keyword or image search, (2) filter by country and certification, (3) open 5–8 stores, (4) compare price and MOQ, (5) send RFQs to 3–5 suppliers, (6) sample before ordering. The winner is usually the supplier who <strong>replies to the RFQ within two hours</strong> and already has certificate images, tiered MOQ pricing and a factory video — not necessarily the cheapest.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 10 ============ -->
+<section id="s10">
+  <div class="sec-head">
+    <div class="sec-num">10</div>
+    <div>
+      <h2><span class="vi">Phân tích giá bán</span><span class="cn">价格分析</span><span class="en">Pricing analysis</span></h2>
+      <div class="sec-sub"><span class="vi">Giá niêm yết theo phân khúc và vị thế giá của các nguồn cung</span><span class="cn">各细分挂牌价与各供应来源的价格定位</span><span class="en">List prices by segment and price positioning by origin</span></div>
+    </div>
+  </div>
+
+  <p>
+    <span class="vi">Giá đồ chơi trên Alibaba.com biến động rất mạnh theo phân khúc — từ 0,62 USD cho một con plush nhỏ đến 405 USD cho một bộ cầu trượt sân vườn, tức chênh lệch hơn 600 lần. Vì vậy so sánh "giá đồ chơi Việt Nam với Trung Quốc" ở cấp ngành là vô nghĩa; phải so theo từng dòng sản phẩm cụ thể. Bảng dưới đây tổng hợp dải giá quan sát được và biên lợi nhuận ước tính ở cấp nhà nhập khẩu.</span>
+    <span class="cn">Alibaba.com 上的玩具价格随细分差异极大——从小毛绒 0.62 美元到户外滑梯套装 405 美元，相差 600 倍以上。因此"越南与中国玩具价格"的行业级比较毫无意义，必须按具体产品线比较。下表汇总观察到的价格区间与进口商层面的估算毛利。</span>
+    <span class="en">Toy prices on Alibaba.com vary wildly by segment — from USD 0.62 for a small plush to USD 405 for an outdoor slide set, a spread of more than 600 times. Industry-level "Vietnam vs China toy price" comparisons are therefore meaningless; compare by specific product line. The table summarises observed price ranges and estimated importer-level margin.</span>
+  </p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Phân khúc</span><span class="cn">细分</span><span class="en">Segment</span></th>
+        <th class="num"><span class="vi">Giá thấp</span><span class="cn">最低价</span><span class="en">Low</span></th>
+        <th class="num"><span class="vi">Giá cao</span><span class="cn">最高价</span><span class="en">High</span></th>
+        <th class="num"><span class="vi">Biên LN ước tính (NK)</span><span class="cn">进口商估算毛利</span><span class="en">Est. importer margin</span></th>
+        <th><span class="vi">Ghi chú</span><span class="cn">备注</span><span class="en">Note</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="vi">Plush nhỏ (dưới 20 cm)</span><span class="cn">小毛绒（20cm 以下）</span><span class="en">Small plush (&lt;20 cm)</span></td><td class="num">$0.62</td><td class="num">$0.93</td><td class="num">45–60%</td><td><span class="vi">MOQ thấp (50 pcs); cạnh tranh khốc liệt, biên mỏng ở khâu sản xuất</span><span class="cn">MOQ 低（50 件）；竞争激烈，生产端毛利薄</span><span class="en">Low MOQ (50 pcs); fierce competition, thin factory margin</span></td></tr>
+        <tr><td><span class="vi">Lục lạc / đồ chơi sơ sinh</span><span class="cn">摇铃 / 婴儿玩具</span><span class="en">Rattle / infant toy</span></td><td class="num">$1.30</td><td class="num">$2.00</td><td class="num">50–65%</td><td><span class="vi">Yêu cầu CPSIA + CPC; rào cản chứng nhận tạo biên cao hơn</span><span class="cn">需 CPSIA + CPC；认证门槛带来更高毛利</span><span class="en">Requires CPSIA + CPC; certification barrier supports higher margin</span></td></tr>
+        <tr><td><span class="vi">Chăn quấn / soother sơ sinh</span><span class="cn">婴儿抱被 / 安抚玩具</span><span class="en">Baby comforter / soother</span></td><td class="num">$2.25</td><td class="num">$4.49</td><td class="num">40–55%</td><td><span class="vi">Cotton hữu cơ; yêu cầu OEKO-TEX, tài liệu vật liệu</span><span class="cn">有机棉；需 OEKO-TEX 与材料文件</span><span class="en">Organic cotton; needs OEKO-TEX and material documentation</span></td></tr>
+        <tr><td><span class="vi">Búp bê móc len thủ công</span><span class="cn">手工钩编玩偶</span><span class="en">Handmade crochet doll</span></td><td class="num">$3.00</td><td class="num">$4.00</td><td class="num">55–70%</td><td><span class="vi">Giá trị thủ công cao; phù hợp nhóm sản xuất nhỏ tại VN</span><span class="cn">手工附加值高；适合越南小规模生产者</span><span class="en">High craft value; suits small VN producers</span></td></tr>
+        <tr><td><span class="vi">Puzzle gỗ nhỏ</span><span class="cn">小木制拼图</span><span class="en">Small wooden puzzle</span></td><td class="num">$3.59</td><td class="num">$3.59</td><td class="num">45–55%</td><td><span class="vi">MOQ rất cao (10.000 sets) — dành cho nhà máy lớn</span><span class="cn">MOQ 极高（10,000 套）——适合大厂</span><span class="en">Very high MOQ (10,000 sets) — for large plants only</span></td></tr>
+        <tr><td><span class="vi">Xe điều khiển (RC)</span><span class="cn">遥控车</span><span class="en">RC car</span></td><td class="num">$3.85</td><td class="num">$5.82</td><td class="num">35–50%</td><td><span class="vi">Phụ thuộc linh kiện; cần FCC/CE và pin an toàn</span><span class="cn">依赖元器件；需 FCC/CE 与电池安全</span><span class="en">Component-dependent; needs FCC/CE and battery safety</span></td></tr>
+        <tr><td><span class="vi">Bộ lắp ghép STEM</span><span class="cn">STEM 拼装套装</span><span class="en">STEM building set</span></td><td class="num">$5.50</td><td class="num">$15.60</td><td class="num">40–55%</td><td><span class="vi">Biên rộng theo số chi tiết; dễ mở rộng dòng sản phẩm</span><span class="cn">毛利随件数变化；易于扩展产品线</span><span class="en">Margin varies with piece count; easy line extension</span></td></tr>
+        <tr><td><span class="vi">Xe ride-on / ba bánh</span><span class="cn">骑乘 / 三轮车</span><span class="en">Ride-on / tricycle</span></td><td class="num">$10.90</td><td class="num">$11.90</td><td class="num">30–45%</td><td><span class="vi">Chi phí logistics lớn; MOQ thấp (10 pcs) nhưng cồng kềnh</span><span class="cn">物流成本高；MOQ 低（10 件）但体积大</span><span class="en">Heavy logistics; low MOQ (10 pcs) but bulky</span></td></tr>
+        <tr><td><span class="vi">Puzzle gỗ cao cấp</span><span class="cn">高端木制拼图</span><span class="en">Premium wooden puzzle</span></td><td class="num">$34.99</td><td class="num">$39.99</td><td class="num">50–65%</td><td><span class="vi">Thủ công, bán cho chuỗi boutique; định vị quà tặng</span><span class="cn">手工制作，供货精品店；礼品定位</span><span class="en">Handmade, sold to boutique chains; gift positioning</span></td></tr>
+        <tr><td><span class="vi">Bộ đồ nghề gỗ nhập vai</span><span class="cn">木制工具套装</span><span class="en">Wooden workshop set</span></td><td class="num">$62.13</td><td class="num">$62.13</td><td class="num">45–60%</td><td><span class="vi">Giá trị cao, MOQ 1 pc — mô hình bán lẻ trực tiếp</span><span class="cn">高价值、MOQ 1 件——直接零售模式</span><span class="en">High value, MOQ 1 pc — direct retail model</span></td></tr>
+        <tr><td><span class="vi">Sân chơi ngoài trời</span><span class="cn">户外游乐设备</span><span class="en">Outdoor playground</span></td><td class="num">$314</td><td class="num">$405</td><td class="num">25–40%</td><td><span class="vi">Đơn vị nguyên bộ; chi phí vận chuyển có thể vượt giá trị hàng</span><span class="cn">整套计价；运费可能超过货值</span><span class="en">Sold as a set; freight can exceed goods value</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tfoot">
+    <span class="vi">Giá: niêm yết thực tế trên Alibaba.com (09/11/2026). Biên lợi nhuận: <strong>ước tính của báo cáo</strong> ở cấp nhà nhập khẩu, dựa trên chênh lệch FOB và giá bán lẻ điển hình của từng phân khúc — không phải số liệu công bố; dùng để định hướng đàm phán, không dùng để cam kết với khách hàng.</span>
+    <span class="cn">价格：Alibaba.com 实际挂牌（2026-11-09）。毛利：<strong>本报告估算</strong>，为进口商层面，基于各细分 FOB 与典型零售价的差额，非公布数据；用于谈判定调，不可作为对客承诺。</span>
+    <span class="en">Prices: actual Alibaba.com listings (9 Nov 2026). Margin: <strong>report estimate</strong> at importer level, based on the gap between FOB and typical retail for each segment — not published data; use it to frame negotiation, never as a commitment to a client.</span>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">So sánh giá FOB theo phân khúc và nguồn cung</span><span class="cn">按细分与供应来源比较 FOB 价格</span><span class="en">FOB price comparison by segment and origin</span></h4>
+    <div class="cap"><span class="vi">USD/đơn vị · giá thấp nhất trong khoảng niêm yết của nguồn cung tương ứng</span><span class="cn">美元/件 · 各来源挂牌区间下限</span><span class="en">USD/unit · lower bound of the listed range for each origin</span></div>
+    <div class="canvas-wrap"><canvas id="c11"></canvas></div>
+  </div>
+
+  <div class="highlight">
+    <div class="t"><span class="vi">Chiến lược giá đề xuất cho nhà cung cấp Việt Nam</span><span class="cn">对越南供应商的定价建议</span><span class="en">Recommended pricing strategy for Vietnamese suppliers</span></div>
+    <p>
+      <span class="vi">Đừng cạnh tranh ở dải dưới 5 USD — đó là sân chơi của Trung Quốc và Ấn Độ với MOQ hàng chục nghìn chiếc. Hãy định giá ở dải <strong>5–50 USD với ba tầng MOQ</strong> (mẫu 50–100 pcs, thử đơn 500–1.000 pcs, đơn sản xuất 3.000+ pcs) và cộng thêm phí chứng nhận vào giá thay vì chịu lỗ để lấy đơn. Lưu ý riêng: trong 12 gian hàng Việt Nam được khảo sát, <strong>không gian hàng nào niêm yết chứng nhận CE/CPC/EN 71</strong> trên hồ sơ công ty — trong khi đây là bộ lọc người mua dùng trước cả khi xem giá.</span>
+      <span class="cn">不要在 5 美元以下竞争——那是中国与印度数万件 MOQ 的战场。应在 <strong>5–50 美元区间设三档 MOQ</strong>（样品 50–100 件、试单 500–1,000 件、量产 3,000 件以上），并将认证成本计入报价而非亏本接单。特别注意：所调研的 12 家越南店铺<strong>均未在公司档案中标注 CE/CPC/EN 71 认证</strong>——而这是买家在看价格之前就会使用的筛选条件。</span>
+      <span class="en">Do not compete below USD 5 — that is China's and India's arena with MOQs in the tens of thousands. Price in the <strong>USD 5–50 band with three MOQ tiers</strong> (sample 50–100 pcs, trial 500–1,000 pcs, production 3,000+ pcs) and build certification cost into the price instead of absorbing it to win the order. Note specifically: none of the 12 Vietnamese stores surveyed <strong>list CE/CPC/EN 71 certification</strong> on their company profile — and that is the filter buyers apply before they even look at price.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 11 ============ -->
+<section id="s11">
+  <div class="sec-head">
+    <div class="sec-num">11</div>
+    <div>
+      <h2><span class="vi">Chiến lược và kế hoạch cạnh tranh</span><span class="cn">竞争策略与行动计划</span><span class="en">Competitive strategy and action plan</span></h2>
+      <div class="sec-sub"><span class="vi">Từ tuân thủ → hiển thị → chuyển đổi → mở rộng</span><span class="cn">合规 → 曝光 → 转化 → 扩张</span><span class="en">Compliance → visibility → conversion → scale</span></div>
+    </div>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Chiến lược</span><span class="cn">策略</span><span class="en">Strategy</span></th>
+        <th><span class="vi">Mô tả</span><span class="cn">说明</span><span class="en">Description</span></th>
+        <th><span class="vi">Phù hợp với</span><span class="cn">适用对象</span><span class="en">Best for</span></th>
+        <th><span class="vi">ROI dự kiến</span><span class="cn">预期回报</span><span class="en">Expected return</span></th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="vi">1. Chứng nhận trước, bán sau</span><span class="cn">1. 先认证，后销售</span><span class="en">1. Certify first, sell second</span></td>
+          <td><span class="vi">Hoàn tất EN 71-1/2/3 + CPC (Mỹ) hoặc UKCA (Anh) trước khi chạy quảng cáo; đưa chứng thư lên ảnh thứ 4 của listing</span><span class="cn">在投放前完成 EN 71-1/2/3 + CPC（美国）或 UKCA（英国）；将证书放在 listing 第 4 张图</span><span class="en">Complete EN 71-1/2/3 + CPC (US) or UKCA (UK) before advertising; put the certificate in image slot 4</span></td>
+          <td><span class="vi">Mọi nhà cung cấp chưa có chứng nhận</span><span class="cn">所有尚无认证的供应商</span><span class="en">Any supplier without certification</span></td>
+          <td><span class="vi">Cao — điều kiện để được xét vào shortlist RFQ</span><span class="cn">高——进入 RFQ 候选的必要条件</span><span class="en">High — the gate to enter RFQ shortlists</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">2. Định vị "gỗ chứng nhận Việt Nam"</span><span class="cn">2. 定位"越南认证木材"</span><span class="en">2. Position "certified Vietnamese wood"</span></td>
+          <td><span class="vi">Khai thác FSC + đồ chơi gỗ giáo dục, nhắm EU và Nhật — nơi trả giá cao hơn 20–35% so với plush nhựa</span><span class="cn">结合 FSC 与木制教育玩具，瞄准欧盟与日本——比塑料毛绒溢价 20–35%</span><span class="en">Leverage FSC plus wooden educational toys, aimed at the EU and Japan — where buyers pay 20–35% more than for plastic plush</span></td>
+          <td><span class="vi">Nhà máy gỗ, xưởng thủ công quy mô vừa</span><span class="cn">木制工厂、中型手工坊</span><span class="en">Wood factories, mid-size craft workshops</span></td>
+          <td><span class="vi">Trung bình–cao, chu kỳ 6–12 tháng</span><span class="cn">中–高，周期 6–12 个月</span><span class="en">Medium–high over 6–12 months</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">3. MOQ thấp + tùy biến</span><span class="cn">3. 低 MOQ + 定制</span><span class="en">3. Low MOQ + customisation</span></td>
+          <td><span class="vi">Nhận đơn 50–500 pcs với phụ phí hợp lý; nhắm nhà bán lẻ độc lập và người bán e-commerce thay vì đối đầu đơn container</span><span class="cn">承接 50–500 件订单并合理加价；瞄准独立零售商与电商卖家，而非争夺整柜</span><span class="en">Take 50–500 pc orders at a fair premium; target independent retailers and e-commerce sellers instead of container bids</span></td>
+          <td><span class="vi">Doanh nghiệp nhỏ, hộ kinh doanh</span><span class="cn">小微企业、个体户</span><span class="en">Small firms, household businesses</span></td>
+          <td><span class="vi">Trung bình, biên cao hơn</span><span class="cn">中等，毛利更高</span><span class="en">Moderate volume, higher margin</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">4. Chuẩn hóa nội dung gian hàng</span><span class="cn">4. 店铺内容标准化</span><span class="en">4. Standardise store content</span></td>
+          <td><span class="vi">6 ảnh + 1 video theo chuẩn ngành; tiêu đề chứa từ khóa người mua thật; bảng thông số kỹ thuật và độ tuổi</span><span class="cn">6 图 + 1 视频行业标准；标题含真实买家关键词；附规格表与适用年龄</span><span class="en">Six images plus a video to category standard; real buyer keywords in titles; a spec sheet with age grading</span></td>
+          <td><span class="vi">Tất cả</span><span class="cn">全部</span><span class="en">All</span></td>
+          <td><span class="vi">Cao, chi phí thấp, hiệu quả trong 30–60 ngày</span><span class="cn">高，成本低，30–60 天见效</span><span class="en">High, low cost, visible in 30–60 days</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">5. Phản hồi RFQ dưới 2 giờ</span><span class="cn">5. 2 小时内回复 RFQ</span><span class="en">5. Sub-2-hour RFQ response</span></td>
+          <td><span class="vi">Trực RFQ theo khung giờ người mua; ba mẫu báo giá sẵn theo dải MOQ; kèm ảnh chứng nhận ngay trong tin nhắn đầu</span><span class="cn">按买家时段值守 RFQ；备好三档 MOQ 报价模板；首封即附认证图片</span><span class="en">Staff RFQs in buyer time zones; three ready quote templates by MOQ band; attach certificate images in the first message</span></td>
+          <td><span class="vi">Tất cả, đặc biệt nhà máy có chứng nhận</span><span class="cn">全部，尤其有认证的工厂</span><span class="en">All, especially certified plants</span></td>
+          <td><span class="vi">Cao — yếu tố quyết định tỉ lệ thắng</span><span class="cn">高——决定中标率的关键</span><span class="en">High — the decisive win-rate factor</span></td>
+        </tr>
+        <tr>
+          <td><span class="vi">6. Đa dạng hóa thị trường</span><span class="cn">6. 市场多元化</span><span class="en">6. Market diversification</span></td>
+          <td><span class="vi">Giảm phụ thuộc Mỹ (47,8%) bằng cách mở EU qua EVFTA, Nhật/Canada/Australia qua CPTPP</span><span class="cn">通过 EVFTA 开拓欧盟、通过 CPTPP 开拓日本/加拿大/澳大利亚，降低对美依赖（47.8%）</span><span class="en">Reduce US dependence (47.8%) via the EU under EVFTA and Japan/Canada/Australia under CPTPP</span></td>
+          <td><span class="vi">Nhà cung cấp đã có đơn Mỹ ổn định</span><span class="cn">已有稳定美国订单的供应商</span><span class="en">Suppliers with stable US orders</span></td>
+          <td><span class="vi">Trung bình, giảm rủi ro dài hạn</span><span class="cn">中等，降低长期风险</span><span class="en">Moderate, reduces long-term risk</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3><span class="vi">Lộ trình 4 giai đoạn trong 12 tháng</span><span class="cn">12 个月四阶段路线图</span><span class="en">Four-phase roadmap over 12 months</span></h3>
+  <div class="phases">
+    <div class="phase">
+      <div class="pn">Phase 1 · <span class="vi">Tháng 1–2</span><span class="cn">第 1–2 月</span><span class="en">Month 1–2</span></div>
+      <div class="pt"><span class="vi">Nền tảng &amp; tuân thủ</span><span class="cn">基础与合规</span><span class="en">Foundation &amp; compliance</span></div>
+      <p><span class="vi">Hoàn tất chứng nhận, chuẩn hóa hồ sơ công ty, ảnh và video, bảng giá ba tầng MOQ.</span><span class="cn">完成认证、标准化公司档案、图片视频、三档 MOQ 报价。</span><span class="en">Finish certification, standardise the company profile, images and video, build three-tier MOQ pricing.</span></p>
+    </div>
+    <div class="phase">
+      <div class="pn">Phase 2 · <span class="vi">Tháng 3–5</span><span class="cn">第 3–5 月</span><span class="en">Month 3–5</span></div>
+      <div class="pt"><span class="vi">Hiển thị &amp; từ khóa</span><span class="cn">曝光与关键词</span><span class="en">Visibility &amp; keywords</span></div>
+      <p><span class="vi">Phủ 20–30 từ khóa dài theo phân khúc; đăng 15–25 sản phẩm; tối ưu để vào top kết quả tìm kiếm theo quốc gia.</span><span class="cn">覆盖 20–30 个长尾词；上架 15–25 个产品；优化分国家搜索结果排名。</span><span class="en">Cover 20–30 long-tail keywords; publish 15–25 products; optimise for country-specific search ranking.</span></p>
+    </div>
+    <div class="phase">
+      <div class="pn">Phase 3 · <span class="vi">Tháng 6–9</span><span class="cn">第 6–9 月</span><span class="en">Month 6–9</span></div>
+      <div class="pt"><span class="vi">Chuyển đổi &amp; RFQ</span><span class="cn">转化与 RFQ</span><span class="en">Conversion &amp; RFQ</span></div>
+      <p><span class="vi">Trực RFQ mùa cao điểm, đàm phán mẫu, chốt đơn thử và xây dựng khách hàng lặp lại.</span><span class="cn">旺季值守 RFQ、样品谈判、拿下试单并建立复购客户。</span><span class="en">Staff RFQs through peak season, negotiate samples, close trial orders and build repeat buyers.</span></p>
+    </div>
+    <div class="phase">
+      <div class="pn">Phase 4 · <span class="vi">Tháng 10–12</span><span class="cn">第 10–12 月</span><span class="en">Month 10–12</span></div>
+      <div class="pt"><span class="vi">Mở rộng &amp; giữ chân</span><span class="cn">扩张与留存</span><span class="en">Scale &amp; retention</span></div>
+      <p><span class="vi">Mở thêm thị trường EU/CPTPP, mở rộng dòng sản phẩm, đàm phán hợp đồng năm với khách đã có.</span><span class="cn">拓展欧盟/CPTPP 市场、扩展产品线、与现有客户谈年度合同。</span><span class="en">Add EU/CPTPP markets, extend the product line, negotiate annual contracts with existing buyers.</span></p>
+    </div>
+  </div>
+
+  <div class="chart-box">
+    <h4><span class="vi">Năng lực cạnh tranh: hiện trạng so với sau 12 tháng triển khai</span><span class="cn">竞争力：现状与 12 个月后对比</span><span class="en">Competitiveness: today vs after 12 months of execution</span></h4>
+    <div class="cap"><span class="vi">Thang 0–10, đánh giá của báo cáo trên 5 trục; không phải chỉ số chính thức</span><span class="cn">0–10 分，本报告五维评估；非官方指数</span><span class="en">0–10 scale, the report's five-axis assessment; not an official index</span></div>
+    <div class="canvas-wrap"><canvas id="c12"></canvas></div>
+  </div>
+</section>
+
+<!-- ============ 12 ============ -->
+<section id="s12">
+  <div class="sec-head">
+    <div class="sec-num">12</div>
+    <div>
+      <h2><span class="vi">Phân tích SWOT</span><span class="cn">SWOT 分析</span><span class="en">SWOT analysis</span></h2>
+      <div class="sec-sub"><span class="vi">Đánh giá từ góc độ nhà cung cấp Việt Nam bán hàng trên Alibaba.com</span><span class="cn">从在 Alibaba.com 销售的越南供应商视角评估</span><span class="en">Assessed from the perspective of a Vietnamese supplier selling on Alibaba.com</span></div>
+    </div>
+  </div>
+
+  <div class="swot">
+    <div class="sw-s">
+      <h5><span class="vi">S — Điểm mạnh</span><span class="cn">S — 优势</span><span class="en">S — Strengths</span></h5>
+      <ul>
+        <li><span class="vi">Vị thế nhà xuất khẩu đồ chơi số 2 thế giới (9,6% thị phần 2025)</span><span class="cn">全球第二大玩具出口国（2025 年份额 9.6%）</span><span class="en">World's #2 toy exporter (9.6% share in 2025)</span></li>
+        <li><span class="vi">Tăng trưởng nhanh nhất nhóm dẫn đầu: +359,8% trong 5 năm</span><span class="cn">领先群体中增长最快：五年 +359.8%</span><span class="en">Fastest growth in the leading group: +359.8% over five years</span></li>
+        <li><span class="vi">Ưu đãi thuế quan EVFTA, UKVFTA, CPTPP, RCEP</span><span class="cn">EVFTA、UKVFTA、CPTPP、RCEP 关税优惠</span><span class="en">EVFTA, UKVFTA, CPTPP and RCEP tariff preferences</span></li>
+        <li><span class="vi">Năng lực chế biến gỗ và dệt may sẵn có, đạt chuẩn EU</span><span class="cn">既有木材与纺织加工能力，达欧盟标准</span><span class="en">Existing wood and textile processing at EU standard</span></li>
+        <li><span class="vi">Nguồn nguyên liệu tự nhiên dồi dào: keo, cao su, mây tre, bông, lanh</span><span class="cn">天然原料充足：相思木、橡胶木、藤竹、棉、亚麻</span><span class="en">Abundant natural materials: acacia, rubberwood, rattan, cotton, linen</span></li>
+      </ul>
+    </div>
+    <div class="sw-w">
+      <h5><span class="vi">W — Điểm yếu</span><span class="cn">W — 劣势</span><span class="en">W — Weaknesses</span></h5>
+      <ul>
+        <li><span class="vi">Phần lớn nhà cung cấp là doanh nghiệp nhỏ, khó nhận đơn trên 5.000 pcs</span><span class="cn">多数供应商为小微企业，难接 5,000 件以上订单</span><span class="en">Most suppliers are small and struggle above 5,000 pcs</span></li>
+        <li><span class="vi">Thiếu chứng nhận CE/CPC/EN 71 trên hồ sơ công khai</span><span class="cn">公开档案缺少 CE/CPC/EN 71 认证</span><span class="en">CE/CPC/EN 71 missing from public profiles</span></li>
+        <li><span class="vi">Hồ sơ không công bố doanh thu, nhân sự, công suất</span><span class="cn">档案未披露营收、人员、产能</span><span class="en">Profiles disclose no revenue, headcount or capacity</span></li>
+        <li><span class="vi">Yếu về linh kiện điện tử, pin, khuôn mẫu phức tạp</span><span class="cn">电子元件、电池、复杂模具较弱</span><span class="en">Weak in electronics, batteries and complex tooling</span></li>
+        <li><span class="vi">Nội dung listing và tốc độ phản hồi RFQ thấp hơn đối thủ Trung Quốc</span><span class="cn">listing 内容与 RFQ 响应速度低于中国对手</span><span class="en">Listing content and RFQ speed lag Chinese competitors</span></li>
+      </ul>
+    </div>
+    <div class="sw-o">
+      <h5><span class="vi">O — Cơ hội</span><span class="cn">O — 机会</span><span class="en">O — Opportunities</span></h5>
+      <ul>
+        <li><span class="vi">Dịch chuyển sản xuất khỏi Trung Quốc (LEGO, MGA Entertainment)</span><span class="cn">产能从中国外移（LEGO、MGA Entertainment）</span><span class="en">Manufacturing shift out of China (LEGO, MGA Entertainment)</span></li>
+        <li><span class="vi">Đồ chơi bền vững tăng CAGR 12,7% đến 2032</span><span class="cn">可持续玩具至 2032 年 CAGR 12.7%</span><span class="en">Sustainable toys at 12.7% CAGR to 2032</span></li>
+        <li><span class="vi">Đồ chơi giáo dục tăng CAGR 8,53% (2026–2034)</span><span class="cn">教育玩具 2026–2034 年 CAGR 8.53%</span><span class="en">Educational toys at 8.53% CAGR (2026–2034)</span></li>
+        <li><span class="vi">Xu hướng "kidulting" mở nhóm khách trưởng thành trả giá cao</span><span class="cn">"Kidult" 趋势带来高支付力成人客群</span><span class="en">"Kidulting" opens a high-spend adult buyer group</span></li>
+        <li><span class="vi">EU và CPTPP chiếm 26% nhập khẩu toàn cầu, thuế quan thấp hơn Mỹ</span><span class="cn">欧盟与 CPTPP 占全球进口 26%，关税低于美国</span><span class="en">EU and CPTPP make up 26% of world imports at lower duty than the US</span></li>
+      </ul>
+    </div>
+    <div class="sw-t">
+      <h5><span class="vi">T — Thách thức</span><span class="cn">T — 威胁</span><span class="en">T — Threats</span></h5>
+      <ul>
+        <li><span class="vi">Thuế nhập khẩu Mỹ 12,5% với HTS 9503.00.00, có thể điều chỉnh</span><span class="cn">美国 HTS 9503.00.00 关税 12.5%，仍可能调整</span><span class="en">US duty of 12.5% on HTS 9503.00.00, subject to change</span></li>
+        <li><span class="vi">Tập trung 47,8% kim ngạch vào một thị trường</span><span class="cn">47.8% 出口集中于单一市场</span><span class="en">47.8% of export value in a single market</span></li>
+        <li><span class="vi">Indonesia, Ấn Độ cạnh tranh trực tiếp bằng chi phí thấp hơn</span><span class="cn">印尼、印度以更低成本直接竞争</span><span class="en">Indonesia and India compete directly on lower cost</span></li>
+        <li><span class="vi">Rủi ro thu hồi sản phẩm và yêu cầu an toàn ngày càng chặt</span><span class="cn">产品召回风险与日益严格的安全要求</span><span class="en">Recall risk and tightening safety requirements</span></li>
+        <li><span class="vi">Giá nguyên liệu gỗ, bông và cước vận tải biến động mạnh</span><span class="cn">木材、棉花价格与海运费波动剧烈</span><span class="en">Wood, cotton and ocean freight prices are volatile</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13 ============ -->
+<section id="s13">
+  <div class="sec-head">
+    <div class="sec-num">13</div>
+    <div>
+      <h2><span class="vi">Đề xuất đầu tư và ROI</span><span class="cn">投入建议与回报</span><span class="en">Investment recommendation and ROI</span></h2>
+      <div class="sec-sub"><span class="vi">Ba cấu hình gói và mô hình lợi nhuận 12 tháng</span><span class="cn">三档方案与 12 个月收益模型</span><span class="en">Three package configurations and a 12-month return model</span></div>
+    </div>
+  </div>
+
+  <p>
+    <span class="vi">Ngành đồ chơi cần vốn đầu tư vào chứng nhận và nội dung trước khi có đơn hàng lớn. Bảng dưới so sánh ba cấu hình theo <em>năng lực vận hành</em> thay vì giá gói — giá gói thay đổi theo chương trình hiện hành và cần AM xác nhận trực tiếp với khách. Phần ROI là mô hình giả định, không phải cam kết.</span>
+    <span class="cn">玩具行业需要在拿到大单前先投入认证与内容。下表按<em>运营能力</em>比较三档方案，而非套餐价格——套餐价格随当期政策变动，需客户经理与客户直接确认。ROI 部分为假设模型，非承诺。</span>
+    <span class="en">Toys require capital in certification and content before large orders arrive. The table compares three configurations by <em>operating capability</em> rather than package price — pricing changes with current programmes and the AM must confirm it directly with the client. The ROI section is a scenario model, not a commitment.</span>
+  </p>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Năng lực</span><span class="cn">能力</span><span class="en">Capability</span></th>
+        <th>Basic</th>
+        <th>+ KWA</th>
+        <th>Verified + Premium</th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="vi">Hiển thị gian hàng &amp; sản phẩm</span><span class="cn">店铺与产品展示</span><span class="en">Store and product display</span></td><td><span class="vi">Cơ bản</span><span class="cn">基础</span><span class="en">Basic</span></td><td><span class="vi">Tốt hơn</span><span class="cn">较好</span><span class="en">Improved</span></td><td><span class="vi">Tối đa</span><span class="cn">最佳</span><span class="en">Full</span></td></tr>
+        <tr><td><span class="vi">Huy hiệu tin cậy (Verified)</span><span class="cn">认证标识（Verified）</span><span class="en">Trust badge (Verified)</span></td><td>—</td><td>—</td><td><span class="vi">Có — tác động trực tiếp đến tỉ lệ mở tin nhắn</span><span class="cn">有——直接影响询盘打开率</span><span class="en">Yes — directly affects inquiry open rates</span></td></tr>
+        <tr><td><span class="vi">Công cụ từ khóa &amp; phân tích dữ liệu</span><span class="cn">关键词工具与数据分析</span><span class="en">Keyword and analytics tools</span></td><td><span class="vi">Hạn chế</span><span class="cn">有限</span><span class="en">Limited</span></td><td><span class="vi">Đầy đủ</span><span class="cn">完整</span><span class="en">Full</span></td><td><span class="vi">Đầy đủ + dữ liệu ngành</span><span class="cn">完整 + 行业数据</span><span class="en">Full plus industry data</span></td></tr>
+        <tr><td><span class="vi">Quyền truy cập RFQ</span><span class="cn">RFQ 权限</span><span class="en">RFQ access</span></td><td><span class="vi">Giới hạn</span><span class="cn">受限</span><span class="en">Limited</span></td><td><span class="vi">Mở rộng</span><span class="cn">扩展</span><span class="en">Expanded</span></td><td><span class="vi">Ưu tiên</span><span class="cn">优先</span><span class="en">Priority</span></td></tr>
+        <tr><td><span class="vi">Hỗ trợ nội dung &amp; ảnh sản phẩm</span><span class="cn">内容与产品图支持</span><span class="en">Content and imagery support</span></td><td><span class="vi">Tự làm</span><span class="cn">自行处理</span><span class="en">Self-service</span></td><td><span class="vi">Một phần</span><span class="cn">部分</span><span class="en">Partial</span></td><td><span class="vi">Đầy đủ theo chuẩn ngành</span><span class="cn">按行业标准完整支持</span><span class="en">Full, to category standard</span></td></tr>
+        <tr><td><span class="vi">Phù hợp giai đoạn</span><span class="cn">适用阶段</span><span class="en">Suitable stage</span></td><td><span class="vi">Kiểm tra thị trường</span><span class="cn">市场测试</span><span class="en">Market testing</span></td><td><span class="vi">Đã có 1–2 khách lặp lại</span><span class="cn">已有 1–2 个复购客户</span><span class="en">1–2 repeat buyers already</span></td><td><span class="vi">Mục tiêu đơn container đều</span><span class="cn">目标为稳定整柜订单</span><span class="en">Targeting steady container orders</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3><span class="vi">Giả định của mô hình ROI</span><span class="cn">ROI 模型假设</span><span class="en">ROI model assumptions</span></h3>
+  <ul>
+    <li><span class="vi">Đơn hàng trung bình: 3.000 pcs, giá FOB 2,50 USD → doanh thu 7.500 USD/đơn.</span><span class="cn">平均订单：3,000 件，FOB 2.50 美元 → 每单 7,500 美元。</span><span class="en">Average order: 3,000 pcs at USD 2.50 FOB → USD 7,500 per order.</span></li>
+    <li><span class="vi">Số đơn mới mỗi tháng tăng dần theo lộ trình 4 giai đoạn ở mục 11.</span><span class="cn">每月新单量按第 11 节四阶段路线逐步增加。</span><span class="en">New orders per month ramp according to the four-phase roadmap in section 11.</span></li>
+    <li><span class="vi">Chi phí cố định gồm gói nền tảng, chứng nhận (phân bổ 12 tháng) và sản xuất nội dung.</span><span class="cn">固定成本含平台套餐、认证（12 个月分摊）与内容制作。</span><span class="en">Fixed cost includes platform package, certification (amortised over 12 months) and content production.</span></li>
+    <li><span class="vi">Biên gộp 25% trên doanh thu đơn hàng — mức thận trọng cho gia công đồ chơi.</span><span class="cn">订单毛利率 25%——玩具代工的保守水平。</span><span class="en">25% gross margin on order revenue — conservative for toy contract manufacturing.</span></li>
+  </ul>
+  <p class="note">
+    <span class="vi">Các con số trên là giả định phục vụ lập kế hoạch. Kết quả thực tế phụ thuộc vào chứng nhận, năng lực sản xuất và tốc độ phản hồi RFQ của từng khách hàng.</span>
+    <span class="cn">上述数字为规划假设。实际结果取决于各客户的认证、产能与 RFQ 响应速度。</span>
+    <span class="en">These figures are planning assumptions. Actual results depend on each client's certification, capacity and RFQ responsiveness.</span>
+  </p>
+
+  <div class="chart-box">
+    <h4><span class="vi">Dự phóng 12 tháng: chi phí lũy kế và doanh thu lũy kế (mô hình giả định)</span><span class="cn">12 个月预测：累计成本与累计营收（假设模型）</span><span class="en">12-month projection: cumulative cost and cumulative revenue (scenario model)</span></h4>
+    <div class="cap"><span class="vi">Đơn vị: nghìn USD · giả định theo bảng phía trên</span><span class="cn">单位：千美元 · 依据上方假设</span><span class="en">USD thousand · based on the assumptions above</span></div>
+    <div class="canvas-wrap"><canvas id="c13"></canvas></div>
+  </div>
+
+  <div class="insight">
+    <div class="t"><span class="vi">Đọc mô hình này đúng cách</span><span class="cn">如何正确解读</span><span class="en">How to read this model</span></div>
+    <p>
+      <span class="vi">Điểm hòa vốn trong mô hình rơi vào khoảng tháng 7–8, tức ngay trước mùa cao điểm đặt hàng. Nếu khách hàng bắt đầu vào tháng 11–12, họ sẽ đi qua giai đoạn chứng nhận và nội dung đúng vào lúc người mua đang tìm nguồn cho mùa sau — đây là thời điểm tốt nhất để khởi động, không phải quý 1. Đừng trình bày con số này như dự báo; hãy trình bày như <strong>cấu trúc chi phí và thứ tự ưu tiên</strong>.</span>
+      <span class="cn">模型中的盈亏平衡点在第 7–8 月，正好在采购旺季之前。若客户在 11–12 月启动，其认证与内容阶段将正好落在买家为下一季寻源之时——这是最佳启动窗口，而非一季度。不要把这些数字当作预测呈现，而应作为<strong>成本结构与优先级</strong>呈现。</span>
+      <span class="en">Break-even in the model falls around month 7–8, just before the sourcing peak. If a client starts in November–December, certification and content work lands exactly when buyers are sourcing for the next season — the best launch window, not Q1. Present these figures as a <strong>cost structure and priority order</strong>, not as a forecast.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 14 ============ -->
+<section id="s14">
+  <div class="sec-head">
+    <div class="sec-num">14</div>
+    <div>
+      <h2><span class="vi">Kết luận và khuyến nghị</span><span class="cn">结论与建议</span><span class="en">Conclusion and recommendations</span></h2>
+      <div class="sec-sub"><span class="vi">Đánh giá tiềm năng ngành và hành động ưu tiên</span><span class="cn">行业潜力评估与优先行动</span><span class="en">Category potential and priority actions</span></div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <div class="vt"><span class="vi">Đánh giá tổng thể</span><span class="cn">总体评估</span><span class="en">Overall verdict</span></div>
+    <h3><span class="vi">Tiềm năng CAO — nhưng thắng bằng tuân thủ, không bằng giá</span><span class="cn">潜力高——但取胜靠合规，不靠价格</span><span class="en">HIGH potential — but won on compliance, not price</span></h3>
+    <p>
+      <span class="vi">Đồ chơi trẻ em là một trong những ngành hàng có cấu trúc thuận lợi nhất cho nhà cung cấp Việt Nam trong 3–5 năm tới: cầu toàn cầu 123 tỷ USD và tăng 8%, chuỗi cung ứng đang dịch chuyển khỏi Trung Quốc, Việt Nam đã ở vị thế số 2 thế giới, và ba hiệp định thương mại đang tạo lợi thế thuế quan thực tế.</span>
+      <span class="cn">儿童玩具是未来 3–5 年对越南供应商结构最有利的品类之一：全球需求 1,230 亿美元且增长 8%，供应链正从中国外移，越南已居全球第二，三项自贸协定带来实际关税优势。</span>
+      <span class="en">Kids' toys is one of the most structurally favourable categories for Vietnamese suppliers over the next 3–5 years: USD 123 billion of global demand growing 8%, a supply chain shifting out of China, Vietnam already at number two worldwide, and three trade agreements delivering real tariff advantage.</span>
+    </p>
+    <p>
+      <span class="vi">Nhưng dữ liệu khảo sát trên Alibaba.com cho thấy khoảng cách lớn nhất <strong>không nằm ở năng lực sản xuất mà ở khả năng được tin</strong>: hồ sơ trống, không chứng nhận, không giá, phản hồi chậm. Một nhà máy có thể sản xuất tốt hơn nhưng vẫn thua một nhà cung cấp Trung Quốc chỉ vì người mua không có bằng chứng để đặt niềm tin.</span>
+      <span class="cn">但 Alibaba.com 调研数据显示，最大差距<strong>不在产能，而在可信度</strong>：档案空白、无认证、无价格、响应慢。一家产能更好的工厂，可能仅因买家缺少可信依据而输给中国供应商。</span>
+      <span class="en">But the Alibaba.com research shows the biggest gap is <strong>not production capability but credibility</strong>: blank profiles, no certification, no pricing, slow replies. A better factory can still lose to a Chinese supplier simply because the buyer has no evidence to trust.</span>
+    </p>
+  </div>
+
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Ưu tiên</span><span class="cn">优先级</span><span class="en">Priority</span></th>
+        <th><span class="vi">Hành động</span><span class="cn">行动</span><span class="en">Action</span></th>
+        <th><span class="vi">Kết quả kỳ vọng</span><span class="cn">预期结果</span><span class="en">Expected outcome</span></th>
+        <th><span class="vi">Timeline</span><span class="cn">时间</span><span class="en">Timeline</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span class="vi">1 — Cấp thiết</span><span class="cn">1 — 紧急</span><span class="en">1 — Urgent</span></td><td><span class="vi">Hoàn tất chứng nhận EN 71 / CPC và đăng lên hồ sơ công ty</span><span class="cn">完成 EN 71 / CPC 认证并上传至公司档案</span><span class="en">Complete EN 71 / CPC and upload it to the company profile</span></td><td><span class="vi">Đủ điều kiện vào shortlist RFQ; tăng tỉ lệ mở tin nhắn</span><span class="cn">具备进入 RFQ 候选资格；提升询盘打开率</span><span class="en">Eligible for RFQ shortlists; higher inquiry open rate</span></td><td><span class="vi">0–60 ngày</span><span class="cn">0–60 天</span><span class="en">0–60 days</span></td></tr>
+        <tr><td>2 — <span class="vi">Cao</span><span class="cn">高</span><span class="en">High</span></td><td><span class="vi">Chuẩn hóa hồ sơ: doanh thu, nhân sự, diện tích, công suất, 6 ảnh + 1 video</span><span class="cn">档案标准化：营收、人员、面积、产能、6 图 + 1 视频</span><span class="en">Standardise the profile: revenue, headcount, area, capacity, six images plus a video</span></td><td><span class="vi">Rút ngắn thời gian người mua ra quyết định</span><span class="cn">缩短买家决策时间</span><span class="en">Shorter buyer decision time</span></td><td><span class="vi">30–90 ngày</span><span class="cn">30–90 天</span><span class="en">30–90 days</span></td></tr>
+        <tr><td>3 — <span class="vi">Cao</span><span class="cn">高</span><span class="en">High</span></td><td><span class="vi">Thiết lập SLA phản hồi RFQ dưới 2 giờ và ba mẫu báo giá theo MOQ</span><span class="cn">建立 2 小时内 RFQ 响应 SLA 与三档 MOQ 报价模板</span><span class="en">Set a sub-2-hour RFQ SLA and three MOQ quote templates</span></td><td><span class="vi">Tăng tỉ lệ thắng RFQ trong mùa cao điểm</span><span class="cn">提升旺季 RFQ 中标率</span><span class="en">Higher RFQ win rate in peak season</span></td><td><span class="vi">0–30 ngày</span><span class="cn">0–30 天</span><span class="en">0–30 days</span></td></tr>
+        <tr><td>4 — <span class="vi">Trung bình</span><span class="cn">中</span><span class="en">Medium</span></td><td><span class="vi">Phủ 20–30 từ khóa dài, đăng 15–25 sản phẩm theo phân khúc gỗ giáo dục và plush</span><span class="cn">覆盖 20–30 个长尾词，上架 15–25 个木制教育与毛绒产品</span><span class="en">Cover 20–30 long-tail keywords; publish 15–25 wooden educational and plush products</span></td><td><span class="vi">Tăng lưu lượng tìm kiếm tự nhiên</span><span class="cn">提升自然搜索流量</span><span class="en">More organic search traffic</span></td><td><span class="vi">30–120 ngày</span><span class="cn">30–120 天</span><span class="en">30–120 days</span></td></tr>
+        <tr><td>5 — <span class="vi">Trung bình</span><span class="cn">中</span><span class="en">Medium</span></td><td><span class="vi">Mở thị trường EU (EVFTA) và CPTPP để giảm phụ thuộc Mỹ</span><span class="cn">开拓欧盟（EVFTA）与 CPTPP 市场，降低对美依赖</span><span class="en">Open EU (EVFTA) and CPTPP markets to cut US dependence</span></td><td><span class="vi">Phân tán rủi ro thuế quan và tỷ giá</span><span class="cn">分散关税与汇率风险</span><span class="en">Diversified tariff and FX risk</span></td><td><span class="vi">6–12 tháng</span><span class="cn">6–12 个月</span><span class="en">6–12 months</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight">
+    <div class="t"><span class="vi">Bước tiếp theo cho AM</span><span class="cn">客户经理的下一步</span><span class="en">Next step for the AM</span></div>
+    <p>
+      <span class="vi">Bước 1: chọn 3 khách hàng tiềm năng nhất trong danh sách 12 nhà cung cấp Việt Nam ở mục 07 (ưu tiên DPG Vietnam, YK Plush, VIETMADE). Bước 2: đối chiếu hồ sơ của họ với một đối thủ Trung Quốc cùng phân khúc trong cùng bảng — khoảng cách hiển thị chính là nội dung cuộc gọi tư vấn. Bước 3: chuẩn bị checklist chứng nhận theo thị trường mục tiêu (Mỹ: CPC + CPSIA; EU: EN 71 + CE; Anh: UKCA). Bước 4: đặt lịch tư vấn trước tháng 3 để kịp mùa đặt hàng.</span>
+      <span class="cn">第一步：在第 07 节的 12 家越南供应商中选出 3 家最有潜力的客户（优先 DPG Vietnam、YK Plush、VIETMADE）。第二步：将其档案与同表中同细分的中国对手对比——展示差距即是咨询通话的内容。第三步：按目标市场准备认证清单（美国：CPC + CPSIA；欧盟：EN 71 + CE；英国：UKCA）。第四步：在 3 月前安排咨询，赶上采购季。</span>
+      <span class="en">Step 1: pick the three most promising clients from the 12 Vietnamese suppliers in section 07 (prioritise DPG Vietnam, YK Plush, VIETMADE). Step 2: benchmark their profiles against a Chinese competitor in the same segment from the same table — the visibility gap is the content of the advisory call. Step 3: prepare a certification checklist by target market (US: CPC + CPSIA; EU: EN 71 + CE; UK: UKCA). Step 4: book the advisory session before March to catch the ordering season.</span>
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="f-top">
+    <div class="wrap">
+      <img src="https://s.alicdn.com/@logo/logo_en_light_horizontal_default_full.png" alt="Alibaba.com">
+      <span>Alibaba.com — GGS Vietnam</span>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="f-cols">
+      <div>
+        <h6><span class="vi">Giới thiệu</span><span class="cn">关于</span><span class="en">About</span></h6>
+        <p><span class="vi">Alibaba.com là nền tảng thương mại điện tử B2B toàn cầu, kết nối nhà cung cấp tại hơn 190 quốc gia và vùng lãnh thổ với người mua doanh nghiệp.</span><span class="cn">Alibaba.com 是全球 B2B 电商平台，连接 190 多个国家和地区的供应商与企业买家。</span><span class="en">Alibaba.com is a global B2B e-commerce platform connecting suppliers in more than 190 countries and regions with business buyers.</span></p>
+      </div>
+      <div>
+        <h6><span class="vi">Liên hệ</span><span class="cn">联系</span><span class="en">Contact</span></h6>
+        <p>GGS Vietnam Account Management<br><span class="vi">Báo cáo soạn cho mục đích tư vấn nội bộ</span><span class="cn">本报告仅供内部咨询使用</span><span class="en">Report prepared for internal advisory use</span></p>
+      </div>
+      <div>
+        <h6><span class="vi">Pháp lý</span><span class="cn">法律声明</span><span class="en">Legal</span></h6>
+        <p><span class="vi">Số liệu thị trường lấy từ nguồn công khai được ghi rõ ở từng mục; số liệu nhà cung cấp đọc trực tiếp trên Alibaba.com ngày 09/11/2026. Các mô hình ước tính được dán nhãn rõ và không phải cam kết.</span><span class="cn">市场数据来自各节标注的公开来源；供应商数据于 2026-11-09 直接读取自 Alibaba.com。估算模型均已标注，不构成承诺。</span><span class="en">Market data comes from the public sources cited in each section; supplier data was read directly on Alibaba.com on 9 November 2026. Estimated models are labelled and are not commitments.</span></p>
+      </div>
+      <div>
+        <h6><span class="vi">Nguồn dữ liệu</span><span class="cn">数据来源</span><span class="en">Resources</span></h6>
+        <ul>
+          <li><a href="https://www.toyassociation.org/ta/toys/research-and-data/data/global-sales-data.aspx" target="_blank" rel="noopener">The Toy Association</a></li>
+          <li><a href="https://oec.world/en/profile/bilateral-product/other-toys/reporter/vnm" target="_blank" rel="noopener">OEC — Vietnam toys</a></li>
+          <li><a href="https://comtradeplus.un.org/" target="_blank" rel="noopener">UN Comtrade</a></li>
+          <li><a href="https://www.worldstopexports.com/top-toys-exporters-for-traditional-toys-versus-video-games/" target="_blank" rel="noopener">World's Top Exports</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-copy">
+      <span>DOC-IND-TOYS-2026-001 · v1.0 · 09/11/2026</span>
+      <span>© 2026 Alibaba.com — GGS Vietnam. <span class="vi">Tài liệu nội bộ.</span><span class="cn">内部文件。</span><span class="en">Internal document.</span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= Language switch ================= */
+function switchLang(lang){
+  document.documentElement.className = 'lang-' + lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang-switcher button').forEach(function(b){
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  buildCharts(lang);
+}
+
+/* ================= Chart labels ================= */
+var L = {
+  vi: {
+    exportLabel:'Xuất khẩu đồ chơi toàn cầu (tỷ USD)',
+    retailLabel:'Bán lẻ đồ chơi toàn cầu (tỷ USD)',
+    demandIdx:'Chỉ số nhu cầu (trung bình = 100)',
+    lowPrice:'Giá thấp (USD)',
+    highPrice:'Giá cao (USD)',
+    unitPrice:'USD / sản phẩm (thang log)',
+    vnDest:'Thị trường nhận (% giá trị)',
+    sharePct:'Thị phần (%)',
+    growth5y:'Tăng trưởng 5 năm (%)',
+    importVal:'Nhập khẩu 2024 (tỷ USD)',
+    importShare:'% tổng nhập khẩu thế giới',
+    regionShare:'Tỉ trọng khu vực (%)',
+    productCount:'Số sản phẩm',
+    personaShare:'% cơ cấu đơn hàng (ước tính)',
+    priceUSD:'USD / đơn vị (thang log)',
+    score:'Điểm (0–10)',
+    cumCost:'Chi phí lũy kế',
+    cumRev:'Doanh thu lũy kế',
+    cumGross:'Lợi nhuận gộp lũy kế (25%)',
+    usdThousand:'nghìn USD',
+    usdBn:'tỷ USD',
+    month:'Tháng ',
+    today:'Hiện trạng',
+    after12:'Sau 12 tháng',
+    axCompliance:'Tuân thủ', axContent:'Nội dung', axTraffic:'Lưu lượng', axConversion:'Chuyển đổi', axRetention:'Giữ chân',
+    p1:'Nhà bán lẻ độc lập', p2:'Nhà nhập khẩu', p3:'Thương hiệu / IP', p4:'Người bán e-commerce', p5:'Mua khuyến mãi', p6:'PP đồ chơi giáo dục',
+    s1:'Plush nhỏ', s2:'Lục lạc sơ sinh', s3:'Chăn quấn sơ sinh', s4:'Búp bê móc len', s5:'Puzzle gỗ nhỏ', s6:'Xe điều khiển', s7:'Bộ lắp ghép STEM', s8:'Xe ba bánh', s9:'Puzzle gỗ cao cấp', s10:'Bộ đồ nghề gỗ', s11:'Sân chơi ngoài trời',
+    band1:'< 1 USD', band2:'1–5 USD', band3:'5–15 USD', band4:'15–50 USD', band5:'> 50 USD',
+    originIN:'Ấn Độ', originTH:'Thái Lan', originTR:'Thổ Nhĩ Kỳ', originCN:'Trung Quốc', originPL:'Ba Lan',
+    other:'Khác'
+  },
+  cn: {
+    exportLabel:'全球玩具出口额（十亿美元）',
+    retailLabel:'全球玩具零售额（十亿美元）',
+    demandIdx:'需求指数（均值 = 100）',
+    lowPrice:'最低价（美元）',
+    highPrice:'最高价（美元）',
+    unitPrice:'美元 / 件（对数轴）',
+    vnDest:'目的地（占出口额%）',
+    sharePct:'份额（%）',
+    growth5y:'五年增长（%）',
+    importVal:'2024 进口额（十亿美元）',
+    importShare:'占全球进口%',
+    regionShare:'地区占比（%）',
+    productCount:'产品数',
+    personaShare:'订单结构%（估算）',
+    priceUSD:'美元 / 件（对数轴）',
+    score:'评分（0–10）',
+    cumCost:'累计成本',
+    cumRev:'累计营收',
+    cumGross:'累计毛利（25%）',
+    usdThousand:'千美元',
+    usdBn:'十亿美元',
+    month:'第 ',
+    today:'现状',
+    after12:'12 个月后',
+    axCompliance:'合规', axContent:'内容', axTraffic:'流量', axConversion:'转化', axRetention:'留存',
+    p1:'独立零售商', p2:'进口商', p3:'品牌 / IP', p4:'电商卖家', p5:'促销采购', p6:'教育玩具分销商',
+    s1:'小毛绒', s2:'婴儿摇铃', s3:'婴儿抱被', s4:'钩编玩偶', s5:'小木拼图', s6:'遥控车', s7:'STEM 积木', s8:'三轮车', s9:'高端木拼图', s10:'木制工具套', s11:'户外游乐',
+    band1:'< 1 美元', band2:'1–5 美元', band3:'5–15 美元', band4:'15–50 美元', band5:'> 50 美元',
+    originIN:'印度', originTH:'泰国', originTR:'土耳其', originCN:'中国', originPL:'波兰',
+    other:'其他'
+  },
+  en: {
+    exportLabel:'Global toy exports (USD bn)',
+    retailLabel:'Global toy retail (USD bn)',
+    demandIdx:'Demand index (average = 100)',
+    lowPrice:'Low price (USD)',
+    highPrice:'High price (USD)',
+    unitPrice:'USD per unit (log scale)',
+    vnDest:'Destination (% of value)',
+    sharePct:'Share (%)',
+    growth5y:'Five-year growth (%)',
+    importVal:'2024 imports (USD bn)',
+    importShare:'% of world imports',
+    regionShare:'Regional share (%)',
+    productCount:'Products',
+    personaShare:'% of order mix (estimated)',
+    priceUSD:'USD per unit (log scale)',
+    score:'Score (0–10)',
+    cumCost:'Cumulative cost',
+    cumRev:'Cumulative revenue',
+    cumGross:'Cumulative gross profit (25%)',
+    usdThousand:'USD thousand',
+    usdBn:'USD bn',
+    month:'Month ',
+    today:'Today',
+    after12:'After 12 months',
+    axCompliance:'Compliance', axContent:'Content', axTraffic:'Traffic', axConversion:'Conversion', axRetention:'Retention',
+    p1:'Independent retailer', p2:'Importer', p3:'Brand / IP owner', p4:'E-commerce seller', p5:'Promo buyer', p6:'Educational distributor',
+    s1:'Small plush', s2:'Baby rattle', s3:'Baby comforter', s4:'Crochet doll', s5:'Small wooden puzzle', s6:'RC car', s7:'STEM building set', s8:'Tricycle', s9:'Premium wooden puzzle', s10:'Wooden workshop set', s11:'Outdoor playground',
+    band1:'< USD 1', band2:'USD 1–5', band3:'USD 5–15', band4:'USD 15–50', band5:'> USD 50',
+    originIN:'India', originTH:'Thailand', originTR:'Türkiye', originCN:'China', originPL:'Poland',
+    other:'Others'
+  }
+};
+
+var CHARTS = {};
+var PALETTE = ['#1B365D','#E8740C','#2E8B57','#2D5AA0','#B7791F','#7B4EA8','#C0392B','#0E7C86','#8A6D1F','#5A6072','#B9C4D2'];
+
+function destroyAll(){
+  Object.keys(CHARTS).forEach(function(k){ if(CHARTS[k]){ CHARTS[k].destroy(); } });
+  CHARTS = {};
+}
+
+function buildCharts(lang){
+  var t = L[lang] || L.vi;
+  var font = lang === 'cn' ? "'Noto Sans SC', sans-serif" : (lang === 'en' ? "'Inter', sans-serif" : "'Be Vietnam Pro', sans-serif");
+  if (typeof Chart === 'undefined') { return; }
+  Chart.defaults.font.family = font;
+  Chart.defaults.font.size = 11;
+  Chart.defaults.color = '#4A5568';
+  destroyAll();
+
+  var gridCfg = {color:'#EDF1F6'};
+
+  /* c1 — global exports & retail */
+  CHARTS.c1 = new Chart(document.getElementById('c1'), {
+    type:'bar',
+    data:{
+      labels:['2021','2024','2025'],
+      datasets:[
+        {label:t.exportLabel, data:[98.3,84.1,92.5], backgroundColor:'#1B365D', borderRadius:4, barPercentage:.55},
+        {label:t.retailLabel, data:[null,113.9,123.0], backgroundColor:'#E8740C', borderRadius:4, barPercentage:.55}
+      ]
+    },
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{boxWidth:12,usePointStyle:true,pointStyle:'rectRounded'}}},
+      scales:{y:{beginAtZero:true,grid:gridCfg,title:{display:true,text:t.usdBn}},
+              x:{grid:{display:false}}}
+    }
+  });
+
+  /* c2 — seasonality */
+  CHARTS.c2 = new Chart(document.getElementById('c2'), {
+    type:'line',
+    data:{
+      labels:['J','F','M','A','M','J','J','A','S','O','N','D'],
+      datasets:[{label:t.demandIdx, data:[82,88,96,105,112,116,118,114,104,94,86,78],
+        borderColor:'#E8740C', backgroundColor:'rgba(232,116,12,.10)', fill:true, tension:.35,
+        pointRadius:3, pointBackgroundColor:'#E8740C', borderWidth:2.5}]
+    },
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}},
+      scales:{y:{beginAtZero:false, suggestedMin:60, suggestedMax:130, grid:gridCfg}, x:{grid:{display:false}}}
+    }
+  });
+
+  /* c3 — price range by segment */
+  CHARTS.c3 = new Chart(document.getElementById('c3'), {
+    type:'bar',
+    data:{
+      labels:[t.s1,t.s2,t.s3,t.s4,t.s5,t.s6,t.s7,t.s8,t.s9,t.s10,t.s11],
+      datasets:[
+        {label:t.lowPrice, data:[0.62,1.30,2.25,3.00,3.59,3.85,5.50,10.90,34.99,62.13,314],
+         backgroundColor:'#1B365D', borderRadius:3, barPercentage:.7},
+        {label:t.highPrice, data:[0.93,2.00,4.49,4.00,3.59,5.82,15.60,11.90,39.99,62.13,405],
+         backgroundColor:'#E8740C', borderRadius:3, barPercentage:.7}
+      ]
+    },
+    options:{indexAxis:'y', responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{boxWidth:12,usePointStyle:true,pointStyle:'rectRounded'}}},
+      scales:{x:{type:'logarithmic',grid:gridCfg,title:{display:true,text:t.unitPrice}}, y:{grid:{display:false}}}
+    }
+  });
+
+  /* c4 — VN destinations doughnut */
+  CHARTS.c4 = new Chart(document.getElementById('c4'), {
+    type:'doughnut',
+    data:{labels:['United States','Japan','China','United Kingdom','Germany', t.other],
+      datasets:[{data:[1.630,0.355,0.182,0.164,0.121,0.958],
+        backgroundColor:['#1B365D','#E8740C','#2E8B57','#2D5AA0','#B7791F','#B9C4D2'], borderWidth:2, borderColor:'#fff'}]},
+    options:{responsive:true, maintainAspectRatio:false, cutout:'52%',
+      plugins:{legend:{position:'right',labels:{boxWidth:11,usePointStyle:true,pointStyle:'circle'}},
+        tooltip:{callbacks:{label:function(c){return c.label + ': ' + c.parsed.toFixed(3) + ' bn USD';}}}}
+    }
+  });
+
+  /* c5 — supplier share pie */
+  CHARTS.c5 = new Chart(document.getElementById('c5'), {
+    type:'pie',
+    data:{labels:['China','Vietnam','Czechia','Germany','Poland','Japan','United States','Hong Kong','Netherlands','Belgium', t.other],
+      datasets:[{data:[50.8,9.6,4.5,4.2,2.8,2.6,2.6,2.3,2.1,1.9,16.6],
+        backgroundColor:PALETTE, borderWidth:2, borderColor:'#fff'}]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'right',labels:{boxWidth:11,usePointStyle:true,pointStyle:'circle'}},
+        tooltip:{callbacks:{label:function(c){return c.label + ': ' + c.parsed + '%';}}}}
+    }
+  });
+
+  /* c6 — 5y growth */
+  CHARTS.c6 = new Chart(document.getElementById('c6'), {
+    type:'bar',
+    data:{labels:['Vietnam','Hungary','Belgium','Mexico','Germany','China','Japan','Hong Kong'],
+      datasets:[{label:t.growth5y, data:[359.8,70.8,60.1,58.0,-13.4,-22.7,-25.4,-37.7],
+        backgroundColor:['#2E8B57','#2E8B57','#2E8B57','#2E8B57','#C0392B','#C0392B','#C0392B','#C0392B'],
+        borderRadius:4, barPercentage:.6}]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}},
+      scales:{y:{grid:gridCfg, title:{display:true,text:t.growth5y}}, x:{grid:{display:false}}}
+    }
+  });
+
+  /* c7 — import value + share */
+  CHARTS.c7 = new Chart(document.getElementById('c7'), {
+    data:{
+      labels:['US','Germany','UK','Japan','France','Canada','Poland','Netherlands','Czechia','Australia','Mexico','Italy'],
+      datasets:[
+        {type:'bar', label:t.importVal, data:[18.907,4.164,2.915,2.760,2.308,1.699,1.694,1.680,1.341,1.323,1.192,1.065],
+         backgroundColor:'#1B365D', borderRadius:3, yAxisID:'y', barPercentage:.6},
+        {type:'line', label:t.importShare, data:[30.8,6.8,4.7,4.5,3.8,2.8,2.8,2.7,2.2,2.2,1.9,1.7],
+         borderColor:'#E8740C', backgroundColor:'#E8740C', borderWidth:2.5, pointRadius:3, tension:.3, yAxisID:'y1'}
+      ]
+    },
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{boxWidth:12,usePointStyle:true}}},
+      scales:{y:{beginAtZero:true,grid:gridCfg,title:{display:true,text:t.importVal}},
+        y1:{position:'right',beginAtZero:true,grid:{display:false},title:{display:true,text:t.importShare}},
+        x:{grid:{display:false}}}
+    }
+  });
+
+  /* c8 — region doughnut */
+  CHARTS.c8 = new Chart(document.getElementById('c8'), {
+    type:'doughnut',
+    data:{labels:[lang==='vi'?'Bắc Mỹ':(lang==='cn'?'北美':'North America'),
+                  lang==='vi'?'EU':(lang==='cn'?'欧盟':'EU'),
+                  lang==='vi'?'Anh':(lang==='cn'?'英国':'United Kingdom'),
+                  lang==='vi'?'Châu Á':(lang==='cn'?'亚洲':'Asia'),
+                  lang==='vi'?'Châu Đại Dương':(lang==='cn'?'大洋洲':'Oceania'), t.other],
+      datasets:[{data:[35.5,19.9,4.7,7.1,2.2,30.6],
+        backgroundColor:['#1B365D','#E8740C','#2D5AA0','#2E8B57','#0E7C86','#B9C4D2'], borderWidth:2, borderColor:'#fff'}]},
+    options:{responsive:true, maintainAspectRatio:false, cutout:'52%',
+      plugins:{legend:{position:'right',labels:{boxWidth:11,usePointStyle:true,pointStyle:'circle'}}}
+    }
+  });
+
+  /* c9 — price band distribution */
+  CHARTS.c9 = new Chart(document.getElementById('c9'), {
+    type:'bar',
+    data:{labels:[t.band1,t.band2,t.band3,t.band4,t.band5],
+      datasets:[{label:t.productCount, data:[1,5,2,1,2], backgroundColor:'#2D5AA0', borderRadius:4, barPercentage:.55}]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false}},
+      scales:{y:{beginAtZero:true,ticks:{stepSize:1},grid:gridCfg,title:{display:true,text:t.productCount}}, x:{grid:{display:false}}}
+    }
+  });
+
+  /* c10 — personas polar */
+  CHARTS.c10 = new Chart(document.getElementById('c10'), {
+    type:'polarArea',
+    data:{labels:[t.p1,t.p2,t.p3,t.p4,t.p5,t.p6],
+      datasets:[{data:[28,22,14,18,8,10],
+        backgroundColor:['rgba(27,54,93,.75)','rgba(232,116,12,.75)','rgba(46,139,87,.75)','rgba(45,90,160,.75)','rgba(183,121,31,.75)','rgba(123,78,168,.75)']}]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'right',labels:{boxWidth:11,usePointStyle:true,pointStyle:'circle'}},
+        tooltip:{callbacks:{label:function(c){return c.label + ': ' + c.parsed.r + '%';}}}},
+      scales:{r:{grid:{color:'#EDF1F6'},ticks:{backdropColor:'transparent'}}}
+    }
+  });
+
+  /* c11 — price by segment and origin */
+  var segs = [t.s1,t.s5,t.s3,t.s8,t.s9,t.s10];
+  CHARTS.c11 = new Chart(document.getElementById('c11'), {
+    type:'bar',
+    data:{labels:segs,
+      datasets:[
+        {label:t.originIN, data:[0.62,null,null,null,34.99,null], backgroundColor:'#1B365D', borderRadius:3},
+        {label:t.originTH, data:[null,3.59,null,null,null,null], backgroundColor:'#E8740C', borderRadius:3},
+        {label:t.originTR, data:[null,null,2.25,10.90,null,null], backgroundColor:'#2E8B57', borderRadius:3},
+        {label:t.originPL, data:[null,null,null,null,null,62.13], backgroundColor:'#7B4EA8', borderRadius:3}
+      ]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{boxWidth:12,usePointStyle:true,pointStyle:'rectRounded'}}},
+      scales:{y:{type:'logarithmic',grid:gridCfg,title:{display:true,text:t.priceUSD}}, x:{grid:{display:false}}}
+    }
+  });
+
+  /* c12 — radar */
+  CHARTS.c12 = new Chart(document.getElementById('c12'), {
+    type:'radar',
+    data:{labels:[t.axCompliance,t.axContent,t.axTraffic,t.axConversion,t.axRetention],
+      datasets:[
+        {label:t.today, data:[3,4,4,4,3], borderColor:'#B7791F', backgroundColor:'rgba(183,121,31,.14)', borderWidth:2, pointRadius:3},
+        {label:t.after12, data:[8,8,7,8,7], borderColor:'#2E8B57', backgroundColor:'rgba(46,139,87,.14)', borderWidth:2, pointRadius:3}
+      ]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{boxWidth:11,usePointStyle:true}}},
+      scales:{r:{min:0,max:10,grid:{color:'#E6ECF3'},angleLines:{color:'#E6ECF3'},
+        pointLabels:{font:{size:11},color:'#1B365D'},ticks:{backdropColor:'transparent',stepSize:2}}}
+    }
+  });
+
+  /* c13 — 12-month projection */
+  var months = []; for (var i=1;i<=12;i++){ months.push(t.month + i); }
+  CHARTS.c13 = new Chart(document.getElementById('c13'), {
+    type:'line',
+    data:{labels:months,
+      datasets:[
+        {label:t.cumCost, data:[4,8,12,16,20,24,28,32,36,40,44,48], borderColor:'#C0392B', borderWidth:2.5, pointRadius:2, tension:.25, fill:false},
+        {label:t.cumRev, data:[0,0,7.5,22.5,45,82.5,135,202.5,285,382.5,495,630], borderColor:'#2D5AA0', borderWidth:2.5, pointRadius:2, tension:.25, fill:false},
+        {label:t.cumGross, data:[0,0,1.9,5.6,11.3,20.6,33.8,50.6,71.3,95.6,123.8,157.5], borderColor:'#2E8B57', borderWidth:2.5, borderDash:[6,4], pointRadius:2, tension:.25, fill:false}
+      ]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{position:'bottom',labels:{boxWidth:12,usePointStyle:true}}},
+      scales:{y:{beginAtZero:true,grid:gridCfg,title:{display:true,text:t.usdThousand}}, x:{grid:{display:false}}}
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function(){ buildCharts('vi'); });
+</script>
+</body>
+</html>
