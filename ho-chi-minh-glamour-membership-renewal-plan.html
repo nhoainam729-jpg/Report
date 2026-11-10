@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="HO CHI MINH GLAMOUR - Phương án đầu tư gia hạn thành viên: Guarantee L3+ hoặc nâng cấp Verified Supplier" />
+  <title>HO CHI MINH GLAMOUR | Phương án đầu tư thành viên Alibaba.com</title>
+  <style>
+    :root{
+      --orange:#ff6a00;--orange-2:#ff8b3d;--orange-soft:#fff3ea;
+      --blue:#0e5cc4;--blue-soft:#eaf2ff;
+      --ink:#172033;--muted:#667085;--line:#dfe6ef;--panel:#f5f8fc;
+      --paper:#fbfdff;--white:#fff;--green:#16845b;--red:#c4453c;
+      --shadow:0 18px 55px rgba(32,62,103,.10);--radius:22px;--max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--ink);font-family:"Segoe UI","Helvetica Neue",Arial,"Microsoft YaHei","PingFang SC",sans-serif;background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+    body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(circle at 86% 2%,rgba(255,106,0,.13),transparent 26%),radial-gradient(circle at 8% 14%,rgba(24,119,210,.10),transparent 28%),linear-gradient(#fbfdff,#f6faff)}
+    body:after{content:"";position:fixed;inset:0;z-index:-1;opacity:.32;background-image:linear-gradient(rgba(32,75,120,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(32,75,120,.06) 1px,transparent 1px);background-size:36px 36px;mask-image:linear-gradient(to bottom,black,transparent 60%)}
+    a{color:inherit}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+
+    .topbar{position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(223,230,239,.85);background:rgba(251,253,255,.9);backdrop-filter:blur(16px)}
+    .topbar .wrap{height:64px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;white-space:nowrap;font-size:14px}
+    .brand-mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--orange),#ff9a57);box-shadow:0 7px 20px rgba(255,106,0,.28);position:relative;flex:none}
+    .brand-mark:after{content:"G";color:#fff;font-weight:900;position:absolute;inset:2px 0 0;text-align:center}
+    .nav{display:flex;gap:16px;font-size:13px;color:var(--muted)}
+    .nav a{text-decoration:none}
+    .nav a:hover{color:var(--orange)}
+    .lang-switch{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:11px;background:#fff;white-space:nowrap}
+    .lang-btn{appearance:none;border:0;border-radius:8px;padding:6px 9px;background:transparent;color:var(--muted);font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+    .lang-btn:hover{color:var(--orange);background:var(--orange-soft)}
+    .lang-btn.active{background:var(--ink);color:#fff}
+
+    section{padding:70px 0}
+    .section-head{display:grid;grid-template-columns:.86fr 1.14fr;gap:50px;align-items:end;margin-bottom:30px}
+    .kicker{color:var(--orange);font-size:13px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase}
+    .section-head h2{margin:8px 0 0;font-size:clamp(30px,3.6vw,46px);line-height:1.16;letter-spacing:-1px}
+    .section-head p{margin:0;color:var(--muted);font-size:16.5px}
+    .surface{border:1px solid rgba(223,230,239,.95);border-radius:var(--radius);background:rgba(255,255,255,.9);box-shadow:var(--shadow);overflow:hidden}
+
+    .hero{padding:62px 0 16px}
+    .hero-card{position:relative;overflow:hidden;border-radius:30px;border:1px solid #ffe0c9;background:linear-gradient(128deg,#fff7f1 0%,#ffffff 46%,#eef7ff 100%);padding:52px 54px;box-shadow:0 26px 70px rgba(160,84,20,.14)}
+    .hero-card:after{content:"";position:absolute;right:-90px;top:-110px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(255,139,61,.22),transparent 68%)}
+    .hero-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid #ffd0ab;color:#b4520c;font-size:12.5px;font-weight:900;letter-spacing:.6px}
+    .hero-card h1{position:relative;z-index:1;margin:18px 0 10px;font-size:clamp(30px,4.3vw,54px);line-height:1.1;letter-spacing:-1.3px;font-weight:900}
+    .hero-card h1 span{color:var(--orange)}
+    .hero-sub{position:relative;z-index:1;margin:0;color:#475467;font-size:17px;max-width:780px}
+    .hero-chips{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+    .hero-chips span{padding:9px 14px;border-radius:12px;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:800;color:#344054}
+    .hero-chips b{color:var(--orange);font-size:15px;margin-right:6px}
+    .hero-meta{position:relative;z-index:1;margin-top:22px;display:flex;flex-wrap:wrap;gap:22px;color:var(--muted);font-size:13px}
+    .hero-meta b{color:var(--ink)}
+
+    .big-title{font-size:clamp(42px,7vw,86px);line-height:.98;letter-spacing:-3px;font-weight:900;margin:6px 0 12px;color:var(--ink)}
+    .big-title span{display:block;color:var(--orange)}
+    .big-sub{margin:0;color:var(--muted);font-size:16px;max-width:860px}
+
+    .plan{margin-top:30px}
+    .plan-head{padding:32px 34px;display:flex;justify-content:space-between;gap:30px;align-items:center;background:#fff;border-bottom:1px solid var(--line);flex-wrap:wrap}
+    .plan-title{min-width:280px;flex:1}
+    .opt-badge{display:inline-flex;align-items:center;padding:6px 13px;border-radius:999px;color:#fff;font-size:12px;font-weight:900;letter-spacing:.7px;margin-bottom:10px}
+    .opt-badge.o1{background:linear-gradient(135deg,#ffb347,#ff7a1a);box-shadow:0 8px 18px rgba(255,122,26,.32)}
+    .opt-badge.o2{background:linear-gradient(135deg,#3f86e0,#0e5cc4);box-shadow:0 8px 18px rgba(14,92,196,.30)}
+    .plan-title h3{margin:0;font-size:clamp(22px,2.4vw,30px);line-height:1.25;letter-spacing:-.4px}
+    .plan-title p{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:660px}
+    .plan-price{text-align:right;min-width:270px}
+    .plan-price .big{display:block;font-size:clamp(28px,3.2vw,40px);font-weight:900;letter-spacing:-.8px;line-height:1.15}
+    .plan-price .usd{display:block;font-size:19px;font-weight:900;color:#344054;margin-top:2px}
+    .plan-price .cap{display:block;color:var(--muted);font-size:12.5px;margin-top:8px}
+    .p1 .plan-price .big{color:var(--orange)}
+    .p2 .plan-price .big{color:var(--blue)}
+    .plan-alt{padding:18px 34px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;font-size:13.5px;border-bottom:1px solid var(--line)}
+    .p1 .plan-alt{background:#fff8f2;border-bottom-color:#ffe3cd;color:#8a4a11}
+    .p2 .plan-alt{background:#f2f7ff;border-bottom-color:#d5e5fb;color:#1f4a80}
+    .plan-alt b{font-weight:900}
+    .plan-alt .alt-prices{display:flex;gap:16px;flex-wrap:wrap;font-weight:900;font-size:15px}
+    .promo-line{padding:14px 34px;background:#effaf4;border-bottom:1px solid #cdead9;color:#0f6b47;font-size:13px;display:flex;gap:10px;align-items:flex-start}
+    .promo-line b{color:#0b5738}
+
+    .ptable{width:100%;border-collapse:collapse;background:#fff}
+    .ptable thead th{background:#172033;color:#fff;font-size:13px;letter-spacing:.4px;text-align:left;padding:16px 24px}
+    .ptable thead th:last-child{text-align:center}
+    .p1 .ptable thead th:last-child{background:linear-gradient(135deg,#ff7a1a,#ff9a57)}
+    .p2 .ptable thead th:last-child{background:linear-gradient(135deg,#0e5cc4,#3f86e0)}
+    .ptable th,.ptable td{padding:13px 24px;border-top:1px solid var(--line);vertical-align:middle;text-align:left}
+    .ptable tbody tr:nth-child(even) td{background:#fafcff}
+    .grp th{font-size:12px;font-weight:900;letter-spacing:1.1px;text-transform:uppercase;padding:11px 24px}
+    .p1 .grp th{background:var(--orange-soft)!important;color:#a64400}
+    .p2 .grp th{background:var(--blue-soft)!important;color:#134a9c}
+    .grp.pricing th{background:#172033!important;color:#ffd9bd}
+    .p2 .grp.pricing th{color:#cfe0f8}
+    .feat{width:62%;font-size:14.5px}
+    .feat b{display:block;font-size:15px;font-weight:800;color:#1d2939}
+    .feat span{display:block;color:var(--muted);font-size:12.5px;margin-top:1px}
+    .val{text-align:center!important;font-weight:900;font-size:15px;color:#1d2939}
+    .val.price{font-size:20px;letter-spacing:-.3px}
+    .p1 .val.price{color:var(--orange)}
+    .p2 .val.price{color:var(--blue)}
+    .val.price em{display:block;font-style:normal;font-size:15px;color:#344054;font-weight:900;margin-top:2px}
+    .val.guarantee{white-space:normal;color:var(--red);font-size:13px;line-height:1.45;max-width:270px;margin:0 auto}
+    .val.yes{color:var(--green);font-size:18px}
+    .val.no{color:#98a2b3;font-size:17px}
+    .val.none{color:#b0b8c4}
+    .val.pri{color:var(--blue);font-size:13.5px}
+    .val.long{white-space:normal;font-size:12.5px;font-weight:800;line-height:1.45;max-width:280px;margin:0 auto;color:#475467}
+    .ptable tr.hl td{background:linear-gradient(90deg,#fff4ea,#fff)!important}
+    .p2 .ptable tr.hl td{background:linear-gradient(90deg,#eef5ff,#fff)!important}
+    .src-note{padding:18px 30px;background:var(--panel);color:#475467;font-size:12.5px;border-top:1px solid var(--line)}
+    .src-note b{color:#344054}
+
+    .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .vcard{padding:26px;border-radius:20px}
+    .vcard i{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:var(--orange-soft);color:var(--orange);font-style:normal;font-weight:900;font-size:14px}
+    .vcard h3{margin:13px 0 6px;font-size:18.5px;line-height:1.3}
+    .vcard p{margin:0;color:var(--muted);font-size:13.5px}
+    .vcard .arrows{display:inline-block;margin:10px 0 0;padding:5px 10px;border-radius:999px;background:#eef5ff;color:#134a9c;font-size:12.5px;font-weight:900}
+    .warn{margin-top:18px;padding:22px 26px;border-radius:18px;border:1px solid #ffd0b3;background:#fff7f1;color:#7a3d0c;font-size:14px;display:flex;gap:14px;align-items:flex-start}
+    .warn b{color:#a64400}
+    .warn .ic{flex:none;width:30px;height:30px;border-radius:9px;background:#ffd0b3;color:#8a3f06;display:grid;place-items:center;font-weight:900}
+
+    .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .wcard{padding:28px;border-radius:20px}
+    .wcard h3{margin:0 0 8px;font-size:20px}
+    .wcard p{margin:0;color:var(--muted);font-size:14px}
+    .band{margin-top:20px;padding:26px 30px;border-radius:20px;background:linear-gradient(115deg,#172033,#253a5c);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:26px;flex-wrap:wrap}
+    .band strong{font-size:19px;line-height:1.45;max-width:840px}
+    .band .tag{white-space:nowrap;padding:11px 16px;border-radius:12px;background:linear-gradient(135deg,var(--orange),#ff9a57);font-weight:900;font-size:13px}
+
+    .flow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .step{padding:24px;border-radius:18px;border:1px solid var(--line);background:#fff}
+    .step .num{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--orange),#ff9a57);color:#fff;font-weight:900;margin-bottom:12px}
+    .step h3{margin:0 0 6px;font-size:17px}
+    .step p{margin:0;color:var(--muted);font-size:13px}
+    .step .when{display:inline-block;margin-top:12px;padding:5px 10px;border-radius:999px;background:var(--panel);color:#475467;font-size:11.5px;font-weight:900}
+    .step.hl{background:linear-gradient(145deg,#172033,#23446d);border-color:#172033;color:#fff}
+    .step.hl p{color:#d5e3f3}
+    .step.hl .when{background:rgba(255,255,255,.14);color:#ffd9bd}
+
+    .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .tbox{padding:24px;border-radius:18px;background:#fff;border:1px solid var(--line)}
+    .tbox h3{margin:0 0 10px;font-size:17px}
+    .tbox ul{margin:0;padding-left:18px;color:#475467;font-size:13.5px}
+    .tbox li{margin:7px 0}
+
+    footer{padding:44px 0 60px;border-top:1px solid var(--line);margin-top:30px;color:var(--muted);font-size:12.5px}
+    footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+    .cta{display:inline-flex;padding:12px 20px;border-radius:12px;background:var(--ink);color:#fff;font-weight:900;font-size:13px;text-decoration:none}
+
+    @media(max-width:900px){
+      .nav{display:none}
+      .section-head{grid-template-columns:1fr;gap:14px}
+      .vgrid,.wgrid{grid-template-columns:1fr 1fr}
+      .flow{grid-template-columns:1fr 1fr}
+      .tgrid{grid-template-columns:1fr}
+      .hero-card{padding:34px 26px}
+      .plan-head{padding:24px}
+      .plan-price{text-align:left}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 24px,var(--max))}
+      .topbar .wrap{height:auto;min-height:54px;flex-wrap:wrap;padding:8px 0;gap:8px;justify-content:flex-start}
+      .brand{font-size:11px;white-space:normal;line-height:1.25;flex:1 1 100%;max-width:100%}
+      .brand-mark{width:24px;height:24px;border-radius:7px}
+      .lang-switch{padding:3px;margin-left:0}
+      .lang-btn{padding:5px 7px;font-size:11px}
+      .vgrid,.wgrid,.flow{grid-template-columns:1fr}
+      .big-title{letter-spacing:-2px}
+      .ptable th,.ptable td{padding:12px 14px}
+      .feat{width:54%;font-size:13.5px}
+      .val{font-size:13.5px}
+      .val.price{font-size:16px}
+      .val.long{max-width:150px}
+    }
+    @media print{.topbar{display:none}body:before,body:after{display:none}section{break-inside:avoid;padding:34px 0}.surface{box-shadow:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="brand notranslate" translate="no"><span class="brand-mark" aria-hidden="true"></span>HO CHI MINH GLAMOUR × Alibaba.com</div>
+      <nav class="nav" aria-label="Nav">
+        <a href="#investment" data-i18n="nav.n1">Phương án đầu tư</a>
+        <a href="#benefits" data-i18n="nav.n2">Khác biệt Verified</a>
+        <a href="#why" data-i18n="nav.n3">Vì sao chốt ngay</a>
+        <a href="#roadmap" data-i18n="nav.n4">Lộ trình 90 ngày</a>
+        <a href="#terms" data-i18n="nav.n5">Điều khoản</a>
+      </nav>
+      <div class="lang-switch notranslate" translate="no" aria-label="Language">
+        <button class="lang-btn" data-lang="zh">中文</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="vi">Tiếng Việt</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-card">
+          <div class="hero-tag" data-i18n="hero.tag">KẾ HOẠCH GIA HẠN THÀNH VIÊN 2026 – 2027</div>
+          <h1 data-i18n="hero.title">Hai phương án đầu tư<br><span>Guarantee L3+ / Verified Supplier</span></h1>
+          <p class="hero-sub" data-i18n="hero.sub">Gian hàng HO CHI MINH GLAMOUR trên Alibaba.com có hai lựa chọn: tái ký đúng gói ban đầu (Guarantee L3+) hoặc nâng cấp lên Verified Supplier Basic. Cả hai được trình bày cùng một dạng bảng quyền lợi để so sánh trực tiếp.</p>
+          <div class="hero-chips">
+            <span data-i18n="hero.c1"><b>01</b>Gian hàng</span>
+            <span data-i18n="hero.c2"><b>2</b>phương án</span>
+            <span data-i18n="hero.c3"><b>3.900 → 7.800</b>credits/tháng</span>
+            <span data-i18n="hero.c4"><b>3 → 4</b>STAR</span>
+          </div>
+          <div class="hero-meta">
+            <div><span data-i18n="hero.m1">Khách hàng:</span> <b>HO CHI MINH GLAMOUR</b></div>
+            <div><span data-i18n="hero.m2">Nguồn giá:</span> <b>Alibaba.com FY27S2 Price List</b></div>
+            <div><span data-i18n="hero.m3">Đơn vị tiền:</span> <b>VND / USD</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="investment">
+      <div class="wrap">
+        <div class="kicker" data-i18n="inv.kicker">01 / Phương án đầu tư</div>
+        <h2 class="big-title" data-i18n="inv.title">PHƯƠNG ÁN<span>ĐẦU TƯ</span></h2>
+        <p class="big-sub" data-i18n="inv.sub">Cùng một danh mục quyền lợi, hai mức đầu tư: giữ nguyên gói ban đầu hoặc nâng cấp lên Verified Supplier. Mỗi phương án có bảng giá riêng, cột phải là giá trị tương ứng của gói.</p>
+
+        <div class="surface plan p1">
+          <div class="plan-head">
+            <div class="plan-title">
+              <span class="opt-badge o1" data-i18n="inv.badge1">PHƯƠNG ÁN ĐẦU TƯ 1</span>
+              <h3 data-i18n="inv.p1t">Tái ký gói thành viên ban đầu — Guarantee L3+</h3>
+              <p data-i18n="inv.p1d">Giữ nguyên gói đã đăng ký lần đầu, không thay đổi cấp thành viên: SAA Pro 3.900 credits/tháng, 3 STAR trong 6 tháng, cam kết ≥ 35 cơ hội kinh doanh L3+ trong 90 ngày.</p>
+            </div>
+            <div class="plan-price">
+              <strong class="big">₫126.100.000</strong>
+              <span class="usd">$5,299</span>
+              <span class="cap" data-i18n="inv.p1cap">Guarantee L3+ · mức SAA Pro 3.900 credits/tháng</span>
+            </div>
+          </div>
+          <div class="plan-alt">
+            <div data-i18n="inv.altd">Tùy chọn nâng ngân sách quảng cáo trong cùng gói (SAA Ultra — 16.500 credits/tháng):</div>
+            <div class="alt-prices"><span>₫151.600.000</span><span>$6,199</span></div>
+          </div>
+          <table class="ptable" data-plan="0"></table>
+          <div class="src-note" data-i18n="inv.note1">Nguồn: Alibaba.com FY27S2 Price List — bảng “Membership packages detailed benefits”. Giá chưa bao gồm VAT. Dấu — là ô trống trong bảng gốc (gói không bao gồm quyền lợi đó).</div>
+        </div>
+
+        <div class="surface plan p2">
+          <div class="plan-head">
+            <div class="plan-title">
+              <span class="opt-badge o2" data-i18n="inv.badge2">PHƯƠNG ÁN ĐẦU TƯ 2</span>
+              <h3 data-i18n="inv.p2t">Nâng cấp lên Verified Supplier — Verified Supplier Basic</h3>
+              <p data-i18n="inv.p2d">Chuyển từ gói thường sang gói Verified: 4 STAR, 60 RFQ/tháng, 60 Showcase, 12 tháng Product Advisor, cùng toàn bộ bộ chứng thực Verified (SGS/TUV, nhãn Verified, video + ảnh 360°) và ưu đãi vận hành.</p>
+            </div>
+            <div class="plan-price">
+              <strong class="big">₫212.400.000</strong>
+              <span class="usd">$8,999</span>
+              <span class="cap" data-i18n="inv.p2cap">Verified Supplier Basic · SAA Elite 7.800 credits/tháng</span>
+            </div>
+          </div>
+          <div class="promo-line"><b data-i18n="inv.promoTag">Ưu đãi quý:</b><span data-i18n="inv.promo">Từ tháng 10 đến tháng 12 FY27, khách mua gói Verified Supplier được tặng SAA Elite trị giá 600 USD — tổng 7.800 credits/tháng, có thể mua thêm để nâng cấp.</span></div>
+          <div class="plan-alt">
+            <div data-i18n="inv.altd2">Tùy chọn nâng ngân sách quảng cáo trong cùng gói (SAA Ultra — 16.500 credits/tháng):</div>
+            <div class="alt-prices"><span>₫246.400.000</span><span>$10,199</span></div>
+          </div>
+          <table class="ptable" data-plan="1"></table>
+          <div class="src-note" data-i18n="inv.note2">Nguồn: cùng bảng giá FY27S2, cột “Verified Supplier Basic”. Lưu ý: gói này <b>không</b> kèm cam kết ≥ 35 cơ hội L3+/90 ngày và không có KWA — hai quyền lợi đó chỉ có ở Guarantee L3+. Giá chưa bao gồm VAT.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker" data-i18n="ben.kicker">02 / Khác biệt khi lên Verified</div>
+            <h2 data-i18n="ben.title">Sáu thay đổi cụ thể giữa hai phương án</h2>
+          </div>
+          <p data-i18n="ben.desc">Toàn bộ số liệu lấy từ bảng giá FY27S2; chênh lệch giá giữa hai phương án là 86.300.000 VND (≈ 3.700 USD).</p>
+        </div>
+        <div class="vgrid">
+          <article class="surface vcard"><i>01</i><h3 data-i18n="ben.1t">Ngân sách AI và quảng cáo</h3><p data-i18n="ben.1d">SAA Pro 3.900 credits/tháng → SAA Elite 7.800 credits/tháng (tặng trong quý này, trị giá 600 USD).</p><span class="arrows" data-i18n="ben.a1">3.900 → 7.800 credits</span></article>
+          <article class="surface vcard"><i>02</i><h3 data-i18n="ben.2t">Cấp sao và độ phủ hiển thị</h3><p data-i18n="ben.2d">Từ 3 STAR lên 4 STAR (6 tháng) — nhóm sao cao hơn tương ứng tệp người mua doanh nghiệp.</p><span class="arrows" data-i18n="ben.a2">3 STAR → 4 STAR</span></article>
+          <article class="surface vcard"><i>03</i><h3 data-i18n="ben.3t">Nguồn cơ hội chủ động</h3><p data-i18n="ben.3d">RFQ 40 → 60 mỗi tháng; Greenpass 5 → 10; báo giá ưu tiên 5 → 10. Tổng cộng thêm 20 RFQ và 10 lượt ưu tiên mỗi tháng.</p><span class="arrows" data-i18n="ben.a3">40 → 60 RFQ/tháng</span></article>
+          <article class="surface vcard"><i>04</i><h3 data-i18n="ben.4t">Tài sản trưng bày và tư vấn</h3><p data-i18n="ben.4d">Showcase 20 → 60 sản phẩm; Product Advisor 6 → 12 tháng; gian hàng được ưu tiên trong các chiến dịch sourcing của Alibaba.com.</p><span class="arrows" data-i18n="ben.a4">20 → 60 showcase</span></article>
+          <article class="surface vcard"><i>05</i><h3 data-i18n="ben.5t">Bộ chứng thực Verified</h3><p data-i18n="ben.5d">SGS/TUV xác minh on-site và báo cáo đánh giá; thiết kế gian hàng “Verified” + bảng xác minh; nhãn, chứng nhận và nhãn năng lực Verified; quay video và ảnh toàn cảnh 360°.</p><span class="arrows" data-i18n="ben.a5">Chỉ có ở Phương án 2</span></article>
+          <article class="surface vcard"><i>06</i><h3 data-i18n="ben.6t">Vận hành và ưu đãi</h3><p data-i18n="ben.6d">Xuất hiện trên tab “Nhà sản xuất”, phân tích gian hàng bản PRO, 10 tài khoản phụ, ưu đãi giao dịch đảm bảo (Extra Discount), tư vấn tài khoản hằng tháng.</p><span class="arrows" data-i18n="ben.a6">5 → 10 sub-account</span></article>
+        </div>
+        <div class="warn">
+          <div class="ic">!</div>
+          <div data-i18n="ben.warn"><b>Đánh đổi cần cân nhắc:</b> Phương án 2 mạnh hơn về hạng sao, chứng thực và công cụ, nhưng <b>không</b> có cam kết ≥ 35 cơ hội L3+/90 ngày và không có KWA $3.000. Nếu cần cả hai, gói <b>Verified Supplier Guarantee L3+</b> là phương án kết hợp — giá niêm yết ₫280.880.000 / $11,999 (mức SAA Elite), có thể báo riêng nếu anh/chị muốn xem.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker" data-i18n="why.kicker">03 / Vì sao chốt ngay</div>
+            <h2 data-i18n="why.title">Ba yếu tố quyết định thời điểm, không phụ thuộc chọn gói nào</h2>
+          </div>
+          <p data-i18n="why.desc">Thời điểm kích hoạt ảnh hưởng trực tiếp đến việc gói có rơi vào mùa cao điểm hay không, và với Phương án 2 là việc có nhận được ưu đãi SAA Elite hay không.</p>
+        </div>
+        <div class="wgrid">
+          <article class="surface wcard"><h3 data-i18n="why.1t">Không gián đoạn gian hàng</h3><p data-i18n="why.1d">Gia hạn liên tục giữ nguyên sản phẩm, lịch sử giao dịch và dữ liệu vận hành — điều người mua đang sàng lọc nhà cung cấp quan tâm nhất.</p></article>
+          <article class="surface wcard"><h3 data-i18n="why.2t">Chọn đúng cấp gói</h3><p data-i18n="why.2d">Chỉ cần duy trì hiện trạng: Phương án 1. Cần chứng thực Verified, hạng sao cao hơn và bộ công cụ mạnh hơn: Phương án 2.</p></article>
+          <article class="surface wcard"><h3 data-i18n="why.3t">Ưu đãi và cam kết có hạn</h3><p data-i18n="why.3d">SAA Elite 600 USD chỉ tặng cho gói Verified mua trong tháng 10–12 FY27; cam kết ≥ 35 cơ hội L3+ chỉ bắt đầu tính từ ngày gói Guarantee L3+ có hiệu lực.</p></article>
+        </div>
+        <div class="band">
+          <strong data-i18n="why.band">Hai phương án dùng chung một bảng quyền lợi, khác nhau ở mức đầu tư và mức chứng thực. Chọn xong là chốt được ngay, không cần đàm phán thêm cấu hình.</strong>
+          <span class="tag" data-i18n="why.tag">2 phương án</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker" data-i18n="road.kicker">04 / Lộ trình 90 ngày</div>
+            <h2 data-i18n="road.title">Bốn bước triển khai, khác nhau ở bước onboarding</h2>
+          </div>
+          <p data-i18n="road.desc">Phương án 1 kích hoạt gần như ngay; Phương án 2 cần thêm thời gian cho xác minh on-site và sản xuất bộ tài sản Verified.</p>
+        </div>
+        <div class="flow">
+          <div class="step"><div class="num">1</div><h3 data-i18n="road.1t">Chốt phương án và thanh toán</h3><p data-i18n="road.1d">Xác nhận báo giá, ký hợp đồng, thanh toán gói đã chọn.</p><span class="when" data-i18n="road.1w">Tuần 1</span></div>
+          <div class="step"><div class="num">2</div><h3 data-i18n="road.2t">Kích hoạt và onboarding</h3><p data-i18n="road.2d">PA1: kích hoạt và rà soát sản phẩm. PA2: thêm lịch SGS/TUV on-site, quay video, ảnh 360°, thiết kế gian hàng Verified.</p><span class="when" data-i18n="road.2w">Tuần 2 – 4</span></div>
+          <div class="step hl"><div class="num">3</div><h3 data-i18n="road.3t">Khai thác RFQ, showcase và credits</h3><p data-i18n="road.3d">PA1: 40 RFQ + 5 Greenpass + 3.900 credits. PA2: 60 RFQ + 10 Greenpass + 60 showcase + 7.800 credits.</p><span class="when" data-i18n="road.3w">Tháng 1 – 2</span></div>
+          <div class="step"><div class="num">4</div><h3 data-i18n="road.4t">Đo lường theo đúng cam kết</h3><p data-i18n="road.4d">PA1: đối chiếu số cơ hội L3+ với mốc 35 trong 90 ngày. PA2: checklist tài sản Verified và hiệu quả RFQ theo tháng.</p><span class="when" data-i18n="road.4w">Tháng 2 – 3</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="terms">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="kicker" data-i18n="term.kicker">05 / Điều khoản và lưu ý</div>
+            <h2 data-i18n="term.title">Những điểm cần xác nhận trước khi ký</h2>
+          </div>
+          <p data-i18n="term.desc">Đối chiếu với báo giá và hợp đồng chính thức do Alibaba.com phát hành trước khi thanh toán.</p>
+        </div>
+        <div class="tgrid">
+          <div class="surface tbox">
+            <h3 data-i18n="term.1t">Giá và thanh toán</h3>
+            <ul>
+              <li data-i18n="term.1a">Phương án 1 — Guarantee L3+: ₫126.100.000 / $5,299 (SAA Pro 3.900 credits/tháng).</li>
+              <li data-i18n="term.1b">Phương án 1 — tùy chọn SAA Ultra: ₫151.600.000 / $6,199.</li>
+              <li data-i18n="term.1c">Phương án 2 — Verified Supplier Basic: ₫212.400.000 / $8,999 (SAA Elite 7.800 credits/tháng).</li>
+              <li data-i18n="term.1d">Phương án 2 — tùy chọn SAA Ultra: ₫246.400.000 / $10,199.</li>
+              <li data-i18n="term.1e">Giá chưa bao gồm VAT; tỷ giá và phí áp dụng theo báo giá tại thời điểm thanh toán.</li>
+            </ul>
+          </div>
+          <div class="surface tbox">
+            <h3 data-i18n="term.2t">Điều kiện ưu đãi và cam kết</h3>
+            <ul>
+              <li data-i18n="term.2a">SAA Elite (600 USD, 7.800 credits/tháng) chỉ áp dụng cho gói Verified mua trong tháng 10–12 FY27.</li>
+              <li data-i18n="term.2b">Cam kết ≥ 35 cơ hội L3+ trong 90 ngày chỉ thuộc gói Guarantee L3+; gói Verified Supplier Basic không bao gồm cam kết này.</li>
+              <li data-i18n="term.2c">Star-rating Direct được kích hoạt sau khi hoàn tất các bước onboarding.</li>
+              <li data-i18n="term.2d">Quyền lợi áp dụng cho 01 gian hàng HO CHI MINH GLAMOUR; chi tiết dịch vụ Onboarding liên hệ đội sales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <strong style="color:#172033">HO CHI MINH GLAMOUR × Alibaba.com</strong><br>
+        <span data-i18n="foot.note">Tài liệu đề xuất nội bộ. Giá và quyền lợi cuối cùng theo báo giá chính thức và hợp đồng.</span>
+      </div>
+      <a class="cta" href="#investment" data-i18n="foot.cta">Xem lại hai phương án</a>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var UI={
+        pageTitle:{zh:'HO CHI MINH GLAMOUR｜会员套餐投资方案（Guarantee L3+ / Verified）',en:'HO CHI MINH GLAMOUR | Membership Investment Plan (Guarantee L3+ / Verified)',vi:'HO CHI MINH GLAMOUR | Phương án đầu tư gói thành viên'},
+        featHdr:{zh:'功能与权益',en:'Modules & Features',vi:'Tính năng và quyền lợi'},
+        pricing:{zh:'定价',en:'Pricing',vi:'Giá gói'},
+        col1:{zh:'Guarantee L3+',en:'Guarantee L3+',vi:'Guarantee L3+'},
+        col2:{zh:'Verified Supplier Basic',en:'Verified Supplier Basic',vi:'Verified Supplier Basic'}
+      };
+
+      var I18N={
+        'nav.n1':{zh:'投资方案',en:'Investment Plan',vi:'Phương án đầu tư'},
+        'nav.n2':{zh:'Verified 差异',en:'Verified Difference',vi:'Khác biệt Verified'},
+        'nav.n3':{zh:'为何现在锁定',en:'Why Lock In Now',vi:'Vì sao chốt ngay'},
+        'nav.n4':{zh:'90天路线',en:'90-Day Roadmap',vi:'Lộ trình 90 ngày'},
+        'nav.n5':{zh:'条款',en:'Terms',vi:'Điều khoản'},
+
+        'hero.tag':{zh:'2026–2027 会员续费计划',en:'MEMBERSHIP PLAN 2026 – 2027',vi:'KẾ HOẠCH GIA HẠN THÀNH VIÊN 2026 – 2027'},
+        'hero.title':{zh:'两个投资方案<br><span>Guarantee L3+ / Verified Supplier</span>',en:'Two investment options<br><span>Guarantee L3+ / Verified Supplier</span>',vi:'Hai phương án đầu tư<br><span>Guarantee L3+ / Verified Supplier</span>'},
+        'hero.sub':{zh:'HO CHI MINH GLAMOUR 在阿里巴巴国际站的店铺有两个选择：按原套餐续签（Guarantee L3+），或升级至 Verified Supplier Basic。两者用同一张权益表结构呈现，便于直接比较。',en:'The HO CHI MINH GLAMOUR store on Alibaba.com has two options: renew the original package (Guarantee L3+) or upgrade to Verified Supplier Basic. Both are presented in the same benefit-table format for direct comparison.',vi:'Gian hàng HO CHI MINH GLAMOUR trên Alibaba.com có hai lựa chọn: tái ký đúng gói ban đầu (Guarantee L3+) hoặc nâng cấp lên Verified Supplier Basic. Cả hai được trình bày cùng một dạng bảng quyền lợi để so sánh trực tiếp.'},
+        'hero.c1':{zh:'<b>01</b>个店铺',en:'<b>01</b>store',vi:'<b>01</b>Gian hàng'},
+        'hero.c2':{zh:'<b>2</b>个方案',en:'<b>2</b>options',vi:'<b>2</b>phương án'},
+        'hero.c3':{zh:'<b>3,900 → 7,800</b>credits/月',en:'<b>3,900 → 7,800</b>credits/mo',vi:'<b>3.900 → 7.800</b>credits/tháng'},
+        'hero.c4':{zh:'<b>3 → 4</b>STAR',en:'<b>3 → 4</b>STAR',vi:'<b>3 → 4</b>STAR'},
+        'hero.m1':{zh:'客户：',en:'Client:',vi:'Khách hàng:'},
+        'hero.m2':{zh:'价格来源：',en:'Price source:',vi:'Nguồn giá:'},
+        'hero.m3':{zh:'币种：',en:'Currency:',vi:'Đơn vị tiền:'},
+
+        'inv.kicker':{zh:'01 / 投资方案',en:'01 / Investment Plan',vi:'01 / Phương án đầu tư'},
+        'inv.title':{zh:'投资<span>方案</span>',en:'INVESTMENT<span>PLAN</span>',vi:'PHƯƠNG ÁN<span>ĐẦU TƯ</span>'},
+        'inv.sub':{zh:'同一份权益清单，两种投入水平：保持原套餐或升级至 Verified Supplier。每个方案各有一张价格表，右列为该套餐对应的权益值。',en:'One benefit list, two investment levels: keep the original package or upgrade to Verified Supplier. Each option has its own price table, with the right column showing that package values.',vi:'Cùng một danh mục quyền lợi, hai mức đầu tư: giữ nguyên gói ban đầu hoặc nâng cấp lên Verified Supplier. Mỗi phương án có bảng giá riêng, cột phải là giá trị tương ứng của gói.'},
+        'inv.badge1':{zh:'投资方案 1',en:'INVESTMENT PLAN 1',vi:'PHƯƠNG ÁN ĐẦU TƯ 1'},
+        'inv.p1t':{zh:'续签原始会员套餐 — Guarantee L3+',en:'Renew the original membership package — Guarantee L3+',vi:'Tái ký gói thành viên ban đầu — Guarantee L3+'},
+        'inv.p1d':{zh:'保持首次开通的套餐与会员等级不变：SAA Pro 3,900 credits/月、3星6个月、90天内承诺 ≥ 35 个 L3+ 商机。',en:'Keep the originally activated package and tier unchanged: SAA Pro 3,900 credits/month, 3 STAR for 6 months, and ≥ 35 L3+ opportunities within 90 days.',vi:'Giữ nguyên gói đã đăng ký lần đầu, không thay đổi cấp thành viên: SAA Pro 3.900 credits/tháng, 3 STAR trong 6 tháng, cam kết ≥ 35 cơ hội kinh doanh L3+ trong 90 ngày.'},
+        'inv.p1cap':{zh:'Guarantee L3+ · SAA Pro 3,900 credits/月',en:'Guarantee L3+ · SAA Pro 3,900 credits/month',vi:'Guarantee L3+ · mức SAA Pro 3.900 credits/tháng'},
+        'inv.altd':{zh:'同一套餐内可选的广告预算升级（SAA Ultra — 16,500 credits/月）：',en:'Optional in-package ad budget upgrade (SAA Ultra — 16,500 credits/month):',vi:'Tùy chọn nâng ngân sách quảng cáo trong cùng gói (SAA Ultra — 16.500 credits/tháng):'},
+        'inv.note1':{zh:'来源：Alibaba.com FY27S2 Price List — “Membership packages detailed benefits”。价格未含 VAT。“—”表示原表为空（套餐不含该权益）。',en:'Source: Alibaba.com FY27S2 Price List — “Membership packages detailed benefits”. Prices exclude VAT. “—” means the cell is blank in the source table (the package does not include it).',vi:'Nguồn: Alibaba.com FY27S2 Price List — bảng “Membership packages detailed benefits”. Giá chưa bao gồm VAT. Dấu — là ô trống trong bảng gốc (gói không bao gồm quyền lợi đó).'},
+        'inv.badge2':{zh:'投资方案 2',en:'INVESTMENT PLAN 2',vi:'PHƯƠNG ÁN ĐẦU TƯ 2'},
+        'inv.p2t':{zh:'升级至 Verified Supplier — Verified Supplier Basic',en:'Upgrade to Verified Supplier — Verified Supplier Basic',vi:'Nâng cấp lên Verified Supplier — Verified Supplier Basic'},
+        'inv.p2d':{zh:'从普通套餐升级为 Verified：4星、每月60个RFQ、60个Showcase、12个月Product Advisor，以及全套 Verified 认证资产（SGS/TUV、Verified 标识、视频与360°照片）与运营权益。',en:'Upgrade from a standard package to Verified: 4 STAR, 60 RFQs/month, 60 Showcase slots, 12 months of Product Advisor, plus the full Verified asset set (SGS/TUV, Verified badge, video and 360° photos) and operating benefits.',vi:'Chuyển từ gói thường sang gói Verified: 4 STAR, 60 RFQ/tháng, 60 Showcase, 12 tháng Product Advisor, cùng toàn bộ bộ chứng thực Verified (SGS/TUV, nhãn Verified, video + ảnh 360°) và ưu đãi vận hành.'},
+        'inv.p2cap':{zh:'Verified Supplier Basic · SAA Elite 7,800 credits/月',en:'Verified Supplier Basic · SAA Elite 7,800 credits/month',vi:'Verified Supplier Basic · SAA Elite 7.800 credits/tháng'},
+        'inv.promoTag':{zh:'季度优惠：',en:'Quarterly offer:',vi:'Ưu đãi quý:'},
+        'inv.promo':{zh:'FY27 10月至12月期间购买 Verified Supplier 套餐的客户，可获赠价值 600 美元的 SAA Elite 权益 — 合计 7,800 credits/月，可通过 top-up 加购升级。',en:'From October to December of FY27, customers who purchase a Verified Supplier package receive the SAA Elite benefit worth USD 600 — 7,800 credits/month in total, upgradable via top-up.',vi:'Từ tháng 10 đến tháng 12 FY27, khách mua gói Verified Supplier được tặng SAA Elite trị giá 600 USD — tổng 7.800 credits/tháng, có thể mua thêm để nâng cấp.'},
+        'inv.altd2':{zh:'同一套餐内可选的广告预算升级（SAA Ultra — 16,500 credits/月）：',en:'Optional in-package ad budget upgrade (SAA Ultra — 16,500 credits/month):',vi:'Tùy chọn nâng ngân sách quảng cáo trong cùng gói (SAA Ultra — 16.500 credits/tháng):'},
+        'inv.note2':{zh:'来源：同一份 FY27S2 价格表，“Verified Supplier Basic”列。注意：该套餐<b>不含</b> ≥ 35 个 L3+/90 天商机承诺，也不含 KWA — 这两项仅 Guarantee L3+ 具备。价格未含 VAT。',en:'Source: the same FY27S2 price list, “Verified Supplier Basic” column. Note: this package does <b>not</b> include the ≥ 35 L3+/90-day commitment and has no KWA — both belong to Guarantee L3+ only. Prices exclude VAT.',vi:'Nguồn: cùng bảng giá FY27S2, cột “Verified Supplier Basic”. Lưu ý: gói này <b>không</b> kèm cam kết ≥ 35 cơ hội L3+/90 ngày và không có KWA — hai quyền lợi đó chỉ có ở Guarantee L3+. Giá chưa bao gồm VAT.'},
+
+        'ben.kicker':{zh:'02 / 升级 Verified 的差异',en:'02 / Verified Upgrade Difference',vi:'02 / Khác biệt khi lên Verified'},
+        'ben.title':{zh:'两个方案之间六项具体变化',en:'Six concrete changes between the two options',vi:'Sáu thay đổi cụ thể giữa hai phương án'},
+        'ben.desc':{zh:'数据全部来自 FY27S2 价格表；两个方案的价差为 86,300,000 VND（约 3,700 美元）。',en:'All figures come from the FY27S2 price list; the price gap between the two options is 86,300,000 VND (≈ USD 3,700).',vi:'Toàn bộ số liệu lấy từ bảng giá FY27S2; chênh lệch giá giữa hai phương án là 86.300.000 VND (≈ 3.700 USD).'},
+        'ben.1t':{zh:'AI 与广告预算',en:'AI and advertising budget',vi:'Ngân sách AI và quảng cáo'},
+        'ben.1d':{zh:'SAA Pro 3,900 credits/月 → SAA Elite 7,800 credits/月（本季度赠送，价值 600 美元）。',en:'SAA Pro 3,900 credits/month → SAA Elite 7,800 credits/month (gifted this quarter, worth USD 600).',vi:'SAA Pro 3.900 credits/tháng → SAA Elite 7.800 credits/tháng (tặng trong quý này, trị giá 600 USD).'},
+        'ben.2t':{zh:'星级与展示层级',en:'Star level and visibility',vi:'Cấp sao và độ phủ hiển thị'},
+        'ben.2d':{zh:'从 3星升到 4星（6个月）— 更高星级对应企业买家群体。',en:'From 3 STAR to 4 STAR (6 months) — a higher star tier maps to corporate buyers.',vi:'Từ 3 STAR lên 4 STAR (6 tháng) — nhóm sao cao hơn tương ứng tệp người mua doanh nghiệp.'},
+        'ben.3t':{zh:'主动商机来源',en:'Proactive lead sources',vi:'Nguồn cơ hội chủ động'},
+        'ben.3d':{zh:'RFQ 每月 40 → 60；Greenpass 5 → 10；优先报价 5 → 10。每月多 20 个 RFQ 与 10 次优先机会。',en:'RFQ 40 → 60 per month; Greenpass 5 → 10; priority quotes 5 → 10. That is 20 extra RFQs and 10 extra priority slots each month.',vi:'RFQ 40 → 60 mỗi tháng; Greenpass 5 → 10; báo giá ưu tiên 5 → 10. Tổng cộng thêm 20 RFQ và 10 lượt ưu tiên mỗi tháng.'},
+        'ben.4t':{zh:'展示资产与顾问服务',en:'Showcase assets and advisory',vi:'Tài sản trưng bày và tư vấn'},
+        'ben.4d':{zh:'Showcase 20 → 60 个产品；Product Advisor 6 → 12 个月；可优先参与 Alibaba.com 采购活动。',en:'Showcase 20 → 60 products; Product Advisor 6 → 12 months; priority access to Alibaba.com sourcing campaigns.',vi:'Showcase 20 → 60 sản phẩm; Product Advisor 6 → 12 tháng; gian hàng được ưu tiên trong các chiến dịch sourcing của Alibaba.com.'},
+        'ben.5t':{zh:'Verified 认证资产',en:'Verified credential assets',vi:'Bộ chứng thực Verified'},
+        'ben.5d':{zh:'SGS/TUV 实地验厂与评估报告；专属 Verified 店铺设计与认证牌匾；Verified 标识、证书与能力标签；视频拍摄与 360° 全景照片。',en:'SGS/TUV on-site verification and assessment report; exclusive Verified store design and plaque; Verified tag, certificates and capability labels; video shooting and 360° panoramic photos.',vi:'SGS/TUV xác minh on-site và báo cáo đánh giá; thiết kế gian hàng “Verified” + bảng xác minh; nhãn, chứng nhận và nhãn năng lực Verified; quay video và ảnh toàn cảnh 360°.'},
+        'ben.6t':{zh:'运营与优惠',en:'Operations and incentives',vi:'Vận hành và ưu đãi'},
+        'ben.6d':{zh:'进入“制造商”Tab、PRO 版店铺分析、10 个子账号、信保额外折扣、每月账号诊断。',en:'Listed on the Manufacturers Tab, PRO store analysis, 10 sub-accounts, extra Trade Assurance discount, monthly account diagnosis.',vi:'Xuất hiện trên tab “Nhà sản xuất”, phân tích gian hàng bản PRO, 10 tài khoản phụ, ưu đãi giao dịch đảm bảo (Extra Discount), tư vấn tài khoản hằng tháng.'},
+        'ben.a1':{zh:'3,900 → 7,800 credits',en:'3,900 → 7,800 credits',vi:'3.900 → 7.800 credits'},
+        'ben.a2':{zh:'3 STAR → 4 STAR',en:'3 STAR → 4 STAR',vi:'3 STAR → 4 STAR'},
+        'ben.a3':{zh:'40 → 60 RFQ/月',en:'40 → 60 RFQ/mo',vi:'40 → 60 RFQ/tháng'},
+        'ben.a4':{zh:'20 → 60 个 Showcase',en:'20 → 60 Showcase',vi:'20 → 60 showcase'},
+        'ben.a5':{zh:'仅方案 2 具备',en:'Option 2 only',vi:'Chỉ có ở Phương án 2'},
+        'ben.a6':{zh:'5 → 10 个子账号',en:'5 → 10 sub-accounts',vi:'5 → 10 sub-account'},
+        'ben.warn':{zh:'<b>需要权衡：</b>方案 2 在星级、认证与工具上更强，但<b>不含</b> 90 天内 ≥ 35 个 L3+ 商机承诺，也不含 3,000 美元 KWA。若两者都要，<b>Verified Supplier Guarantee L3+</b> 是组合方案 — 挂牌价 ₫280,880,000 / $11,999（SAA Elite 档），如需可另行报价。',en:'<b>Trade-off:</b> Option 2 is stronger on star level, verification and tools, but it does <b>not</b> include the ≥ 35 L3+ opportunities in 90 days commitment and has no USD 3,000 KWA. If both are needed, <b>Verified Supplier Guarantee L3+</b> combines them — list price ₫280,880,000 / $11,999 (SAA Elite tier), quotable on request.',vi:'<b>Đánh đổi cần cân nhắc:</b> Phương án 2 mạnh hơn về hạng sao, chứng thực và công cụ, nhưng <b>không</b> có cam kết ≥ 35 cơ hội L3+/90 ngày và không có KWA $3.000. Nếu cần cả hai, gói <b>Verified Supplier Guarantee L3+</b> là phương án kết hợp — giá niêm yết ₫280.880.000 / $11,999 (mức SAA Elite), có thể báo riêng nếu anh/chị muốn xem.'},
+
+        'why.kicker':{zh:'03 / 为何现在锁定',en:'03 / Why Lock In Now',vi:'03 / Vì sao chốt ngay'},
+        'why.title':{zh:'三个决定时点的因素，与选哪个方案无关',en:'Three timing factors that apply whichever option you choose',vi:'Ba yếu tố quyết định thời điểm, không phụ thuộc chọn gói nào'},
+        'why.desc':{zh:'激活时点直接影响套餐是否落在旺季；对方案 2 而言，还决定能否拿到 SAA Elite 赠送权益。',en:'The activation date determines whether the package lands in peak season — and for Option 2, whether the SAA Elite gift applies.',vi:'Thời điểm kích hoạt ảnh hưởng trực tiếp đến việc gói có rơi vào mùa cao điểm hay không, và với Phương án 2 là việc có nhận được ưu đãi SAA Elite hay không.'},
+        'why.1t':{zh:'店铺不中断',en:'No store interruption',vi:'Không gián đoạn gian hàng'},
+        'why.1d':{zh:'连续续费可保留产品、交易历史与运营数据 — 这是筛选供应商的买家最在意的信息。',en:'Continuous renewal preserves products, transaction history and operating data — exactly what buyers screening suppliers look for.',vi:'Gia hạn liên tục giữ nguyên sản phẩm, lịch sử giao dịch và dữ liệu vận hành — điều người mua đang sàng lọc nhà cung cấp quan tâm nhất.'},
+        'why.2t':{zh:'选对套餐档位',en:'Pick the right package tier',vi:'Chọn đúng cấp gói'},
+        'why.2d':{zh:'只需维持现状：方案 1。需要 Verified 认证、更高星级与更强工具：方案 2。',en:'Only need continuity: Option 1. Need Verified credentials, higher star level and stronger tools: Option 2.',vi:'Chỉ cần duy trì hiện trạng: Phương án 1. Cần chứng thực Verified, hạng sao cao hơn và bộ công cụ mạnh hơn: Phương án 2.'},
+        'why.3t':{zh:'优惠与承诺有时限',en:'Offers and commitments are time-bound',vi:'Ưu đãi và cam kết có hạn'},
+        'why.3d':{zh:'600 美元 SAA Elite 仅赠送给 FY27 10–12 月购买的 Verified 套餐；≥ 35 个 L3+ 商机承诺从 Guarantee L3+ 生效日开始计算。',en:'The USD 600 SAA Elite gift applies only to Verified packages bought in October–December FY27; the ≥ 35 L3+ commitment starts counting from the Guarantee L3+ activation date.',vi:'SAA Elite 600 USD chỉ tặng cho gói Verified mua trong tháng 10–12 FY27; cam kết ≥ 35 cơ hội L3+ chỉ bắt đầu tính từ ngày gói Guarantee L3+ có hiệu lực.'},
+        'why.band':{zh:'两个方案共用一张权益表，区别在投入水平与认证水平。选定即可落地，无需再谈配置。',en:'Both options share one benefit table; they differ in investment and verification level. Once chosen, it can be executed immediately.',vi:'Hai phương án dùng chung một bảng quyền lợi, khác nhau ở mức đầu tư và mức chứng thực. Chọn xong là chốt được ngay, không cần đàm phán thêm cấu hình.'},
+        'why.tag':{zh:'2 个方案',en:'2 options',vi:'2 phương án'},
+
+        'road.kicker':{zh:'04 / 90天路线',en:'04 / 90-Day Roadmap',vi:'04 / Lộ trình 90 ngày'},
+        'road.title':{zh:'四步落地，差别在 onboarding 环节',en:'Four implementation steps, differing at onboarding',vi:'Bốn bước triển khai, khác nhau ở bước onboarding'},
+        'road.desc':{zh:'方案 1 几乎即时生效；方案 2 需额外时间做实地验厂与 Verified 资产制作。',en:'Option 1 activates almost immediately; Option 2 needs extra time for on-site verification and Verified asset production.',vi:'Phương án 1 kích hoạt gần như ngay; Phương án 2 cần thêm thời gian cho xác minh on-site và sản xuất bộ tài sản Verified.'},
+        'road.1t':{zh:'确认方案与付款',en:'Confirm and pay',vi:'Chốt phương án và thanh toán'},
+        'road.1d':{zh:'确认报价、签署合同并支付所选套餐。',en:'Confirm the quotation, sign the contract and pay for the chosen package.',vi:'Xác nhận báo giá, ký hợp đồng, thanh toán gói đã chọn.'},
+        'road.1w':{zh:'第1周',en:'Week 1',vi:'Tuần 1'},
+        'road.2t':{zh:'生效与 onboarding',en:'Activation and onboarding',vi:'Kích hoạt và onboarding'},
+        'road.2d':{zh:'方案1：生效并盘点产品。方案2：增加 SGS/TUV 实地验厂、视频与360°拍摄、Verified 店铺设计。',en:'Option 1: activate and audit products. Option 2: add SGS/TUV on-site audit, video and 360° shooting, Verified store design.',vi:'PA1: kích hoạt và rà soát sản phẩm. PA2: thêm lịch SGS/TUV on-site, quay video, ảnh 360°, thiết kế gian hàng Verified.'},
+        'road.2w':{zh:'第2–4周',en:'Week 2 – 4',vi:'Tuần 2 – 4'},
+        'road.3t':{zh:'运营 RFQ、Showcase 与 credits',en:'Run RFQ, Showcase and credits',vi:'Khai thác RFQ, showcase và credits'},
+        'road.3d':{zh:'方案1：40 RFQ + 5 Greenpass + 3,900 credits。方案2：60 RFQ + 10 Greenpass + 60 Showcase + 7,800 credits。',en:'Option 1: 40 RFQ + 5 Greenpass + 3,900 credits. Option 2: 60 RFQ + 10 Greenpass + 60 Showcase + 7,800 credits.',vi:'PA1: 40 RFQ + 5 Greenpass + 3.900 credits. PA2: 60 RFQ + 10 Greenpass + 60 showcase + 7.800 credits.'},
+        'road.3w':{zh:'第1–2月',en:'Month 1 – 2',vi:'Tháng 1 – 2'},
+        'road.4t':{zh:'按承诺口径度量',en:'Measure against the commitment',vi:'Đo lường theo đúng cam kết'},
+        'road.4d':{zh:'方案1：核对90天内 L3+ 商机数与35的门槛。方案2：核对 Verified 资产清单与每月 RFQ 效果。',en:'Option 1: compare L3+ opportunities in 90 days against the 35 threshold. Option 2: check the Verified asset checklist and monthly RFQ performance.',vi:'PA1: đối chiếu số cơ hội L3+ với mốc 35 trong 90 ngày. PA2: checklist tài sản Verified và hiệu quả RFQ theo tháng.'},
+        'road.4w':{zh:'第2–3月',en:'Month 2 – 3',vi:'Tháng 2 – 3'},
+
+        'term.kicker':{zh:'05 / 条款与注意事项',en:'05 / Terms and Notes',vi:'05 / Điều khoản và lưu ý'},
+        'term.title':{zh:'签约前需确认的要点',en:'Points to confirm before signing',vi:'Những điểm cần xác nhận trước khi ký'},
+        'term.desc':{zh:'付款前请与 Alibaba.com 出具的正式报价与合同核对以下内容。',en:'Check the following against the official quotation and contract issued by Alibaba.com before payment.',vi:'Đối chiếu với báo giá và hợp đồng chính thức do Alibaba.com phát hành trước khi thanh toán.'},
+        'term.1t':{zh:'价格与付款',en:'Price and payment',vi:'Giá và thanh toán'},
+        'term.1a':{zh:'方案 1 — Guarantee L3+：₫126,100,000 / $5,299（SAA Pro 3,900 credits/月）。',en:'Option 1 — Guarantee L3+: ₫126,100,000 / $5,299 (SAA Pro 3,900 credits/month).',vi:'Phương án 1 — Guarantee L3+: ₫126.100.000 / $5,299 (SAA Pro 3.900 credits/tháng).'},
+        'term.1b':{zh:'方案 1 — SAA Ultra 可选档：₫151,600,000 / $6,199。',en:'Option 1 — optional SAA Ultra: ₫151,600,000 / $6,199.',vi:'Phương án 1 — tùy chọn SAA Ultra: ₫151.600.000 / $6,199.'},
+        'term.1c':{zh:'方案 2 — Verified Supplier Basic：₫212,400,000 / $8,999（SAA Elite 7,800 credits/月）。',en:'Option 2 — Verified Supplier Basic: ₫212,400,000 / $8,999 (SAA Elite 7,800 credits/month).',vi:'Phương án 2 — Verified Supplier Basic: ₫212.400.000 / $8,999 (SAA Elite 7.800 credits/tháng).'},
+        'term.1d':{zh:'方案 2 — SAA Ultra 可选档：₫246,400,000 / $10,199。',en:'Option 2 — optional SAA Ultra: ₫246,400,000 / $10,199.',vi:'Phương án 2 — tùy chọn SAA Ultra: ₫246.400.000 / $10,199.'},
+        'term.1e':{zh:'价格未含 VAT；汇率与手续费按付款时的正式报价执行。',en:'Prices exclude VAT; exchange rate and fees follow the official quotation at the time of payment.',vi:'Giá chưa bao gồm VAT; tỷ giá và phí áp dụng theo báo giá tại thời điểm thanh toán.'},
+        'term.2t':{zh:'优惠与承诺条件',en:'Offer and commitment conditions',vi:'Điều kiện ưu đãi và cam kết'},
+        'term.2a':{zh:'SAA Elite（600 美元，7,800 credits/月）仅适用于 FY27 10–12 月购买的 Verified 套餐。',en:'SAA Elite (USD 600, 7,800 credits/month) applies only to Verified packages purchased in October–December FY27.',vi:'SAA Elite (600 USD, 7.800 credits/tháng) chỉ áp dụng cho gói Verified mua trong tháng 10–12 FY27.'},
+        'term.2b':{zh:'90天内 ≥ 35 个 L3+ 商机承诺仅属于 Guarantee L3+；Verified Supplier Basic 不含该承诺。',en:'The ≥ 35 L3+ opportunities in 90 days commitment belongs to Guarantee L3+ only; Verified Supplier Basic does not include it.',vi:'Cam kết ≥ 35 cơ hội L3+ trong 90 ngày chỉ thuộc gói Guarantee L3+; gói Verified Supplier Basic không bao gồm cam kết này.'},
+        'term.2c':{zh:'Star-rating Direct 在完成 onboarding 步骤后生效。',en:'Star-rating Direct activates after onboarding steps are completed.',vi:'Star-rating Direct được kích hoạt sau khi hoàn tất các bước onboarding.'},
+        'term.2d':{zh:'权益仅适用于 HO CHI MINH GLAMOUR 的 01 个店铺；Onboarding 服务细节请联系销售团队。',en:'Benefits apply to the single HO CHI MINH GLAMOUR store; contact the sales team for Onboarding service details.',vi:'Quyền lợi áp dụng cho 01 gian hàng HO CHI MINH GLAMOUR; chi tiết dịch vụ Onboarding liên hệ đội sales.'},
+
+        'foot.note':{zh:'内部提案文件。最终价格与权益以正式报价及合同为准。',en:'Internal proposal document. Final price and benefits are subject to the official quotation and contract.',vi:'Tài liệu đề xuất nội bộ. Giá và quyền lợi cuối cùng theo báo giá chính thức và hợp đồng.'},
+        'foot.cta':{zh:'返回两个方案',en:'Back to the two options',vi:'Xem lại hai phương án'}
+      };
+
+      var FEAT={
+        saa_credits:{vi:'Quyền lợi SAA',zh:'SAA权益',en:'SAA Benefits'},
+        star_direct:{vi:'Sao trực tiếp',zh:'星级直达',en:'Star-rating Direct'},
+        prod_cat:{vi:'Danh mục sản phẩm',zh:'产品类目',en:'Product Categories'},
+        rfq:{vi:'Phản hồi RFQ theo tháng',zh:'每月 RFQ',en:'Monthly RFQ'},
+        rfq_green:{vi:'Thẻ xanh RFQ theo tháng',zh:'每月 RFQ 绿通',en:'Monthly RFQ Greenpass'},
+        rfq_prio:{vi:'Thẻ ưu tiên báo giá RFQ',zh:'每月 RFQ 优先报价',en:'Monthly RFQ priority quotes'},
+        showcase:{vi:'Sản phẩm trưng bày',zh:'Showcase（橱窗）',en:'Showcase'},
+        okki:{vi:'OKKI CRM Seed',zh:'OKKI CRM Seed',en:'OKKI CRM Seed'},
+        guaranteed:{vi:'Đảm bảo tối thiểu số cơ hội kinh doanh',zh:'商机保障（保底）',en:'Guaranteed on'},
+        kwa_usd:{vi:'KWA USD',zh:'KWA USD',en:'KWA USD'},
+        kwa_vnd:{vi:'KWA VND',zh:'KWA VND',en:'KWA VND'},
+        prod_adv:{vi:'Product Advisor',zh:'Product Advisor（产品顾问）',en:'Product Advisor'},
+        storefront:{vi:'Tạo trang gian hàng',zh:'旺铺建站工具',en:'Storefront site creator'},
+        im_tool:{vi:'Công cụ tin nhắn tức thời',zh:'在线沟通工具',en:'Instant messaging tool'},
+        sourcing:{vi:'Sự kiện và chiến dịch của Alibaba.com',zh:'Alibaba.com 采购节与营销活动',en:'Alibaba.com sourcing events & campaigns'},
+        mfr_tab:{vi:'Tìm kiếm được trên tab “Nhà sản xuất”',zh:'制造商 Tab 可搜索',en:'Searchable on Manufacturers Tab'},
+        region_tab:{vi:'Xuất hiện trên tab “Nguồn cung khu vực”',zh:'区域供给专区',en:'Region supplies Tab'},
+        biz_verif:{vi:'Xác minh doanh nghiệp',zh:'企业认证',en:'Business Verification'},
+        store_perf:{vi:'Công cụ phân tích gian hàng',zh:'店铺经营分析',en:'Store performance analysis'},
+        subaccount:{vi:'Tài khoản phụ',zh:'子账号',en:'Sub-account'},
+        ta_benefits:{vi:'Quyền lợi giao dịch đảm bảo',zh:'信保（Trade Assurance）权益',en:'Trade assurance benefits'},
+        live_cs:{vi:'Hỗ trợ trực tuyến',zh:'在线人工客服',en:'Live Customer service'},
+        acct_diag:{vi:'Tư vấn tài khoản',zh:'经营诊断',en:'Account Diagnosis'},
+        ads_consult:{vi:'Tư vấn chiến lược tiếp thị',zh:'广告策略咨询',en:'Ads Consultation'},
+        sgs:{vi:'Xác minh on-site và báo cáo đánh giá SGS/TUV',zh:'SGS/TUV 实地验厂及评估报告',en:'SGS/TUV On-site verification & assessment report'},
+        vdesign:{vi:'Thiết kế gian hàng “Verified” và bảng xác minh độc quyền',zh:'专属 “Verified” 旺铺设计、专属 Alibaba.com 认证牌匾',en:'Exclusive Verified store design and Alibaba.com verified plaque'},
+        vtag:{vi:'Nhãn xác minh, chứng nhận và nhãn năng lực Verified',zh:'Verified 标识、证书与能力标签',en:'Verified tag, certificates and capability labels'},
+        vvideo:{vi:'Dịch vụ quay video Verified và ảnh toàn cảnh 360°',zh:'Verified 视频拍摄服务、360° 全景照片',en:'Verified video shooting service and 360° panoramic photos'},
+        obs:{vi:'Sản phẩm đăng',zh:'上线产品数',en:'Products posted'}
+      };
+
+      var GROUP={
+        acc:{vi:'Quyền lợi tài khoản',zh:'账户权益',en:'Account Benefit'},
+        mkt:{vi:'Công cụ đắc lực cho marketing hiệu quả',zh:'高效营销工具',en:'Powerful tools for effective marketing'},
+        local:{vi:'Dịch vụ chuyên nghiệp hỗ trợ tăng trưởng',zh:'本地服务',en:'Local Service'},
+        vsex:{vi:'Đặc quyền Verified Supplier',zh:'Verified Supplier 专属',en:'Verified Supplier Exclusive'},
+        obs:{vi:'Dịch vụ lên sàn (Onboarding Service)',zh:'上线服务 (Onboarding Service)',en:'Onboarding Service'}
+      };
+
+      var V={
+        Y:{vi:'✔',zh:'✔',en:'✔'},
+        N:{vi:'✕',zh:'✕',en:'✕'},
+        B:{vi:'—',zh:'—',en:'—'},
+        UNL:{vi:'Không giới hạn',zh:'不限量',en:'Unlimited'},
+        R40:{vi:'40/tháng',zh:'40/月',en:'40/m'},
+        R60:{vi:'60/tháng',zh:'60/月',en:'60/m'},
+        G5:{vi:'5/tháng',zh:'5/月',en:'5/m'},
+        G10:{vi:'10/tháng',zh:'10/月',en:'10/m'},
+        S20:{vi:'20',zh:'20',en:'20'},
+        S60:{vi:'60',zh:'60',en:'60'},
+        SUB5:{vi:'5',zh:'5',en:'5'},
+        SUB10:{vi:'10',zh:'10',en:'10'},
+        M6:{vi:'6 tháng',zh:'6个月',en:'6 MONTHS'},
+        M12:{vi:'12 tháng',zh:'12个月',en:'12 MONTHS'},
+        STAR3_6:{vi:'3 STAR (6 tháng)',zh:'3星（6个月）',en:'3 STAR (6 Months)'},
+        STAR4_6:{vi:'4 STAR (6 tháng)',zh:'4星（6个月）',en:'4 STAR (6 Months)'},
+        PRI:{vi:'Ưu tiên',zh:'优先参与',en:'Priority'},
+        EXC:{vi:'Khu vực độc quyền',zh:'专属专区',en:'Exclusive pavilion'},
+        PRO:{vi:'PRO',zh:'PRO',en:'PRO'},
+        ED:{vi:'Ưu đãi thêm',zh:'额外折扣',en:'Extra Discount'},
+        QTR:{vi:'Hàng quý',zh:'每季度',en:'Quarterly'},
+        MON:{vi:'Hàng tháng (theo yêu cầu)',zh:'每月（如有需要）',en:'Monthly (if needed)'},
+        ADS:{vi:'Theo nhu cầu — ưu tiên khách hàng có ngân sách quảng cáo cao hơn',zh:'按需提供；优先广告预算更高的客户',en:'On demand. Prioritize customers with higher Ads packages.'},
+        G35:{vi:'CAM KẾT ≥ 35 cơ hội L3+ trong 90 ngày',zh:'承诺90天内 ≥ 35 个 L3+ 商机',en:'GUARANTEED ≥ 35 L3+ business opportunities in 90 days'},
+        K3000:{vi:'$3.000',zh:'$3,000',en:'$3,000'},
+        KV708:{vi:'₫70.800.000',zh:'₫70,800,000',en:'₫70,800,000'},
+        SAA_C_B:{vi:'3.900 credits/tháng (tương ứng SAA $300), có thể mua thêm để nâng cấp',zh:'3,900 credits/月（等同 SAA $300），可通过 top-up 升级',en:'3,900 credits/mo (equivalent to $300 SAA), upgradable via top-up'},
+        SAA_C_VS:{vi:'Được tặng trong quý này: 7.800 credits/tháng, có thể mua thêm để nâng cấp',zh:'本季度赠送：7,800 credits/月，可通过 top-up 升级',en:'Gifted this quarter: 7,800 credits/mo, upgradable via top-up'},
+        OBS1:{vi:'60–100 sản phẩm (tùy danh mục và yêu cầu chất lượng: 5.0 ≤ PIS ≤ 5.5)',zh:'60–100 个产品（数量依类目与质量要求：5.0 ≤ PIS ≤ 5.5）',en:'60–100 products (depends on category and quality requirements: 5.0 ≤ PIS ≤ 5.5)'},
+        OBS2:{vi:'100–200 sản phẩm (tùy danh mục và yêu cầu chất lượng: 5.0 ≤ PIS ≤ 5.5)',zh:'100–200 个产品（数量依类目与质量要求：5.0 ≤ PIS ≤ 5.5）',en:'100–200 products (depends on category and quality requirements: 5.0 ≤ PIS ≤ 5.5)'}
+      };
+
+      var ROWS=[
+        {g:'acc'},
+        {f:'saa_credits', v:['SAA_C_B','SAA_C_VS']},
+        {f:'star_direct', v:['STAR3_6','STAR4_6']},
+        {f:'prod_cat',    v:['UNL','UNL']},
+        {f:'rfq',         v:['R40','R60']},
+        {f:'rfq_green',   v:['G5','G10']},
+        {f:'rfq_prio',    v:['G5','G10']},
+        {f:'showcase',    v:['S20','S60']},
+        {f:'okki',        v:['B','Y']},
+        {f:'guaranteed',  v:['G35','B']},
+        {f:'kwa_usd',     v:['K3000','B']},
+        {f:'kwa_vnd',     v:['KV708','B']},
+        {f:'prod_adv',    v:['M6','M12']},
+        {f:'storefront',  v:['Y','Y']},
+        {f:'im_tool',     v:['Y','Y']},
+        {f:'sourcing',    v:['Y','PRI']},
+        {f:'mfr_tab',     v:['N','Y']},
+        {f:'region_tab',  v:['Y','EXC']},
+        {f:'biz_verif',   v:['Y','Y']},
+        {g:'mkt'},
+        {f:'store_perf',  v:['Y','PRO']},
+        {f:'subaccount',  v:['SUB5','SUB10']},
+        {f:'ta_benefits', v:['N','ED']},
+        {g:'local'},
+        {f:'live_cs',     v:['Y','Y']},
+        {f:'acct_diag',   v:['QTR','MON']},
+        {f:'ads_consult', v:['ADS','ADS']},
+        {g:'vsex'},
+        {f:'sgs',         v:['N','Y']},
+        {f:'vdesign',     v:['N','Y']},
+        {f:'vtag',        v:['N','Y']},
+        {f:'vvideo',      v:['N','Y']},
+        {g:'obs'},
+        {f:'obs',         v:['OBS1','OBS2']}
+      ];
+
+      var PRICING=[
+        [ {n:'SAA Pro',   s:{vi:'(300$/Năm; 3.900 credits/Tháng)',zh:'（300$/年；3,900 credits/月）',en:'(300$/Year; 3,900 credits/Month)'}, vnd:'₫126.100.000', usd:'$5,299', hl:true},
+          {n:'SAA Ultra', s:{vi:'(1.200$/Năm; 16.500 credits/Tháng)',zh:'（1,200$/年；16,500 credits/月）',en:'(1,200$/Year; 16,500 credits/Month)'}, vnd:'₫151.600.000', usd:'$6,199'} ],
+        [ {n:'SAA Elite', s:{vi:'(được tặng trong quý này; 7.800 credits/Tháng)',zh:'（本季度赠送；7,800 credits/月）',en:'(gifted this quarter; 7,800 credits/Month)'}, vnd:'₫212.400.000', usd:'$8,999', hl:true},
+          {n:'SAA Ultra', s:{vi:'(1.200$/Năm; 16.500 credits/Tháng)',zh:'（1,200$/年；16,500 credits/月）',en:'(1,200$/Year; 16,500 credits/Month)'}, vnd:'₫246.400.000', usd:'$10,199'} ]
+      ];
+
+      var LONG=['SAA_C_B','SAA_C_VS','OBS1','OBS2','ADS','MON'];
+      var PRI=['PRI','EXC'];
+
+      function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+      function cell(tok,l){
+        var cls='val', txt=V[tok]?V[tok][l]:tok;
+        if(tok==='Y') cls+=' yes';
+        else if(tok==='N') cls+=' no';
+        else if(tok==='B') cls+=' none';
+        else if(tok==='G35') cls+=' guarantee';
+        else if(PRI.indexOf(tok)>=0) cls+=' pri';
+        else if(LONG.indexOf(tok)>=0) cls+=' long';
+        return '<td class="'+cls+'">'+esc(txt)+'</td>';
+      }
+
+      function buildTable(pi,l){
+        var h='<thead><tr><th>'+esc(UI.featHdr[l])+'</th><th>'+esc(pi===0?UI.col1[l]:UI.col2[l])+'</th></tr></thead><tbody>';
+        h+='<tr class="grp pricing"><th colspan="2">'+esc(UI.pricing[l])+'</th></tr>';
+        PRICING[pi].forEach(function(p){
+          h+='<tr'+(p.hl?' class="hl"':'')+'><td class="feat"><b>'+p.n+'</b><span>'+esc(p.s[l])+'</span></td>';
+          h+='<td class="val price">'+p.vnd+'<em>'+p.usd+'</em></td></tr>';
+        });
+        ROWS.forEach(function(r){
+          if(r.g){ h+='<tr class="grp"><th colspan="2">'+esc(GROUP[r.g][l])+'</th></tr>'; return; }
+          var hl=(r.f==='saa_credits'||r.f==='guaranteed'||r.f==='sgs')?' class="hl"':'';
+          h+='<tr'+hl+'><td class="feat"><b>'+esc(FEAT[r.f][l])+'</b></td>'+cell(r.v[pi],l)+'</tr>';
+        });
+        return h+'</tbody>';
+      }
+
+      var buttons=[].slice.call(document.querySelectorAll('.lang-btn'));
+      var supported=['zh','en','vi'];
+      var lang=new URLSearchParams(location.search).get('lang');
+      if(supported.indexOf(lang)<0) lang=localStorage.getItem('glamour-language')||'vi';
+      if(supported.indexOf(lang)<0) lang='vi';
+
+      function apply(l){
+        localStorage.setItem('glamour-language',l);
+        document.documentElement.lang=l;
+        buttons.forEach(function(b){ b.classList.toggle('active',b.dataset.lang===l); });
+        document.querySelectorAll('[data-i18n]').forEach(function(el){
+          var t=I18N[el.dataset.i18n];
+          if(t&&t[l]!=null&&t[l]!=='') el.innerHTML=t[l];
+        });
+        document.querySelectorAll('table.ptable').forEach(function(tb){
+          tb.innerHTML=buildTable(parseInt(tb.dataset.plan,10),l);
+        });
+        if(UI.pageTitle[l]) document.title=UI.pageTitle[l];
+      }
+      buttons.forEach(function(b){ b.addEventListener('click',function(){ apply(b.dataset.lang); }); });
+      apply(lang);
+    })();
+  </script>
+</body>
+</html>
+
